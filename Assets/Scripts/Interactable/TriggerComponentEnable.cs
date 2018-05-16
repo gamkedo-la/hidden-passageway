@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MouseTipOnLook))]
 public class TriggerComponentEnable : MonoBehaviour {
-	public string displayText = "Touch Book";
 	public GameObject toEnable;
     public bool wasUsed = false;
 

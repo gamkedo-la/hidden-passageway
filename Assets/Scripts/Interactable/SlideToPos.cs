@@ -54,7 +54,7 @@ public class SlideToPos : MonoBehaviour {
             WalkControl.instance.enabled = true;
 
             movePerc = 1.0f;
-            // Camera.main.transform.localRotation = camRotReset;
+            Camera.main.transform.rotation = camRotWorldInitial;
             return;
         }
         else

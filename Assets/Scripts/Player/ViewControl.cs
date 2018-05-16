@@ -41,16 +41,19 @@ public class ViewControl : MonoBehaviour {
 
 		RaycastHit rhInfo;
 		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 4.0f)) {		
-			TriggerComponentEnable activateComponent = rhInfo.collider.gameObject.GetComponent<TriggerComponentEnable>();
-			if(activateComponent) {
-				if(Input.GetMouseButtonDown(0)) {
-                    activateComponent.triggerAction();
+            MouseTipOnLook mtol = rhInfo.collider.gameObject.GetComponent<MouseTipOnLook>();
+
+            if(mtol) {
+                if(Input.GetMouseButtonDown(0)) {
+                    mtol.SendMessage("triggerAction");
 				} else {
-                    if(activateComponent.wasUsed)
+                    TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
+                
+                    if(activateComponent && activateComponent.wasUsed)
                     {
                         linkClueShadow.text = linkClue.text = "(already used)";
                     } else {
-                        linkClueShadow.text = linkClue.text = activateComponent.displayText;
+                        linkClueShadow.text = linkClue.text = mtol.displayText;
                     }
                 }
 			}
