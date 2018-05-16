@@ -7,6 +7,7 @@ public class WalkControl : MonoBehaviour {
 	private Rigidbody rb;
 	private bool onGround=true;
     private Vector3 prevValidPosition;
+    public bool areFeetLocked = false;
 
     public static WalkControl instance;
 
@@ -51,17 +52,22 @@ public class WalkControl : MonoBehaviour {
 			}
 		}
 		if(Cursor.lockState == CursorLockMode.Locked) {
-			transform.position += transform.forward * Time.deltaTime * 6.0f *
-				Input.GetAxisRaw("Vertical");
-			transform.position += transform.right * Time.deltaTime * 4.0f *
-				Input.GetAxisRaw("Horizontal");
+            if (areFeetLocked == false)
+            {
+                transform.position += transform.forward * Time.deltaTime * 6.0f *
+                    Input.GetAxisRaw("Vertical");
+                transform.position += transform.right * Time.deltaTime * 4.0f *
+                    Input.GetAxisRaw("Horizontal");
+
+                if (onGround && Input.GetKeyDown(KeyCode.Space))
+                {
+                    rb.velocity = Vector3.up * 5.0f;
+                    onGround = false;
+                }
+            }
 			
 			transform.Rotate(Vector3.up, Time.deltaTime * 65.0f * Input.GetAxis("Mouse X"));
 
-			if(onGround && Input.GetKeyDown(KeyCode.Space)) {
-				rb.velocity = Vector3.up * 5.0f;
-				onGround = false;
-			}
 		} else if(Input.GetMouseButtonDown(0)) {
 			Cursor.lockState = CursorLockMode.Locked;
 		}

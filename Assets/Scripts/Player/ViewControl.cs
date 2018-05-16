@@ -49,11 +49,11 @@ public class ViewControl : MonoBehaviour {
 				} else {
                     TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
                 
-                    if(activateComponent && activateComponent.wasUsed && activateComponent.canBeReversed == false)
+                    if(activateComponent == null || activateComponent.canBeUsed())
                     {
-                        linkClueShadow.text = linkClue.text = "(already used)";
-                    } else {
                         linkClueShadow.text = linkClue.text = mtol.displayText;
+                    } else {
+                        linkClueShadow.text = linkClue.text = "(already used)";
                     }
                 }
 			}

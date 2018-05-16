@@ -653,7 +653,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 461969353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8999996, y: 16.8, z: 10.4}
+  m_LocalPosition: {x: 2.8999996, y: 18.21, z: 13.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1901944855}
@@ -664,7 +664,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh23454
+  m_Name: pb_Mesh31858
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1633,6 +1633,7 @@ Transform:
   - {fileID: 1016598601}
   - {fileID: 461969359}
   - {fileID: 1902042944}
+  - {fileID: 2041525392}
   m_Father: {fileID: 1847622713}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1650,7 +1651,7 @@ GameObject:
   - component: {fileID: 1902042940}
   - component: {fileID: 1902042945}
   m_Layer: 0
-  m_Name: Elevator Switch
+  m_Name: Elevator Switch low
   m_TagString: InteractionSwitch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1667,9 +1668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b624966ea2d464a1da839063b1c89297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEnable: {fileID: 1016598595}
+  toEnable: {fileID: 1016598602}
   canBeReversed: 1
-  wasUsed: 0
 --- !u!136 &1902042941
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1749,13 +1749,126 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Use Elevator (very broken!)
+  displayText: Use Elevator (low switch)
+--- !u!1 &2041525391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2041525392}
+  - component: {fileID: 2041525397}
+  - component: {fileID: 2041525396}
+  - component: {fileID: 2041525395}
+  - component: {fileID: 2041525394}
+  - component: {fileID: 2041525393}
+  m_Layer: 0
+  m_Name: Elevator Switch high
+  m_TagString: InteractionSwitch
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2041525392
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041525391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.9099998, y: 20.21, z: 14.48}
+  m_LocalScale: {x: 0.55443996, y: 0.83114, z: 0.55443996}
+  m_Children: []
+  m_Father: {fileID: 1901944855}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041525393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041525391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Use Elevator (high switch)
+--- !u!114 &2041525394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041525391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b624966ea2d464a1da839063b1c89297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toEnable: {fileID: 1016598602}
+  canBeReversed: 1
+--- !u!136 &2041525395
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041525391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &2041525396
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041525391}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2041525397
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041525391}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!43 &2093526710
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh17820
+  m_Name: pb_Mesh31878
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

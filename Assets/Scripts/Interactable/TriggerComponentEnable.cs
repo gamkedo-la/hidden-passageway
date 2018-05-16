@@ -4,22 +4,21 @@ using UnityEngine;
 
 [RequireComponent(typeof(MouseTipOnLook))]
 public class TriggerComponentEnable : MonoBehaviour {
-	public GameObject toEnable;
+    public SlideToPos toEnable;
 
     public bool canBeReversed = false;
 
-    [HideInInspector]
-    public bool wasUsed = false;
-
     public void triggerAction()
     {
-        if(wasUsed == false)
+        if(toEnable.isDone == false)
         {
-            wasUsed = true;
             toEnable.SendMessage("Activate");
         } else if(canBeReversed) {
-            wasUsed = false;
             toEnable.SendMessage("Reverse");
         }
+    }
+
+    public bool canBeUsed() {
+        return (toEnable.isDone == false) || canBeReversed;
     }
 }

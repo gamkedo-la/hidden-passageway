@@ -22,8 +22,31 @@ public class SlideToPos : MonoBehaviour {
     private Vector3 posB;
     private Quaternion rotB;
 
+    private bool isTouchingPlayer;
+    private static GameObject playerGO;
+    Transform wasPlayerParent;
+
+    void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Player") {
+            isTouchingPlayer = true;
+            //Debug.Log(name +" is now touching player");
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            isTouchingPlayer = false;
+            //Debug.Log(name + " is no longer touching player");
+        }
+    }
+
     public void Start()
     {
+        if(playerGO == null) {
+            playerGO = GameObject.FindWithTag("Player");
+        }
         isStarted = false;
         camRotReset = Camera.main.transform.localRotation;
 
@@ -49,7 +72,6 @@ public class SlideToPos : MonoBehaviour {
                 TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
                 if (tceScript.toEnable == gameObject)
                 {
-                    tceScript.wasUsed = true;
                     matchFound = true;
                 }
             }
@@ -85,8 +107,6 @@ public class SlideToPos : MonoBehaviour {
             return;
         }
         PlayerPrefs.SetInt(mySaveName, 1);
-        ViewControl.instance.enabled = false;
-        WalkControl.instance.enabled = false;
         camRotWorldInitial = Camera.main.transform.rotation;
         isStarted = true;
         startTime = Time.time;
@@ -94,6 +114,16 @@ public class SlideToPos : MonoBehaviour {
         startRot = rotA;
         endPos.position = posB;
         endPos.rotation = rotB;
+
+        if (isTouchingPlayer) // elevator or spinning disc etc, so attach to it
+        {
+            wasPlayerParent = playerGO.transform.parent;
+            playerGO.transform.parent = transform;
+            WalkControl.instance.areFeetLocked = true;
+        } else {
+            WalkControl.instance.enabled = false;
+            ViewControl.instance.enabled = false;
+        }
     }
 
     void Update () {
@@ -105,11 +135,17 @@ public class SlideToPos : MonoBehaviour {
         if (movePerc > 1.0f)
         {
             isDone = true;
-            ViewControl.instance.enabled = true;
-            WalkControl.instance.enabled = true;
 
             movePerc = 1.0f;
-            Camera.main.transform.rotation = camRotWorldInitial;
+            if (isTouchingPlayer)
+            {
+                WalkControl.instance.areFeetLocked = false;
+                playerGO.transform.parent = wasPlayerParent;
+            } else {
+                Camera.main.transform.rotation = camRotWorldInitial;
+                ViewControl.instance.enabled = true;
+                WalkControl.instance.enabled = true;
+            }
 
             if(isReversing) {
                 isReversing = false;
@@ -117,7 +153,7 @@ public class SlideToPos : MonoBehaviour {
             }
             return;
         }
-        else
+        else if (isTouchingPlayer == false)
         {
             float camTurn = Mathf.Clamp01((Time.time - startTime) * 2.0f);
             Camera.main.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
