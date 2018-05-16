@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SlideToPos : MonoBehaviour {
     public Transform endPos;
@@ -13,11 +14,63 @@ public class SlideToPos : MonoBehaviour {
     Quaternion startRot;
     Quaternion camRotReset;
     Quaternion camRotWorldInitial;
+    private string mySaveName;
+    bool isReversing = false;
+
+    private Vector3 posA;
+    private Quaternion rotA;
+    private Vector3 posB;
+    private Quaternion rotB;
 
     public void Start()
     {
         isStarted = false;
         camRotReset = Camera.main.transform.localRotation;
+
+        mySaveName = SceneManager.GetActiveScene().name +
+                                      gameObject.name;
+        int wasFinished = PlayerPrefs.GetInt(mySaveName, 0);
+
+        // storing separately, used for reverse option
+        posA = transform.position;
+        rotA = transform.rotation;
+        posB = endPos.position;
+        rotB = endPos.rotation;
+
+        if (wasFinished == 1)
+        {
+            transform.position = endPos.position;
+            transform.rotation = endPos.rotation;
+            isStarted = isDone = true;
+            GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag("InteractionSwitch");
+            bool matchFound = false;
+            for (int i = 0; i < interactionSwitches.Length; i++)
+            {
+                TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
+                if (tceScript.toEnable == gameObject)
+                {
+                    tceScript.wasUsed = true;
+                    matchFound = true;
+                }
+            }
+            if(matchFound == false) {
+                Debug.LogWarning("Is the tag set to InteractionSwitch for switch to " + gameObject.name);
+            }
+        }
+    }
+
+    public void Reverse() {
+        isStarted = isDone = false;
+
+        Activate();
+
+        // overriding how Activate() left them:
+        PlayerPrefs.SetInt(mySaveName, 0);
+        endPos.position = posA;
+        endPos.rotation = rotA;
+        startPos = posB;
+        startRot = rotB;
+        isReversing = true; // important to toggle off isStarted and isDone after
     }
 
     public void Activate()
@@ -26,19 +79,21 @@ public class SlideToPos : MonoBehaviour {
         {
             return;
         }
-
         if (isDone)
         {
-            this.enabled = false;
+            // this.enabled = false;
             return;
         }
+        PlayerPrefs.SetInt(mySaveName, 1);
         ViewControl.instance.enabled = false;
         WalkControl.instance.enabled = false;
         camRotWorldInitial = Camera.main.transform.rotation;
         isStarted = true;
         startTime = Time.time;
-        startPos = transform.position;
-        startRot = transform.rotation;
+        startPos = posA;
+        startRot = rotA;
+        endPos.position = posB;
+        endPos.rotation = rotB;
     }
 
     void Update () {
@@ -55,6 +110,11 @@ public class SlideToPos : MonoBehaviour {
 
             movePerc = 1.0f;
             Camera.main.transform.rotation = camRotWorldInitial;
+
+            if(isReversing) {
+                isReversing = false;
+                isStarted = isDone = false;
+            }
             return;
         }
         else

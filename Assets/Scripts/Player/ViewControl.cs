@@ -49,7 +49,7 @@ public class ViewControl : MonoBehaviour {
 				} else {
                     TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
                 
-                    if(activateComponent && activateComponent.wasUsed)
+                    if(activateComponent && activateComponent.wasUsed && activateComponent.canBeReversed == false)
                     {
                         linkClueShadow.text = linkClue.text = "(already used)";
                     } else {

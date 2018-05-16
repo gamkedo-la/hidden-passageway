@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WalkControl : MonoBehaviour {
 	private Rigidbody rb;
@@ -35,6 +36,12 @@ public class WalkControl : MonoBehaviour {
         RaycastHit rhInfo;
 
         prevValidPosition = transform.position;
+
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+            return;
+        }
 
         if (Input.GetKeyUp(KeyCode.Escape)) {
 			if(Cursor.lockState == CursorLockMode.Locked) {
