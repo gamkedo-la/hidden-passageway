@@ -14,7 +14,11 @@ public class TriggerComponentEnable : MonoBehaviour {
         {
             toEnable.SendMessage("Activate");
         } else if(canBeReversed) {
-            toEnable.SendMessage("Reverse");
+            SlideToPos endOfChain = toEnable;
+            while(endOfChain.callNext != null) {
+                endOfChain = endOfChain.callNext;
+            }
+            endOfChain.SendMessage("Reverse");
         }
     }
 

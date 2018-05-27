@@ -13,7 +13,7 @@ public class SlideToPos : MonoBehaviour {
     Vector3 startPos;
     Quaternion startRot;
     Quaternion camRotReset;
-    Quaternion camRotWorldInitial;
+    static Quaternion camRotWorldInitial;
     private string mySaveName;
     bool isReversing = false;
 
@@ -26,7 +26,18 @@ public class SlideToPos : MonoBehaviour {
     private static GameObject playerGO;
     Transform wasPlayerParent;
 
-    void OnCollisionEnter(Collision other) {
+    public SlideToPos callNext;
+    [HideInInspector]
+    public SlideToPos callPrev; // backward link automatically
+
+	private void Awake()
+	{
+        if(callNext != null) {
+            callNext.callPrev = this;
+        }
+	}
+
+	void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Player") {
             isTouchingPlayer = true;
             //Debug.Log(name +" is now touching player");
@@ -107,7 +118,11 @@ public class SlideToPos : MonoBehaviour {
             return;
         }
         PlayerPrefs.SetInt(mySaveName, 1);
-        camRotWorldInitial = Camera.main.transform.rotation;
+        if ((isReversing == false && callPrev == null) ||
+                    (isReversing && callNext == null)) // start of chain?
+        {
+            camRotWorldInitial = Camera.main.transform.rotation;
+        }
         isStarted = true;
         startTime = Time.time;
         startPos = posA;
@@ -137,34 +152,59 @@ public class SlideToPos : MonoBehaviour {
             isDone = true;
 
             movePerc = 1.0f;
+
+            transform.position = endPos.position;
+            transform.rotation = endPos.rotation;
+
             if (isTouchingPlayer)
             {
                 WalkControl.instance.areFeetLocked = false;
                 playerGO.transform.parent = wasPlayerParent;
             } else {
-                Camera.main.transform.rotation = camRotWorldInitial;
-                ViewControl.instance.enabled = true;
-                WalkControl.instance.enabled = true;
+                if ((isReversing == false && callNext == null) || 
+                    (isReversing && callPrev == null)) // end of chain?
+                {
+                    Camera.main.transform.rotation = camRotWorldInitial;
+                    ViewControl.instance.enabled = true;
+                    WalkControl.instance.enabled = true;
+                }
             }
 
             if(isReversing) {
                 isReversing = false;
                 isStarted = isDone = false;
+                if (callPrev)
+                {
+                    callPrev.Reverse();
+                }
+            } else {
+                if (callNext)
+                {
+                    callNext.Activate();
+                }
             }
             return;
         }
         else if (isTouchingPlayer == false)
         {
-            float camTurn = Mathf.Clamp01((Time.time - startTime) * 2.0f);
-            Camera.main.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
-                      Quaternion.LookRotation(transform.position -
-                      Camera.main.transform.position), camTurn);
-
-            if (camTurn >= 1.0f) {
-                camTurn = Mathf.Clamp01(((startTime + duration) - Time.time) * 2.0f);
+            if (callPrev == null && callNext == null) // no chain?
+            {
+                float camTurn = Mathf.Clamp01((Time.time - startTime) / duration * 4.0f);
                 Camera.main.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
                           Quaternion.LookRotation(transform.position -
                           Camera.main.transform.position), camTurn);
+
+                if (camTurn >= 1.0f)
+                {
+                    camTurn = Mathf.Clamp01(((startTime + duration) - Time.time) / duration * 4.0f);
+                    Camera.main.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
+                              Quaternion.LookRotation(transform.position -
+                              Camera.main.transform.position), camTurn);
+                }
+            } else {
+                Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation,
+                        Quaternion.LookRotation( ( isReversing ? startPos : endPos.position) -
+                                                      Camera.main.transform.position), 4.0f * Time.deltaTime); // tilting to watch
             }
         }
         transform.position = Vector3.Lerp(startPos, endPos.position, movePerc);
