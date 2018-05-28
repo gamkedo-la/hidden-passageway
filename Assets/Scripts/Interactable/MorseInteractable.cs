@@ -30,6 +30,9 @@ public class MorseInteractable : MonoBehaviour
 
 	public void triggerAction( )
 	{
+		if ( !enabled )
+			return;
+
 		element++;
 		element = element >= codes.Length ? 0 : element;
 
