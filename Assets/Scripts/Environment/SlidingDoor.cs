@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 
 public class SlidingDoor : MonoBehaviour
 {
+	[SerializeField] private Transform lookAtPoint = null;
 	[SerializeField] private Animator animator = null;
 	[SerializeField] private MorseInteractable[] morseCodes = null;
 	[SerializeField] private ScreenShake shake = null;
@@ -13,6 +14,7 @@ public class SlidingDoor : MonoBehaviour
 
 	void Start ()
 	{
+		Assert.IsNotNull( lookAtPoint );
 		Assert.IsNotNull( animator );
 		Assert.IsNotNull( shake );
 		Assert.IsNotNull( show );
@@ -40,7 +42,7 @@ public class SlidingDoor : MonoBehaviour
 				code.enabled = false;
 			}
 
-			float time = show.Show( );
+			float time = show.Show( lookAtPoint );
 			isOpen = true;
 			Invoke( "DoAnimation", time );
 		}

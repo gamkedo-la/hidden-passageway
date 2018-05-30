@@ -4,20 +4,15 @@ using UnityEngine.Assertions;
 public class ScreenShake : MonoBehaviour
 {
 	[SerializeField] private Transform cam;
-	[SerializeField] private float shakeAmount = 0.7f;
-	[SerializeField] private float decreaseFactor = 1.0f;
 
 	private Vector3 originalPos;
 	private float shakeDuration = 0f;
+	private float shakeAmount;
+	private float decreaseFactor;
 
 	void Start( )
 	{
 		Assert.IsNotNull( cam );
-	}
-
-	void OnEnable( )
-	{
-		originalPos = cam.localPosition;
 	}
 
 	void Update( )
@@ -34,8 +29,12 @@ public class ScreenShake : MonoBehaviour
 		}
 	}
 
-	public void StartShake( float duration )
+	public void StartShake( float shakeDuration, float shakeAmount = 0.2f, float decreaseFactor = 1.0f )
 	{
-		shakeDuration = duration;
+		this.shakeDuration = shakeDuration;
+		this.shakeAmount = shakeAmount;
+		this.decreaseFactor = decreaseFactor;
+
+		originalPos = cam.localPosition;
 	}
 }
