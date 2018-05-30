@@ -50,7 +50,6 @@ public class SlidingDoor : MonoBehaviour
 
 	private void DoAnimation()
 	{
-		Debug.Log( "Do Anim" );
 		shake.StartShake( animationTime );
 		animator.SetBool( "Open", true );
 
@@ -59,7 +58,6 @@ public class SlidingDoor : MonoBehaviour
 
 	private void EndAnimation( )
 	{
-		Debug.Log( "End Anim" );
 		show.Return( );
 	}
 }

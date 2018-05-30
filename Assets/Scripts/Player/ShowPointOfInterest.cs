@@ -6,7 +6,7 @@ public class ShowPointOfInterest : MonoBehaviour
 	[SerializeField] private Transform camRig = null;
 	[SerializeField] private ViewControl view = null;
 	[SerializeField] private WalkControl walk = null;
-	[SerializeField] private float anglesPerSec = 200f;
+	[SerializeField] private float anglesPerSec = 100f;
 	[SerializeField] private float backMultiplayer = 0.5f;
 
 	private Transform lookAtPoint = null;
@@ -49,8 +49,6 @@ public class ShowPointOfInterest : MonoBehaviour
 
 	public float Show( Transform point )
 	{
-		Debug.Log( "Show POI" );
-
 		if ( point == null )
 		{
 			Debug.LogError( "Looking. Point to look at is NULL." );
@@ -68,19 +66,15 @@ public class ShowPointOfInterest : MonoBehaviour
 
 		isRotating = true;
 
-		float amount = Vector3.Angle( neededRotation.eulerAngles, originalRot.eulerAngles );
-		Debug.Log( "amount: " + amount );
+		float amount = Quaternion.Angle( originalRot, neededRotation );
 		fullRotationTime = amount / anglesPerSec;
 		currentRotationTime = 0;
-		Debug.Log( "fullRotationTime: " + fullRotationTime );
 
 		return fullRotationTime;
 	}
 
 	public void Return( )
 	{
-		Debug.Log( "Return Cam" );
-
 		if ( lookAtPoint == null )
 		{
 			Debug.LogError( "Returning. Point to look at is NULL." );
@@ -93,19 +87,15 @@ public class ShowPointOfInterest : MonoBehaviour
 
 		isReturning = true;
 
-		float amount = Vector3.Angle( neededRotation.eulerAngles, originalRot.eulerAngles );
-		Debug.Log( "amount: " + amount );
+		float amount = Quaternion.Angle( originalRot, neededRotation );
 		fullRotationTime = amount / anglesPerSec * backMultiplayer;
 		currentRotationTime = 0;
-		Debug.Log( "fullRotationTime: " + fullRotationTime );
 
 		Invoke( "Returned", fullRotationTime );
 	}
 
 	private void Returned( )
 	{
-		Debug.Log( "Returned Cam" );
-
 		view.enabled = true;
 		walk.enabled = true;
 	}
