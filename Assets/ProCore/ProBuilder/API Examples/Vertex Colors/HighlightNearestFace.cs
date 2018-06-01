@@ -13,7 +13,7 @@ public class HighlightNearestFace : MonoBehaviour
 {
 	// The distance covered by the plane.
 	public float travel = 50f;
-	// The speed at which the sphere will move.
+	// The ThrowForce at which the sphere will move.
 	public float speed = .2f;
 	// ProBuilder mesh component
 	private pb_Object target;

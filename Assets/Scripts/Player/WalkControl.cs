@@ -8,6 +8,9 @@ public class WalkControl : MonoBehaviour {
 	private bool onGround=true;
     private Vector3 prevValidPosition;
     public bool areFeetLocked = false;
+    public float jumpForce = 5.0f;
+    public float walkSpeed = 6.0f;
+    public float strafeSpeed = 4.0f;
 
     public static WalkControl instance;
 
@@ -54,14 +57,14 @@ public class WalkControl : MonoBehaviour {
 		if(Cursor.lockState == CursorLockMode.Locked) {
             if (areFeetLocked == false)
             {
-                transform.position += transform.forward * Time.deltaTime * 6.0f *
+                transform.position += transform.forward * Time.deltaTime * walkSpeed *
                     Input.GetAxisRaw("Vertical");
-                transform.position += transform.right * Time.deltaTime * 4.0f *
+                transform.position += transform.right * Time.deltaTime * strafeSpeed *
                     Input.GetAxisRaw("Horizontal");
 
                 if (onGround && Input.GetKeyDown(KeyCode.Space))
                 {
-                    rb.velocity = Vector3.up * 5.0f;
+                    rb.velocity = Vector3.up * jumpForce;
                     onGround = false;
                 }
             }

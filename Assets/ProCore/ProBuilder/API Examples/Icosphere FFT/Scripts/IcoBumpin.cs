@@ -80,7 +80,7 @@ namespace ProBuilder2.Examples
 		// How far from the icosphere should the waveform be.
 		public float waveformRadius	= 20f;
 
-		// If @rotateWaveformRing is true, this is the speed it will travel.
+		// If @rotateWaveformRing is true, this is the ThrowForce it will travel.
 		public float waveformSpeed = .1f;
 
 		// If true, the waveform ring will randomly orbit the icosphere.

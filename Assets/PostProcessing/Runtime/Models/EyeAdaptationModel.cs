@@ -35,10 +35,10 @@ namespace UnityEngine.PostProcessing
             [Tooltip("Use \"Progressive\" if you want the auto exposure to be animated. Use \"Fixed\" otherwise.")]
             public EyeAdaptationType adaptationType;
 
-            [Min(0f), Tooltip("Adaptation speed from a dark to a light environment.")]
+            [Min(0f), Tooltip("Adaptation ThrowForce from a dark to a light environment.")]
             public float speedUp;
 
-            [Min(0f), Tooltip("Adaptation speed from a light to a dark environment.")]
+            [Min(0f), Tooltip("Adaptation ThrowForce from a light to a dark environment.")]
             public float speedDown;
 
             [Range(-16, -1), Tooltip("Lower bound for the brightness range of the generated histogram (in EV). The bigger the spread between min & max, the lower the precision will be.")]
