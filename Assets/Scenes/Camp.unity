@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03025489, g: 0.030257389, b: 0.030360375, a: 1}
+  m_IndirectSpecularColor: {r: 0.035494242, g: 0.035439122, b: 0.035413917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -883,6 +883,32 @@ Transform:
   m_Father: {fileID: 1840840580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745035203 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 4ec7ff13a97b698448f09b3d8244058b, type: 3}
+  m_PrefabInternal: {fileID: 2063960120}
+--- !u!114 &745035205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745035203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Campfire
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 14
 --- !u!1 &1012290158 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: c92c5a6510f524b1e923a56e9d5ab3b7, type: 3}
@@ -1303,6 +1329,8 @@ MonoBehaviour:
   endPos: {fileID: 461969359}
   duration: 2
   isDone: 0
+  callNext: {fileID: 0}
+  callPrev: {fileID: 0}
 --- !u!1001 &1062961777
 Prefab:
   m_ObjectHideFlags: 0
@@ -6942,3 +6970,20 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &2125931962 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552369758932374, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 1488701653}
+--- !u!114 &2125931969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125931962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
