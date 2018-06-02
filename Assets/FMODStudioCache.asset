@@ -16,10 +16,33 @@ MonoBehaviour:
   - {fileID: 114067266497356332}
   EditorEvents:
   - {fileID: 114098292914335838}
+  - {fileID: 114040805641033308}
   MasterBankRef: {fileID: 114067266497356332}
   StringsBankRef: {fileID: 114200449917542654}
-  stringsBankWriteTime: 636635423160079168
+  stringsBankWriteTime: 636635458412666542
   cacheVersion: 2
+--- !u!114 &114040805641033308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Crickets
+  guid: 74be58d5c7e2a844aa0081a6f53fac24
+  Banks:
+  - {fileID: 114067266497356332}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 48500
 --- !u!114 &114067266497356332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,11 +56,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\FMOD Studio\HiddenPassageway\Build\Desktop\Master
     Bank.bank
-  lastModified: 636635423160039192
+  lastModified: 636635458412626560
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 97824
+    Value: 540928
   Exists: 1
 --- !u!114 &114098292914335838
 MonoBehaviour:
@@ -74,9 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\FMOD Studio\HiddenPassageway\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636635423160079168
+  lastModified: 636635458412666542
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 718
+    Value: 768
   Exists: 1

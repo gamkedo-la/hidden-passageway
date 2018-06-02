@@ -9,7 +9,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000049427B68 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000048A0EE98 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -22,49 +22,90 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 83296
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 14528
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007809F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9E9E7E4B0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9E9E7E480
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9E9E7E580
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9E9E7E640
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000049B6FE18
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 83296
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 14528
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007809F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9E9E7E4B0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9E9E7E480
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9E9E7E580
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9E9E7E640
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000049B6FE18
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
-[LOG] SoundI::release                          :  (000000000E852488)
-[LOG] SoundI::release                          :     FIRE_crackly_shortloop (000000001ECC5DD8)
-[LOG] SoundI::release                          :  (000000000B3413C8)
-[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (000000001ECC4718)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 0000000048A249C8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 0000000048A249C8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 0000000048A249C8 connected, entering connected state
+[LOG] SystemI::createSound                     : filename = C:\Users\Chris\Documents\FMOD Studio\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 00000000485997E8 : node = 0000000048AB3900
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000159A3D78.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000485997E8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Chris\Documents\FMOD Studio\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 524608
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16320
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000048AB3A18
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 524608
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16320
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006A48F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF9E9E7E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF9E9E7E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF9E9E7E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF9E9E7E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 00000000489AC558
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 524608
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16320
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006A48F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF9E9E7E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF9E9E7E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF9E9E7E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF9E9E7E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 00000000489AC558
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000485997E8
+[LOG] SoundI::getSubSound                      : sound 00000000485997E8.  Subsound index 0 / 1
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-8enNru/hotswap_61.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-8enNru/hotswap_61.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (00000000485997E8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (00000000159A4788)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000048598DC8)
+[LOG] SoundI::release                          :  (000000000F5BF4C8)
+[LOG] SoundI::release                          :     FIRE_crackly_shortloop (00000000159A42A8)
+[LOG] SoundI::release                          :  (00000000488B6878)
+[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (00000000159A3A88)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] FMOD_OS_Net_Read                         : Interrupted.[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 16
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
