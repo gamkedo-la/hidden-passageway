@@ -54,7 +54,13 @@ public class WalkControl : MonoBehaviour {
 				Cursor.lockState = CursorLockMode.Locked;
 			}
 		}
-		if(Cursor.lockState == CursorLockMode.Locked) {
+
+        if (ViewControl.instance.paperView.enabled)
+        {
+            return; // reading, stand still
+        }
+
+        if (Cursor.lockState == CursorLockMode.Locked) {
             if (areFeetLocked == false)
             {
                 transform.position += transform.forward * Time.deltaTime * walkSpeed *

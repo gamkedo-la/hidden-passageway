@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ViewControl : MonoBehaviour {
 	public Text linkClue;
     public Text linkClueShadow;
+    public Image paperView;
     private float lookAngLimit = 45.0f;
 
     public static ViewControl instance;
@@ -21,6 +22,16 @@ public class ViewControl : MonoBehaviour {
 		if(Cursor.lockState != CursorLockMode.Locked) {
 			return;
 		}
+
+        if (paperView.enabled)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                paperView.enabled = false;
+                WalkControl.instance.areFeetLocked = false;
+            }
+            return;
+        }
 
 		transform.Rotate(Vector3.right, Time.deltaTime * -60.0f * Input.GetAxis("Mouse Y"));
 		float lookAng = transform.rotation.eulerAngles.x;
@@ -45,8 +56,17 @@ public class ViewControl : MonoBehaviour {
 
             if(mtol) {
                 if(Input.GetMouseButtonDown(0)) {
-                    mtol.SendMessage("triggerAction");
-				} else {
+                    ReadableScrap readScript = mtol.GetComponent<ReadableScrap>();
+                    if(readScript)
+                    {
+                        paperView.sprite = readScript.pageToRead;
+                        paperView.enabled = true;
+                        WalkControl.instance.areFeetLocked = true;
+                    } else
+                    {
+                        mtol.SendMessage("triggerAction");
+                    }
+                } else {
                     TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
                 
                     if(activateComponent == null || activateComponent.canBeUsed())
