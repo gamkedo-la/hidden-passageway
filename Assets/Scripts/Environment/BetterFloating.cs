@@ -9,14 +9,22 @@ public class BetterFloating : MonoBehaviour
     public float floatStrength;
     public Vector3 Roto;
     public float rotmult = 1;
+    public float overrideFloat;
                                     
 
     void Start()
     {
         Roto = Vector3.up;
 //        rotmult = Random.Range(7, 10);
-        floatStrength = Random.Range(1f, 3f);
         this.originalY = this.transform.position.y;
+        if (overrideFloat == 0)
+        {
+            floatStrength = Random.Range(1f, 3f);
+        }
+        if (overrideFloat > 0) 
+        {
+            floatStrength = overrideFloat;
+        }
     }
 
     void Update()

@@ -8,6 +8,8 @@ public class PickupScript : MonoBehaviour {
     /// gamepad controls for player and this script
     /// generalizing script further to pass on to the other level designers
     /// sleep ;-;
+    /// 
+    /// 
     /// </Todo>
 
 
@@ -37,7 +39,7 @@ public class PickupScript : MonoBehaviour {
     //We can use trigger or Collision
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "item")
+        if (col.gameObject.tag == "item"|| col.gameObject.tag == "keyItem")
             //Debug.Log("Collision Detected With Item");
             if (!item) // if we don't have anything holding
                 item = col.gameObject;
@@ -46,7 +48,7 @@ public class PickupScript : MonoBehaviour {
     //We can use trigger or Collision
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "item")
+        if (col.gameObject.tag == "item" || col.gameObject.tag == "keyItem")
         {
             if (canHold)
                 item = null;
