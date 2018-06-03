@@ -13,16 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114200449917542654}
-  - {fileID: 114067266497356332}
+  - {fileID: 114945147526367768}
   EditorEvents:
   - {fileID: 114098292914335838}
   - {fileID: 114040805641033308}
   - {fileID: 114097578518009824}
   - {fileID: 114162944494490862}
   - {fileID: 114779090530591796}
-  MasterBankRef: {fileID: 114067266497356332}
+  MasterBankRef: {fileID: 114945147526367768}
   StringsBankRef: {fileID: 114200449917542654}
-  stringsBankWriteTime: 636635496786943780
+  stringsBankWriteTime: 636635611256588731
   cacheVersion: 2
 --- !u!114 &114040805641033308
 MonoBehaviour:
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Crickets
   guid: 74be58d5c7e2a844aa0081a6f53fac24
   Banks:
-  - {fileID: 114067266497356332}
+  - {fileID: 114945147526367768}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: event:/ElevatorStop
   guid: 40fdcef3eb993d46ae51886f2e29b1c8
   Banks:
-  - {fileID: 114067266497356332}
+  - {fileID: 114945147526367768}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   Path: event:/Campfire
   guid: 9771a84871e4a64ebc692fc405853feb
   Banks:
-  - {fileID: 114067266497356332}
+  - {fileID: 114945147526367768}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: event:/ElevatorActivate
   guid: 7947de63663a1b4782809f4285e9e81b
   Banks:
-  - {fileID: 114067266497356332}
+  - {fileID: 114945147526367768}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -142,9 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: C:\Users\Chris\Documents\FMOD Studio\HiddenPassageway\Build\Desktop\Master
-    Bank.strings.bank
-  lastModified: 636635496786943780
+  Path: Assets\FMOD\HiddenPassageway\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636635611256588731
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -164,7 +163,7 @@ MonoBehaviour:
   Path: event:/ElevatorMove
   guid: ee667fa176f1844eb7972ae7e782af3f
   Banks:
-  - {fileID: 114067266497356332}
+  - {fileID: 114945147526367768}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -172,3 +171,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2903
+--- !u!114 &114945147526367768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636635611256517851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 577760
+  Exists: 1
