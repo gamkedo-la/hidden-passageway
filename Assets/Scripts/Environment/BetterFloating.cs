@@ -21,7 +21,7 @@ public class BetterFloating : MonoBehaviour
         {
             floatStrength = Random.Range(1f, 3f);
         }
-        if (overrideFloat > 0) 
+        if (overrideFloat > 0 || overrideFloat < 0) 
         {
             floatStrength = overrideFloat;
         }

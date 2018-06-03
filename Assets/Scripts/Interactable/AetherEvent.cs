@@ -16,7 +16,7 @@ public class AetherEvent : MonoBehaviour {
     /// 
     /// <Todo>
     /// Allow for tweaking from outside scripts such as singleton controller
-    /// 
+    /// Finish the three main trigger items
     /// </Todo>
     // Use this for initialization
 
@@ -24,12 +24,14 @@ public class AetherEvent : MonoBehaviour {
     public bool Finished;
     public bool createItemType;
     public bool openDoorType;
+    public bool particleType;
     public bool activateCutscene;
     public GameObject keyItem;
     public GameObject keyHole;
     public Transform guide;
     public GameObject Passageway;
     public GameObject spawnItem;
+    public ParticleSystem ps;
 
     
 
@@ -43,7 +45,7 @@ public class AetherEvent : MonoBehaviour {
 
     void Start ()
     {
-		
+        ps = GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -63,13 +65,25 @@ public class AetherEvent : MonoBehaviour {
 
     void KeyTriggered () //Method to trigger either of the 3 types of effects, or all of them.
     {
+        //CanTrigger = false;
+        //Finished = true;
         if (createItemType == true)
         {
-
+            Instantiate(spawnItem, guide);
+            Debug.Log("Spawning"+spawnItem);
         }
         if (openDoorType)
         {
-
+            Debug.Log("Opening door");
+        }
+        if (activateCutscene)
+        {
+            Debug.Log("Activating cutscene");
+        }
+        if (particleType == true)
+        {
+            ps.enableEmission = true;
+            Debug.Log("Emitting Particle");
         }
     }
 }
