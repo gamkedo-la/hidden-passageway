@@ -10,6 +10,9 @@ public class SlidingDoor : MonoBehaviour
 	[SerializeField] private ShowPointOfInterest show = null;
 	[SerializeField] private float animationTime = 1.5f;
 
+	[FMODUnity.EventRef]
+	public string inputSound;
+
 	private bool isOpen = false;
 
 	void Start ()
@@ -50,6 +53,7 @@ public class SlidingDoor : MonoBehaviour
 
 	private void DoAnimation()
 	{
+		FMODUnity.RuntimeManager.PlayOneShotAttached(inputSound, gameObject);
 		shake.StartShake( animationTime );
 		animator.SetBool( "Open", true );
 
