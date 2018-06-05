@@ -10,7 +10,7 @@ public class MorseInteractable : MonoBehaviour
 
 	private int element = 0;
 
-	void Start ()
+    void Start ()
 	{
 		Assert.IsNotNull( codes );
 		Assert.AreNotEqual( codes.Length, 0 );
@@ -36,7 +36,9 @@ public class MorseInteractable : MonoBehaviour
 		element++;
 		element = element >= codes.Length ? 0 : element;
 
-		foreach ( GameObject code in codes )
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/WordWall/WWclick", gameObject);
+
+        foreach ( GameObject code in codes )
 		{
 			code.SetActive( false );
 		}
