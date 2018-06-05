@@ -67,7 +67,13 @@ public class SlidingDoor : MonoBehaviour
 		}
 	}
 
-	private void DoAnimation()
+    private void OnDestroy()
+    {
+        Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Music.release();
+    }
+
+    private void DoAnimation()
 	{
 		FMODUnity.RuntimeManager.PlayOneShotAttached(inputSound, gameObject);
 		shake.StartShake( animationTime );
