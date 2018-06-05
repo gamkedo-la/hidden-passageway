@@ -12,6 +12,9 @@ public class SlidingDoor : MonoBehaviour
 
 	[FMODUnity.EventRef]
 	public string inputSound;
+    FMOD.Studio.EventInstance Music;
+    FMOD.Studio.ParameterInstance MusicProgress;
+    private float musicProgressCount = 0;
 
 	private bool isOpen = false;
 
@@ -23,6 +26,11 @@ public class SlidingDoor : MonoBehaviour
 		Assert.IsNotNull( show );
 		Assert.IsNotNull( morseCodes );
 		Assert.AreNotEqual( morseCodes.Length, 0 );
+
+        Music = FMODUnity.RuntimeManager.CreateInstance("event:/WordWall/WWMusic");
+        Music.getParameter("Progress", out MusicProgress);
+        Music.start();
+
 	}
 
 	void FixedUpdate ()
@@ -31,14 +39,22 @@ public class SlidingDoor : MonoBehaviour
 			return;
 
 		bool shouldOpen = true;
+        musicProgressCount = 0;
 
-		foreach ( var code in morseCodes )
+        foreach ( var code in morseCodes )
 		{
-			if ( !code.CodeIsCorrect )
-				shouldOpen = false;
+            if (!code.CodeIsCorrect)
+            {
+                shouldOpen = false;
+            } else
+            {
+                musicProgressCount++;
+            }
 		}
+        MusicProgress.setValue(musicProgressCount);
 
-		if (shouldOpen)
+
+        if (shouldOpen)
 		{
 			foreach ( var code in morseCodes )
 			{
