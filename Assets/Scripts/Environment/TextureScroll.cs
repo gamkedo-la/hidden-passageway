@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TextureScroll : MonoBehaviour {
-	private float scrollSpeed = 0.1f;
+	public float scrollSpeed = 0.1f;
 	private float oscEffect = 0.05f;
 	private float oscRate = 0.6f;
-	private float offAxisPerc = 0.7f;
+	public float offAxisPerc = 0.7f;
 
 	private float slowItAllDown = 0.3f;
 
