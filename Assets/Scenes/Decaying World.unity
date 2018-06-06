@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.7
+  m_AmbientIntensity: 0.6
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 718c5e3a350dc463d80b34b2f32f0fe9, type: 2}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16940725}
   - component: {fileID: 16940726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128416935}
   - component: {fileID: 128416936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,6 +444,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4014980475071682, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 135326587}
+--- !u!1 &143318171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 143318172}
+  m_Layer: 0
+  m_Name: Water Bottle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143318172
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143318171}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2, y: 56, z: -15}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children:
+  - {fileID: 268955740}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &149650674
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149650675}
   - component: {fileID: 149650676}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168731264}
   - component: {fileID: 168731265}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171728186}
   - component: {fileID: 171728187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183274195}
   - component: {fileID: 183274196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,6 +762,52 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &204415874
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 740317073}
+    m_Modifications:
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cb5a8620e9c74e45a37d071e80c5605, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &231807625
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 231807626}
   - component: {fileID: 231807627}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +877,7 @@ Light:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: b487846ff6ef980478bb7dd0832fb9cd, type: 3}
   m_PrefabInternal: {fileID: 862684150}
---- !u!64 &249831474
+--- !u!64 &249831477
 MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -816,6 +891,56 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b487846ff6ef980478bb7dd0832fb9cd, type: 3}
+--- !u!1001 &268955739
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 143318172}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ad63bca3fdb3ea45af1692a32a45b37, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &268955740 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 3bbfe695180e24e4d951d3c77526cbdd, type: 3}
+  m_PrefabInternal: {fileID: 268955739}
 --- !u!1 &287978991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1200,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.54509807, g: 0.4509804, b: 0.33333334, a: 0.09019608}
+      maxColor: {r: 0.54509807, g: 0.4509804, b: 0.33333334, a: 0.15686275}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1137,7 +1262,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 200
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1453,7 +1578,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 500
+    maxNumParticles: 75
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1660,7 +1785,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 75
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4289,7 +4414,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 0
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -4465,10 +4590,10 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
-    maxCollisionShapes: 256
-    quality: 0
-    voxelSize: 0.5
+      m_Bits: 1536
+    maxCollisionShapes: 1
+    quality: 2
+    voxelSize: 0.0001
     collisionMessages: 0
     collidesWithDynamic: 1
     interiorCollisions: 0
@@ -5431,7 +5556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!1 &290133541
 GameObject:
@@ -5442,7 +5567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290133542}
   - component: {fileID: 290133543}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5507,7 +5632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342709500}
   - component: {fileID: 342709501}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5572,7 +5697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368475790}
   - component: {fileID: 368475791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5637,7 +5762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370251410}
   - component: {fileID: 370251411}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5832,7 +5957,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 613365852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Robot Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5862,7 +5987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645185435}
   - component: {fileID: 645185436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5927,7 +6052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 656172742}
   - component: {fileID: 656172743}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5992,7 +6117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679055825}
   - component: {fileID: 679055826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6111,8 +6236,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -7.6320004, y: -51.434002, z: 6.222}
+--- !u!1 &740317072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 740317073}
+  m_Layer: 0
+  m_Name: Wooden Chair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740317073
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740317072}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -1, y: 56, z: -15}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_Children:
+  - {fileID: 1065121296}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &779861910 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 83b3acda8f21c0246a6b565d9f4fb9b7, type: 3}
@@ -6140,7 +6294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795975502}
   - component: {fileID: 795975503}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6239,6 +6393,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd8eaa8c63519cb43be086454fa31df9, type: 2}
+    - target: {fileID: 100000, guid: 83b3acda8f21c0246a6b565d9f4fb9b7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 83b3acda8f21c0246a6b565d9f4fb9b7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83b3acda8f21c0246a6b565d9f4fb9b7, type: 3}
   m_IsPrefabParent: 0
@@ -6255,7 +6417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831558308}
   - component: {fileID: 831558309}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6311,6 +6473,35 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &840865220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 840865221}
+  m_Layer: 0
+  m_Name: Lamp Stand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &840865221
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840865220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3, y: 56, z: -16}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_Children:
+  - {fileID: 1333628731}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &849537014
 GameObject:
   m_ObjectHideFlags: 0
@@ -6320,7 +6511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849537015}
   - component: {fileID: 849537016}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6448,6 +6639,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0ec5e067b472c9b49b107b5573ec2b16, type: 2}
+    - target: {fileID: 100000, guid: b487846ff6ef980478bb7dd0832fb9cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b487846ff6ef980478bb7dd0832fb9cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b487846ff6ef980478bb7dd0832fb9cd, type: 3}
   m_IsPrefabParent: 0
@@ -6464,7 +6663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 870619361}
   - component: {fileID: 870619362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6558,7 +6757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 916722309}
   - component: {fileID: 916722310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6777,7 +6976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038479206}
   - component: {fileID: 1038479207}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6833,6 +7032,10 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &1065121296 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: d836406f8c86fc54cba51e415ba4741c, type: 3}
+  m_PrefabInternal: {fileID: 204415874}
 --- !u!1 &1069427735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6842,7 +7045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069427736}
   - component: {fileID: 1069427737}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6906,7 +7109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1105573786}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Robot Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6939,7 +7142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1125091430}
   - component: {fileID: 1125091431}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7119,7 +7322,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1191726809}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lights For Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7153,7 +7356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1208894508}
   - component: {fileID: 1208894509}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7217,7 +7420,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1228355282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lights for Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7254,6 +7457,74 @@ Transform:
   m_Father: {fileID: 1545659820}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1333628730
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 840865221}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb134b1694c3ee8449c5f21227e14d52, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1333628731 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+  m_PrefabInternal: {fileID: 1333628730}
+--- !u!1 &1333628732 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
+  m_PrefabInternal: {fileID: 1333628730}
+--- !u!64 &1333628733
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333628732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 8817e01fd36e35047bb44ae1fba4de5c, type: 3}
 --- !u!1001 &1391852478
 Prefab:
   m_ObjectHideFlags: 0
@@ -7331,7 +7602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430006775}
   - component: {fileID: 1430006776}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7459,6 +7730,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f4c2929c8dd0dfa4f93a7a19f4aa0af7, type: 2}
+    - target: {fileID: 100000, guid: ef8d18adacac8e64d84c90576561085e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ef8d18adacac8e64d84c90576561085e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef8d18adacac8e64d84c90576561085e, type: 3}
   m_IsPrefabParent: 0
@@ -7493,7 +7772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1484460860}
   - component: {fileID: 1484460861}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7623,6 +7902,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e3392b456028d1248898633299389f82, type: 2}
+    - target: {fileID: 100002, guid: 236fd6d6815a55b4ca20e7003f3d94cd, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 236fd6d6815a55b4ca20e7003f3d94cd, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 236fd6d6815a55b4ca20e7003f3d94cd, type: 3}
   m_IsPrefabParent: 0
@@ -7638,7 +7925,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1545659820}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Robot Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7669,7 +7956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575471621}
   - component: {fileID: 1575471622}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7872,7 +8159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701594761}
   - component: {fileID: 1701594762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7937,7 +8224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765164216}
   - component: {fileID: 1765164217}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8002,7 +8289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792572379}
   - component: {fileID: 1792572380}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8066,7 +8353,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1812688207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Skyscraper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8096,7 +8383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864613197}
   - component: {fileID: 1864613198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8188,7 +8475,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1873351989}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lights For Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8318,7 +8605,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1993119018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lights for Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8415,7 +8702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013742761}
   - component: {fileID: 2013742762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8561,7 +8848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2026189980}
   - component: {fileID: 2026189981}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8694,7 +8981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038956391}
   - component: {fileID: 2038956392}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8793,6 +9080,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d9b694a3e01d134499561268ff18424d, type: 2}
+    - target: {fileID: 100002, guid: 9db2a3b51c5fa294882b9cc849eeb6ed, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9db2a3b51c5fa294882b9cc849eeb6ed, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9db2a3b51c5fa294882b9cc849eeb6ed, type: 3}
   m_IsPrefabParent: 0
@@ -8809,7 +9104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053466341}
   - component: {fileID: 2053466342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8874,7 +9169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2077454588}
   - component: {fileID: 2077454589}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9009,7 +9304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114117648}
   - component: {fileID: 2114117649}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9073,7 +9368,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2119125115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Decaying Factory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9092,7 +9387,7 @@ Transform:
   m_Children:
   - {fileID: 862684151}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
 --- !u!1 &2121929957
 GameObject:
@@ -9103,7 +9398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2121929958}
   - component: {fileID: 2121929959}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
