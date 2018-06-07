@@ -2,13 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=11005 (94661), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000040957168 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000005060B028 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,87 +15,490 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] LiveUpdate::clientConnected              : client = 0000000051F4F9E8
-[LOG] LiveUpdate::readPacket                   : Accepting init message for client 0000000051F4F9E8
-[LOG] LiveUpdate::transitionToConnected        : 
-[LOG] Manager::sendConnectTimeHash             : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::acceptInitPacket             : Client 0000000051F4F9E8 connected, entering connected state
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000001EF5BA08 : node = 0000000051F30F00
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001ED467F8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EF5BA08
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE7A408 : node = 000000004FC93B80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A408
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000051F31018
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC93C98
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002EE78FC8 : node = 000000004FC93CD0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000007155F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FFCC014E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FFCC014E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FFCC014E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FFCC014E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000002EE88DC8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EF5BA08
-[LOG] SoundI::getSubSound                      : sound 000000001EF5BA08.  Subsound index 0 / 1
-[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EF5C5D8)
-[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001ED46848)
-[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EF5B858)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000001EF5BD68 : node = 000000000F724160
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001ED467F8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EF5BD68
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000007155F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FFCC014E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FFCC014E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FFCC014E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FFCC014E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000002EE88DC8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A408
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE78FC8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000F724278
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC93DE8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925376, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EF5BD68
-[LOG] SoundI::getSubSound                      : sound 000000001EF5BD68.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Campfire for One (000000001EF5B198)
-[LOG] SoundI::release                          :     Campfire for One (000000001ED46028)
-[LOG] SoundI::release                          :     Campfire for One (000000001EF5C0C8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE78FC8
+[LOG] SoundI::getSubSound                      : sound 000000002EE7A408.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000002EE78FC8.  Subsound index 0 / 1
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] SoundI::release                          : Campfire for One (000000001EF5BD68)
-[LOG] SoundI::release                          :     Campfire for One (000000001ED473A8)
-[LOG] SoundI::release                          :     Campfire for One (000000001EF5C5D8)
-[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EF5BA08)
-[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001ED461C8)
-[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EF5C788)
-[LOG] SoundI::release                          :  (00000000408F6698)
-[LOG] SoundI::release                          :     FIRE_crackly_shortloop (000000001ED45E88)
-[LOG] SoundI::release                          :  (00000000408F6C58)
-[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (000000001ED47208)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE799E8 : node = 000000004FC93790
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE799E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC938A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE799E8
+[LOG] SoundI::getSubSound                      : sound 000000002EE799E8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000002EE7A408)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE34808)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE79328)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE79B98 : node = 000000004FC93B80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE79B98
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC93C98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925376, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE79B98
+[LOG] SoundI::getSubSound                      : sound 000000002EE79B98.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Campfire for One (000000002EE78FC8)
+[LOG] SoundI::release                          :     Campfire for One (000000002EE786C8)
+[LOG] SoundI::release                          :     Campfire for One (000000002EE7A258)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A5B8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A5B8
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000002EE799E8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE76D88)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE7A5B8)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE799E8 : node = 000000004FC938E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE799E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC939F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE799E8
+[LOG] SoundI::getSubSound                      : sound 000000002EE799E8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE7A408 : node = 000000004FC93CD0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A408
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC93DE8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925376, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A408
+[LOG] SoundI::getSubSound                      : sound 000000002EE7A408.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Campfire for One (000000002EE79B98)
+[LOG] SoundI::release                          :     Campfire for One (000000002EE34808)
+[LOG] SoundI::release                          :     Campfire for One (000000002EE79688)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A258
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A258
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE79D48
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE79D48
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE79EF8 : node = 000000004FC93790
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE79EF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC938A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000007155F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FFCC014E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FFCC014E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FFCC014E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FFCC014E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000002EE88BA8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Base_04c-glued', format=2, channels=2, frequency=48000, lengthbytes=222560, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.663666.
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='ahhh', format=2, channels=2, frequency=48000, lengthbytes=51840, lengthpcm=176326, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.307068.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE79EF8
+[LOG] SoundI::getSubSound                      : sound 000000002EE79EF8.  Subsound index 0 / 1
+[WRN] EventInstance::update                    : Event {5005b138-0e2f-40c2-a64c-ab5dc97d089d} waited 81 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A5B8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A5B8
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007155F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCC014E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCC014E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCC014E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCC014E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000002EE88BA8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='click', format=2, channels=1, frequency=48000, lengthbytes=1024, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.808502.
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000002EE799E8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE76D88)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE7A258)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE79688 : node = 000000004FC938E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE79688
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC939F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE79688
+[LOG] SoundI::getSubSound                      : sound 000000002EE79688.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000002EE7A0A8 : node = 000000004FC93B80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A0A8
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002EE7A258 : node = 00000000506CD9F0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004FC93C98
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002EE79328 : node = 00000000506CD360
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 9795
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002EE78C68 : node = 00000000506CCCD0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 2
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002EE78FC8 : node = 00000000506CCE20
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 3
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drums_1_pu-glued', format=2, channels=2, frequency=48000, lengthbytes=36448, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.744202.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A0A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE7A258
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CDB08
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 9795
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bass_14b-glued', format=2, channels=2, frequency=48000, lengthbytes=286880, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.500854.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE7A258
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE79328
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CD478
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 9795
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Base_04b-glued', format=2, channels=2, frequency=48000, lengthbytes=229504, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.720734.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE79328
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE78C68
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CCDE8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 9795
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Silence-glued', format=2, channels=2, frequency=48000, lengthbytes=2784, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE78C68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002EE78FC8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CCF38
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 9795
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Silence-glued', format=2, channels=2, frequency=48000, lengthbytes=2784, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002EE78FC8
+[LOG] SoundI::getSubSound                      : sound 000000002EE7A0A8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000002EE7A258.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000002EE79328.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000002EE78C68.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000002EE78FC8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Base_04c-glued (000000002EE79EF8)
+[LOG] SoundI::release                          :     Base_04c-glued (000000002EE34808)
+[LOG] SoundI::release                          :     Base_04c-glued (000000002EE7A5B8)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007155F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCC014E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCC014E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCC014E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCC014E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000002EE87EE8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Rumble2', format=2, channels=2, frequency=48000, lengthbytes=18720, lengthpcm=110336, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.865051.
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000005078A4C8 : node = 00000000506CD8A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005078A4C8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000050788ED8 : node = 00000000506CCF70
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CD9B8
+[LOG] SystemI::createSound                     :     setdata soundi = 00000000507889C8 : node = 00000000506CD210
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005078A168 : node = 00000000506CD0C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002F3CF238.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drums_5-glued', format=2, channels=2, frequency=48000, lengthbytes=271104, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.986298.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005078A4C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000050788ED8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CD088
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Base_5-glued', format=2, channels=2, frequency=48000, lengthbytes=273600, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.812866.
+[LOG] SoundI::getSubSound                      :     sound 000000005078A4C8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000050788ED8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000507889C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CD328
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bass_5-glued', format=2, channels=2, frequency=48000, lengthbytes=288000, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.475800.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000507889C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005078A168
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/WordWall.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690080
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26752
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000506CD1D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Count_01_4-glued', format=2, channels=2, frequency=48000, lengthbytes=144960, lengthpcm=940408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.468109.
+[LOG] SoundI::getSubSound                      :     sound 0000000050788ED8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     sound 00000000507889C8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005078A168
+[LOG] SoundI::getSubSound                      : sound 000000005078A168.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Drums_1_pu-glued (000000002EE7A0A8)
+[LOG] SoundI::release                          :     Drums_1_pu-glued (000000002EE76D88)
+[LOG] SoundI::release                          :     Drums_1_pu-glued (000000002EE79B98)
+[LOG] SoundI::release                          : Silence-glued (000000002EE78FC8)
+[LOG] SoundI::release                          :     Silence-glued (00000000500C58A8)
+[LOG] SoundI::release                          :     Silence-glued (0000000050789238)
+[LOG] SoundI::release                          : Silence-glued (000000002EE78C68)
+[LOG] SoundI::release                          :     Silence-glued (000000002F4CB0D8)
+[LOG] SoundI::release                          :     Silence-glued (0000000050789FB8)
+[LOG] SoundI::release                          : Base_04b-glued (000000002EE79328)
+[LOG] SoundI::release                          :     Base_04b-glued (000000002EDE0CA8)
+[LOG] SoundI::release                          :     Base_04b-glued (0000000050788D28)
+[LOG] SoundI::release                          : Bass_14b-glued (000000002EE7A258)
+[LOG] SoundI::release                          :     Bass_14b-glued (000000002F3A7748)
+[LOG] SoundI::release                          :     Bass_14b-glued (000000002EE794D8)
+[LOG] SoundI::release                          : Count_01_4-glued (000000005078A168)
+[LOG] SoundI::release                          :     Count_01_4-glued (00000000500C5A48)
+[LOG] SoundI::release                          :     Count_01_4-glued (00000000507893E8)
+[LOG] SoundI::release                          : Bass_5-glued (00000000507889C8)
+[LOG] SoundI::release                          :     Bass_5-glued (00000000500C5708)
+[LOG] SoundI::release                          :     Bass_5-glued (0000000050789088)
+[LOG] SoundI::release                          : Base_5-glued (0000000050788ED8)
+[LOG] SoundI::release                          :     Base_5-glued (00000000500C53C8)
+[LOG] SoundI::release                          :     Base_5-glued (0000000050789748)
+[LOG] SoundI::release                          : Drums_5-glued (000000005078A4C8)
+[LOG] SoundI::release                          :     Drums_5-glued (00000000500C60C8)
+[LOG] SoundI::release                          :     Drums_5-glued (0000000050788B78)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000002EE79688)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (00000000007909B8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000002EE799E8)
+[LOG] SoundI::release                          : Campfire for One (000000002EE7A408)
+[LOG] SoundI::release                          :     Campfire for One (000000002EE786C8)
+[LOG] SoundI::release                          :     Campfire for One (000000002EE79D48)
+[LOG] SoundI::release                          :  (000000002F3C0C18)
+[LOG] SoundI::release                          :     FIRE_crackly_shortloop (000000002F4695D8)
+[LOG] SoundI::release                          :  (000000002F3C14B8)
+[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (000000002EE7C808)
+[LOG] SoundI::release                          :  (000000002F3C04E8)
+[LOG] SoundI::release                          :     click (000000002F470038)
+[LOG] SoundI::release                          :  (000000002F3C07C8)
+[LOG] SoundI::release                          :     Rumble2 (00000000500C5568)
+[LOG] SoundI::release                          :  (000000002F3C1798)
+[LOG] SoundI::release                          :     ahhh (000000002EE73848)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] FMOD_OS_Net_Read                         : Interrupted.[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 16
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
@@ -112,3 +514,12 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
+[LOG] SystemI::close                           : Closed.
