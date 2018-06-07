@@ -891,6 +891,56 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b487846ff6ef980478bb7dd0832fb9cd, type: 3}
+--- !u!1001 &265847313
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 829313424}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 00e2e4f9d7e0dfc419f2a8cdbb19dca2, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &265847314 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 38dbad7de6ee728489244a270fb3f3b6, type: 3}
+  m_PrefabInternal: {fileID: 265847313}
 --- !u!1001 &268955739
 Prefab:
   m_ObjectHideFlags: 0
@@ -5556,7 +5606,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!1 &290133541
 GameObject:
@@ -6366,7 +6416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -7.6320004, y: -51.434002, z: 6.222}
 --- !u!1 &740317072
 GameObject:
@@ -6538,6 +6588,35 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 83b3acda8f21c0246a6b565d9f4fb9b7, type: 3}
   m_PrefabInternal: {fileID: 815118775}
+--- !u!1 &829313423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 829313424}
+  m_Layer: 0
+  m_Name: Knife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829313424
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829313423}
+  m_LocalRotation: {x: 0.000000014901163, y: 0.000000014901163, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.2, y: 56.62, z: -15}
+  m_LocalScale: {x: 0.0023000005, y: 0.002300001, z: 0.0023000003}
+  m_Children:
+  - {fileID: 265847314}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &831558307
 GameObject:
   m_ObjectHideFlags: 0
@@ -7382,7 +7461,7 @@ MonoBehaviour:
   - {fileID: 1648874499}
   dimmingRateForLightIntensity: 0.001
   brighteningRateForLightIntensity: 0.001
-  minLightIntensity: 0.35
+  minLightIntensity: 0.25
   maxLightIntensity: 0.5
 --- !u!1 &1125091429
 GameObject:
@@ -7573,6 +7652,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1191726809}
+  - component: {fileID: 1191726810}
   m_Layer: 10
   m_Name: Lights For Left Eye
   m_TagString: Untagged
@@ -7598,6 +7678,27 @@ Transform:
   m_Father: {fileID: 1105573786}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1191726810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191726808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd66f87523481b408fa4b65b65f3e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsList:
+  - {fileID: 1038479205}
+  - {fileID: 368475789}
+  - {fileID: 916722308}
+  - {fileID: 2038956390}
+  - {fileID: 1430006774}
+  dimmingRateForLightIntensity: 0.01
+  brighteningRateForLightIntensity: 0.5
+  minLightIntensity: 0
+  maxLightIntensity: 2
 --- !u!1 &1208894507
 GameObject:
   m_ObjectHideFlags: 0
@@ -8773,6 +8874,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1873351989}
+  - component: {fileID: 1873351990}
   m_Layer: 10
   m_Name: Lights For Right Eye
   m_TagString: Untagged
@@ -8798,6 +8900,27 @@ Transform:
   m_Father: {fileID: 1105573786}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873351990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1873351988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd66f87523481b408fa4b65b65f3e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsList:
+  - {fileID: 342709499}
+  - {fileID: 1208894507}
+  - {fileID: 149650674}
+  - {fileID: 1575471620}
+  - {fileID: 645185434}
+  dimmingRateForLightIntensity: 0.01
+  brighteningRateForLightIntensity: 0.5
+  minLightIntensity: 0
+  maxLightIntensity: 2
 --- !u!1 &1884963744
 GameObject:
   m_ObjectHideFlags: 0
@@ -8968,6 +9091,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1993119018}
+  - component: {fileID: 1993119019}
   m_Layer: 10
   m_Name: Lights for Mouth
   m_TagString: Untagged
@@ -8998,6 +9122,32 @@ Transform:
   m_Father: {fileID: 1105573786}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993119019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993119017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd66f87523481b408fa4b65b65f3e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsList:
+  - {fileID: 849537014}
+  - {fileID: 231807625}
+  - {fileID: 1701594760}
+  - {fileID: 656172741}
+  - {fileID: 1125091429}
+  - {fileID: 171728185}
+  - {fileID: 2013742760}
+  - {fileID: 679055824}
+  - {fileID: 290133541}
+  - {fileID: 1864613196}
+  dimmingRateForLightIntensity: 0.01
+  brighteningRateForLightIntensity: 0.05
+  minLightIntensity: 0
+  maxLightIntensity: 2
 --- !u!1 &1996207891
 GameObject:
   m_ObjectHideFlags: 0

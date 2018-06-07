@@ -20,7 +20,7 @@ public class MakeThisLightDimAndBrightenOverTime : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ///<summary>
-        /// The following loop cycles through each light source and dims that light based on your settings by a rate of your choosing.
+        /// The following loop cycles through each light source and dims/brightens that light based on your settings by a rate of your choosing.
         /// Can be used to make light sources flicker on and off
         ///</summary>
         for (int i = 0; i < gameObjectsList.Length; i++)
