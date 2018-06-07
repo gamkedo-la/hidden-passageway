@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114436060093803012}
-  - {fileID: 114846638699124106}
-  - {fileID: 114935382724979200}
+  - {fileID: 114007156992174904}
+  - {fileID: 114608057518268406}
   EditorEvents:
   - {fileID: 114338176476538860}
   - {fileID: 114417154990974964}
@@ -27,10 +27,28 @@ MonoBehaviour:
   - {fileID: 114554409380648526}
   - {fileID: 114590863950951684}
   - {fileID: 114619275165808106}
-  MasterBankRef: {fileID: 114935382724979200}
+  MasterBankRef: {fileID: 114608057518268406}
   StringsBankRef: {fileID: 114436060093803012}
-  stringsBankWriteTime: 636639233275794474
+  stringsBankWriteTime: 636639786731806186
   cacheVersion: 2
+--- !u!114 &114007156992174904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\csbut\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\WordWall.bank
+  lastModified: 636638809911141827
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3716832
+  Exists: 1
 --- !u!114 &114008014044258140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,7 +63,7 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorStop
   guid: 40fdcef3eb993d46ae51886f2e29b1c8
   Banks:
-  - {fileID: 114935382724979200}
+  - {fileID: 114608057518268406}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -122,7 +140,7 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorActivate
   guid: 7947de63663a1b4782809f4285e9e81b
   Banks:
-  - {fileID: 114935382724979200}
+  - {fileID: 114608057518268406}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -230,7 +248,7 @@ MonoBehaviour:
   Path: event:/WordWall/Rumble
   guid: 2bd1257c7769d841a3fed6a94a2ae4a7
   Banks:
-  - {fileID: 114846638699124106}
+  - {fileID: 114007156992174904}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -252,7 +270,7 @@ MonoBehaviour:
   Path: event:/WordWall/DoorSlide
   guid: b48f9d19700b154496bb198c0a2ab4d1
   Banks:
-  - {fileID: 114846638699124106}
+  - {fileID: 114007156992174904}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -274,7 +292,7 @@ MonoBehaviour:
   Path: event:/WordWall/SecretAhh
   guid: 38b105502f0ec240a64cab5dc97d089d
   Banks:
-  - {fileID: 114846638699124106}
+  - {fileID: 114007156992174904}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -294,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/HiddenPassageway\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636639233275794474
+  lastModified: 636639786731806186
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -437,7 +455,7 @@ MonoBehaviour:
   Path: event:/Camp/Campfire
   guid: 9771a84871e4a64ebc692fc405853feb
   Banks:
-  - {fileID: 114935382724979200}
+  - {fileID: 114608057518268406}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -459,7 +477,7 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorMove
   guid: ee667fa176f1844eb7972ae7e782af3f
   Banks:
-  - {fileID: 114935382724979200}
+  - {fileID: 114608057518268406}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -481,7 +499,7 @@ MonoBehaviour:
   Path: event:/Camp/Crickets
   guid: 74be58d5c7e2a844aa0081a6f53fac24
   Banks:
-  - {fileID: 114935382724979200}
+  - {fileID: 114608057518268406}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -508,6 +526,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 577760
   Exists: 1
+--- !u!114 &114608057518268406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\csbut\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636639786731786216
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1504928
+  Exists: 1
 --- !u!114 &114619275165808106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +559,7 @@ MonoBehaviour:
   Path: event:/Camp/CampMusic
   guid: 903862e4a44a8b49acf3e39d587d4fea
   Banks:
-  - {fileID: 114935382724979200}
+  - {fileID: 114608057518268406}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -546,6 +583,21 @@ MonoBehaviour:
   Max: 4
   Default: 0
 --- !u!114 &114679717209328982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
+--- !u!114 &114723622250136180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -743,7 +795,7 @@ MonoBehaviour:
   Path: event:/WordWall/WWclick
   guid: 6ae6529f00f5f0468f7d6445433f5498
   Banks:
-  - {fileID: 114846638699124106}
+  - {fileID: 114007156992174904}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -780,12 +832,12 @@ MonoBehaviour:
   Path: event:/WordWall/WWMusic
   guid: 5bdf9946100a584da46651f699625067
   Banks:
-  - {fileID: 114846638699124106}
+  - {fileID: 114007156992174904}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114306120328950126}
+  - {fileID: 114723622250136180}
   MinDistance: 0
   MaxDistance: 0
   Length: 117551
