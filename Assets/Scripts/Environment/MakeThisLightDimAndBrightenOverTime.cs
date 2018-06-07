@@ -8,6 +8,7 @@ public class MakeThisLightDimAndBrightenOverTime : MonoBehaviour {
     public float brighteningRateForLightIntensity = 0.05f;
     public float minLightIntensity = 0.0f;
     public float maxLightIntensity = 0.5f;
+    public float rangeForLightSource = 2.0f;
 
     Light lightFixture;     
     bool isLightDimming = true;
@@ -26,6 +27,7 @@ public class MakeThisLightDimAndBrightenOverTime : MonoBehaviour {
         for (int i = 0; i < gameObjectsList.Length; i++)
         {
             lightFixture = gameObjectsList[i].GetComponent<Light>();
+            lightFixture.range = rangeForLightSource;
 
             if(lightFixture.intensity > minLightIntensity && isLightDimming)
             {
