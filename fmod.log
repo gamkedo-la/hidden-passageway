@@ -14,7 +14,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x14076b008 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x1104f8008 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -28,6 +28,84 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0x142a3c4c8 : node = 0x142a3c680
+[LOG] SystemI::createSound                     : add node to async list : head = 0x142a3c8f8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x142a3c4c8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484160
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x142a3c798
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 0x142a3aed8 : node = 0x142a3b090
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x142a3c8f8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484160
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000097ed7bc
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x166ea596f
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x166ea5a2b
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x166ea5a5b
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x166ea5af8
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x16843a1d8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484160
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000097ed7bc
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x166ea596f
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x166ea5a2b
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x166ea5a5b
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x166ea5af8
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x16843a1d8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x142a3c4c8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x142a3aed8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1484160
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 20832
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x142a3b1a8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925440, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x142a3aed8
+[LOG] SoundI::getSubSound                      : sound 0x142a3c4c8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x142a3aed8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Campfire for One (0x142a3aed8)
+[LOG] SoundI::release                          :     Campfire for One (0x138c24a78)
+[LOG] SoundI::release                          :     Campfire for One (0x138c24c08)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (0x142a3c4c8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0x142a3b948)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0x142a38c48)
+[LOG] SoundI::release                          :  (0x138c26898)
+[LOG] SoundI::release                          :     FIRE_crackly_shortloop (0x138c24168)
+[LOG] SoundI::release                          :  (0x168438ae8)
+[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (0x1684551c8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -37,4 +115,6 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.

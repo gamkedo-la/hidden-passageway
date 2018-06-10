@@ -10,6 +10,9 @@ public class ViewControl : MonoBehaviour {
     public Image paperView;
     private float lookAngLimit = 45.0f;
 
+    ReadableScrap readScript;
+    int pageViewed = -1;
+
     public static ViewControl instance;
 
     // Use this for initialization
@@ -27,8 +30,16 @@ public class ViewControl : MonoBehaviour {
         {
             if(Input.GetMouseButtonDown(0))
             {
-                paperView.enabled = false;
-                WalkControl.instance.areFeetLocked = false;
+                pageViewed++;
+                if (pageViewed < readScript.pageToRead.Length)
+                {
+                    paperView.sprite = readScript.pageToRead[pageViewed];
+                    paperView.enabled = true;
+                    WalkControl.instance.areFeetLocked = true;
+                } else {
+                    paperView.enabled = false;
+                    WalkControl.instance.areFeetLocked = false;
+                }
             }
             return;
         }
@@ -56,10 +67,11 @@ public class ViewControl : MonoBehaviour {
 
             if(mtol) {
                 if(Input.GetMouseButtonDown(0)) {
-                    ReadableScrap readScript = mtol.GetComponent<ReadableScrap>();
+                    readScript = mtol.GetComponent<ReadableScrap>();
                     if(readScript)
                     {
-                        paperView.sprite = readScript.pageToRead;
+                        pageViewed=0;
+                        paperView.sprite = readScript.pageToRead[pageViewed];
                         paperView.enabled = true;
                         WalkControl.instance.areFeetLocked = true;
                     } else
