@@ -32,6 +32,7 @@ public class AetherEvent : MonoBehaviour {
     public GameObject Passageway;
     public GameObject spawnItem;
     public ParticleSystem ps;
+    public AetherDoorOpen dc;
 
     
 
@@ -46,10 +47,12 @@ public class AetherEvent : MonoBehaviour {
     void Start ()
     {
         ps = GetComponent<ParticleSystem>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        dc = Passageway.GetComponent<AetherDoorOpen>();
+
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
 		
 	}
@@ -74,7 +77,8 @@ public class AetherEvent : MonoBehaviour {
         }
         if (openDoorType)
         {
-            Debug.Log("Opening door");
+            dc.StartMoving = true;
+            Debug.Log("Opening door"+Passageway);
         }
         if (activateCutscene)
         {

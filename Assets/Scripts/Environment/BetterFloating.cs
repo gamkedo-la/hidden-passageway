@@ -16,7 +16,7 @@ public class BetterFloating : MonoBehaviour
     {
         Roto = Vector3.up;
 //        rotmult = Random.Range(7, 10);
-        this.originalY = this.transform.position.y;
+        this.originalY = this.transform.localPosition.y;
         if (overrideFloat == 0)
         {
             floatStrength = Random.Range(1f, 3f);
@@ -29,9 +29,9 @@ public class BetterFloating : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x,
+        transform.localPosition = new Vector3(transform.localPosition.x,
             originalY + (Mathf.Sin(Time.time) * floatStrength),
-            transform.position.z);
+            transform.localPosition.z);
         transform.Rotate((Roto * Time.deltaTime * rotmult));
     }
 }
