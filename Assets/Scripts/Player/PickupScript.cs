@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Hiya all! This is my new-member test GitHub commit. Removing shortly... -Adam "alohn"
-
 public class PickupScript : MonoBehaviour {
     /// <Todo>
     /// Rotation input and test rotation
