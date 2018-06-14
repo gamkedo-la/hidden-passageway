@@ -30,7 +30,15 @@ public class SlideToPos : MonoBehaviour {
     [HideInInspector]
     public SlideToPos callPrev; // backward link automatically
 
-	private void Awake()
+    [FMODUnity.EventRef]
+    public string startSound;
+    [FMODUnity.EventRef]
+    public string moveSound;
+    [FMODUnity.EventRef]
+    public string endSound;
+    FMOD.Studio.EventInstance MoveLoopAudio;
+
+    private void Awake()
 	{
         if(callNext != null) {
             callNext.callPrev = this;
@@ -90,6 +98,8 @@ public class SlideToPos : MonoBehaviour {
                 Debug.LogWarning("Is the tag set to InteractionSwitch for switch to " + gameObject.name);
             }
         }
+
+        MoveLoopAudio = FMODUnity.RuntimeManager.CreateInstance(moveSound);
     }
 
     public void Reverse() {
@@ -139,6 +149,10 @@ public class SlideToPos : MonoBehaviour {
             WalkControl.instance.enabled = false;
             ViewControl.instance.enabled = false;
         }
+
+        FMODUnity.RuntimeManager.PlayOneShotAttached(startSound, gameObject);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(MoveLoopAudio, gameObject.transform, GetComponent<Rigidbody>());
+        MoveLoopAudio.start();
     }
 
     void Update () {
@@ -156,6 +170,9 @@ public class SlideToPos : MonoBehaviour {
             transform.position = endPos.position;
             transform.rotation = endPos.rotation;
 
+            FMODUnity.RuntimeManager.PlayOneShotAttached(endSound, gameObject);
+            MoveLoopAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
             if (isTouchingPlayer)
             {
                 WalkControl.instance.areFeetLocked = false;
@@ -168,6 +185,7 @@ public class SlideToPos : MonoBehaviour {
                     ViewControl.instance.enabled = true;
                     WalkControl.instance.enabled = true;
                 }
+                
             }
 
             if(isReversing) {
@@ -209,5 +227,6 @@ public class SlideToPos : MonoBehaviour {
         }
         transform.position = Vector3.Lerp(startPos, endPos.position, movePerc);
         transform.rotation = Quaternion.Slerp(startRot, endPos.rotation, movePerc);
+        
     }
 }

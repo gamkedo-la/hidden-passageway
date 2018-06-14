@@ -2,13 +2,14 @@
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
 [LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=11005 (94661), maxchannels=1024, flags=0x00030000
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000000481890D8 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000000EE3D968 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -22,13 +23,659 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000000035EA78F8 : node = 000000004BFB4030
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000035EA78F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004BFB4148
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000035EA8EE8 : node = 000000004BFB3C40
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000001E965338.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003E02F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF995D8E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF995D8E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF995D8E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF995D8E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000004C0CD6E8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='MECHANICAL_machine_lowfrequency_02', format=2, channels=1, frequency=48000, lengthbytes=23904, lengthpcm=139351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707062.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003E02F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF995D8E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF995D8E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF995D8E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF995D8E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000004C0CD6E8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003E02F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF995D8E4B0
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF995D8E480
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF995D8E580
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF995D8E640
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000004C0CD6E8
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000035EA78F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000035EA8EE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004BFB3D58
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925376, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000035EA8EE8
+[LOG] SoundI::getSubSound                      : sound 0000000035EA78F8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000035EA8EE8.  Subsound index 0 / 1
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000000004C4E4D08
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000000004C4E4D08
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000000004C4E4D08 connected, entering connected state
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_0.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_0.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_1.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_1.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_2.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_2.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_3.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_3.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_4.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_4.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_5.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_5.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_6.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_6.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_7.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_7.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_8.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_8.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_9.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_9.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_10.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_10.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_11.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_11.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_12.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_12.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3D508 : node = 0000000012925240
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3D508
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000012925358
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3D508
+[LOG] SoundI::getSubSound                      : sound 000000001EB3D508.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (0000000035EA78F8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001E965388)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3C428)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_13.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_13.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_14.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_14.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_15.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_15.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_16.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_16.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_17.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_17.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_18.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_18.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_19.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_19.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3C0C8 : node = 000000004BC4DD20
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3C0C8
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3C0C8
+[LOG] SoundI::release                          : Campfire for One (0000000035EA8EE8)
+[LOG] SoundI::release                          :     Campfire for One (00000000717851F8)
+[LOG] SoundI::release                          :     Campfire for One (000000001EB3CE48)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_20.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_20.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_21.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_21.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_22.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_22.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_23.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_23.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_24.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_24.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_25.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_25.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3CE48 : node = 000000004C7499E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3CE48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C749AF8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3CE48
+[LOG] SoundI::getSubSound                      : sound 000000001EB3CE48.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3D508)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (00000000717856D8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3BD68)
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3CFF8 : node = 000000004BC4D1E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3CFF8
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3CFF8
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3C0C8)
+[LOG] SoundI::release                          :     (null) (0000000071784018)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000003E02F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF995D8E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF995D8E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF995D8E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF995D8E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000000BC9B8B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='FEEDBACK_beep_positive_17', format=2, channels=1, frequency=48000, lengthbytes=9536, lengthpcm=56622, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.811310.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000003E02F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF995D8E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF995D8E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF995D8E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF995D8E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000000BC9D238
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='FEEDBACK_beep_positive_16', format=2, channels=1, frequency=48000, lengthbytes=28768, lengthpcm=172880, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988556.
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3D1A8 : node = 000000004C749890
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3D1A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C7499A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3D1A8
+[LOG] SoundI::getSubSound                      : sound 000000001EB3D1A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3CE48)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000071785878)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3BF18)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_26.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_26.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_27.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_27.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_28.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_28.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_29.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_29.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_30.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_30.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_31.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_31.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_32.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_32.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_33.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_33.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_34.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_34.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_35.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_35.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_36.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_36.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_37.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_37.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_38.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_38.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_39.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_39.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_40.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_40.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_41.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_41.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_42.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_42.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_43.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_43.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_44.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_44.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_45.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_45.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_46.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_46.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_47.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_47.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_48.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_48.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_49.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_49.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_50.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_50.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_51.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_51.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_52.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_52.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3BF18 : node = 000000004BC4D960
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3BF18
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3BF18
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3CFF8)
+[LOG] SoundI::release                          :     (null) (00000000717844F8)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_53.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_53.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_54.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_54.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_55.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_55.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_56.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_56.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_57.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_57.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_58.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_58.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_59.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_59.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_60.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_60.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_61.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_61.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_62.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_62.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_63.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_63.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_64.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_64.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3C428 : node = 000000004C74A310
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3C428
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C74A428
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3C428
+[LOG] SoundI::getSubSound                      : sound 000000001EB3C428.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3D1A8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000071783E78)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3D358)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_65.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_65.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_66.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_66.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_67.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_67.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_68.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_68.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_69.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_69.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3CE48 : node = 000000004BC4E220
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3CE48
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3CE48
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3BF18)
+[LOG] SoundI::release                          :     (null) (00000000717856D8)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3CFF8 : node = 000000004C749C80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3CFF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C749D98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3CFF8
+[LOG] SoundI::getSubSound                      : sound 000000001EB3CFF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3C428)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000071785878)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3C5D8)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_70.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_70.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_71.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_71.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_72.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_72.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3D868 : node = 000000004C749740
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3D868
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C749858
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3D868
+[LOG] SoundI::getSubSound                      : sound 000000001EB3D868.  Subsound index 0 / 1
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3CFF8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (00000000717851F8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3BF18)
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3C428 : node = 000000004BC4D1E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3C428
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3C428
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3CE48)
+[LOG] SoundI::release                          :     (null) (0000000071785058)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_73.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_73.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_74.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_74.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_75.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_75.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_76.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_76.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_77.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_77.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_78.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_78.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3D868)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000071784358)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3C0C8)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3CE48 : node = 000000004C749C80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3CE48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C749D98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3CE48
+[LOG] SoundI::getSubSound                      : sound 000000001EB3CE48.  Subsound index 0 / 1
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_79.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_79.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_80.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_80.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_81.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Chris/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-NLNPTF/hotswap_81.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3D868 : node = 000000004BC4DD20
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3D868
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3D868
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3C428)
+[LOG] SoundI::release                          :     (null) (00000000717851F8)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3CE48)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000071784018)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3D358)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3CE48 : node = 000000004C748780
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3CE48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512928
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004C748898
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3CE48
+[LOG] SoundI::getSubSound                      : sound 000000001EB3CE48.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg : mode 0201c082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001EB3D1A8 : node = 000000004BC4CBA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000001E965338.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EB3D1A8
+[LOG] SystemI::createSoundInternal             :     Create name='fmod:///remote/C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg', mode=0x0201C082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] ProfileRemoteFile::fileOpen              :     Attemping to open remote file 'C:/Users/Chris/Documents/GitHub/hidden-passageway/Assets/FMOD/HiddenPassageway/Assets/Camp/Campfire for One.ogg'
+[LOG] SystemI::createSoundInternal             :     Stream: name='(null)', format=2, channels=2, frequency=44100, lengthbytes=1745683, lengthpcm=2633460, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EB3D1A8
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3D868)
+[LOG] SoundI::release                          :     (null) (0000000071784358)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (000000001EB3CE48)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0000000071784EB8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (000000001EB3BD68)
+[LOG] SoundI::release                          : Campfire for One.ogg (000000001EB3D1A8)
+[LOG] SoundI::release                          :     (null) (0000000071784698)
+[LOG] SoundI::release                          :  (000000004C24ACA8)
+[LOG] SoundI::release                          :     FEEDBACK_beep_positive_17 (00000000717841B8)
+[LOG] SoundI::release                          :  (000000004C24A128)
+[LOG] SoundI::release                          :     FEEDBACK_beep_positive_16 (0000000071784B78)
+[LOG] SoundI::release                          :  (000000004C24A9C8)
+[LOG] SoundI::release                          :     MECHANICAL_machine_lowfrequency_02 (0000000071783CD8)
+[LOG] SoundI::release                          :  (000000004C24AF88)
+[LOG] SoundI::release                          :     FIRE_crackly_shortloop (0000000071785538)
+[LOG] SoundI::release                          :  (000000004C24B6B8)
+[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (00000000717849D8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] FMOD_OS_Net_Read                         : Interrupted.[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 16
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
