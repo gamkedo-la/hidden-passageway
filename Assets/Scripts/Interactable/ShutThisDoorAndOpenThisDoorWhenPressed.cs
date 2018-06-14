@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShutThisBlueDoorAndOpenThisRedDoorWhenPressed : MonoBehaviour {
+public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour {
     public GameObject doorToBeOpened;
     public GameObject doorToBeClosed;
 
