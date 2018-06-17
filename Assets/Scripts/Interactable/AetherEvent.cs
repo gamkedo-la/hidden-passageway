@@ -47,7 +47,12 @@ public class AetherEvent : MonoBehaviour {
     void Start ()
     {
         ps = GetComponent<ParticleSystem>();
-        dc = Passageway.GetComponent<AetherDoorOpen>();
+        if(Passageway) {
+            dc = Passageway.GetComponent<AetherDoorOpen>();
+        } else {
+            Debug.LogWarning("Passageway GO was not assigned in inspector. Disabling script to avoid null error.");
+            enabled = false;
+        }
 
     }
 
