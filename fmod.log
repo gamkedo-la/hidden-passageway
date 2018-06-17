@@ -1,15 +1,21 @@
 [LOG] System::create                           : Header version = 1.10.05. Current version = 1.10.05.
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0000000000000000.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0x0.
 [LOG] SystemI::init                            : Initialize version=11005 (94661), maxchannels=1024, flags=0x00030000
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] OutputCoreAudio::enumerate               : Enumerating...
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Built-in Output".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "HDMI".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (2ch)".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (64ch)".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "ZoomAudioDevice".
+[LOG] OutputCoreAudio::enumerate               : Done.
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000002EDDE668 isAsync 1 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x1107f1a08 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -24,409 +30,105 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] LiveUpdate::clientConnected              : client = 000000002EDC4EA8
-[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000000002EDC4EA8
-[LOG] LiveUpdate::transitionToConnected        : 
-[LOG] Manager::sendConnectTimeHash             : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::acceptInitPacket             : Client 000000002EDC4EA8 connected, entering connected state
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 000000002ECD3598 : node = 000000002EDAC300
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002ECD3598
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : setdata soundi = 0x1263d6aa8 : node = 0x14106b950
+[LOG] SystemI::createSound                     : add node to async list : head = 0x14106b5e8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x1263d6aa8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC418
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14106ba68
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000002ECD2ED8 : node = 000000002EDAC450
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000002ECD38F8 : node = 000000002EDAAE00
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000003F437AC8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
+[LOG] SystemI::createSound                     :     setdata soundi = 0x123cccd38 : node = 0x123ccd2d0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x14106b5e8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000047a37bc
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x14f45096f
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x14f450a2b
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x14f450a5b
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x14f450af8
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x1263d7b68
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='MECHANICAL_machine_lowfrequency_02', format=2, channels=1, frequency=48000, lengthbytes=23904, lengthpcm=139351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707062.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000047a37bc
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x14f45096f
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x14f450a2b
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x14f450a5b
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x14f450af8
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x1263d7b68
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000047a37bc
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x14f45096f
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x14f450a2b
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x14f450a5b
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x14f450af8
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x1263d7b68
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
 [LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002ECD3598
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002ECD2ED8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x1263d6aa8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x123cccd38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC568
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x123ccd3e8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='WEATHER_wind_low', format=2, channels=2, frequency=48000, lengthbytes=1201056, lengthpcm=5139942, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.577576.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002ECD2ED8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002ECD38F8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAAF18
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='DecayingWorld_Ambient', format=2, channels=2, frequency=48000, lengthbytes=1440224, lengthpcm=7372800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.577484.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002ECD38F8
-[LOG] SoundI::getSubSound                      : sound 000000002ECD3598.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000002ECD2ED8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000002ECD38F8.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD278 : node = 000000002EDAB880
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD278
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB998
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD278
-[LOG] SoundI::getSubSound                      : sound 00000000725DD278.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (000000002ECD3598)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F436C78)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000002ECD3AA8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD0C8 : node = 000000002EDAC300
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD0C8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC418
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD0C8
-[LOG] SoundI::getSubSound                      : sound 00000000725DD0C8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD278)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437B18)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DED78)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD788 : node = 000000002EDAAF50
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD788
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB068
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD788
-[LOG] SoundI::getSubSound                      : sound 00000000725DD788.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD0C8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437CB8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DE1A8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD5D8 : node = 000000002EDAC300
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD5D8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC418
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD5D8
-[LOG] SoundI::getSubSound                      : sound 00000000725DD5D8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD788)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437498)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DEA18)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD0C8 : node = 000000002EDAC6F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD0C8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC808
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD0C8
-[LOG] SoundI::getSubSound                      : sound 00000000725DD0C8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD5D8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F436798)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DE6B8)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DDC98
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DDC98
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD278 : node = 000000002EDAA8C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD278
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAA9D8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD278
-[LOG] SoundI::getSubSound                      : sound 00000000725DD278.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD0C8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437B18)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DDC98)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DEA18 : node = 000000002EDAAF50
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DEA18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB068
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DEA18
-[LOG] SoundI::getSubSound                      : sound 00000000725DEA18.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD278)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437498)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DD5D8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DE6B8 : node = 000000002EDAB880
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DE6B8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB998
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DE6B8
-[LOG] SoundI::getSubSound                      : sound 00000000725DE6B8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DEA18)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F436798)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DDFF8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DEA18 : node = 000000002EDAAF50
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DEA18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB068
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DEA18
-[LOG] SoundI::getSubSound                      : sound 00000000725DEA18.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DE6B8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437B18)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DD0C8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DE6B8 : node = 000000002EDAC6F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DE6B8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC808
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DE6B8
-[LOG] SoundI::getSubSound                      : sound 00000000725DE6B8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DEA18)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437498)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DD278)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DD938 : node = 000000002EDAB880
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD938
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB998
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='WEATHER_wind_low', format=2, channels=2, frequency=48000, lengthbytes=1201056, lengthpcm=5139942, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.577576.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD938
-[LOG] SoundI::getSubSound                      : sound 00000000725DD938.  Subsound index 0 / 1
-[LOG] SoundI::release                          : WEATHER_wind_low (000000002ECD2ED8)
-[LOG] SoundI::release                          :     WEATHER_wind_low (000000003F4365F8)
-[LOG] SoundI::release                          :     WEATHER_wind_low (000000002ECD3FB8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DED78 : node = 000000002EDAAF50
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DED78
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB068
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DED78
-[LOG] SoundI::getSubSound                      : sound 00000000725DED78.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DE6B8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437CB8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DE358)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DDFF8 : node = 000000002EDAB1F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DDFF8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB308
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000725DDC98 : node = 000000002EDAC300
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] SystemI::createSound                     :     filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000725DD278 : node = 000000002EDAB490
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='WEATHER_wind_low', format=2, channels=2, frequency=48000, lengthbytes=1201056, lengthpcm=5139942, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.577576.
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000003F437AC8.  list count = 1
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DDFF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DDC98
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC418
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='DecayingWorld_Ambient', format=2, channels=2, frequency=48000, lengthbytes=1440224, lengthpcm=7372800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.577484.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DDC98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DD278
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAB5A8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DD278
-[LOG] SoundI::getSubSound                      : sound 00000000725DD278.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000725DDFF8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000725DDC98.  Subsound index 0 / 1
-[LOG] SoundI::release                          : DecayingWorld_Ambient (000000002ECD38F8)
-[LOG] SoundI::release                          :     DecayingWorld_Ambient (000000003F4372F8)
-[LOG] SoundI::release                          :     DecayingWorld_Ambient (00000000725DDE48)
-[LOG] SoundI::release                          : WEATHER_wind_low (00000000725DD938)
-[LOG] SoundI::release                          :     WEATHER_wind_low (000000003F436798)
-[LOG] SoundI::release                          :     WEATHER_wind_low (00000000725DEA18)
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DED78)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F4365F8)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DD0C8)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000725DEA18 : node = 000000002EDAC450
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003F437AC8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000725DEA18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD\HiddenPassageway\Build\Desktop/DecayingWorld.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3038112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002EDAC568
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Decaying World - RobotBeacon', format=2, channels=2, frequency=48000, lengthbytes=86528, lengthpcm=504000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.407227.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000725DEA18
-[LOG] SoundI::getSubSound                      : sound 00000000725DEA18.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DD278)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F436938)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DE1A8)
-[LOG] SoundI::release                          : DecayingWorld_Ambient (00000000725DDC98)
-[LOG] SoundI::release                          :     DecayingWorld_Ambient (000000003F437CB8)
-[LOG] SoundI::release                          :     DecayingWorld_Ambient (00000000725DE358)
-[LOG] SoundI::release                          : WEATHER_wind_low (00000000725DDFF8)
-[LOG] SoundI::release                          :     WEATHER_wind_low (000000003F437B18)
-[LOG] SoundI::release                          :     WEATHER_wind_low (00000000725DDAE8)
-[LOG] SoundI::release                          : Decaying World - RobotBeacon (00000000725DEA18)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (000000003F437E58)
-[LOG] SoundI::release                          :     Decaying World - RobotBeacon (00000000725DED78)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925440, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x123cccd38
+[LOG] SoundI::getSubSound                      : sound 0x1263d6aa8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x123cccd38.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Campfire for One (0x123cccd38)
+[LOG] SoundI::release                          :     Campfire for One (0x123ccf988)
+[LOG] SoundI::release                          :     Campfire for One (0x123ccfb18)
+[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (0x1263d6aa8)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0x1263d8088)
+[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0x11f8b2e08)
+[LOG] SoundI::release                          :  (0x141063318)
+[LOG] SoundI::release                          :     MECHANICAL_machine_lowfrequency_02 (0x141062fe8)
+[LOG] SoundI::release                          :  (0x141065878)
+[LOG] SoundI::release                          :     FIRE_crackly_shortloop (0x141063678)
+[LOG] SoundI::release                          :  (0x123ccf2c8)
+[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (0x123ccf438)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] FMOD_OS_Net_Read                         : Interrupted.[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 16
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
