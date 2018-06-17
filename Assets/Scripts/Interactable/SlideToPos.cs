@@ -99,7 +99,9 @@ public class SlideToPos : MonoBehaviour {
             }
         }
 
-        MoveLoopAudio = FMODUnity.RuntimeManager.CreateInstance(moveSound);
+        if(moveSound.Length > 2) {
+            MoveLoopAudio = FMODUnity.RuntimeManager.CreateInstance(moveSound);
+        }
     }
 
     public void Reverse() {
@@ -150,9 +152,14 @@ public class SlideToPos : MonoBehaviour {
             ViewControl.instance.enabled = false;
         }
 
-        FMODUnity.RuntimeManager.PlayOneShotAttached(startSound, gameObject);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(MoveLoopAudio, gameObject.transform, GetComponent<Rigidbody>());
-        MoveLoopAudio.start();
+        if (startSound.Length>0)
+        {
+            FMODUnity.RuntimeManager.PlayOneShotAttached(startSound, gameObject);
+        }
+        if(moveSound.Length > 0) {
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(MoveLoopAudio, gameObject.transform, GetComponent<Rigidbody>());
+            MoveLoopAudio.start();
+        }
     }
 
     void Update () {
@@ -170,8 +177,12 @@ public class SlideToPos : MonoBehaviour {
             transform.position = endPos.position;
             transform.rotation = endPos.rotation;
 
-            FMODUnity.RuntimeManager.PlayOneShotAttached(endSound, gameObject);
-            MoveLoopAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            if(endSound.Length > 0) {
+                FMODUnity.RuntimeManager.PlayOneShotAttached(endSound, gameObject);
+            }
+            if(moveSound.Length > 0) {
+                MoveLoopAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
 
             if (isTouchingPlayer)
             {

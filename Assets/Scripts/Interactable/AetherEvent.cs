@@ -91,7 +91,9 @@ public class AetherEvent : MonoBehaviour {
         }
         if (particleType == true)
         {
-            ps.enableEmission = true;
+            if(ps) {
+                ps.enableEmission = true;
+            }
             Debug.Log("Emitting Particle");
         }
     }

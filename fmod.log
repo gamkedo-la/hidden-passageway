@@ -15,7 +15,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x1107f1a08 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x14af5bc08 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -30,102 +30,6 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 0x1263d6aa8 : node = 0x14106b950
-[LOG] SystemI::createSound                     : add node to async list : head = 0x14106b5e8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x1263d6aa8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14106ba68
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0x123cccd38 : node = 0x123ccd2d0
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x14106b5e8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000047a37bc
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x14f45096f
-[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x14f450a2b
-[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x14f450a5b
-[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x14f450af8
-[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x1263d7b68
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ANIMAL_crickets_v4_reallylong', format=2, channels=1, frequency=48000, lengthbytes=440864, lengthpcm=2325361, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.709332.
-[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='MECHANICAL_machine_lowfrequency_02', format=2, channels=1, frequency=48000, lengthbytes=23904, lengthpcm=139351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707062.
-[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000047a37bc
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x14f45096f
-[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x14f450a2b
-[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x14f450a5b
-[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x14f450af8
-[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x1263d7b68
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_shortloop', format=2, channels=1, frequency=48000, lengthbytes=49120, lengthpcm=237067, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.770477.
-[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000047a37bc
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x14f45096f
-[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x14f450a2b
-[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x14f450a5b
-[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x14f450af8
-[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x1263d7b68
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='FIRE_crackly_lowhumloop', format=2, channels=1, frequency=48000, lengthbytes=33920, lengthpcm=236940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051636.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x1263d6aa8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x123cccd38
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1512960
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21120
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x123ccd3e8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Campfire for One', format=2, channels=2, frequency=48000, lengthbytes=925440, lengthpcm=2866351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260834.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x123cccd38
-[LOG] SoundI::getSubSound                      : sound 0x1263d6aa8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0x123cccd38.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Campfire for One (0x123cccd38)
-[LOG] SoundI::release                          :     Campfire for One (0x123ccf988)
-[LOG] SoundI::release                          :     Campfire for One (0x123ccfb18)
-[LOG] SoundI::release                          : ANIMAL_crickets_v4_reallylong (0x1263d6aa8)
-[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0x1263d8088)
-[LOG] SoundI::release                          :     ANIMAL_crickets_v4_reallylong (0x11f8b2e08)
-[LOG] SoundI::release                          :  (0x141063318)
-[LOG] SoundI::release                          :     MECHANICAL_machine_lowfrequency_02 (0x141062fe8)
-[LOG] SoundI::release                          :  (0x141065878)
-[LOG] SoundI::release                          :     FIRE_crackly_shortloop (0x141063678)
-[LOG] SoundI::release                          :  (0x123ccf2c8)
-[LOG] SoundI::release                          :     FIRE_crackly_lowhumloop (0x123ccf438)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -135,6 +39,4 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
