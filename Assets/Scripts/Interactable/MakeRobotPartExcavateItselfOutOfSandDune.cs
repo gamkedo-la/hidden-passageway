@@ -21,7 +21,7 @@ public class MakeRobotPartExcavateItselfOutOfSandDune : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Excavating robot part: " + robotPart.name);    
+        
     }
 	
 	// Update is called once per frame

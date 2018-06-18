@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03859721, g: 0.034802295, b: 0.02332248, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.038597, g: 0.034802206, b: 0.023322482, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -354,7 +354,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 137176c340f425446b973563c1a012d5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 464c305dc460c1249a80f8470bc93f6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a312e031acac80d4da472bfac9507556, type: 2}
     - target: {fileID: 400002, guid: 137176c340f425446b973563c1a012d5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -366,6 +366,22 @@ Prefab:
     - target: {fileID: 400002, guid: 137176c340f425446b973563c1a012d5, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 137176c340f425446b973563c1a012d5, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 137176c340f425446b973563c1a012d5, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 137176c340f425446b973563c1a012d5, type: 3}
+      propertyPath: m_TagString
+      value: button
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 137176c340f425446b973563c1a012d5, type: 3}
+      propertyPath: m_TagString
+      value: button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 137176c340f425446b973563c1a012d5, type: 3}
@@ -716,9 +732,9 @@ GameObject:
   m_Component:
   - component: {fileID: 158131765}
   - component: {fileID: 158131766}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Blue Button
-  m_TagString: Untagged
+  m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -750,6 +766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorToBeOpened: {fileID: 870451094}
   doorToBeClosed: {fileID: 260500127}
+  doorToBeClosedEndPosition: {fileID: 1085460859}
+  doorToBeOpenedEndPosition: {fileID: 1193841251}
 --- !u!1 &158389110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1194,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 260500128}
+  - component: {fileID: 260500129}
   m_Layer: 9
   m_Name: Sliding Door Red
   m_TagString: Untagged
@@ -1189,15 +1208,30 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 260500127}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0, z: 48}
-  m_LocalScale: {x: 0.57, y: 0.6, z: 0.57}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.4999943, y: 0, z: 48.00003}
+  m_LocalScale: {x: 0.57000065, y: 0.6, z: 0.57000065}
   m_Children:
   - {fileID: 491805524}
   - {fileID: 876725006}
-  m_Father: {fileID: 2119125115}
-  m_RootOrder: 3
+  m_Father: {fileID: 1133179021}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &260500129
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260500127}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &265847313
 Prefab:
   m_ObjectHideFlags: 0
@@ -1619,7 +1653,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 90
+      scalar: 80
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1935,7 +1969,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 100
+    maxNumParticles: 150
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -2142,7 +2176,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 150
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6034,7 +6068,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 1c5930614e9863149bebc12c9ab109ca, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f9d4f0bfb09f67b4cab6c66a183d78c0, type: 2}
+      objectReference: {fileID: 2100000, guid: 8c015f05d31ffe348bb59cd8a5bf0e18, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c5930614e9863149bebc12c9ab109ca, type: 3}
   m_IsPrefabParent: 0
@@ -6344,7 +6378,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 1c5930614e9863149bebc12c9ab109ca, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f9d4f0bfb09f67b4cab6c66a183d78c0, type: 2}
+      objectReference: {fileID: 2100000, guid: 8c015f05d31ffe348bb59cd8a5bf0e18, type: 2}
     - target: {fileID: 400002, guid: 1c5930614e9863149bebc12c9ab109ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -6719,14 +6753,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616126062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.497492, y: 1.2000008, z: 48.00004}
-  m_LocalScale: {x: 0.14250016, y: 0.15, z: 0.14250016}
+  m_LocalPosition: {x: -4.4974957, y: 1.2000008, z: 48.000076}
+  m_LocalScale: {x: 0.14250034, y: 0.15, z: 0.14250034}
   m_Children:
   - {fileID: 1938855166}
   - {fileID: 1690094941}
   - {fileID: 158131765}
-  m_Father: {fileID: 2119125115}
-  m_RootOrder: 2
+  m_Father: {fileID: 1133179021}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636173816
 GameObject:
@@ -7052,6 +7086,34 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &729536274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 729536275}
+  m_Layer: 9
+  m_Name: Red Door Location Opened Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729536275
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729536274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5, y: 0, z: 48}
+  m_LocalScale: {x: 0.57000136, y: 0.59999996, z: 0.57000136}
+  m_Children: []
+  m_Father: {fileID: 1133179021}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740317072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7682,6 +7744,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 870451095}
+  - component: {fileID: 870451096}
   m_Layer: 9
   m_Name: Sliding Door Blue
   m_TagString: Untagged
@@ -7696,14 +7759,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 870451094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5, y: 0, z: 48}
-  m_LocalScale: {x: 0.57000065, y: 0.59999996, z: 0.57000065}
+  m_LocalPosition: {x: -6.5, y: 0, z: 48}
+  m_LocalScale: {x: 0.57000136, y: 0.59999996, z: 0.57000136}
   m_Children:
   - {fileID: 775636802}
   - {fileID: 1201095019}
-  m_Father: {fileID: 2119125115}
+  m_Father: {fileID: 1133179021}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &870451096
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870451094}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &870619360
 GameObject:
   m_ObjectHideFlags: 0
@@ -8154,7 +8232,7 @@ Prefab:
     - target: {fileID: 2300000, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f9d4f0bfb09f67b4cab6c66a183d78c0, type: 2}
+      objectReference: {fileID: 2100000, guid: 464c305dc460c1249a80f8470bc93f6a, type: 2}
     - target: {fileID: 400002, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -8166,6 +8244,22 @@ Prefab:
     - target: {fileID: 400002, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
+      propertyPath: m_TagString
+      value: button
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
+      propertyPath: m_TagString
+      value: button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
@@ -8308,6 +8402,34 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1085460858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1085460859}
+  m_Layer: 9
+  m_Name: Red Door Location Closed Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1085460859
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085460858}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.5, y: 0, z: 48}
+  m_LocalScale: {x: 0.57000065, y: 0.59999996, z: 0.57000065}
+  m_Children: []
+  m_Father: {fileID: 1133179021}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105573785
 GameObject:
   m_ObjectHideFlags: 0
@@ -8461,6 +8583,41 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1133179020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1133179021}
+  m_Layer: 9
+  m_Name: Entrance Door Whole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1133179021
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1133179020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 616126063}
+  - {fileID: 260500128}
+  - {fileID: 1085460859}
+  - {fileID: 729536275}
+  - {fileID: 870451095}
+  - {fileID: 1542323819}
+  - {fileID: 1193841251}
+  m_Father: {fileID: 2119125115}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1150916801
 GameObject:
   m_ObjectHideFlags: 0
@@ -8695,6 +8852,34 @@ MonoBehaviour:
   minLightIntensity: 0
   maxLightIntensity: 2
   rangeForLightSource: 2
+--- !u!1 &1193841250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1193841251}
+  m_Layer: 9
+  m_Name: Blue Door Location Opened Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1193841251
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193841250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.5, y: 0, z: 48}
+  m_LocalScale: {x: 0.57000065, y: 0.59999996, z: 0.57000065}
+  m_Children: []
+  m_Father: {fileID: 1133179021}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201095018
 GameObject:
   m_ObjectHideFlags: 0
@@ -9102,6 +9287,24 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 921bc960bef5f0a42a3e357fd9342eab, type: 3}
+--- !u!1 &1416855407 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 137176c340f425446b973563c1a012d5, type: 3}
+  m_PrefabInternal: {fileID: 67478073}
+--- !u!64 &1416855408
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1416855407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 137176c340f425446b973563c1a012d5, type: 3}
 --- !u!1 &1430006774
 GameObject:
   m_ObjectHideFlags: 0
@@ -9350,6 +9553,34 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 236fd6d6815a55b4ca20e7003f3d94cd, type: 3}
   m_PrefabInternal: {fileID: 1533310575}
+--- !u!1 &1542323818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1542323819}
+  m_Layer: 9
+  m_Name: Blue Door Location Closed Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1542323819
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542323818}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.5, y: 0, z: 48}
+  m_LocalScale: {x: 0.57000065, y: 0.59999996, z: 0.57000065}
+  m_Children: []
+  m_Father: {fileID: 1133179021}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545659819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,6 +9814,24 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: badd509de4fd369468a448b4576848aa, type: 3}
+--- !u!1 &1641271287 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
+  m_PrefabInternal: {fileID: 1027537400}
+--- !u!64 &1641271288
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641271287}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: ffc1e9c7dabf23c48a94d2b2e905500c, type: 3}
 --- !u!1 &1648874499
 GameObject:
   m_ObjectHideFlags: 0
@@ -9657,9 +9906,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1690094941}
   - component: {fileID: 1690094942}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Red Button
-  m_TagString: Untagged
+  m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9691,6 +9940,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorToBeOpened: {fileID: 260500127}
   doorToBeClosed: {fileID: 870451094}
+  doorToBeClosedEndPosition: {fileID: 1542323819}
+  doorToBeOpenedEndPosition: {fileID: 729536275}
 --- !u!1 &1701594760
 GameObject:
   m_ObjectHideFlags: 0
@@ -11381,9 +11632,7 @@ Transform:
   m_Children:
   - {fileID: 862684151}
   - {fileID: 1870592929}
-  - {fileID: 616126063}
-  - {fileID: 260500128}
-  - {fileID: 870451095}
+  - {fileID: 1133179021}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
