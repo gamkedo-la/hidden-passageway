@@ -22,10 +22,19 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
         RaycastHit rayHitInfo;
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rayHitInfo, 1.0f))
         {
-            if(rayHitInfo.collider.tag.Contains("button"))
+            if(rayHitInfo.collider.tag.Contains("red button"))
             {
                 Debug.Log("Hitting button: " + rayHitInfo.collider.name);
                 if(Input.GetMouseButtonDown(0))
+                {
+                    doorToBeOpened.transform.position = doorToBeOpenedEndPosition.position;
+                    doorToBeClosed.transform.position = doorToBeClosedEndPosition.position;
+                }
+            }
+            else if (rayHitInfo.collider.tag.Contains("blue button"))
+            {
+                Debug.Log("Hitting button: " + rayHitInfo.collider.name);
+                if (Input.GetMouseButtonDown(0))
                 {
                     doorToBeOpened.transform.position = doorToBeOpenedEndPosition.position;
                     doorToBeClosed.transform.position = doorToBeClosedEndPosition.position;
