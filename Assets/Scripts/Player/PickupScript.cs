@@ -16,9 +16,17 @@ public class PickupScript : MonoBehaviour {
     [SerializeField]
     private float ThrowForce = 10;
     public bool canHold = true;
+    public bool hideCol;
     public GameObject item;
+    public Collider itemCol;
     public Transform guide;
     public float rotationForce;
+    public GameObject exception;
+
+    private void Start()
+    {
+        exception = GameObject.Find ("Handtorch");
+    }
 
     void Update()
     {
@@ -65,6 +73,7 @@ public class PickupScript : MonoBehaviour {
         if (!item)
             return;
 
+
         //parent an item to the guide
         item.transform.SetParent(guide);
 
@@ -77,13 +86,27 @@ public class PickupScript : MonoBehaviour {
         item.transform.position = guide.position;
 
         canHold = false;
+        itemCol = item.GetComponent<Collider>();
+        if (item == exception)
+        {
+            itemCol.enabled = true;
+        }
+        else
+        {
+            itemCol.enabled = false;
+        }
     }
 
     // throwing or dropping method
     private void throw_drop()
     {
+
         if (!item)
             return;
+        if (!(item == exception))
+        {
+            itemCol.enabled = true;
+        }
 
         //Set our Gravity to true again.
         item.GetComponent<Rigidbody>().useGravity = true;
@@ -95,5 +118,7 @@ public class PickupScript : MonoBehaviour {
         //Unparent item
         guide.GetChild(0).parent = null;
         canHold = true;
+        itemCol.enabled = true;
+
     }
 }

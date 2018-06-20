@@ -96,7 +96,7 @@ public class WalkControl : MonoBehaviour {
     {
         if (col.gameObject.tag == "Powerup")
             jumpForce += powerUp;
-            Debug.Log("Player picked up powerup adding +" + powerUp + "jump force");
+            Debug.Log("Player picked up powerup adding +" + powerUp + " to a total of " + jumpForce);
     }
 
     void OnCollisionStay(Collision facts) {
