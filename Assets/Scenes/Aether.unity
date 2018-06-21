@@ -25338,6 +25338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050166791}
   - component: {fileID: 1050166792}
+  - component: {fileID: 1050166793}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -25396,6 +25397,28 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1050166793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1050166790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/Torch
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 4
 --- !u!1 &1058513064
 GameObject:
   m_ObjectHideFlags: 0
@@ -35068,6 +35091,7 @@ GameObject:
   - component: {fileID: 1625382468}
   - component: {fileID: 1625382467}
   - component: {fileID: 1625382466}
+  - component: {fileID: 1625382470}
   m_Layer: 0
   m_Name: FallingWater
   m_TagString: Untagged
@@ -35144,6 +35168,28 @@ Transform:
   m_Father: {fileID: 1537208480}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -0.61600006, y: 44.982002, z: -87.84701}
+--- !u!114 &1625382470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625382465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/Waterfall
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 17
+  OverrideMaxDistance: 70
 --- !u!1 &1629063761
 GameObject:
   m_ObjectHideFlags: 0
@@ -48078,6 +48124,33 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 95a5fccf2a2ccc54c8918cdfbfa96bc8, type: 3}
   m_PrefabInternal: {fileID: 306825822}
+--- !u!1 &1998608256 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1426275167121504, guid: 558131412da44a744bcdf04222e6024b,
+    type: 2}
+  m_PrefabInternal: {fileID: 390145803}
+--- !u!114 &1998608258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998608256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/Torch
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 4
 --- !u!1001 &2004112243
 Prefab:
   m_ObjectHideFlags: 0
