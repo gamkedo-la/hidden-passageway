@@ -16,7 +16,7 @@ public class AetherPowerUp : MonoBehaviour {
     {
 		
 	}
-    void OnTriggerEnter(Collider col) //Trigger collision fires off KeyTriggered method and logs what it hit
+    void OnTriggerEnter(Collider col) 
     {
         if (col.gameObject.tag == "Player")
             Destroy(this.gameObject);

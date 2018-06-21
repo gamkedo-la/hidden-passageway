@@ -8,6 +8,7 @@ public class ViewControl : MonoBehaviour {
 	public Text linkClue;
     public Text linkClueShadow;
     public Image paperView;
+    [SerializeField]
     private float lookAngLimit = 45.0f;
 
     ReadableScrap readScript;

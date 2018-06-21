@@ -24,6 +24,8 @@ public class AetherEvent : MonoBehaviour {
     public bool Finished;
     public bool createItemType;
     public bool openDoorType;
+    public bool meshShowType;
+    public bool keyItemShowType;
     public bool particleType;
     public bool activateCutscene;
     public GameObject keyItem;
@@ -31,8 +33,10 @@ public class AetherEvent : MonoBehaviour {
     public Transform guide;
     public GameObject Passageway;
     public GameObject spawnItem;
+    public GameObject showItem;
     public ParticleSystem ps;
     public AetherDoorOpen dc;
+    public MeshRenderer mr;
 
     
 
@@ -47,12 +51,8 @@ public class AetherEvent : MonoBehaviour {
     void Start ()
     {
         ps = GetComponent<ParticleSystem>();
-        if(Passageway) {
-            dc = Passageway.GetComponent<AetherDoorOpen>();
-        } else {
-            Debug.LogWarning("Passageway GO was not assigned in inspector. Disabling script to avoid null error.");
-            enabled = false;
-        }
+        dc = Passageway.GetComponent<AetherDoorOpen>();
+        mr = GetComponent<MeshRenderer>();
 
     }
 
@@ -73,8 +73,8 @@ public class AetherEvent : MonoBehaviour {
 
     void KeyTriggered () //Method to trigger either of the 3 types of effects, or all of them.
     {
-        //CanTrigger = false;
-        //Finished = true;
+        CanTrigger = false;
+        Finished = true;
         if (createItemType == true)
         {
             Instantiate(spawnItem, guide);
@@ -91,10 +91,27 @@ public class AetherEvent : MonoBehaviour {
         }
         if (particleType == true)
         {
-            if(ps) {
-                ps.enableEmission = true;
-            }
+            ps.enableEmission = true;
+            StartCoroutine("TilDeath");
             Debug.Log("Emitting Particle");
         }
+        if (meshShowType == true)
+        {
+            mr.enabled = true;
+            Debug.Log("Mesh shown");
+        }
+        if (keyItemShowType == true)
+        {
+            showItem.active = true;
+            Debug.Log("activated" + showItem);
+        }
+    }
+    private IEnumerator TilDeath()
+    {
+        Debug.Log("Coroutine started");
+        yield return new WaitForSeconds(5);
+        ps.enableEmission = false;
+        Debug.Log("Coroutine finished");
+        StopCoroutine("TilDeath");
     }
 }

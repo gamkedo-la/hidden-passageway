@@ -7,7 +7,7 @@ public class AetherDoorOpen : MonoBehaviour {
     public bool Finished;
     public Vector3 StartingLocation;
     public Vector3 EndLocation;
-    public BoxCollider boxcol;
+    public Collider boxcol;
     public float AddedVal;
 
 
@@ -15,7 +15,7 @@ public class AetherDoorOpen : MonoBehaviour {
 	void Awake ()
     {
         StartingLocation = transform.localPosition;
-        boxcol = GetComponent<BoxCollider>();
+        boxcol = GetComponent<Collider>();
 	}
     void Start()
     {
@@ -30,16 +30,21 @@ public class AetherDoorOpen : MonoBehaviour {
         if (StartMoving && !Finished) 
         {
             transform.localPosition = new Vector3(StartingLocation.x, (transform.localPosition.y + Time.deltaTime), StartingLocation.z);
+            if (boxcol)
+            {
             boxcol.enabled = false;
+            }
+
             if ((transform.localPosition.y) >= EndLocation.y) 
             {
                 Finished = true;
             }
         }
-        if (Finished)
+        if (Finished && boxcol)
         {
             boxcol.enabled = true;
         }
 
     }
+
 }
