@@ -22819,6 +22819,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4451576632749010, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
     type: 2}
   m_PrefabInternal: {fileID: 406470715}
+--- !u!1 &797846488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 797846489}
+  m_Layer: 0
+  m_Name: AmbientAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797846489
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797846488}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -46.223125, y: -61.330006, z: -109.101906}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1804723583}
+  m_Father: {fileID: 0}
+  m_RootOrder: 84
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &800227183 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4606276746699968, guid: 80f90e25fafd4b84ea91d539f543ceaa,
@@ -35188,8 +35217,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 17
-  OverrideMaxDistance: 70
+  OverrideMinDistance: 12
+  OverrideMaxDistance: 60
 --- !u!1 &1629063761
 GameObject:
   m_ObjectHideFlags: 0
@@ -45980,6 +46009,78 @@ Transform:
   m_Father: {fileID: 1537208480}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -41.524002, z: 0}
+--- !u!1 &1804723582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1804723583}
+  - component: {fileID: 1804723586}
+  - component: {fileID: 1804723585}
+  - component: {fileID: 1804723584}
+  m_Layer: 0
+  m_Name: BirdsCue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1804723583
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804723582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -32.19, y: 72.29, z: 112.74}
+  m_LocalScale: {x: 34.3, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797846489}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1804723584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804723582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/BirdsInTrees
+  PlayEvent: 3
+  StopEvent: 4
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.14
+  OverrideMaxDistance: 20.3
+--- !u!135 &1804723585
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804723582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1804723586
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804723582}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1805138165
 Prefab:
   m_ObjectHideFlags: 0
