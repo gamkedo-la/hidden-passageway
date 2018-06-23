@@ -15,7 +15,7 @@ public class MakeThisLightDimAndBrightenOverTime : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Flicker Lights Script reached in GO: " + gameObject.name);
+
     }
 	
 	// Update is called once per frame

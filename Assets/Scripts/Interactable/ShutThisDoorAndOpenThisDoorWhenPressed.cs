@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
 {
-    public doorOpenClose doorToBeOpened;
+    public doorOpenClose[] doorsToBeOpened;
     public doorOpenClose[] doorsInGroup;
 
     //Update is called once per frame
@@ -30,6 +30,9 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
             doorsInGroup[i].Close();
         }
 
-        doorToBeOpened.Open();
+        for(int i = 0; i < doorsToBeOpened.Length; i ++)
+        {
+            doorsToBeOpened[i].Open();
+        }
     }
 }
