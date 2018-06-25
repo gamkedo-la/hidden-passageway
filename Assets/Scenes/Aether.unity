@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.448
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 702917159}
-  m_IndirectSpecularColor: {r: 0.15747334, g: 0.22341621, b: 0.25006276, a: 0.448}
+  m_IndirectSpecularColor: {r: 0.15747298, g: 0.22341545, b: 0.25006068, a: 0.448}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19283,7 +19283,6 @@ GameObject:
   - component: {fileID: 411307404}
   - component: {fileID: 411307403}
   - component: {fileID: 411307402}
-  - component: {fileID: 411307401}
   - component: {fileID: 411307400}
   m_Layer: 0
   m_Name: CineCam
@@ -19304,13 +19303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 91d5ad3f11f70a8419124b33ddeba65a, type: 2}
---- !u!81 &411307401
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 411307399}
-  m_Enabled: 1
 --- !u!124 &411307402
 Behaviour:
   m_ObjectHideFlags: 0
@@ -46693,7 +46685,9 @@ Prefab:
       propertyPath: lookAngLimit
       value: 60
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1831343280 stripped
