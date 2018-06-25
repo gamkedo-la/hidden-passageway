@@ -163,6 +163,12 @@ Prefab:
       propertyPath: m_Name
       value: Right portal
       objectReference: {fileID: 0}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
@@ -171,6 +177,76 @@ Transform:
   m_PrefabParentObject: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9,
     type: 2}
   m_PrefabInternal: {fileID: 33521243}
+--- !u!1001 &39833984
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1057897859}
+    m_Modifications:
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -61.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -19.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.9238793
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.3826841
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 179648584}
+    - target: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_Name
+      value: TEST PORTAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.50000143
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.50000143
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &39833985 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4496848991810878, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 39833984}
 --- !u!1 &115318332
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +728,12 @@ Prefab:
       propertyPath: destination
       value: 
       objectReference: {fileID: 179648584}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
@@ -689,6 +771,7 @@ Transform:
   - {fileID: 586758209}
   - {fileID: 1965189718}
   - {fileID: 2137339529}
+  - {fileID: 39833985}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -904,6 +987,12 @@ Prefab:
       propertyPath: m_Name
       value: Center portal
       objectReference: {fileID: 0}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
@@ -1092,6 +1181,12 @@ Prefab:
       propertyPath: destination
       value: 
       objectReference: {fileID: 2103319316}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
@@ -1242,6 +1337,12 @@ Prefab:
       propertyPath: m_Name
       value: Center platform portal
       objectReference: {fileID: 0}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
@@ -1502,6 +1603,12 @@ Prefab:
       propertyPath: m_Name
       value: Left platform portal
       objectReference: {fileID: 0}
+    - target: {fileID: 114218272779726412, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1813088435037598, guid: ff6d62433f34b4b5cbee7ad4cb0603fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
