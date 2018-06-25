@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.448
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 702917159}
-  m_IndirectSpecularColor: {r: 0.15747298, g: 0.22341545, b: 0.25006068, a: 0.448}
+  m_IndirectSpecularColor: {r: 0.15747334, g: 0.22341621, b: 0.25006276, a: 0.448}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21496,7 +21496,7 @@ Transform:
   m_LocalPosition: {x: 21.74, y: 79.12, z: 138.71}
   m_LocalScale: {x: 34.3, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 797846489}
+  m_Father: {fileID: 2042922036}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &644640053
@@ -22908,11 +22908,7 @@ Transform:
   m_LocalPosition: {x: -46.223125, y: -61.330006, z: -109.101906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1804723583}
-  - {fileID: 1260900108}
-  - {fileID: 1402947528}
-  - {fileID: 644640052}
-  - {fileID: 2119106208}
+  - {fileID: 2042922036}
   m_Father: {fileID: 0}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26192,6 +26188,78 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1123931726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1123931727}
+  - component: {fileID: 1123931730}
+  - component: {fileID: 1123931729}
+  - component: {fileID: 1123931728}
+  m_Layer: 0
+  m_Name: BirdsLargeTreeCue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123931727
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123931726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.959999, y: 71.1, z: 213.31}
+  m_LocalScale: {x: 54.24001, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2042922036}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123931728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123931726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/BirdsLargeTree
+  PlayEvent: 3
+  StopEvent: 4
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.14
+  OverrideMaxDistance: 20.3
+--- !u!135 &1123931729
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123931726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1123931730
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123931726}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1132122205
 GameObject:
   m_ObjectHideFlags: 0
@@ -26948,10 +27016,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1260900107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.95, y: 83, z: 83.53}
+  m_LocalPosition: {x: -3.9500008, y: 83, z: 83.53}
   m_LocalScale: {x: 54.24, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 797846489}
+  m_Father: {fileID: 2042922036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1260900109
@@ -26974,8 +27042,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 22.5
-  OverrideMaxDistance: 30
+  OverrideMinDistance: 6.14
+  OverrideMaxDistance: 20.3
 --- !u!135 &1260900110
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28647,10 +28715,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1402947527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.52, y: 69.49, z: 121.39}
+  m_LocalPosition: {x: 4.5200005, y: 69.49, z: 121.39}
   m_LocalScale: {x: 34.3, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 797846489}
+  m_Father: {fileID: 2042922036}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1402947529
@@ -35281,6 +35349,10 @@ Rigidbody:
 --- !u!1 &1622165979 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 45d566fb8da2f4c4cade1d4d5a7db2cc, type: 3}
+  m_PrefabInternal: {fileID: 1498120291}
+--- !u!4 &1622165980 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 45d566fb8da2f4c4cade1d4d5a7db2cc, type: 3}
   m_PrefabInternal: {fileID: 1498120291}
 --- !u!114 &1622165983
 MonoBehaviour:
@@ -46245,11 +46317,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1804723582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -32.19, y: 72.29, z: 112.74}
   m_LocalScale: {x: 34.3, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 797846489}
+  m_Father: {fileID: 2042922036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1804723584
@@ -48665,6 +48737,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 11.147, y: 231.96399, z: -1.7570001}
+--- !u!1 &2042922035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2042922036}
+  m_Layer: 0
+  m_Name: Trees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042922036
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042922035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1804723583}
+  - {fileID: 1260900108}
+  - {fileID: 1402947528}
+  - {fileID: 644640052}
+  - {fileID: 2119106208}
+  - {fileID: 1123931727}
+  m_Father: {fileID: 797846489}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046433957 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
@@ -49646,7 +49752,7 @@ Transform:
   m_LocalPosition: {x: 30.92, y: 70.5, z: 222.77}
   m_LocalScale: {x: 34.3, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 797846489}
+  m_Father: {fileID: 2042922036}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2119106209
@@ -54391,3 +54497,67 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 6649022f9401b3c4b802697feb48abb1, type: 3}
   m_PrefabInternal: {fileID: 2137695349}
+--- !u!1 &2138263001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2138263002}
+  - component: {fileID: 2138263003}
+  - component: {fileID: 2138263004}
+  m_Layer: 0
+  m_Name: FrogoCue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138263002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2138263001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.691467, y: 0.59, z: -6.613552}
+  m_LocalScale: {x: 250, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1622165980}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2138263003
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2138263001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2138263004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2138263001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/Frog
+  PlayEvent: 3
+  StopEvent: 4
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 2.5
+  OverrideMaxDistance: 8
