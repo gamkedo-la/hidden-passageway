@@ -19,16 +19,16 @@ public class AetherLightActivator : MonoBehaviour {
     {
         OnIntensity = Light1.intensity;
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
-		
+
 	}
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == Tags.Player)
         {
             Light1.intensity = OnIntensity;
             Light2.intensity = OnIntensity;
@@ -41,7 +41,7 @@ public class AetherLightActivator : MonoBehaviour {
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == Tags.Player)
         {
             Light1.intensity = OffIntensity;
             Light2.intensity = OffIntensity;

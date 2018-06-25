@@ -14,16 +14,16 @@ public class AetherCaveLighting : MonoBehaviour {
     {
         StartingLightIntensity = Sun.intensity;
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
-		
+
 	}
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == Tags.Player)
         {
             Sun.intensity = UndergroundLightIntensity;
         }
@@ -31,7 +31,7 @@ public class AetherCaveLighting : MonoBehaviour {
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == Tags.Player)
         {
             Sun.intensity = StartingLightIntensity;
         }
