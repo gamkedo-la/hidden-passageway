@@ -6,6 +6,7 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
 {
     public doorOpenClose[] doorsToBeOpened;
     public doorOpenClose[] doorsInGroup;
+    private bool isButtonPressed = false;
 
     //Update is called once per frame
     void Update()
@@ -16,23 +17,26 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rayHitInfo, 1.0f))
             {               
                 if (rayHitInfo.collider.gameObject == gameObject)
-                {                 
-                    OpenMyDoorOnly();
+                {                  
+                    OpenMyDoorsOnly();
                 }
             }           
         }
     }
 
-    void OpenMyDoorOnly()
+    void OpenMyDoorsOnly()
     {
-        for(int i = 0; i < doorsInGroup.Length; i++)
+        if (doorsToBeOpened != null)
         {
-            doorsInGroup[i].Close();
+            for (int i = 0; i < doorsToBeOpened.Length; i++)
+            {
+                doorsToBeOpened[i].Open();
+            }
         }
 
-        for(int i = 0; i < doorsToBeOpened.Length; i ++)
+        for (int i = 0; i < doorsInGroup.Length; i++)
         {
-            doorsToBeOpened[i].Open();
+            doorsInGroup[i].Close();
         }
     }
 }

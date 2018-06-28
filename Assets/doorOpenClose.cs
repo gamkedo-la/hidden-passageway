@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class doorOpenClose : MonoBehaviour {
-    private Transform startPos;
-    public Transform endPos;
+    public Animator anim;
     public bool startsOpen;
 
 	// Use this for initialization
 	void Start () {
-        GameObject startGO = new GameObject();
-        startGO.name = gameObject.name + "_initial";
-        startGO.transform.position = transform.position;
-        startGO.transform.rotation = transform.rotation;
-        startPos = startGO.transform;
+        anim = GetComponent<Animator>();
+        
         if(startsOpen)
         {
             Open();
@@ -22,13 +18,11 @@ public class doorOpenClose : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Close() {
-        transform.position = startPos.position;
-        transform.rotation = startPos.rotation;
+        anim.Play("doorClose");
     }
 
     public void Open()
     {
-        transform.position = endPos.position;
-        transform.rotation = endPos.rotation;
+        anim.Play("doorOpen");
     }
 }
