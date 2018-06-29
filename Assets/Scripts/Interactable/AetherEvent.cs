@@ -63,6 +63,14 @@ public class AetherEvent : MonoBehaviour {
         if (meshShowType)
         {
             mr = GetComponent<MeshRenderer>();
+            //if (!(mr)) 
+            //{
+            //    Debug.Log("Mesh show type event doesn't have a Mesh Renderer!");
+            //}
+            //else
+            //{
+            //    mr = GetComponent<MeshRenderer>();
+            //}
         }
 
 
