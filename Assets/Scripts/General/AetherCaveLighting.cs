@@ -5,6 +5,7 @@ using UnityEngine;
 public class AetherCaveLighting : MonoBehaviour {
 
     public Light Sun;
+    public bool stayDark;
     public float StartingLightIntensity;
     public float UndergroundLightIntensity;
 
@@ -31,7 +32,7 @@ public class AetherCaveLighting : MonoBehaviour {
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == Tags.Player)
+        if ((col.gameObject.tag == Tags.Player) && !(stayDark))
         {
             Sun.intensity = StartingLightIntensity;
         }
