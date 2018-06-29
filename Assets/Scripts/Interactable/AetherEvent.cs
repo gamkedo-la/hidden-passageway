@@ -50,9 +50,21 @@ public class AetherEvent : MonoBehaviour {
 
     void Start ()
     {
-        ps = GetComponent<ParticleSystem>();
-        dc = Passageway.GetComponent<AetherDoorOpen>();
-        mr = GetComponent<MeshRenderer>();
+        
+        
+        if (openDoorType)
+        {
+            dc = Passageway.GetComponent<AetherDoorOpen>();
+        }
+        if (particleType)
+        {
+            ps = GetComponent<ParticleSystem>();
+        }
+        if (meshShowType)
+        {
+            mr = GetComponent<MeshRenderer>();
+        }
+
 
     }
 
