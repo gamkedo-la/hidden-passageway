@@ -343,6 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 236510770}
   - component: {fileID: 236510769}
+  - component: {fileID: 236510771}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -360,8 +361,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9245283, g: 0.6534883, b: 0.11774653, a: 1}
-  m_Intensity: 1
-  m_Range: 10.46
+  m_Intensity: 1.5
+  m_Range: 3.81
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -399,6 +400,21 @@ Transform:
   m_Father: {fileID: 870755153}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236510771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236510768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf1781557f5b0f45a9c9e8375b02786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radiusMod: 0.5
+  intensityMod: 1
+  lightToMod: {fileID: 0}
+  flickerSpeed: 0.08
 --- !u!1001 &438903224
 Prefab:
   m_ObjectHideFlags: 0
@@ -461,6 +477,10 @@ Prefab:
     - target: {fileID: 400000, guid: 198ce0fac47c9bd46a936509657fd74b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.0317
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 198ce0fac47c9bd46a936509657fd74b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 198ce0fac47c9bd46a936509657fd74b, type: 3}
@@ -540,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1336160703
 Transform:
   m_ObjectHideFlags: 0
@@ -779,6 +799,18 @@ Prefab:
     - target: {fileID: 400002, guid: a1418f8882fe8b14994d90227bcb7407, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a1418f8882fe8b14994d90227bcb7407, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1418f8882fe8b14994d90227bcb7407, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a1418f8882fe8b14994d90227bcb7407, type: 3}
+      propertyPath: m_PreserveUVs
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1418f8882fe8b14994d90227bcb7407, type: 3}

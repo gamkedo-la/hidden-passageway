@@ -71,8 +71,8 @@ public class WalkControl : MonoBehaviour {
 
                 if (onGround && Input.GetKeyDown(KeyCode.Space))
                 {
-                    rb.velocity = Vector3.up * jumpForce;
                     onGround = false;
+                    rb.velocity = Vector3.up * jumpForce;
                 }
             }
 			
@@ -89,6 +89,13 @@ public class WalkControl : MonoBehaviour {
                 transform.position = prevValidPosition; // undoing position if over water
             }
         }
+
+        //
+        if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.01f))
+        {
+            onGround = true;
+        }
+        else onGround = false;
     }
     ///This is powerup code for Aether. Just increases jump height
     ///No idea why this isn't working right, the debug fires, but the jump force refuses to change.
@@ -99,9 +106,10 @@ public class WalkControl : MonoBehaviour {
             Debug.Log("Player picked up powerup adding +" + powerUp + " to a total of " + jumpForce);
     }
 
+    /*
     void OnCollisionStay(Collision facts) {
 		onGround = true; // currently not distinguishing ground from wall/ceiling/etc.
-	}
+	}*/
 
 	void OnTriggerStay(Collider other) {
 		if(other.gameObject.layer == LayerMask.NameToLayer("Water")) {
