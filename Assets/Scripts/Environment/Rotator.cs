@@ -8,10 +8,22 @@ public class Rotator : MonoBehaviour {
     public bool rotateUp;
     public bool rotateRight;
     public float rotationSpeed = 1;
+    public bool rotateAtRandom;
     public Vector3 rotationVector;
+    private float randX;
+    private float randY;
+    private float randZ;
 
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+
+    private void Awake()
+    {
+        randX = Random.Range(-20, 20);
+        randY = Random.Range(-20, 20);
+        randZ = Random.Range(-20, 20);
+    }
+    void Start ()
     {
         if (rotateUp) 
         {
@@ -20,6 +32,10 @@ public class Rotator : MonoBehaviour {
         if (rotateRight) 
         {
             rotationVector = Vector3.right;
+        }
+        if (rotateAtRandom)
+        {
+            rotationVector = new Vector3(randX, randY, randZ);
         }
 	}
 	
