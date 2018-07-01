@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 64027432781926810}
   - component: {fileID: 114174987526152302}
   - component: {fileID: 65102553043374612}
+  - component: {fileID: 114049390807264424}
   m_Layer: 0
   m_Name: DirtMound
   m_TagString: Untagged
@@ -112,6 +113,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 5, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114049390807264424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137614316877926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Something's buried here...
 --- !u!114 &114174987526152302
 MonoBehaviour:
   m_ObjectHideFlags: 1
