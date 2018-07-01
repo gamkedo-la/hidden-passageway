@@ -9,6 +9,7 @@ public class AetherDoorOpen : MonoBehaviour {
     public Vector3 EndLocation;
     public Collider boxcol;
     public float AddedVal;
+    public float mult = 1;
 
 
 	// Use this for initialization
@@ -29,7 +30,7 @@ public class AetherDoorOpen : MonoBehaviour {
     {
         if (StartMoving && !Finished) 
         {
-            transform.localPosition = new Vector3(StartingLocation.x, (transform.localPosition.y + Time.deltaTime), StartingLocation.z);
+            transform.localPosition = new Vector3(StartingLocation.x, (transform.localPosition.y + Time.deltaTime * mult), StartingLocation.z);
             if (boxcol)
             {
             boxcol.enabled = false;
