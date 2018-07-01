@@ -77,7 +77,7 @@ public class ViewControl : MonoBehaviour {
                         WalkControl.instance.areFeetLocked = true;
                     } else
                     {
-                        mtol.SendMessage("triggerAction");
+                        mtol.SendMessage("triggerAction", SendMessageOptions.DontRequireReceiver);
                     }
                 } else {
                     TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
