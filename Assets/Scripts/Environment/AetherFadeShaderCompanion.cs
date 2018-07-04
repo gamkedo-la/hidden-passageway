@@ -7,6 +7,7 @@ public class AetherFadeShaderCompanion : MonoBehaviour
 
 
     public GameObject maze;
+    public bool inverter;
     public float radius = 0.5f;
     public float softness = 0.5f;
 
@@ -27,10 +28,14 @@ public class AetherFadeShaderCompanion : MonoBehaviour
     }
     private void OnTriggerExit(Collider col)
     {
-        if (col.gameObject == maze)
+        if (inverter)
         {
-            softness = -0.2f;
-            radius = 2f;
+            if (col.gameObject == maze)
+            {
+                softness = -0.2f;
+                radius = 2f;
+            }
+
         }
     }
 }

@@ -40,6 +40,7 @@ public class AetherDebugController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 flyMode();
+                noClipMode();
             }
             if (Input.GetKeyDown(KeyCode.N))
             {

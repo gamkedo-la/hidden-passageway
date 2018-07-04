@@ -11,7 +11,7 @@ public class WalkControl : MonoBehaviour {
     public float jumpForce = 5.0f;
     public float walkSpeed = 6.0f;
     public float strafeSpeed = 4.0f;
-    private float powerUp = 1.0f;
+    //private float powerUp = 1.0f;
 
     public static WalkControl instance;
 
@@ -99,12 +99,12 @@ public class WalkControl : MonoBehaviour {
     }
     ///This is powerup code for Aether. Just increases jump height
     ///No idea why this isn't working right, the debug fires, but the jump force refuses to change.
-    void OnTriggerEnter(Collider col) //PowerupCode for the Aether - ties into Powerup tag. Just increases jump height.
-    {
-        if (col.gameObject.tag == "Powerup")
-            jumpForce += powerUp;
-            Debug.Log("Player picked up powerup adding +" + powerUp + " to a total of " + jumpForce);
-    }
+    //void OnTriggerEnter(Collider col) //PowerupCode for the Aether - ties into Powerup tag. Just increases jump height.
+    //{
+    //    if (col.gameObject.tag == "Powerup")
+    //        jumpForce += powerUp;
+    //        Debug.Log("Player picked up powerup adding +" + powerUp + " to a total of " + jumpForce);
+    //}
 
     /*
     void OnCollisionStay(Collision facts) {
