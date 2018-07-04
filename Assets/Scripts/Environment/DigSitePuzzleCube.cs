@@ -8,41 +8,55 @@ public class DigSitePuzzleCube : MonoBehaviour {
     public int puzzleIndex;
     private GameObject parent;
     private DigSitePuzzle puzzle;
+    //public Renderer renderer;
+    public Material mat;
+    RaycastHit rhInfo;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         parent = this.transform.parent.gameObject;
         puzzle = parent.GetComponent<DigSitePuzzle>();
+        //renderer = GetComponent<Renderer>();
+        mat = GetComponent<Renderer>().material;
+        mat.SetColor("_EmissionColor", Color.green);
+
     } //end of Start()
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonUp(0)) {
-            Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit rhInfo;
-            int mouseMask = LayerMask.GetMask("DigSitePuzzleCube");
 
-            if (Physics.Raycast(mouseRay, out rhInfo, cubeClickDistance, mouseMask)) {
-                Debug.Log("Mouse ray hit: " + rhInfo.collider.gameObject.name + " at " + rhInfo.point);
+        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        int mouseMask = LayerMask.GetMask("DigSitePuzzleCube");
 
-                Debug.Log(puzzleIndex);
-                //Debug.Log(puzzle.isCubeUnbreakable(puzzleIndex));
-                if (puzzle.isCubeUnbreakable(puzzleIndex)) {
-                    Destroy(rhInfo.collider.gameObject);
-                } else {
-                   //Debug.Log("Cube Unbreakable");
-                }   
+        if (Physics.Raycast(mouseRay, out rhInfo, cubeClickDistance, mouseMask) && rhInfo.collider.gameObject == gameObject) {
+            
+            gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+            RemoveBrickOnClick();
 
-            } else {
-               //Debug.Log("Mouse ray hit nothing");
-            }
-
-        } //end of if mouse inpout
+        } else {
+            this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+        }
 	} //end of Update()
 
     public void SetIndex(int index) {
         puzzleIndex = index;
     }
+
+    public void RemoveBrickOnClick() {
+        if (Input.GetMouseButtonUp(0)) {
+            if (rhInfo.collider.gameObject == gameObject) {
+
+                if (!puzzle.isCubeUnbreakable(puzzleIndex)) {
+                    Destroy(rhInfo.collider.gameObject);
+                } else { //end if
+                    mat.SetColor("_EmissionColor", Color.red);
+                    this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+                    mat.SetColor("_EmissionColor", Color.green);
+                } //end else
+
+            } //end if
+        } // end of if mouse input
+    } // end of RemoveBrickOnClick()
 
 } // end of class
  
