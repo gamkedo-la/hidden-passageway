@@ -4,59 +4,67 @@ using UnityEngine;
 
 public class DigSitePuzzleCube : MonoBehaviour {
 
-    public float cubeClickDistance = 50.0f; //distance player must be to a puzzle cube to interact
+    public float cubeClickDistance = 50f; //distance player must be to a puzzle cube to interact (Seems to currently have no effect)
     public int puzzleIndex;
+    public Material mat;
+    public RaycastHit rhInfo;
     private GameObject parent;
     private DigSitePuzzle puzzle;
-    //public Renderer renderer;
-    public Material mat;
-    RaycastHit rhInfo;
-
-    // Use this for initialization
+ 
     void Start () {
+
+        //Get reference to the DigSitePuzzle script component of parent puzzle game object
         parent = this.transform.parent.gameObject;
         puzzle = parent.GetComponent<DigSitePuzzle>();
-        //renderer = GetComponent<Renderer>();
+
+        //Get reference to the cube's Renderer component and set the default emission color to green
         mat = GetComponent<Renderer>().material;
         mat.SetColor("_EmissionColor", Color.green);
 
     } //end of Start()
 	
-	// Update is called once per frame
 	void Update () {
+
+        ReactOnMouseOver();
+
+    } //end of Update()
+
+    public void ReactOnMouseOver() {
 
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         int mouseMask = LayerMask.GetMask("DigSitePuzzleCube");
 
         if (Physics.Raycast(mouseRay, out rhInfo, cubeClickDistance, mouseMask) && rhInfo.collider.gameObject == gameObject) {
-            
             gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-            RemoveBrickOnClick();
-
-        } else {
+            DestroyCubeOnClick();
+        } else { // end of if mouse is over this cube
             this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
-        }
-	} //end of Update()
+        } // end of else mouse is not over this cube 
 
-    public void SetIndex(int index) {
-        puzzleIndex = index;
-    }
+    } // end of ReactOnMouseOver()
 
-    public void RemoveBrickOnClick() {
+    public void DestroyCubeOnClick() {
         if (Input.GetMouseButtonUp(0)) {
-            if (rhInfo.collider.gameObject == gameObject) {
 
                 if (!puzzle.isCubeUnbreakable(puzzleIndex)) {
+
                     Destroy(rhInfo.collider.gameObject);
-                } else { //end if
+
+                } else { //end of if cube is breakable
+
+                    //Briefly changes highlight color to red if clicking unbreakable cube.  hardly noticable as is.
                     mat.SetColor("_EmissionColor", Color.red);
                     this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
                     mat.SetColor("_EmissionColor", Color.green);
-                } //end else
 
-            } //end if
+                } //end of else cube is unbreakable
+
         } // end of if mouse input
     } // end of RemoveBrickOnClick()
+
+    public void SetIndex(int index) {
+        puzzleIndex = index;
+    } // end of SetIndex()
 
 } // end of class
  
