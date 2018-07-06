@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class AetherPortal : MonoBehaviour {
 
-	[SerializeField] GameObject particles;
 	[SerializeField] Transform destination;
 	Transform player;
-    [SerializeField] private bool particletype;
 
 	void Awake()
 	{
@@ -16,10 +14,6 @@ public class AetherPortal : MonoBehaviour {
 		{
 			player = playerGO.transform;
 		}
-        if (particletype == false)
-        {
-            particles = null;
-        }
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -31,11 +25,6 @@ public class AetherPortal : MonoBehaviour {
 
 		other.gameObject.transform.position = destination.position;
 		other.gameObject.transform.rotation = destination.rotation;
-        if (!(particles))
-        {
-            particles.transform.position = destination.position;
-    		Instantiate(particles, player.position, player.rotation, player);
-        }
 
 	}
 

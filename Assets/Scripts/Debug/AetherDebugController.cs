@@ -68,7 +68,7 @@ public class AetherDebugController : MonoBehaviour {
                 }
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
-                    flightSpeed = 16f;
+                    flightSpeed = 24f;
                 }
                 if (Input.GetKeyUp(KeyCode.LeftShift))
                 {
@@ -100,11 +100,13 @@ public class AetherDebugController : MonoBehaviour {
         {
             walkControl.enabled = false;
             playerRB.useGravity = false;
+            playerRB.velocity = new Vector3(0, 0, 0);
         }
         if (flight == false)
         {
             walkControl.enabled = true;
             playerRB.useGravity = true;
+            playerRB.velocity = new Vector3(0, 0, 0);
 
         }
     }
