@@ -20,10 +20,14 @@ public class AetherFadeShaderCompanion : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject == maze)
+        if (inverter)
         {
-            softness = 0.2f;
-            radius = 4f;
+            if (col.gameObject == maze)
+            {
+                softness = 0.2f;
+                radius = 2f;
+            }
+
         }
     }
     private void OnTriggerExit(Collider col)
