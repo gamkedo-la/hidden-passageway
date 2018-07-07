@@ -46,9 +46,11 @@ public class DigSitePuzzleCube : MonoBehaviour {
     public void DestroyCubeOnClick() {
         if (Input.GetMouseButtonUp(0)) {
 
-                if (!puzzle.isCubeUnbreakable(puzzleIndex)) {
-
+                if (!puzzle.IsCubeUnbreakable(puzzleIndex)) {
+                    
                     Destroy(rhInfo.collider.gameObject);
+                    puzzle.CheckForSolution();
+                    Debug.Log("Calling CheckForSolution()");
 
                 } else { //end of if cube is breakable
 

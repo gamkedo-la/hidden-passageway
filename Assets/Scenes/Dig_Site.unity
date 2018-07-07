@@ -321,6 +321,10 @@ Prefab:
       propertyPath: m_Name
       value: Puzzle 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1786589598381090, guid: 3420bdd105b784f46a28c33877506f2f, type: 2}
+      propertyPath: m_TagString
+      value: DigSitePuzzle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3420bdd105b784f46a28c33877506f2f, type: 2}
   m_IsPrefabParent: 0
@@ -361,6 +365,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 505056889}
+  - component: {fileID: 505056890}
   m_Layer: 0
   m_Name: Puzzles
   m_TagString: Untagged
@@ -387,6 +392,19 @@ Transform:
   m_Father: {fileID: 592361347}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &505056890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505056888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0b9ba218ed25544b479ced6c802fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPuzzles: []
+  solvedPuzzles: []
 --- !u!1 &592361346
 GameObject:
   m_ObjectHideFlags: 0

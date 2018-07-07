@@ -5,16 +5,21 @@ using UnityEngine;
 public class DigSitePuzzle : MonoBehaviour {
 
     public GameObject puzzleCubePrefab;
+    public List<GameObject> breakableCubes;
     public bool[] cubeState;
     private int gridIndex;
     private int gridCols = 7;
     private int gridRows = 7;
-
+    private GameObject parent;
+    private DigSitePuzzleTracker puzzleTracker;
+    
     void Start () {
+
+        parent = this.transform.parent.gameObject;
+        puzzleTracker = parent.GetComponent<DigSitePuzzleTracker>();
 
         cubeState = new bool[gridCols * gridRows];
         CreateCubeGrid(7,7);
-
     }
 	
 	void Update () {
@@ -55,9 +60,9 @@ public class DigSitePuzzle : MonoBehaviour {
                 //Randomize cube state
                 if (Random.Range(0f,1f) > 0.6) {
                     cubeState[gridIndex] = true;
-                    
                 } else { //end if
                     cubeState[gridIndex] = false;
+                    breakableCubes.Add(tempGO);
                 } // end else
 
             } // end of for x loop
@@ -68,7 +73,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
     } // end of CreateCubeGrid()
 
-    public bool isCubeUnbreakable(int index) {
+    public bool IsCubeUnbreakable(int index) {
 
         if (cubeState[index]) {
             return true;
@@ -81,5 +86,18 @@ public class DigSitePuzzle : MonoBehaviour {
     public int ColRowToGridIndex(int col, int row) {
         return col + (gridCols * row);
     }  // end of ColRowToGridIndex()
+
+    public void CheckForSolution() {
+
+        //Remove destroyed cubes from list
+        breakableCubes.RemoveAll(GameObject => GameObject == null);
+
+        Debug.Log(breakableCubes);
+        if (breakableCubes.Count <= 1) { //solves if 1 left, because last cube is not detroyed yet, when check is made.
+            puzzleTracker.MarkSolved(gameObject.name);
+            Debug.Log("Solution Found. Calling MarkSolved() for object " + gameObject.name);
+        } // end of if
+
+    } // end of CheckForSolution()
 
 } // end of class
