@@ -46,20 +46,19 @@ public class DigSitePuzzleCube : MonoBehaviour {
     public void DestroyCubeOnClick() {
         if (Input.GetMouseButtonUp(0)) {
 
-                if (!puzzle.IsCubeUnbreakable(puzzleIndex)) {
+            if (!puzzle.IsCubeUnbreakable(puzzleIndex)) {
                     
-                    Destroy(rhInfo.collider.gameObject);
-                    puzzle.CheckForSolution();
-                    Debug.Log("Calling CheckForSolution()");
+                Destroy(rhInfo.collider.gameObject);
+                puzzle.SetSolutionCheckNeeded();
 
-                } else { //end of if cube is breakable
+            } else { //end of if cube is breakable
 
-                    //Briefly changes highlight color to red if clicking unbreakable cube.  hardly noticable as is.
-                    mat.SetColor("_EmissionColor", Color.red);
-                    this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
-                    mat.SetColor("_EmissionColor", Color.green);
+                //Briefly changes highlight color to red if clicking unbreakable cube.  hardly noticable as is.
+                mat.SetColor("_EmissionColor", Color.red);
+                this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+                mat.SetColor("_EmissionColor", Color.green);
 
-                } //end of else cube is unbreakable
+            } //end of else cube is unbreakable
 
         } // end of if mouse input
     } // end of RemoveBrickOnClick()
