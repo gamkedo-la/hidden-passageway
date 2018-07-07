@@ -11,12 +11,17 @@ public class WalkControl : MonoBehaviour {
     public float jumpForce = 5.0f;
     public float walkSpeed = 6.0f;
     public float strafeSpeed = 4.0f;
+
+    public float suchLowYMustHaveFallenThroughFloor = -150.0f;
+    Vector3 lastKnownSafelyOnGround = Vector3.zero;
+
     //private float powerUp = 1.0f;
 
     public static WalkControl instance;
 
 	// Use this for initialization
 	void Start () {
+        lastKnownSafelyOnGround = transform.position;
         instance = this;
         rb = GetComponent<Rigidbody>();
 		Cursor.lockState = CursorLockMode.Locked;
@@ -94,8 +99,18 @@ public class WalkControl : MonoBehaviour {
         if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.01f))
         {
             onGround = true;
+            lastKnownSafelyOnGround = transform.position;
         }
-        else onGround = false;
+        else
+        {
+            onGround = false;
+            if (transform.position.y < suchLowYMustHaveFallenThroughFloor)
+            {
+                Debug.Log("Fell through or off world edge, resetting to last ground touch");
+                Debug.Log("If this shouldn't have happened or fell too far, set lastKnownSafelyOnGround");
+                transform.position = lastKnownSafelyOnGround;
+            }
+        }
     }
     ///This is powerup code for Aether. Just increases jump height
     ///No idea why this isn't working right, the debug fires, but the jump force refuses to change.
