@@ -43,6 +43,8 @@ public class LanternSway : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        RaycastHit rhInfo;
+
         if (mainLanternScript.held)
         {
             currentVelocity = rb.velocity;
@@ -54,20 +56,16 @@ public class LanternSway : MonoBehaviour {
             }
 
 
-
-
-
-
             if ((currentVelocity.x + currentVelocity.y + currentVelocity.z) < maxVelocity && (currentVelocity.x + currentVelocity.y + currentVelocity.z) > -maxVelocity)
             {
                 //BEST LOOKING SWAY SO FAR
                 if (rotateSpeed < 0)
                 {
-                    rb.AddForce((Vector3.right * rotateSpeed) * swayAmount);
+                    rb.AddForce((Vector3.forward * rotateSpeed) * -swayAmount);
                 }
                 if (rotateSpeed > 0)
                 {
-                    rb.AddForce((Vector3.right * rotateSpeed) * -swayAmount);
+                    rb.AddForce((Vector3.forward * rotateSpeed) * -swayAmount);
                 }
             }
         }
