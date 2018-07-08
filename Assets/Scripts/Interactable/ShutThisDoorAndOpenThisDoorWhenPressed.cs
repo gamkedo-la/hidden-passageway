@@ -26,17 +26,17 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
 
     void OpenMyDoorsOnly()
     {
+        for (int i = 0; i < doorsInGroup.Length; i++)
+        {
+            doorsInGroup[i].Close();
+        }
+
         if (doorsToBeOpened != null)
         {
             for (int i = 0; i < doorsToBeOpened.Length; i++)
             {
                 doorsToBeOpened[i].Open();
             }
-        }
-
-        for (int i = 0; i < doorsInGroup.Length; i++)
-        {
-            doorsInGroup[i].Close();
         }
     }
 }
