@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlickerEmissionForPowerShortage : MonoBehaviour {
-    public Shader shader;
+public class InventorySystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
