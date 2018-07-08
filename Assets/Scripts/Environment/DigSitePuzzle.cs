@@ -12,7 +12,8 @@ public class DigSitePuzzle : MonoBehaviour {
     private int gridRows = 7;
     private GameObject parent;
     private DigSitePuzzleTracker puzzleTracker;
-    
+    public bool solutionCheckNeeded = false;
+
     void Start () {
 
         parent = this.transform.parent.gameObject;
@@ -23,8 +24,12 @@ public class DigSitePuzzle : MonoBehaviour {
     }
 	
 	void Update () {
-		
-	}
+        if (solutionCheckNeeded) {
+            CheckForSolution();
+            Debug.Log("Calling CheckForSolution()");
+            solutionCheckNeeded = false;
+        }
+    }
     
     public void CreateCubeGrid(int cols, int rows) {
 
@@ -93,11 +98,15 @@ public class DigSitePuzzle : MonoBehaviour {
         breakableCubes.RemoveAll(GameObject => GameObject == null);
 
         Debug.Log(breakableCubes);
-        if (breakableCubes.Count <= 1) { //solves if 1 left, because last cube is not detroyed yet, when check is made.
+        if (breakableCubes.Count == 0) { //solves if 1 left, because last cube is not detroyed yet, when check is made.
             puzzleTracker.MarkSolved(gameObject.name);
             Debug.Log("Solution Found. Calling MarkSolved() for object " + gameObject.name);
         } // end of if
 
     } // end of CheckForSolution()
+
+    public void SetSolutionCheckNeeded() {
+        solutionCheckNeeded = true;
+    }
 
 } // end of class
