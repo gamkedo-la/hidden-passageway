@@ -1876,7 +1876,7 @@ Prefab:
     - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: jumpForce
-      value: 4.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -1904,6 +1904,11 @@ Prefab:
     - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
       propertyPath: m_LocalPosition.z
       value: 410.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: suchLowYMustHaveFallenThroughFloor
+      value: -85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
@@ -20508,8 +20513,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 612478081}
-  - component: {fileID: 612478083}
-  - component: {fileID: 612478082}
   m_Layer: 0
   m_Name: Desert Whole
   m_TagString: Untagged
@@ -20536,47 +20539,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &612478082
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 612478080}
-  m_Material: {fileID: 0}
-  m_Enabled: 1
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
---- !u!218 &612478083
-Terrain:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 612478080}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_TerrainData: {fileID: 0}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMaximumLOD: 0
-  m_CastShadows: 1
-  m_DrawHeightmap: 1
-  m_DrawTreesAndFoliage: 1
-  m_ReflectionProbeUsage: 1
-  m_MaterialType: 0
-  m_LegacySpecular:
-    serializedVersion: 2
-    rgba: 4286545791
-  m_LegacyShininess: 0.078125
-  m_MaterialTemplate: {fileID: 0}
-  m_BakeLightProbesForTrees: 1
-  m_ScaleInLightmap: 1
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &613365851
 GameObject:
   m_ObjectHideFlags: 0
