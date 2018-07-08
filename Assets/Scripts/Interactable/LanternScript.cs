@@ -3,18 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LanternScript : MonoBehaviour {
+    Transform defaultParent;
+    GameObject parentObject;
+    Transform trueDefaultParent;
+    public bool held = false;
 
-    bool held = false;
+    Collider[] colliders = new Collider[2];
 
-    float offsetX = 0;
-    float offsetY = 0;
-    float offsetZ = 0;
+    bool canPerformAction = true;
+
+    [SerializeField]
+    float depthOffset = 0;
+    [SerializeField]
+    float horizontalOffset = 0;
+    [SerializeField]
+    float verticalOffset = 0;
 
     float throwForce = 0;
-    float forceBuildupSpeed = 10;
-    [SerializeField]
-    float maxThrowForce = 10;
+    float forceBuildupSpeed = 125;
 
+    float maxThrowForce = 75;
+
+    LanternSway lanternSwayScript;
+
+    private void Awake()
+    {
+        defaultParent = gameObject.transform.parent;
+        parentObject = gameObject.transform.parent.gameObject;
+        trueDefaultParent = parentObject.transform.parent;
+        colliders = gameObject.GetComponents<BoxCollider>();
+        lanternSwayScript = gameObject.GetComponent<LanternSway>();
+    }
     // Use this for initialization
     void Start () {
 		
@@ -24,22 +43,33 @@ public class LanternScript : MonoBehaviour {
 	void Update () {
         if (held)
         {
-            if (Input.GetMouseButtonUp(0))
+            if (canPerformAction)
             {
-                PutDown();
-            }
-            if (Input.GetMouseButton(1))
-            {
-                if(throwForce < maxThrowForce)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    throwForce += 1 * Time.deltaTime * forceBuildupSpeed;
-                } else if(throwForce > maxThrowForce)
-                {
-                    throwForce = maxThrowForce;
+                    PutDown();
                 }
-            }else if (Input.GetMouseButtonUp(1))
+                if (Input.GetMouseButton(1))
+                {
+                    if (throwForce < maxThrowForce)
+                    {
+                        throwForce += 1 * Time.deltaTime * forceBuildupSpeed;
+                    }
+                    else if (throwForce > maxThrowForce)
+                    {
+                        throwForce = maxThrowForce;
+                    }
+                }
+                else if (Input.GetMouseButtonUp(1))
+                {
+                    Throw();
+                }
+            }else if (!canPerformAction)
             {
-                Throw();
+                if (Input.GetMouseButtonUp(0))
+                {
+                    canPerformAction = true;
+                }
             }
         }
     }
@@ -51,42 +81,75 @@ public class LanternScript : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 PickUp(null);
+                canPerformAction = false;
             }
         }
     }
 
     public void PickUp(Transform objToParent)
     {
-        if(objToParent == null)
+        ToggleColliders();
+        if (objToParent == null)
         {
-            objToParent = Camera.main.transform;
+            //objToParent = Camera.main.transform;
+            objToParent = GameObject.Find("Player").transform;
         }
-        gameObject.GetComponent<Rigidbody>().useGravity = false;
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        //gameObject.transform.SetParent(objToParent.transform);
-        gameObject.transform.SetParent(objToParent);
-        gameObject.transform.rotation = Quaternion.identity;
-        gameObject.transform.position = gameObject.transform.position;// + new Vector3(offsetX, offsetY, offsetZ);
+        //gameObject.GetComponent<Rigidbody>().useGravity = false;
+        //gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
+        Vector3 newPosition = objToParent.localPosition + (objToParent.transform.forward * depthOffset) + (objToParent.transform.up * verticalOffset) + (objToParent.transform.right * horizontalOffset);
+
+        //Changed this to try and have the target become parented to the player instead of the lantern
+        //gameObject.transform.SetParent(objToParent.transform);
+        parentObject.transform.SetParent(objToParent.transform);
+
+        //gameObject.transform.position = objToParent.localPosition + (objToParent.transform.forward * depthOffset) + (objToParent.transform.up * verticalOffset) + (objToParent.transform.right * horizontalOffset);
+        parentObject.transform.position = newPosition;
+        //gameObject.transform.rotation = objToParent.transform.localRotation;
+        parentObject.transform.rotation = objToParent.transform.localRotation;
+
+        lanternSwayScript.constraintsFrozen = true;
+        lanternSwayScript.ToggleFreezeTargetPos();
         held = true;
     }
     void PutDown()
     {
-        gameObject.transform.SetParent(null);
+        ToggleColliders();
+        //gameObject.transform.SetParent(defaultParent);
+        parentObject.transform.SetParent(trueDefaultParent);
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
+        lanternSwayScript.constraintsFrozen = false;
+        lanternSwayScript.ToggleFreezeTargetPos();
         held = false;
     }
     void Throw()
     {
-        gameObject.transform.SetParent(null);
+        ToggleColliders();
+        //gameObject.transform.SetParent(defaultParent);
+        parentObject.transform.SetParent(trueDefaultParent);
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
+        lanternSwayScript.constraintsFrozen = false;
+        lanternSwayScript.ToggleFreezeTargetPos();
         gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * throwForce, ForceMode.Impulse);
 
         throwForce = 0;
         held = false;
+    }
+
+    void ToggleColliders()
+    {
+        foreach(BoxCollider col in colliders)
+        {
+            if (col.enabled)
+            {
+                col.enabled = false;
+            }
+            else
+                col.enabled = true;
+        }
     }
 }
