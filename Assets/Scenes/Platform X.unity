@@ -239,6 +239,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.50000143
       objectReference: {fileID: 0}
+    - target: {fileID: 65607555349559512, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
@@ -375,6 +380,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 87bfdb4d3299f4feaba8eadf08ed47db, type: 3}
   m_PrefabInternal: {fileID: 123902149}
+--- !u!1 &125582215 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1820981498}
+--- !u!114 &125582218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125582215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &147723454
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +528,33 @@ Transform:
   m_Father: {fileID: 855932157}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &182592605 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 33521243}
+--- !u!114 &182592608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182592605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &220972258 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: c6f55a8db15ca48729ad0cc790252039, type: 3}
@@ -532,6 +591,33 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f08ae8833b5b04ee58f21e045b4166a4, type: 3}
+--- !u!1 &337173631 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1889871558}
+--- !u!114 &337173634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337173631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &389428672 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 69f2d92fdd55f4a1e86136660b273fc7, type: 3}
@@ -747,6 +833,33 @@ Transform:
   m_Father: {fileID: 1847622713}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &883031901 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 39833984}
+--- !u!114 &883031904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883031901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1008337584
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +1020,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1099914251 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2004270550}
+--- !u!114 &1099914254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099914251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1115283389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1268,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1437085481 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1002467452697452, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 39833984}
+--- !u!65 &1437085486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437085481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6, z: 1.5}
+  m_Center: {x: 0, y: 2.7, z: 0}
 --- !u!1 &1456712268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1393,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1510446268 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1030495051}
+--- !u!114 &1510446271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1510446268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!1 &1552796270 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1342144674}
+--- !u!114 &1552796273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552796270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlatformX/Teleporter
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1653279490
 GameObject:
   m_ObjectHideFlags: 0
