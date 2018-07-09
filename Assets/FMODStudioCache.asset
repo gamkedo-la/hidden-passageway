@@ -13,11 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114073259785973054}
-  - {fileID: 114898828354135154}
-  - {fileID: 114861985546107660}
-  - {fileID: 114440712848881592}
-  - {fileID: 114049455358354404}
-  - {fileID: 114343600919073364}
+  - {fileID: 114311695494764250}
+  - {fileID: 114874554678666964}
+  - {fileID: 114773971327908112}
+  - {fileID: 114391919158120230}
+  - {fileID: 114712967833219344}
   EditorEvents:
   - {fileID: 114340770772828378}
   - {fileID: 114922708838333104}
@@ -40,9 +40,9 @@ MonoBehaviour:
   - {fileID: 114404866243161794}
   - {fileID: 114079670089613352}
   - {fileID: 114845149606401878}
-  MasterBankRef: {fileID: 114049455358354404}
+  MasterBankRef: {fileID: 114712967833219344}
   StringsBankRef: {fileID: 114073259785973054}
-  stringsBankWriteTime: 636666630321784616
+  stringsBankWriteTime: 636666681181424896
   cacheVersion: 2
 --- !u!114 &114027560477054958
 MonoBehaviour:
@@ -58,7 +58,7 @@ MonoBehaviour:
   Path: event:/WordWall/Rumble
   guid: 2bd1257c7769d841a3fed6a94a2ae4a7
   Banks:
-  - {fileID: 114440712848881592}
+  - {fileID: 114391919158120230}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1534048
-  Exists: 1
+  Exists: 0
 --- !u!114 &114073259785973054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/HiddenPassageway\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636666630321784616
+  lastModified: 636666681181424896
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -117,7 +117,7 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorMove
   guid: ee667fa176f1844eb7972ae7e782af3f
   Banks:
-  - {fileID: 114049455358354404}
+  - {fileID: 114712967833219344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   Path: event:/Aether/BirdsLargeTree
   guid: 2fa74bb08e08a84a96bbec8b727e4d1f
   Banks:
-  - {fileID: 114861985546107660}
+  - {fileID: 114773971327908112}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -177,6 +177,21 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3500
+--- !u!114 &114173736971120032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114179925207033224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +239,7 @@ MonoBehaviour:
   Path: event:/WordWall/DoorSlide
   guid: b48f9d19700b154496bb198c0a2ab4d1
   Banks:
-  - {fileID: 114440712848881592}
+  - {fileID: 114391919158120230}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -247,6 +262,24 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114311695494764250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\2018\gamkedo\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\PlatformX.bank
+  lastModified: 636666681181434903
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 35520
+  Exists: 1
 --- !u!114 &114340770772828378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +294,7 @@ MonoBehaviour:
   Path: event:/DecayingWorld/Wind
   guid: 5daa280a25b8c742b436e9cfe450700a
   Banks:
-  - {fileID: 114898828354135154}
+  - {fileID: 114874554678666964}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -286,7 +319,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 35520
-  Exists: 1
+  Exists: 0
 --- !u!114 &114372646707564170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +335,24 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114391919158120230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\2018\gamkedo\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\WordWall.bank
+  lastModified: 636644184815349120
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3716928
+  Exists: 1
 --- !u!114 &114404866243161794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +367,7 @@ MonoBehaviour:
   Path: event:/Camp/Campfire
   guid: 9771a84871e4a64ebc692fc405853feb
   Banks:
-  - {fileID: 114049455358354404}
+  - {fileID: 114712967833219344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -338,7 +389,7 @@ MonoBehaviour:
   Path: event:/Aether/Waterfall
   guid: 564b90c80d7ac04899d26374b2672100
   Banks:
-  - {fileID: 114861985546107660}
+  - {fileID: 114773971327908112}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -360,7 +411,7 @@ MonoBehaviour:
   Path: event:/Aether/Frog
   guid: 0af94582ae6c8f4e9be666f05986e0b8
   Banks:
-  - {fileID: 114861985546107660}
+  - {fileID: 114773971327908112}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -385,7 +436,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 3716928
-  Exists: 1
+  Exists: 0
 --- !u!114 &114474003296844224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +451,7 @@ MonoBehaviour:
   Path: event:/WordWall/WWclick
   guid: 6ae6529f00f5f0468f7d6445433f5498
   Banks:
-  - {fileID: 114440712848881592}
+  - {fileID: 114391919158120230}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -422,7 +473,7 @@ MonoBehaviour:
   Path: event:/Camp/Crickets
   guid: 74be58d5c7e2a844aa0081a6f53fac24
   Banks:
-  - {fileID: 114049455358354404}
+  - {fileID: 114712967833219344}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -444,7 +495,7 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorStop
   guid: 40fdcef3eb993d46ae51886f2e29b1c8
   Banks:
-  - {fileID: 114049455358354404}
+  - {fileID: 114712967833219344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -466,7 +517,7 @@ MonoBehaviour:
   Path: event:/WordWall/SecretAhh
   guid: 38b105502f0ec240a64cab5dc97d089d
   Banks:
-  - {fileID: 114440712848881592}
+  - {fileID: 114391919158120230}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -488,7 +539,7 @@ MonoBehaviour:
   Path: event:/Aether/Birds
   guid: ebe9d1151d34f24980bc678c21fc1a5c
   Banks:
-  - {fileID: 114861985546107660}
+  - {fileID: 114773971327908112}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -548,6 +599,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 459904
   Exists: 1
+--- !u!114 &114712967833219344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\2018\gamkedo\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636653678126263006
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1534048
+  Exists: 1
 --- !u!114 &114720249186161992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +632,7 @@ MonoBehaviour:
   Path: event:/Aether/Torch
   guid: e663e6b1e7607845b261739c56f67143
   Banks:
-  - {fileID: 114861985546107660}
+  - {fileID: 114773971327908112}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -584,7 +654,7 @@ MonoBehaviour:
   Path: event:/DecayingWorld/Ambient
   guid: e6cfdb34a8075144b9e6bf269255d29a
   Banks:
-  - {fileID: 114898828354135154}
+  - {fileID: 114874554678666964}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -639,12 +709,12 @@ MonoBehaviour:
   Path: event:/WordWall/WWMusic
   guid: 5bdf9946100a584da46651f699625067
   Banks:
-  - {fileID: 114440712848881592}
+  - {fileID: 114391919158120230}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114737060882772252}
+  - {fileID: 114173736971120032}
   MinDistance: 0
   MaxDistance: 0
   Length: 117551
@@ -678,6 +748,24 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114773971327908112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\2018\gamkedo\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\Aether.bank
+  lastModified: 636655303828523559
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 459904
+  Exists: 1
 --- !u!114 &114786806858913868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,12 +795,12 @@ MonoBehaviour:
   Path: event:/PlatformX/Teleporter
   guid: 53dc08ea26fae5439a90a5b2e58d75ca
   Banks:
-  - {fileID: 114343600919073364}
+  - {fileID: 114311695494764250}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114306980001996314}
+  - {fileID: 114932366420865678}
   MinDistance: 0
   MaxDistance: 0
   Length: 2742
@@ -733,6 +821,24 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 459904
+  Exists: 0
+--- !u!114 &114874554678666964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\2018\gamkedo\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\DecayingWorld.bank
+  lastModified: 636653678126112909
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3176416
   Exists: 1
 --- !u!114 &114888484179925320
 MonoBehaviour:
@@ -748,7 +854,7 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorActivate
   guid: 7947de63663a1b4782809f4285e9e81b
   Banks:
-  - {fileID: 114049455358354404}
+  - {fileID: 114712967833219344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -773,7 +879,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 3176416
-  Exists: 1
+  Exists: 0
 --- !u!114 &114922708838333104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,7 +894,7 @@ MonoBehaviour:
   Path: event:/DecayingWorld/RobotBeacon
   guid: 6e9e1f493b79be4585cd35cc4c4e3007
   Banks:
-  - {fileID: 114898828354135154}
+  - {fileID: 114874554678666964}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -796,6 +902,21 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 11300
+--- !u!114 &114932366420865678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114938835105029842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,7 +931,7 @@ MonoBehaviour:
   Path: event:/Camp/CampMusic
   guid: 903862e4a44a8b49acf3e39d587d4fea
   Banks:
-  - {fileID: 114049455358354404}
+  - {fileID: 114712967833219344}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -832,7 +953,7 @@ MonoBehaviour:
   Path: event:/DecayingWorld/DiscoveryVOX
   guid: 73771e04dc819049a141a0c4ea34459b
   Banks:
-  - {fileID: 114898828354135154}
+  - {fileID: 114874554678666964}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
