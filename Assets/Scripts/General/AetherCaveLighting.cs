@@ -12,6 +12,7 @@ public class AetherCaveLighting : MonoBehaviour {
     public float StartingLight2Intensity;
     public float UndergroundLightIntensity;
     public float UndergroundLight2Intensity;
+    public AetherGameManager AGM;
 
     public Material skyboxmat1;
     public Material skyboxmat2;
@@ -25,6 +26,8 @@ public class AetherCaveLighting : MonoBehaviour {
         Assert.IsNotNull(skyboxmat2);
         StartingLightIntensity = Sun.intensity;
         StartingLight2Intensity = secondSun.intensity;
+        GameObject AGMGO = GameObject.Find("GameManager");
+        AGM = AGMGO.GetComponent<AetherGameManager>();
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class AetherCaveLighting : MonoBehaviour {
             secondSun.intensity = UndergroundLight2Intensity;
             isnight = true;
             DynamicGI.UpdateEnvironment();
+            AGM.Night = true;
         }
 
     }
@@ -54,6 +58,7 @@ public class AetherCaveLighting : MonoBehaviour {
             secondSun.intensity = StartingLight2Intensity;
             isnight = false;
             DynamicGI.UpdateEnvironment();
+            AGM.Night = false;
         }
     }
 }
