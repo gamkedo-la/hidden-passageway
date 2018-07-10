@@ -5,7 +5,7 @@ using UnityEngine;
 public class AetherPortal : MonoBehaviour {
 
 	[SerializeField] Transform destination;
-	Transform player;
+	private Transform player;
 
 	void Awake()
 	{
