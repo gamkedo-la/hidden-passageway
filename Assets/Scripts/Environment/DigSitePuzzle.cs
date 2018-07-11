@@ -13,6 +13,7 @@ public class DigSitePuzzle : MonoBehaviour {
     private GameObject parent;
     private DigSitePuzzleTracker puzzleTracker;
     public bool solutionCheckNeeded = false;
+    public List<int>[] clues;
 
     void Start () {
 
@@ -21,6 +22,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
         cubeState = new bool[gridCols * gridRows];
         CreateCubeGrid(7,7);
+        CreateRowColClues(7,7);
     }
 	
 	void Update () {
@@ -107,6 +109,61 @@ public class DigSitePuzzle : MonoBehaviour {
 
     public void SetSolutionCheckNeeded() {
         solutionCheckNeeded = true;
-    }
+    } // end of SetSolutionCheckNeeded()
 
+    public void CreateRowColClues(int rows, int cols) {
+
+        int consecutiveCubes = 0;
+
+        clues = new List<int>[rows + cols];
+        for (int i = 0; i < clues.Length; i++) {
+            clues[i] = new List<int>();
+        }
+
+        for (int y = 0; y < rows; y++) {
+            for (int x = 0; x < cols; x++) {
+                if (IsCubeUnbreakable(ColRowToGridIndex(x, y))) {
+                    consecutiveCubes++;
+                    if (x == cols - 1) {
+                        clues[y].Add(consecutiveCubes);
+                        consecutiveCubes = 0;
+                    } // end of if last cube in row
+                } else if (consecutiveCubes != 0) { //end of if cube is unbreakable
+                    clues[y].Add(consecutiveCubes);
+                    consecutiveCubes = 0;
+                } // end of else if
+            } // end of for x
+        } //end of for y
+
+        for (int x = 0; x < cols; x++) {
+            for (int y = 0; y < rows; y++) {
+                if (IsCubeUnbreakable(ColRowToGridIndex(x, y))) {
+                    consecutiveCubes++;
+                    if (y == rows - 1) {
+                        clues[x + rows].Add(consecutiveCubes);
+                        consecutiveCubes = 0;
+                    } //end of if last cube in col
+                } else if (consecutiveCubes != 0) { //end of if cube is unbreakable
+                    clues[x + rows].Add(consecutiveCubes);
+                    consecutiveCubes = 0;
+                } // end of else if
+            } // end of for y
+        } // end of for x
+
+        //Display row clues in console for debugging
+        for (int y = 0; y < rows; y++) {
+            Debug.Log("Number of clues in row y" + (y+1) +": " + clues[y].Count);
+            for (int i = 0; i < clues[y].Count; i++) {
+                Debug.Log("Clue " + i+1 + " in row y" + (y + 1) + ": " + clues[y][i]);
+            }
+        }
+
+        //Display col clues in console for debugging
+        for (int x = 0; x < cols; x++) {
+            Debug.Log("Number of clues in col x" + (x + 1) + ": " + clues[x + rows].Count);
+            for (int i = 0; i < clues[x + rows].Count; i++) {
+                Debug.Log("Clue " + i + 1 + " in col x" + (x + 1) + ": " + clues[x + rows][i]);
+            }
+        }
+    }
 } // end of class
