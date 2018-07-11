@@ -7,9 +7,17 @@ public class EstatePuzzle : MonoBehaviour {
     bool greenLight = false;
     public Light lanternLight;
 
-    public GameObject[] scribbles;
+    GameObject[] scribbles;
+    public GameObject[] alternateByLight;
+    public GameObject[] visibleByLight;
 
     Color defaultColor;
+
+    public EstatePuzzleCube[] cubes;
+    int numberCorrect = 0;
+
+    //DELETE THIS LATER. USED FOR TESTING THE SOLUTION
+    public GameObject lightUpWhenCorrect;
 
     private void Awake()
     {
@@ -30,8 +38,17 @@ public class EstatePuzzle : MonoBehaviour {
         {
             ToggleLanternColor();
         }
-		
-	}
+
+        //USING THIS FOR TESTING
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (TestSolution())
+            {
+                lightUpWhenCorrect.SetActive(true);
+            }
+        }
+
+    }
 
     void ToggleLanternColor()
     {
@@ -57,12 +74,47 @@ public class EstatePuzzle : MonoBehaviour {
             {
                 scribble.SetActive(true);
             }
+            foreach(GameObject obj in alternateByLight)
+            {
+                obj.SetActive(false);
+            }
+            foreach(GameObject obj in visibleByLight)
+            {
+                obj.GetComponentInChildren<Renderer>().enabled = true;
+            }
         }else
         {
             foreach (GameObject scribble in scribbles)
             {
                 scribble.SetActive(false);
             }
+            foreach (GameObject obj in alternateByLight)
+            {
+                obj.SetActive(true);
+            }
+            foreach (GameObject obj in visibleByLight)
+            {
+                obj.GetComponentInChildren<Renderer>().enabled = false;
+            }
         }
+    }
+
+    bool TestSolution()
+    {
+        numberCorrect = 0;
+        foreach(EstatePuzzleCube cube in cubes)
+        {
+            if(cube.solution[cube.currentSelection] == true)
+            {
+                numberCorrect++;
+            }
+        }
+
+        if (numberCorrect == cubes.Length)
+        {
+            return true;
+        }
+        else
+            return false;
     }
 }
