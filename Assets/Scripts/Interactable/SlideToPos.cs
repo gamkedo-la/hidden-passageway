@@ -7,7 +7,9 @@ public class SlideToPos : MonoBehaviour {
     public Transform endPos;
     public float duration = 2.0f;
     public bool isDone = false;
+    public bool lookAtAction = true;
 
+    Camera mainCam;
     bool isStarted = false;
     float startTime;
     Vector3 startPos;
@@ -63,11 +65,12 @@ public class SlideToPos : MonoBehaviour {
 
     public void Start()
     {
+        mainCam = Camera.main;
         if(playerGO == null) {
             playerGO = GameObject.FindWithTag("Player");
         }
         isStarted = false;
-        camRotReset = Camera.main.transform.localRotation;
+        camRotReset = mainCam.transform.localRotation;
 
         mySaveName = SceneManager.GetActiveScene().name +
                                       gameObject.name;
@@ -133,7 +136,7 @@ public class SlideToPos : MonoBehaviour {
         if ((isReversing == false && callPrev == null) ||
                     (isReversing && callNext == null)) // start of chain?
         {
-            camRotWorldInitial = Camera.main.transform.rotation;
+            camRotWorldInitial = mainCam.transform.rotation;
         }
         isStarted = true;
         startTime = Time.time;
@@ -189,14 +192,16 @@ public class SlideToPos : MonoBehaviour {
                 WalkControl.instance.areFeetLocked = false;
                 playerGO.transform.parent = wasPlayerParent;
             } else {
-                if ((isReversing == false && callNext == null) || 
+                if ((isReversing == false && callNext == null) ||
                     (isReversing && callPrev == null)) // end of chain?
                 {
-                    Camera.main.transform.rotation = camRotWorldInitial;
+                    if (lookAtAction) {
+                        mainCam.transform.rotation = camRotWorldInitial;
+                    }
                     ViewControl.instance.enabled = true;
                     WalkControl.instance.enabled = true;
                 }
-                
+
             }
 
             if(isReversing) {
@@ -214,30 +219,30 @@ public class SlideToPos : MonoBehaviour {
             }
             return;
         }
-        else if (isTouchingPlayer == false)
+        else if (isTouchingPlayer == false && lookAtAction)
         {
             if (callPrev == null && callNext == null) // no chain?
             {
                 float camTurn = Mathf.Clamp01((Time.time - startTime) / duration * 4.0f);
-                Camera.main.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
+                mainCam.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
                           Quaternion.LookRotation(transform.position -
-                          Camera.main.transform.position), camTurn);
+                          mainCam.transform.position), camTurn);
 
                 if (camTurn >= 1.0f)
                 {
                     camTurn = Mathf.Clamp01(((startTime + duration) - Time.time) / duration * 4.0f);
-                    Camera.main.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
+                    mainCam.transform.rotation = Quaternion.Slerp(camRotWorldInitial,
                               Quaternion.LookRotation(transform.position -
-                              Camera.main.transform.position), camTurn);
+                              mainCam.transform.position), camTurn);
                 }
             } else {
-                Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation,
+                mainCam.transform.rotation = Quaternion.Slerp(mainCam.transform.rotation,
                         Quaternion.LookRotation( ( isReversing ? startPos : endPos.position) -
-                                                      Camera.main.transform.position), 4.0f * Time.deltaTime); // tilting to watch
+                                                      mainCam.transform.position), 4.0f * Time.deltaTime); // tilting to watch
             }
         }
         transform.position = Vector3.Lerp(startPos, endPos.position, movePerc);
         transform.rotation = Quaternion.Slerp(startRot, endPos.rotation, movePerc);
-        
+
     }
 }
