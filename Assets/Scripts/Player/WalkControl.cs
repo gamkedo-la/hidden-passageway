@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WalkControl : MonoBehaviour {
-	private Rigidbody rb;
+    public Rigidbody rb;
 	private bool onGround=true;
     private Vector3 prevValidPosition;
     public bool areFeetLocked = false;
     public float jumpForce = 5.0f;
     public float walkSpeed = 6.0f;
     public float strafeSpeed = 4.0f;
+    public float speedFalloffAmt = 0.9f; // friction only for lateral motion
 
     public float suchLowYMustHaveFallenThroughFloor = -150.0f;
     Vector3 lastKnownSafelyOnGround = Vector3.zero;
@@ -40,7 +41,50 @@ public class WalkControl : MonoBehaviour {
             }
         }
 	}
-	
+
+	void FixedUpdate()
+	{
+        if (ViewControl.instance.paperView.enabled)
+        {
+            rb.velocity = Vector3.zero;
+            return; // reading, stand still
+        }
+        if (areFeetLocked)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
+
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            if (areFeetLocked == false)
+            {
+                Vector3 lateralDecay = rb.velocity;
+                lateralDecay.x *= speedFalloffAmt;
+                lateralDecay.z *= speedFalloffAmt;
+                rb.velocity = lateralDecay;
+                float scaleForCompatibilityWithOlderTuning = 4.0f; // added to keep pre-physics walk tuning numbers
+                rb.velocity += transform.forward * Time.deltaTime * walkSpeed * scaleForCompatibilityWithOlderTuning *
+                    Input.GetAxisRaw("Vertical");
+                rb.velocity += transform.right * Time.deltaTime * strafeSpeed * scaleForCompatibilityWithOlderTuning *
+                    Input.GetAxisRaw("Horizontal");
+
+                if (onGround && Input.GetKeyDown(KeyCode.Space))
+                {
+                    onGround = false;
+                    rb.velocity += Vector3.up * jumpForce;
+                }
+            }
+
+            transform.Rotate(Vector3.up, Time.deltaTime * 65.0f * Input.GetAxis("Mouse X"));
+
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+	}
+
 	// Update is called once per frame
 	void Update () {
         RaycastHit rhInfo;
@@ -65,27 +109,6 @@ public class WalkControl : MonoBehaviour {
         {
             return; // reading, stand still
         }
-
-        if (Cursor.lockState == CursorLockMode.Locked) {
-            if (areFeetLocked == false)
-            {
-                transform.position += transform.forward * Time.deltaTime * walkSpeed *
-                    Input.GetAxisRaw("Vertical");
-                transform.position += transform.right * Time.deltaTime * strafeSpeed *
-                    Input.GetAxisRaw("Horizontal");
-
-                if (onGround && Input.GetKeyDown(KeyCode.Space))
-                {
-                    onGround = false;
-                    rb.velocity = Vector3.up * jumpForce;
-                }
-            }
-			
-			transform.Rotate(Vector3.up, Time.deltaTime * 65.0f * Input.GetAxis("Mouse X"));
-
-		} else if(Input.GetMouseButtonDown(0)) {
-			Cursor.lockState = CursorLockMode.Locked;
-		}
 
         if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 3.0f))
         {
@@ -129,7 +152,9 @@ public class WalkControl : MonoBehaviour {
 	void OnTriggerStay(Collider other) {
 		if(other.gameObject.layer == LayerMask.NameToLayer("Water")) {
 			if(rb.velocity.y < 0.0f) {
-				rb.velocity = Vector3.zero;
+                Vector3 fixedY = rb.velocity;
+                fixedY.y = 0.0f;
+                rb.velocity = fixedY;
 			}
 			rb.AddForce(Vector3.up * Time.deltaTime * 1000.0f);
 		}

@@ -149,8 +149,10 @@ public class SlideToPos : MonoBehaviour {
         {
             wasPlayerParent = playerGO.transform.parent;
             playerGO.transform.parent = transform;
+            WalkControl.instance.rb.isKinematic = true;
             WalkControl.instance.areFeetLocked = true;
         } else {
+            WalkControl.instance.rb.isKinematic = true;
             WalkControl.instance.enabled = false;
             ViewControl.instance.enabled = false;
         }
@@ -190,6 +192,7 @@ public class SlideToPos : MonoBehaviour {
             if (isTouchingPlayer)
             {
                 WalkControl.instance.areFeetLocked = false;
+                WalkControl.instance.rb.isKinematic = false;
                 playerGO.transform.parent = wasPlayerParent;
             } else {
                 if ((isReversing == false && callNext == null) ||
@@ -198,6 +201,7 @@ public class SlideToPos : MonoBehaviour {
                     if (lookAtAction) {
                         mainCam.transform.rotation = camRotWorldInitial;
                     }
+                    WalkControl.instance.rb.isKinematic = false;
                     ViewControl.instance.enabled = true;
                     WalkControl.instance.enabled = true;
                 }

@@ -602,10 +602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62fd613a77bd44848470c63ddfce91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   areFeetLocked: 0
   jumpForce: 5
   walkSpeed: 6
   strafeSpeed: 4
+  speedFalloffAmt: 0.9
   suchLowYMustHaveFallenThroughFloor: -150
 --- !u!114 &114525483124464342
 MonoBehaviour:
@@ -856,7 +858,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1552369758932374}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b21407b35aa404d2b9190269c5e0ebdc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
