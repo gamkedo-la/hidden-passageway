@@ -119,7 +119,7 @@ public class WalkControl : MonoBehaviour {
         }
 
         //
-        if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.01f))
+        if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.2f))
         {
             onGround = true;
             lastKnownSafelyOnGround = transform.position;
