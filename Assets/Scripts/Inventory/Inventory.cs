@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventorySystem : MonoBehaviour {
+public class Inventory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

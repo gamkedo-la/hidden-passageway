@@ -16,7 +16,6 @@ public class doorOpenClose : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
 	public void Close() {
         anim.Play("doorClose");
     }

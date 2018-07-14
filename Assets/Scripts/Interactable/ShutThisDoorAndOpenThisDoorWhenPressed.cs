@@ -6,7 +6,6 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
 {
     public doorOpenClose[] doorsToBeOpened;
     public doorOpenClose[] doorsInGroup;
-    private bool isButtonPressed = false;
 
     //Update is called once per frame
     void Update()
