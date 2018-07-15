@@ -13,7 +13,7 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
         RaycastHit rayHitInfo;
         if (Input.GetMouseButtonDown(0))
         {            
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rayHitInfo, 1.0f))
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rayHitInfo, 1.5f))
             {               
                 if (rayHitInfo.collider.gameObject == gameObject)
                 {                  

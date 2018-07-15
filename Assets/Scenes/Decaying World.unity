@@ -1684,6 +1684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d902086583d2be478f7418b860635b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  space: 9
 --- !u!4 &121160571
 Transform:
   m_ObjectHideFlags: 0
@@ -1916,17 +1918,17 @@ Prefab:
     - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: jumpForce
-      value: 7
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: walkSpeed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: strafeSpeed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224880283640663342, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -1954,6 +1956,11 @@ Prefab:
         type: 2}
       propertyPath: m_UiScaleMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114523593567061102, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: rb
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
@@ -14980,6 +14987,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 483478635}
+  - component: {fileID: 483478636}
   m_Layer: 0
   m_Name: Red Power Source
   m_TagString: Untagged
@@ -15001,6 +15009,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483478636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483478634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5627e814a6f55974bb1ea12eef77d4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 700d9ff52f57d8e4d89561bc01fb0551, type: 2}
 --- !u!1 &485205986
 GameObject:
   m_ObjectHideFlags: 0
