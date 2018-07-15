@@ -32,17 +32,21 @@ public class AetherVortexPull : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag != Tags.Player)
         {
             return;
         }
         playerInside = true;
+        StartCoroutine("CD");
+
 
 
 
     }
+
+
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag != Tags.Player)
@@ -50,6 +54,7 @@ public class AetherVortexPull : MonoBehaviour {
             return;
         }
         playerInside = false;
+        StopAllCoroutines();
 
 
     }
@@ -62,4 +67,11 @@ public class AetherVortexPull : MonoBehaviour {
         }
 
 	}
+    private IEnumerator CD()
+    {
+        yield return new WaitForSeconds(1);
+        playerInside = false;
+        //Vortex.SetActive(false);
+        StopCoroutine("CD");
+    }
 }
