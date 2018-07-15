@@ -34447,6 +34447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316486380}
   - component: {fileID: 1316486381}
+  - component: {fileID: 1316486382}
   m_Layer: 9
   m_Name: Red Cross (1)
   m_TagString: Untagged
@@ -34485,6 +34486,28 @@ MonoBehaviour:
   rotationSpeed: 100
   rotateAtRandom: 0
   rotationVector: {x: 0, y: 0, z: 1}
+--- !u!114 &1316486382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316486379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/DecayingWorld/RotatingGears
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1.5
+  OverrideMaxDistance: 3.9
 --- !u!1 &1317321607
 GameObject:
   m_ObjectHideFlags: 0
@@ -65655,6 +65678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055102797}
   - component: {fileID: 2055102798}
+  - component: {fileID: 2055102799}
   m_Layer: 9
   m_Name: Blue Cross (1)
   m_TagString: Untagged
@@ -65693,6 +65717,28 @@ MonoBehaviour:
   rotationSpeed: 100
   rotateAtRandom: 0
   rotationVector: {x: 0, y: 0, z: 1}
+--- !u!114 &2055102799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2055102796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/DecayingWorld/RotatingGears
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1.5
+  OverrideMaxDistance: 3.9
 --- !u!1 &2066873541
 GameObject:
   m_ObjectHideFlags: 0
