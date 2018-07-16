@@ -19,6 +19,7 @@ public class AetherDebugController : MonoBehaviour {
     private Quaternion nilRot;
     private Rigidbody playerRB;
     private float before;
+    private AetherGameManager agm;
 	// Use this for initialization
 	void Start ()
     {
@@ -30,7 +31,10 @@ public class AetherDebugController : MonoBehaviour {
         sTypeSoft = mainLight.shadows;
         nilRot = player.transform.rotation;
         playerRB = player.GetComponent<Rigidbody>();
-	}
+        GameObject AGMGO = GameObject.Find("GameManager");
+        agm = AGMGO.GetComponent<AetherGameManager>();
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,9 +46,9 @@ public class AetherDebugController : MonoBehaviour {
                 flyMode();
                 noClipMode();
             }
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.T))
             {
-                noClipMode();
+                TimeShift();
             }
             if (Input.GetKeyDown(KeyCode.L))
             {
@@ -68,11 +72,11 @@ public class AetherDebugController : MonoBehaviour {
                 }
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
-                    flightSpeed = 24f;
+                    flightSpeed = 28f;
                 }
                 if (Input.GetKeyUp(KeyCode.LeftShift))
                 {
-                    flightSpeed = 8f;
+                    flightSpeed = 12f;
                 }
                 if (Input.GetKeyUp(KeyCode.Escape))
                 {
@@ -139,5 +143,11 @@ public class AetherDebugController : MonoBehaviour {
             mainLight.shadows = sTypeSoft;
             mainLight.intensity = before;
         }
+    }
+
+    void TimeShift()
+    {
+        agm.SendMessage("ChangeTime");
+        Debug.Log("DEBUG - Time changed");
     }
 }
