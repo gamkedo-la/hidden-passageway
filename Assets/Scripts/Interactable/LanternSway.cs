@@ -14,15 +14,13 @@ public class LanternSway : MonoBehaviour {
 
     Rigidbody rb;
     //The sway from camera moving
-    float swayAmount = 10;
+    float swayAmount = 6;
     Vector3 swayDir;
 
-    //sway from moving forwards and backwards
-    float movementSway = 15;
+    //sway from moving forwards, backwards, left and right
+    float movementSway = 6;
 
-    [SerializeField]
-    float maxVelocity = 2f;
-    [SerializeField]
+    float maxVelocity = 1.6f;
     Vector3 currentVelocity = new Vector3(0,0,0);
 
     Vector3 currentPos;
@@ -43,8 +41,6 @@ public class LanternSway : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        RaycastHit rhInfo;
-
         if (mainLanternScript.held)
         {
             currentVelocity = rb.velocity;
@@ -53,6 +49,10 @@ public class LanternSway : MonoBehaviour {
             if (Input.GetAxis("Vertical") != 0)
             {
                 rb.AddForce(Vector3.right * Input.GetAxis("Vertical") * movementSway);
+            }
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                rb.AddForce(-Vector3.forward * Input.GetAxis("Horizontal") * movementSway);
             }
 
 

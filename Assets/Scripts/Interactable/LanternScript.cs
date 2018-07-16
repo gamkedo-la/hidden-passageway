@@ -91,21 +91,17 @@ public class LanternScript : MonoBehaviour {
         ToggleColliders();
         if (objToParent == null)
         {
-            //objToParent = Camera.main.transform;
-            objToParent = GameObject.Find("Player").transform;
+            //Changed the parent from the player to the Phantom Player object to fix lantern movement with the newly implemented movement
+            objToParent = GameObject.Find("PhantomPlayer").transform;
+            //objToParent = GameObject.Find("Player").transform;
         }
-        //gameObject.GetComponent<Rigidbody>().useGravity = false;
-        //gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         Vector3 newPosition = objToParent.localPosition + (objToParent.transform.forward * depthOffset) + (objToParent.transform.up * verticalOffset) + (objToParent.transform.right * horizontalOffset);
 
         //Changed this to try and have the target become parented to the player instead of the lantern
-        //gameObject.transform.SetParent(objToParent.transform);
         parentObject.transform.SetParent(objToParent.transform);
 
-        //gameObject.transform.position = objToParent.localPosition + (objToParent.transform.forward * depthOffset) + (objToParent.transform.up * verticalOffset) + (objToParent.transform.right * horizontalOffset);
         parentObject.transform.position = newPosition;
-        //gameObject.transform.rotation = objToParent.transform.localRotation;
         parentObject.transform.rotation = objToParent.transform.localRotation;
 
         lanternSwayScript.constraintsFrozen = true;
