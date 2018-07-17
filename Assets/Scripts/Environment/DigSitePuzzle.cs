@@ -14,6 +14,7 @@ public class DigSitePuzzle : MonoBehaviour {
     private DigSitePuzzleTracker puzzleTracker;
     public bool solutionCheckNeeded = false;
     public List<int>[] clues;
+    public GameObject[] numberPlates;
 
     void Start () {
 
@@ -21,8 +22,9 @@ public class DigSitePuzzle : MonoBehaviour {
         puzzleTracker = parent.GetComponent<DigSitePuzzleTracker>();
 
         cubeState = new bool[gridCols * gridRows];
+        //numberPlates = new GameObject[10];
         CreateCubeGrid(7,7);
-        CreateRowColClues(7,7);
+        
     }
 	
 	void Update () {
@@ -74,6 +76,8 @@ public class DigSitePuzzle : MonoBehaviour {
 
             } // end of for x loop
         } // end of for y loop
+
+        CreateRowColClues(7, 7);
 
         //Sets the puzzle gameObject rotation (along with all the new cubes) back to the intended rotation.
         transform.rotation = Quaternion.Euler(gridFrameRotation);
@@ -150,20 +154,53 @@ public class DigSitePuzzle : MonoBehaviour {
             } // end of for y
         } // end of for x
 
-        //Display row clues in console for debugging
+        //Create number plates for each row
         for (int y = 0; y < rows; y++) {
             Debug.Log("Number of clues in row y" + (y+1) +": " + clues[y].Count);
             for (int i = 0; i < clues[y].Count; i++) {
                 Debug.Log("Clue " + i+1 + " in row y" + (y + 1) + ": " + clues[y][i]);
+
+                GameObject tempPlateGO = GameObject.Instantiate(numberPlates[clues[y][(clues[y].Count - 1) - i]]);
+                if (numberPlates[clues[y][i]] == null) {
+                    tempPlateGO = GameObject.Instantiate(numberPlates[0]);
+                }
+                tempPlateGO.transform.position = gameObject.transform.position + new Vector3(0.4f * (-0.4f * i) - 1,  (0.4f * y) - 0.2f , 0f);
+
+                //Child new plate to this gameObject and set local scale to (.1, .1, .1)
+                tempPlateGO.transform.SetParent(gameObject.transform);
+                Vector3 scale = tempPlateGO.transform.localScale;
+                scale.Set(0.1f, 0.1f, 0.1f);
+                tempPlateGO.transform.localScale = scale;
+
+                //Rename new plate
+                tempPlateGO.name = "Plate y" + (y+1) + " " + (i+1);
             }
         }
 
-        //Display col clues in console for debugging
+        //Create number plates for each col
         for (int x = 0; x < cols; x++) {
             Debug.Log("Number of clues in col x" + (x + 1) + ": " + clues[x + rows].Count);
             for (int i = 0; i < clues[x + rows].Count; i++) {
                 Debug.Log("Clue " + i + 1 + " in col x" + (x + 1) + ": " + clues[x + rows][i]);
+
+                GameObject tempPlateGO = GameObject.Instantiate(numberPlates[clues[x + rows][i]]);
+                if (numberPlates[clues[x + rows][i]] == null) {
+                    tempPlateGO = GameObject.Instantiate(numberPlates[0]);
+                }
+                tempPlateGO.transform.position = gameObject.transform.position + new Vector3(0.4f * x, (0.4f * i) + 3, 0f);
+
+                //Child new plate to this gameObject and set local scale to (.1, .1, .1)
+                tempPlateGO.transform.SetParent(gameObject.transform);
+                Vector3 scale = tempPlateGO.transform.localScale;
+                scale.Set(0.1f, 0.1f, 0.1f);
+                tempPlateGO.transform.localScale = scale;
+
+                //Rename new plate
+                tempPlateGO.name = "Plate x" + (x + 1) + " " + (i + 1);
+
             }
         }
+
+
     }
 } // end of class
