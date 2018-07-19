@@ -34,6 +34,19 @@ public class EstatePuzzle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //Allows the player to interact with the puzzles by looking at them and pressing a key.
+        RaycastHit rhInfo;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 4.0f))
+        {
+            if(rhInfo.collider.gameObject.tag == "EstatePuzzleCube")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    rhInfo.collider.gameObject.GetComponent<EstatePuzzleCube>().RotateDown();
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             ToggleLanternColor();

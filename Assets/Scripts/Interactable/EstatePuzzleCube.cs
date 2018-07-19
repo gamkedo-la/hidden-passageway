@@ -6,40 +6,43 @@ public class EstatePuzzleCube : MonoBehaviour {
     public bool[] solution = new bool[4];
     public int currentSelection = 0;
 
+    Transform childBlock;
+
     float rotationSpeed = 2;
 
     Vector3 currentRot;
 
 	// Use this for initialization
 	void Start () {
-		
+        childBlock = gameObject.transform.GetChild(0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.O))
+        /*if (Input.GetKeyDown(KeyCode.O))
         {
             RotateDown();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
             RotateUp();
-        }
+        }*/
 
     }
 
-    void RotateUp()
+    public void RotateUp()
     {
-        transform.RotateAround(gameObject.GetComponentInChildren<Renderer>().bounds.center, Vector3.right, 90);
+        transform.RotateAround(gameObject.GetComponentInChildren<Renderer>().bounds.center, childBlock.right, 90);
         //Mathf.LerpAngle(currentRot.x, currentRot.x + 90f, Time.deltaTime * rotationSpeed);
         MoveSelection(1);
     }
-    void RotateDown()
+    public void RotateDown()
     {
-        transform.RotateAround(gameObject.GetComponentInChildren<Renderer>().bounds.center, Vector3.right, -90);
+        transform.RotateAround(gameObject.GetComponentInChildren<Renderer>().bounds.center, childBlock.right, -90);
         //Mathf.LerpAngle(currentRot.x, currentRot.x - 90f, Time.deltaTime * rotationSpeed);
         MoveSelection(0);
+
     }
     void MoveSelection(int direction)
     {
