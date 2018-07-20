@@ -2,14 +2,37 @@
 using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour {
+    Item item;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Image icon;
+    public Button removeButton;
+
+	public void AddItem(Item newItem)
+    {
+        item = newItem;
+        icon.sprite = item.icon;
+        icon.enabled = true;
+        removeButton.interactable = true;
+    }
+
+    public void ClearSlot()
+    {
+        item = null;
+        icon.sprite = null;
+        icon.enabled = false;
+        removeButton.interactable = false;
+    }
+
+    public void OnRemoveButton()
+    {
+        Inventory.instance.RemoveItem(item);
+    }
+
+    public void UseItem()
+    {
+        if(item != null)
+        {
+            item.Use();
+        }
+    }
 }
