@@ -52,7 +52,7 @@ public class LanternSway : MonoBehaviour {
             }
             if (Input.GetAxis("Horizontal") != 0)
             {
-                rb.AddForce(-Vector3.forward * Input.GetAxis("Horizontal") * movementSway);
+                rb.AddForce(Vector3.forward * Input.GetAxis("Horizontal") * movementSway);
             }
 
 
