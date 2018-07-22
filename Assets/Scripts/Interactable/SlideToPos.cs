@@ -87,14 +87,21 @@ public class SlideToPos : MonoBehaviour {
             transform.position = endPos.position;
             transform.rotation = endPos.rotation;
             isStarted = isDone = true;
-            GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag("InteractionSwitch");
             bool matchFound = false;
-            for (int i = 0; i < interactionSwitches.Length; i++)
+            if (callPrev != null) // part of a sequence?
             {
-                TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
-                if (tceScript.toEnable == gameObject)
+                matchFound = true;
+            }
+            if (matchFound == false) // called directly by a player switch?
+            {
+                GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag("InteractionSwitch");
+                for (int i = 0; i < interactionSwitches.Length; i++)
                 {
-                    matchFound = true;
+                    TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
+                    if (tceScript.toEnable == this)
+                    {
+                        matchFound = true;
+                    }
                 }
             }
             if(matchFound == false) {
