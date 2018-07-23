@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class WalkControl : MonoBehaviour {
     public Rigidbody rb;
@@ -44,6 +45,11 @@ public class WalkControl : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (ViewControl.instance.paperView.enabled)
         {
             rb.velocity = Vector3.zero;

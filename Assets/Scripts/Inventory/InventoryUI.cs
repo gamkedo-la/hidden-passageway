@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InventoryUI : MonoBehaviour {
     public Transform itemsParent;
@@ -7,7 +6,7 @@ public class InventoryUI : MonoBehaviour {
     Inventory inventory;
     InventorySlot[] slots;
 
-    private void Start()
+    void Start()
     {
         inventory = Inventory.instance;
         inventory.onItemChangeCallback += UpdateUI;
@@ -15,12 +14,12 @@ public class InventoryUI : MonoBehaviour {
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
-    private void Update()
+    void Update()
     {
         if(Input.GetButtonDown("Inventory"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
-        }
+        }       
     }
 
     private void UpdateUI()

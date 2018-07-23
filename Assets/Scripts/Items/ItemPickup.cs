@@ -2,29 +2,31 @@
 
 public class ItemPickup : MonoBehaviour {
     public Item item;
+    public GameObject parentOfGOToBeDestroyed;
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
-            if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2.5f))
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2.5f))
             {
-                if(item != null)
+                if (hit.collider.gameObject == gameObject)
                 {
                     Pickup();
                 }
             }
         }
     }
-    void Pickup()
+
+    public void Pickup()
     {
         bool wasItemPickedUp = Inventory.instance.AddItem(item);
 
         if(wasItemPickedUp)
         {
             Debug.Log("Picking up: " + item.name);
-            Destroy(gameObject);
+            Destroy(parentOfGOToBeDestroyed);
         }
         
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MakeRobotPartExcavateItselfOutOfSandDune : MonoBehaviour {
+public class ExcavateRobotPart : MonoBehaviour {
     public Transform robotPart;
 
     public float rateOfRotationY = 100.0f;
@@ -19,27 +19,32 @@ public class MakeRobotPartExcavateItselfOutOfSandDune : MonoBehaviour {
     float stoppingPosForY = 80.0f;
     float stoppingPosForZ = -100.0f;
 
-    // Use this for initialization
-    void Start () {
-        
-    }
-	
+    public bool isPowerSourceInSlot = false;
+    
 	// Update is called once per frame
-	void Update () {
-        if(Input.GetKey(KeyCode.K))
+	public void Update () {
+        if(isPowerSourceInSlot && robotPart != null)
         {
             if ((robotPart.position.x > stoppingPosForX) && (robotPart.position.y < stoppingPosForY) && (robotPart.position.z > stoppingPosForZ))
             {
                 RotatePart();
                 SlidePart();
             }
-        } 
+            else
+            {
+                isPowerSourceInSlot = false;
+                return;
+            }
+        }
 	}
 
     void RotatePart()
     {
-        robotPart.rotation = Quaternion.AngleAxis(startingAngX, Vector3.right) * Quaternion.AngleAxis(startingAngZ, Vector3.forward)
+        if(robotPart != null)
+        {
+            robotPart.rotation = Quaternion.AngleAxis(startingAngX, Vector3.right) * Quaternion.AngleAxis(startingAngZ, Vector3.forward)
             * Quaternion.AngleAxis(startingAngY, Vector3.up);
+        }
 
         startingAngY += rateOfRotationY * Time.deltaTime;
         startingAngZ += rateOfRotationZ * Time.deltaTime;
@@ -47,6 +52,9 @@ public class MakeRobotPartExcavateItselfOutOfSandDune : MonoBehaviour {
 
     void SlidePart()
     {
-        robotPart.position += (robotPart.up * rateOfPositionSlide * Time.deltaTime);
+        if(robotPart != null)
+        {
+            robotPart.position += (robotPart.up * rateOfPositionSlide * Time.deltaTime);
+        }
     }
 }
