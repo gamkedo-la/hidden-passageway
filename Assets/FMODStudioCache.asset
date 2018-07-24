@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 114957065207670320}
   MasterBankRef: {fileID: 114678520322007548}
   StringsBankRef: {fileID: 114042664524749904}
-  stringsBankWriteTime: 636679626848488050
+  stringsBankWriteTime: 636679645736167172
   cacheVersion: 2
 --- !u!114 &114017059118336356
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/HiddenPassageway\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636679626848488050
+  lastModified: 636679645736167172
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\PlatformX.bank
-  lastModified: 636679626849717335
+  lastModified: 636679645737366273
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -499,10 +499,25 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114017059118336356}
+  - {fileID: 114838878200643616}
   MinDistance: 0
   MaxDistance: 0
   Length: 2742
+--- !u!114 &114232761518737926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114257307872304192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +573,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 35520
   Exists: 1
+--- !u!114 &114280898438387180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114281692311406744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,7 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\WordWall.bank
-  lastModified: 636679626850177082
+  lastModified: 636679645737836011
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1240,6 +1270,21 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4938
+--- !u!114 &114623632284731046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114627458654153334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,6 +1322,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 35520
   Exists: 1
+--- !u!114 &114629595169004464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114672414157094572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,7 +1380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\Master
     Bank.bank
-  lastModified: 636679626848458203
+  lastModified: 636679645736136976
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1558,11 +1618,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\BatesEstate.bank
-  lastModified: 636679626850376964
+  lastModified: 636679645738025895
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 10880
+    Value: 15200
   Exists: 1
 --- !u!114 &114797425064217168
 MonoBehaviour:
@@ -1583,7 +1643,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114314824176373708}
+  - {fileID: 114232761518737926}
   MinDistance: 0
   MaxDistance: 0
   Length: 117551
@@ -1651,12 +1711,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\Aether.bank
-  lastModified: 636679626849107685
+  lastModified: 636679645736726658
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1115712
   Exists: 1
+--- !u!114 &114838878200643616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114848438612941276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,7 +1759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Chris\Documents\GitHub\hidden-passageway\Assets\FMOD\HiddenPassageway\Build\Desktop\DecayingWorld.bank
-  lastModified: 636679626849517457
+  lastModified: 636679645737136407
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1767,7 +1842,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 596
+  Length: 944
 --- !u!114 &114929481737144542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,6 +1906,21 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 920
 --- !u!114 &114961698569729942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
+--- !u!114 &114962574807313756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
