@@ -3859,6 +3859,44 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 08c9107953c174971bf438d1844781ac, type: 3}
   m_PrefabInternal: {fileID: 1454586687}
+--- !u!1 &1454586689 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 08c9107953c174971bf438d1844781ac, type: 3}
+  m_PrefabInternal: {fileID: 1454586687}
+--- !u!114 &1454586690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454586689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/BottleFall
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 20
+--- !u!135 &1454586691
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454586689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.95
+  m_Center: {x: 0.61, y: -6.83, z: 11.34}
 --- !u!1001 &1488701653
 Prefab:
   m_ObjectHideFlags: 0
