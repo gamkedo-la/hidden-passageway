@@ -1412,6 +1412,7 @@ MonoBehaviour:
   endPos: {fileID: 461969359}
   duration: 2
   isDone: 0
+  lookAtAction: 1
   callNext: {fileID: 0}
   callPrev: {fileID: 0}
   startSound: event:/Camp/ElevatorActivate
@@ -1750,7 +1751,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4014980475071682, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: 4014980475071682, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1775,6 +1776,14 @@ Prefab:
     - target: {fileID: 4014980475071682, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
@@ -6752,6 +6761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toEnable: {fileID: 1016598602}
+  toEnable2: {fileID: 0}
+  toEnable3: {fileID: 0}
   canBeReversed: 1
 --- !u!136 &1902042941
 CapsuleCollider:
@@ -6890,6 +6901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toEnable: {fileID: 1016598602}
+  toEnable2: {fileID: 0}
+  toEnable3: {fileID: 0}
   canBeReversed: 1
 --- !u!136 &2041525395
 CapsuleCollider:
