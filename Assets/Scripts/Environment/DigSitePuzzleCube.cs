@@ -10,6 +10,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
     public RaycastHit rhInfo;
     private GameObject parent;
     private DigSitePuzzle puzzle;
+    private bool cubeActivated = false;
  
     void Start () {
 
@@ -36,31 +37,46 @@ public class DigSitePuzzleCube : MonoBehaviour {
 
         if (Physics.Raycast(mouseRay, out rhInfo, cubeClickDistance, mouseMask) && rhInfo.collider.gameObject == gameObject) {
             gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-            DestroyCubeOnClick();
-        } else { // end of if mouse is over this cube
+            InteractCubeOnClick();
+        } else if (!cubeActivated) { // end of if mouse is over this cube
             this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         } // end of else mouse is not over this cube 
 
     } // end of ReactOnMouseOver()
 
-    public void DestroyCubeOnClick() {
-        if (Input.GetMouseButtonUp(0)) {
+    public void InteractCubeOnClick() {
+        if (Input.GetMouseButtonDown(0)) {
 
-            if (!puzzle.IsCubeUnbreakable(puzzleIndex)) {
-                    
-                Destroy(rhInfo.collider.gameObject);
-                puzzle.SetSolutionCheckNeeded();
+            if (cubeActivated) {
 
-            } else { //end of if cube is breakable
-
-                //Briefly changes highlight color to red if clicking unbreakable cube.  hardly noticable as is.
-                mat.SetColor("_EmissionColor", Color.red);
-                this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+                cubeActivated = false;
                 mat.SetColor("_EmissionColor", Color.green);
 
-            } //end of else cube is unbreakable
+            } else { //end of if
+
+                cubeActivated = true;
+                mat.SetColor("_EmissionColor", Color.blue);
+                gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+                puzzle.SetSolutionCheckNeeded();
+
+            } //end of else
 
         } // end of if mouse input
+
+        if (Input.GetMouseButtonDown(1)) {
+            if (cubeActivated) {
+
+                cubeActivated = false;
+                mat.SetColor("_EmissionColor", Color.green);
+
+            } else { //end of if
+
+                cubeActivated = true;
+                mat.SetColor("_EmissionColor", Color.grey);
+                gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+
+            } //end of else
+        }
     } // end of RemoveBrickOnClick()
 
     public void SetIndex(int index) {
