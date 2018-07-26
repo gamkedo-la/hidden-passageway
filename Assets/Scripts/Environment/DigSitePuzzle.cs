@@ -23,7 +23,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
         cubeState = new bool[gridCols * gridRows];
         //numberPlates = new GameObject[10];
-        CreateCubeGrid(7,7);
+        CreateCubeGrid(gridCols,gridRows);
         
     }
 	
@@ -83,6 +83,22 @@ public class DigSitePuzzle : MonoBehaviour {
         transform.rotation = Quaternion.Euler(gridFrameRotation);
 
     } // end of CreateCubeGrid()
+
+    public void ResetPuzzle() {
+
+        //Destroy all existing cubes and number plates in puzzle before creating a new one.
+        Transform[] children = gameObject.GetComponentsInChildren<Transform>(true);
+        foreach (Transform item in children) {
+
+            if (item.gameObject != this.gameObject && item.gameObject.name != "7x7_Puzzle_Frame") {
+                GameObject.Destroy(item.gameObject);
+            } // end of if
+               
+        } // end of foreach
+
+        CreateCubeGrid(gridCols, gridRows);
+
+    } // end of ResetPuzzle()
 
     public bool IsCubeUnbreakable(int index) {
 
