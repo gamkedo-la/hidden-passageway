@@ -1261,10 +1261,138 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
   m_PrefabInternal: {fileID: 83147504}
+--- !u!1 &294659718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 294659719}
+  - component: {fileID: 294659721}
+  - component: {fileID: 294659720}
+  m_Layer: 0
+  m_Name: PuzzleDiscovery (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294659719
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294659718}
+  m_LocalRotation: {x: -0.29260078, y: 0.000000104308114, z: -0, w: 0.95623475}
+  m_LocalPosition: {x: -0, y: -2.33, z: -4.04}
+  m_LocalScale: {x: 0.41654032, y: 0.3577603, z: 0.31099027}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &294659720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294659718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/PuzzleDiscovery
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &294659721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294659718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &318272902 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: e430587d9b00e41049e176c80c9523e6, type: 3}
   m_PrefabInternal: {fileID: 161233425}
+--- !u!1 &336329462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 336329463}
+  - component: {fileID: 336329465}
+  - component: {fileID: 336329464}
+  m_Layer: 0
+  m_Name: PuzzleDiscovery (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &336329463
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336329462}
+  m_LocalRotation: {x: -0.27094704, y: 0.000000044703484, z: -0.000000029802322, w: 0.9625943}
+  m_LocalPosition: {x: -0.000015273692, y: -11.310014, z: 7.068999}
+  m_LocalScale: {x: 0.41654032, y: 0.3577603, z: 0.31099027}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -31.441002, y: 0, z: 0}
+--- !u!114 &336329464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336329462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/PuzzleDiscovery
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &336329465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336329462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &338520690 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: fb9792da72bc67c4cb57496b9825aa90, type: 3}
@@ -1643,13 +1771,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 631470190}
-  m_LocalRotation: {x: 0.19665879, y: -0.000000014901158, z: -0, w: 0.98047197}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1.5989166}
+  m_LocalRotation: {x: 0.4857716, y: -0.000000029802322, z: -0.00000003236346, w: 0.8740858}
+  m_LocalPosition: {x: -0, y: -0.68, z: 1.21}
+  m_LocalScale: {x: 1, y: 0.8701164, z: 1.1531647}
   m_Children: []
   m_Father: {fileID: 1484955949}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.683, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 58.126003, y: 0, z: 0}
 --- !u!114 &631470192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2041,6 +2169,70 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: b31f14c25d2a7264ebc53eb2dfd3e89f, type: 3}
   m_PrefabInternal: {fileID: 1364331758}
+--- !u!1 &768083694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 768083695}
+  - component: {fileID: 768083697}
+  - component: {fileID: 768083696}
+  m_Layer: 0
+  m_Name: PuzzleDiscovery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &768083695
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768083694}
+  m_LocalRotation: {x: -0.2926008, y: 0.00000008940696, z: 0.000000029802319, w: 0.95623475}
+  m_LocalPosition: {x: -0, y: 7.097, z: 4.016}
+  m_LocalScale: {x: 0.41654032, y: 0.35775518, z: 0.31099322}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &768083696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768083694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/PuzzleDiscovery
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &768083697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768083694}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &784057779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3221,6 +3413,70 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: e430587d9b00e41049e176c80c9523e6, type: 3}
+--- !u!1 &1147734102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1147734103}
+  - component: {fileID: 1147734105}
+  - component: {fileID: 1147734104}
+  m_Layer: 0
+  m_Name: PuzzleDiscovery (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1147734103
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147734102}
+  m_LocalRotation: {x: -0.29260078, y: 0.000000119209275, z: -0.000000029802319, w: 0.95623475}
+  m_LocalPosition: {x: -0, y: 0.42, z: 10.726}
+  m_LocalScale: {x: 0.41654032, y: 0.35776037, z: 0.31099036}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &1147734104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147734102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/PuzzleDiscovery
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &1147734105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147734102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1157537544 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 8edfdffb81c6d9e45ba1f99cbfa34e3d, type: 3}
@@ -4119,6 +4375,11 @@ Transform:
   - {fileID: 1436209702}
   - {fileID: 435207328}
   - {fileID: 1921535165}
+  - {fileID: 768083695}
+  - {fileID: 294659719}
+  - {fileID: 1147734103}
+  - {fileID: 2047781183}
+  - {fileID: 336329463}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4203,6 +4464,11 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: b21407b35aa404d2b9190269c5e0ebdc,
         type: 2}
+    - target: {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: ListenerNumber
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabParent: 0
@@ -5503,6 +5769,70 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
+--- !u!1 &2047781182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2047781183}
+  - component: {fileID: 2047781185}
+  - component: {fileID: 2047781184}
+  m_Layer: 0
+  m_Name: PuzzleDiscovery (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2047781183
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047781182}
+  m_LocalRotation: {x: -0.29260078, y: 0.000000119209275, z: -0.000000029802319, w: 0.95623475}
+  m_LocalPosition: {x: 0, y: 6.17, z: 20.26}
+  m_LocalScale: {x: 0.41654032, y: 0.3577603, z: 0.31099027}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &2047781184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047781182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/PuzzleDiscovery
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &2047781185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047781182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2053469962
 GameObject:
   m_ObjectHideFlags: 0
