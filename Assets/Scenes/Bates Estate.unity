@@ -1287,6 +1287,70 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
   m_PrefabInternal: {fileID: 4248428}
+--- !u!1 &435207327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 435207328}
+  - component: {fileID: 435207330}
+  - component: {fileID: 435207329}
+  m_Layer: 0
+  m_Name: CreakyFloor02 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435207328
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435207327}
+  m_LocalRotation: {x: -0.2926008, y: 0.00000008940696, z: 0.000000029802319, w: 0.95623475}
+  m_LocalPosition: {x: -0, y: 0.32, z: 11.33}
+  m_LocalScale: {x: 0.41654032, y: 0.28339016, z: 0.20751016}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &435207329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435207327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/CreakyFloor02
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.25
+  OverrideMaxDistance: 3
+--- !u!65 &435207330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435207327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &435590840 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
@@ -1567,7 +1631,7 @@ GameObject:
   - component: {fileID: 631470193}
   - component: {fileID: 631470192}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: StingerBottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3727,6 +3791,70 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
+--- !u!1 &1436209701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1436209702}
+  - component: {fileID: 1436209704}
+  - component: {fileID: 1436209703}
+  m_Layer: 0
+  m_Name: CreakyFloor02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436209702
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436209701}
+  m_LocalRotation: {x: -0.29260078, y: 0.00000004470348, z: 0.00000004470348, w: 0.9562347}
+  m_LocalPosition: {x: 0, y: -1.485, z: 4.448}
+  m_LocalScale: {x: 0.41654024, y: 0.28339309, z: 0.2075055}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &1436209703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436209701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/CreakyFloor02
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.25
+  OverrideMaxDistance: 3
+--- !u!65 &1436209704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436209701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1439009610
 Prefab:
   m_ObjectHideFlags: 0
@@ -3987,6 +4115,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 631470191}
+  - {fileID: 1722672117}
+  - {fileID: 1436209702}
+  - {fileID: 435207328}
+  - {fileID: 1921535165}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4661,6 +4793,70 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62661f0bfefabbc43be01e91ca14c75f, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1722672116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1722672117}
+  - component: {fileID: 1722672119}
+  - component: {fileID: 1722672118}
+  m_Layer: 0
+  m_Name: CreakyFloor01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722672117
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722672116}
+  m_LocalRotation: {x: -0.29260084, y: 0.000000029802315, z: 0.000000029802315, w: 0.95623463}
+  m_LocalPosition: {x: 0, y: -8.156, z: 10.89}
+  m_LocalScale: {x: 0.4165385, y: 0.41653842, z: 0.42441636}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &1722672118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722672116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/CreakyFloor01
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.25
+  OverrideMaxDistance: 3
+--- !u!65 &1722672119
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722672116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1736659878 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: b31f14c25d2a7264ebc53eb2dfd3e89f, type: 3}
@@ -5058,6 +5254,70 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1921535164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1921535165}
+  - component: {fileID: 1921535167}
+  - component: {fileID: 1921535166}
+  m_Layer: 0
+  m_Name: CreakyFloor01 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921535165
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921535164}
+  m_LocalRotation: {x: -0.29260078, y: 0.00000004470348, z: 0.00000004470348, w: 0.9562347}
+  m_LocalPosition: {x: 0, y: 12.759, z: 9.889}
+  m_LocalScale: {x: 0.34111902, y: 0.2360148, z: 0.5919869}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -34.027, y: 0, z: 0}
+--- !u!114 &1921535166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921535164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/CreakyFloor01
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.25
+  OverrideMaxDistance: 3
+--- !u!65 &1921535167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921535164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1973661232 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4014980475071682, guid: e68c31d7edd714b8aaca10bdfe763061,
