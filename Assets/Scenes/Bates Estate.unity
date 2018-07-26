@@ -1556,6 +1556,70 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f606f858bc4bcc541bf26fff7f578111, type: 3}
   m_PrefabInternal: {fileID: 282093183}
+--- !u!1 &631470190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 631470191}
+  - component: {fileID: 631470193}
+  - component: {fileID: 631470192}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631470191
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631470190}
+  m_LocalRotation: {x: 0.19665879, y: -0.000000014901158, z: -0, w: 0.98047197}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.5989166}
+  m_Children: []
+  m_Father: {fileID: 1484955949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 22.683, y: 0, z: 0}
+--- !u!114 &631470192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631470190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/BatesEstate/CreepyStinger
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &631470193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631470190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 6.83}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &653725418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,6 +3961,35 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.95
   m_Center: {x: 0.61, y: -6.83, z: 11.34}
+--- !u!1 &1484955948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1484955949}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1484955949
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484955948}
+  m_LocalRotation: {x: -0.34613514, y: 0.34613514, z: -0.6165959, w: 0.6165959}
+  m_LocalPosition: {x: -8.231302, y: 4.312, z: 8.271485}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 631470191}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1488701653
 Prefab:
   m_ObjectHideFlags: 0
