@@ -52,14 +52,16 @@ public class DigSitePuzzleCube : MonoBehaviour {
                 cubeActivated = false;
                 mat.SetColor("_EmissionColor", Color.green);
 
-            } else { //end of if
+            } else if (puzzle.IsCubeUnbreakable(puzzleIndex)) { //end of if
 
-                cubeActivated = true;
-                mat.SetColor("_EmissionColor", Color.blue);
-                gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+                puzzle.ResetPuzzle();
+
+            } else {
+
+                Destroy(this.gameObject);
                 puzzle.SetSolutionCheckNeeded();
 
-            } //end of else
+            }//end of else
 
         } // end of if mouse input
 
@@ -72,7 +74,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
             } else { //end of if
 
                 cubeActivated = true;
-                mat.SetColor("_EmissionColor", Color.grey);
+                mat.SetColor("_EmissionColor", Color.blue);
                 gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
 
             } //end of else
