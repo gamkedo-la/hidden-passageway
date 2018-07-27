@@ -8,6 +8,11 @@ public class ItemPickup : MonoBehaviour {
     public string itemPickupSound;
     FMOD.Studio.EventInstance ItemPickupAudio;
 
+    void Start()
+    {
+        ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(1))
@@ -18,7 +23,8 @@ public class ItemPickup : MonoBehaviour {
                 if (hit.collider.gameObject == gameObject)
                 {
                     Pickup();
-                    ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
+                    FMODUnity.RuntimeManager.PlayOneShotAttached(itemPickupSound, gameObject);
+                    
                 }
             }
         }
@@ -30,7 +36,6 @@ public class ItemPickup : MonoBehaviour {
 
         if(wasItemPickedUp)
         {
-            FMODUnity.RuntimeManager.PlayOneShotAttached(itemPickupSound, gameObject);
             Debug.Log("Picking up: " + item.name);
             Destroy(parentOfGOToBeDestroyed);
         }
