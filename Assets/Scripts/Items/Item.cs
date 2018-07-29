@@ -6,22 +6,22 @@ public class Item : ScriptableObject {
     public Sprite icon = null;
     public GameObject prefabToSpawn;
 
-    public virtual void Use()
+    public virtual bool Use()
     {
-        //For using power sources and other game vital objects. For now, just a Log.
-        Debug.Log("Using " + name);
+        //Debug.Log("Using " + name);
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 3.5f))
         {
-            Debug.Log("Ray hitting: " + hit.collider.name);
+            //Debug.Log("Ray hitting: " + hit.collider.name);
             switch(hit.collider.name)
             {
                 case "mini_power_source_dark_red_slot":
                     ExcavateRobotPart hand = hit.collider.GetComponent<ExcavateRobotPart>();
                     hand.isPowerSourceInSlot = true;
-                    break;
+                    return true;
             }
         }
+        return false;
     }
 
     public virtual void RemoveItem()

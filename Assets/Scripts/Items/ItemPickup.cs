@@ -10,7 +10,19 @@ public class ItemPickup : MonoBehaviour {
 
     void Start()
     {
+        Debug.Log(itemPickupSound);
+        if(!string.IsNullOrEmpty(itemPickupSound))
+        {
+            ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
+        }
+        else
+        {
+            itemPickupSound = @"event:/DecayingWorld/ItemPickup";
+        }
+
+        Debug.Log(itemPickupSound);
         ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
+        
     }
 
     private void Update()
@@ -24,7 +36,6 @@ public class ItemPickup : MonoBehaviour {
                 {
                     Pickup();
                     FMODUnity.RuntimeManager.PlayOneShotAttached(itemPickupSound, gameObject);
-                    
                 }
             }
         }

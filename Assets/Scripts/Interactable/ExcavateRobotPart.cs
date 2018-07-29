@@ -5,15 +5,15 @@ using UnityEngine;
 public class ExcavateRobotPart : MonoBehaviour {
     public Transform robotPart;
 
-    public float rateOfRotationY = 100.0f;
-    public float rateOfRotationZ = 10.0f;
-    public float rateOfRotationX = 20.0f;
+    [SerializeField] private float rateOfRotationY = 100.0f;
+    [SerializeField] private float rateOfRotationZ = 5.0f;
+    [SerializeField] private float rateOfRotationX = 0.0f;
 
-    public float startingAngY = 0.0f;
-    public float startingAngZ = 45.0f;
-    public float startingAngX = -15.0f;
+    private float startingAngY = 0.0f;
+    private float startingAngZ = 45.0f;
+    private float startingAngX = -15.0f;
 
-    public float rateOfPositionSlide = 0.5f;
+    private float rateOfPositionSlide = 1.0f;
 
     float stoppingPosForX = -100.0f;
     float stoppingPosForY = 80.0f;
