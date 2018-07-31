@@ -14,7 +14,6 @@ public class SlideToPos : MonoBehaviour {
     float startTime;
     Vector3 startPos;
     Quaternion startRot;
-    Quaternion camRotReset;
     static Quaternion camRotWorldInitial;
     private string mySaveName;
     bool isReversing = false;
@@ -70,7 +69,6 @@ public class SlideToPos : MonoBehaviour {
             playerGO = GameObject.FindWithTag("Player");
         }
         isStarted = false;
-        camRotReset = mainCam.transform.localRotation;
 
         mySaveName = SceneManager.GetActiveScene().name +
                                       gameObject.name;

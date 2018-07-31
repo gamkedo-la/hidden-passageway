@@ -8,12 +8,12 @@ public class AetherEvent : MonoBehaviour {
     /// ie. player/item is here - thing happens.
     /// rudimentary since I don't know the messaging system and have just the basic idea of transfering info between scripts.
     /// </summary>
-    /// 
+    ///
     /// <Usage>
     /// Plop this puppy on the object with the collider you will be using as the keyhole
     /// direct the guide transform with an empty child object for location
     /// </Usage>
-    /// 
+    ///
     /// <Todo>
     /// Allow for tweaking from outside scripts such as singleton controller
     /// Finish the three main trigger items
@@ -38,9 +38,6 @@ public class AetherEvent : MonoBehaviour {
     public AetherDoorOpen dc;
     public MeshRenderer mr;
 
-    
-
-
 
 
     void Awake()
@@ -50,8 +47,8 @@ public class AetherEvent : MonoBehaviour {
 
     void Start ()
     {
-        
-        
+
+
         if (openDoorType)
         {
             dc = Passageway.GetComponent<AetherDoorOpen>();
@@ -63,7 +60,7 @@ public class AetherEvent : MonoBehaviour {
         if (meshShowType)
         {
             mr = GetComponent<MeshRenderer>();
-            //if (!(mr)) 
+            //if (!(mr))
             //{
             //    Debug.Log("Mesh show type event doesn't have a Mesh Renderer!");
             //}
@@ -79,7 +76,7 @@ public class AetherEvent : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-		
+
 	}
 
 
