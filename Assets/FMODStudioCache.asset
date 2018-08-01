@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114042664524749904}
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
   - {fileID: 114287675651191198}
   - {fileID: 114005815071550510}
@@ -20,6 +21,15 @@ MonoBehaviour:
   - {fileID: 114418828239567446}
   - {fileID: 114051028084741122}
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114764737821963176}
+  - {fileID: 114413424487522020}
+  - {fileID: 114541825801603484}
+  - {fileID: 114584526913202972}
+  - {fileID: 114952627046468170}
+  - {fileID: 114056208846234750}
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   EditorEvents:
   - {fileID: 114229548735460616}
   - {fileID: 114076570604224708}
@@ -59,9 +69,15 @@ MonoBehaviour:
   - {fileID: 114406422807530310}
   - {fileID: 114062963559155310}
   - {fileID: 114718594465689928}
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   MasterBankRef: {fileID: 114397704570109616}
   StringsBankRef: {fileID: 114042664524749904}
   stringsBankWriteTime: 636687413170279717
+=======
+  MasterBankRef: {fileID: 114599515817984884}
+  StringsBankRef: {fileID: 114042664524749904}
+  stringsBankWriteTime: 636684118970000000
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   cacheVersion: 2
 --- !u!114 &114000272101702120
 MonoBehaviour:
@@ -170,8 +186,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   Path: Assets/FMOD/HiddenPassageway\Build\Desktop\Master Bank.strings.bank
   lastModified: 636687413170279717
+=======
+  Path: Assets/FMOD/HiddenPassageway/Build/Desktop/Master Bank.strings.bank
+  lastModified: 636684118970000000
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -224,7 +245,11 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorStop
   guid: 40fdcef3eb993d46ae51886f2e29b1c8
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -262,6 +287,24 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114056208846234750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/WordWall.bank
+  lastModified: 636655606120000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3716928
+  Exists: 1
 --- !u!114 &114061914999164998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +337,11 @@ MonoBehaviour:
   Path: event:/BatesEstate/PuzzleDiscovery
   guid: 0be121c1a9958445bf16ef41bb34a619
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
+=======
+  - {fileID: 114764737821963176}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -368,7 +415,11 @@ MonoBehaviour:
   Path: event:/DecayingWorld/Wind
   guid: 5daa280a25b8c742b436e9cfe450700a
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -459,7 +510,11 @@ MonoBehaviour:
   Path: event:/WordWall/Rumble
   guid: 2bd1257c7769d841a3fed6a94a2ae4a7
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114051028084741122}
+=======
+  - {fileID: 114056208846234750}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -532,7 +587,11 @@ MonoBehaviour:
   Path: event:/Camp/CampMusic
   guid: 903862e4a44a8b49acf3e39d587d4fea
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -569,7 +628,11 @@ MonoBehaviour:
   Path: event:/WordWall/WWclick
   guid: 6ae6529f00f5f0468f7d6445433f5498
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114051028084741122}
+=======
+  - {fileID: 114056208846234750}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -670,7 +733,11 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorMove
   guid: ee667fa176f1844eb7972ae7e782af3f
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -861,12 +928,20 @@ MonoBehaviour:
   Path: event:/PlatformX/Teleporter
   guid: 53dc08ea26fae5439a90a5b2e58d75ca
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114287675651191198}
+=======
+  - {fileID: 114413424487522020}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114600777596940262}
+=======
+  - {fileID: 114573806344925846}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   MinDistance: 0
   MaxDistance: 0
   Length: 2742
@@ -963,7 +1038,11 @@ MonoBehaviour:
   Path: event:/WordWall/DoorSlide
   guid: b48f9d19700b154496bb198c0a2ab4d1
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114051028084741122}
+=======
+  - {fileID: 114056208846234750}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1216,7 +1295,11 @@ MonoBehaviour:
   Path: event:/DecayingWorld/Ambient
   guid: e6cfdb34a8075144b9e6bf269255d29a
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1407,7 +1490,11 @@ MonoBehaviour:
   Path: event:/Aether/Waterfall
   guid: 564b90c80d7ac04899d26374b2672100
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1484,7 +1571,11 @@ MonoBehaviour:
   Path: event:/BatesEstate/PuzzleSolved
   guid: db3061b35399f44caaf204f4b852c993
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
+=======
+  - {fileID: 114764737821963176}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1525,6 +1616,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3716928
   Exists: 0
+--- !u!114 &114413424487522020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/PlatformX.bank
+  lastModified: 636684118970000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 35520
+  Exists: 1
 --- !u!114 &114418433775651562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,7 +1711,11 @@ MonoBehaviour:
   Path: event:/Aether/Frog
   guid: 0af94582ae6c8f4e9be666f05986e0b8
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1672,7 +1785,11 @@ MonoBehaviour:
   Path: event:/DecayingWorld/DiscoveryVOX
   guid: 73771e04dc819049a141a0c4ea34459b
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1713,7 +1830,11 @@ MonoBehaviour:
   Path: event:/Aether/Failure
   guid: b78b05ba365e304dbd3fb7ced07fccbc
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1735,7 +1856,11 @@ MonoBehaviour:
   Path: event:/WordWall/SecretAhh
   guid: 38b105502f0ec240a64cab5dc97d089d
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114051028084741122}
+=======
+  - {fileID: 114056208846234750}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1808,7 +1933,11 @@ MonoBehaviour:
   Path: event:/DecayingWorld/RotatingGears
   guid: 70ffe79bc02a7f4cbcf97a3f109843bc
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1918,7 +2047,11 @@ MonoBehaviour:
   Path: event:/BatesEstate/CreakyFloor01
   guid: ba298237c0525c4185cd1b5dd6fa3a8d
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
+=======
+  - {fileID: 114764737821963176}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1940,7 +2073,11 @@ MonoBehaviour:
   Path: event:/Aether/BirdsLargeTree
   guid: 2fa74bb08e08a84a96bbec8b727e4d1f
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -2077,6 +2214,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3716928
   Exists: 1
+--- !u!114 &114541825801603484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/DecayingWorld.bank
+  lastModified: 636684118970000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3240352
+  Exists: 1
 --- !u!114 &114542662007916468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2136,7 +2291,11 @@ MonoBehaviour:
   Path: event:/Camp/Campfire
   guid: 9771a84871e4a64ebc692fc405853feb
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -2209,7 +2368,11 @@ MonoBehaviour:
   Path: event:/Aether/Wooden Door Close
   guid: 6964a420d7955f4dab166e7430f9b2dc
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2247,6 +2410,39 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114573806344925846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
+--- !u!114 &114584526913202972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/Aether.bank
+  lastModified: 636684118970000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1115712
+  Exists: 1
 --- !u!114 &114587806208022886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2302,14 +2498,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3716928
   Exists: 0
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
 --- !u!114 &114600777596940262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
+=======
+--- !u!114 &114599515817984884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -2317,6 +2521,19 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636655606120000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1534048
+  Exists: 1
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
 --- !u!114 &114602144590151256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2418,7 +2635,11 @@ MonoBehaviour:
   Path: event:/Aether/Orb
   guid: 4283978d51bd93478d80e8795aafed16
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2440,7 +2661,11 @@ MonoBehaviour:
   Path: event:/Aether/Torch
   guid: e663e6b1e7607845b261739c56f67143
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -2577,7 +2802,11 @@ MonoBehaviour:
   Path: event:/BatesEstate/CreepyStinger
   guid: 1224bd0448da284fb476bf77a8a9b3e1
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
+=======
+  - {fileID: 114764737821963176}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2747,7 +2976,11 @@ MonoBehaviour:
   Path: event:/Graveyard/Catacombs
   guid: f247ea3b3c37264a9a353c3145bd96d3
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114418828239567446}
+=======
+  - {fileID: 114952627046468170}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -2850,7 +3083,11 @@ MonoBehaviour:
   Path: event:/Camp/ElevatorActivate
   guid: 7947de63663a1b4782809f4285e9e81b
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2872,7 +3109,11 @@ MonoBehaviour:
   Path: event:/DecayingWorld/ItemPickup
   guid: 28a7390fc4b77443973fda35474f58a9
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3013,6 +3254,24 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114764737821963176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/BatesEstate.bank
+  lastModified: 636684118970000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 242976
+  Exists: 1
 --- !u!114 &114769560675868448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3196,12 +3455,20 @@ MonoBehaviour:
   Path: event:/WordWall/WWMusic
   guid: 5bdf9946100a584da46651f699625067
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114051028084741122}
+=======
+  - {fileID: 114056208846234750}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114345921323656214}
+=======
+  - {fileID: 114834422677154320}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   MinDistance: 0
   MaxDistance: 0
   Length: 117551
@@ -3219,7 +3486,11 @@ MonoBehaviour:
   Path: event:/Graveyard/SmallBirds
   guid: dc6d33ec23625d479eddaaa34a21e709
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114418828239567446}
+=======
+  - {fileID: 114952627046468170}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3241,7 +3512,11 @@ MonoBehaviour:
   Path: event:/Aether/Birds
   guid: ebe9d1151d34f24980bc678c21fc1a5c
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3312,6 +3587,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1115712
   Exists: 1
+--- !u!114 &114834422677154320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114838878200643616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,7 +3734,11 @@ MonoBehaviour:
   Path: event:/Graveyard/Crickets
   guid: 3fcb12fc77ddfe4bbe797e34d2c9bbef
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114418828239567446}
+=======
+  - {fileID: 114952627046468170}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3581,7 +3875,11 @@ MonoBehaviour:
   Path: event:/BatesEstate/CreakyFloor02
   guid: 9055fb24072a6b4a9dda7e829aa251bc
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
+=======
+  - {fileID: 114764737821963176}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3690,7 +3988,11 @@ MonoBehaviour:
   Path: event:/Camp/Crickets
   guid: 74be58d5c7e2a844aa0081a6f53fac24
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114397704570109616}
+=======
+  - {fileID: 114599515817984884}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3760,7 +4062,11 @@ MonoBehaviour:
   Path: event:/BatesEstate/BottleFall
   guid: ca24fb90d0ee5a4db9ed517018f47cb1
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114588193567818876}
+=======
+  - {fileID: 114764737821963176}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3834,7 +4140,11 @@ MonoBehaviour:
   Path: event:/Graveyard/Owls
   guid: 4f97ea851c4fe04fb02998457d8c1599
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114418828239567446}
+=======
+  - {fileID: 114952627046468170}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3907,7 +4217,11 @@ MonoBehaviour:
   Path: event:/DecayingWorld/RobotBeacon
   guid: 6e9e1f493b79be4585cd35cc4c4e3007
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114005815071550510}
+=======
+  - {fileID: 114541825801603484}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3915,6 +4229,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14000
+--- !u!114 &114952627046468170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /home/caspar/Gamkedo/hidden-passageway/Assets/FMOD/HiddenPassageway/Build/Desktop/Graveyard.bank
+  lastModified: 636684118970000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 692992
+  Exists: 1
 --- !u!114 &114957065207670320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3929,7 +4261,11 @@ MonoBehaviour:
   Path: event:/Aether/Wooden Door Open
   guid: 3a0f7e1cad9b21408e6b10b9fde45d0a
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4144,7 +4480,11 @@ MonoBehaviour:
   Path: event:/Aether/Lava
   guid: c62d5dfa6e258443baedd509b7ecd907
   Banks:
+<<<<<<< 9ec64033654b9b9be816bb2c7f2bba30c07aff01
   - {fileID: 114863356955906848}
+=======
+  - {fileID: 114584526913202972}
+>>>>>>> Refactored TriggerComponentEnable to accept not just SlideToPos, but possibly anything that derives from the AbstractActivateable class
   IsStream: 0
   Is3D: 1
   IsOneShot: 0

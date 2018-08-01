@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SlideToPos : MonoBehaviour {
+public class SlideToPos : AbstractActivateable {
     public Transform endPos;
     public float duration = 2.0f;
-    public bool isDone = false;
     public bool lookAtAction = true;
 
     Camera mainCam;
@@ -28,10 +27,6 @@ public class SlideToPos : MonoBehaviour {
     private static GameObject playerGO;
     Transform wasPlayerParent;
 
-    public SlideToPos callNext;
-    [HideInInspector]
-    public SlideToPos callPrev; // backward link automatically
-
     [FMODUnity.EventRef]
     public string startSound;
     [FMODUnity.EventRef]
@@ -39,13 +34,6 @@ public class SlideToPos : MonoBehaviour {
     [FMODUnity.EventRef]
     public string endSound;
     FMOD.Studio.EventInstance MoveLoopAudio;
-
-    private void Awake()
-	{
-        if(callNext != null) {
-            callNext.callPrev = this;
-        }
-	}
 
 	void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Player") {
@@ -114,7 +102,7 @@ public class SlideToPos : MonoBehaviour {
         }
     }
 
-    public void Reverse() {
+    public override void Reverse() {
         isStarted = isDone = false;
 
         Activate();
@@ -128,7 +116,7 @@ public class SlideToPos : MonoBehaviour {
         isReversing = true; // important to toggle off isStarted and isDone after
     }
 
-    public void Activate()
+    public override void Activate()
     {
         if (isStarted)
         {

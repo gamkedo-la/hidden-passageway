@@ -6,14 +6,14 @@ using UnityEngine;
 public class TriggerComponentEnable : MonoBehaviour {
 
     [Header("Trigger On Click")]
-    public SlideToPos toEnable;
+    public AbstractActivateable toEnable;
 
     // optional triggers fired at the SAME TIME
     // for when you need to move two things at once
     // for sequences, use callNext field instead
     [Header("Optional Simultaneous Triggers")]
-    public SlideToPos toEnable2; 
-    public SlideToPos toEnable3;
+    public AbstractActivateable toEnable2;
+    public AbstractActivateable toEnable3;
 
     [Header("Trigger Settings")]
     public bool canBeReversed = false;
@@ -29,7 +29,7 @@ public class TriggerComponentEnable : MonoBehaviour {
         }
         else if(canBeReversed) {
 
-            SlideToPos endOfChain = toEnable;
+            AbstractActivateable endOfChain = toEnable;
             while(endOfChain.callNext != null) {
                 endOfChain = endOfChain.callNext;
             }
