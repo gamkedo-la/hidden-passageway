@@ -4,7 +4,7 @@
 	{
 		_MainTex("Sprite Texture", 2D) = "white" {}
 		_Color("Tint", Color) = (1,1,1,1)
-		_Glow("Glow Intensity", Range(1,5)) = 1
+		_Glow("Glow Intensity", Range(1,20)) = 1
 		[MaterialToggle] PixelSnap("Pixel snap", Float) = 0
 	}
 
