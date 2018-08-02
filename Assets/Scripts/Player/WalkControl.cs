@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class WalkControl : MonoBehaviour {
+	[HideInInspector]
     public Rigidbody rb;
 	private bool onGround=true;
     private Vector3 prevValidPosition;
@@ -16,6 +17,8 @@ public class WalkControl : MonoBehaviour {
 
     public float suchLowYMustHaveFallenThroughFloor = -150.0f;
     Vector3 lastKnownSafelyOnGround = Vector3.zero;
+
+	private Vector3 forward, right;
 
     //private float powerUp = 1.0f;
 
@@ -65,14 +68,19 @@ public class WalkControl : MonoBehaviour {
         {
             if (areFeetLocked == false)
             {
+				if (onGround)
+				{
+					forward = transform.forward;
+					right = transform.right;
+				}
                 Vector3 lateralDecay = rb.velocity;
                 lateralDecay.x *= speedFalloffAmt;
                 lateralDecay.z *= speedFalloffAmt;
                 rb.velocity = lateralDecay;
                 float scaleForCompatibilityWithOlderTuning = 4.0f; // added to keep pre-physics walk tuning numbers
-                rb.velocity += transform.forward * Time.deltaTime * walkSpeed * scaleForCompatibilityWithOlderTuning *
+                rb.velocity += forward * Time.deltaTime * walkSpeed * scaleForCompatibilityWithOlderTuning *
                     Input.GetAxisRaw("Vertical");
-                rb.velocity += transform.right * Time.deltaTime * strafeSpeed * scaleForCompatibilityWithOlderTuning *
+                rb.velocity += right * Time.deltaTime * strafeSpeed * scaleForCompatibilityWithOlderTuning *
                     Input.GetAxisRaw("Horizontal");
 
                 if (onGround && Input.GetKeyDown(KeyCode.Space))
@@ -118,17 +126,32 @@ public class WalkControl : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 3.0f))
         {
-            if (rhInfo.collider.gameObject.layer == LayerMask.NameToLayer("Water"))
-            {
-                transform.position = prevValidPosition; // undoing position if over water
-            }
+			if (rhInfo.collider != null)
+			{
+				if (rhInfo.collider.gameObject.layer == LayerMask.NameToLayer("Water"))
+				{
+					transform.position = prevValidPosition; // undoing position if over water
+				}
+			}
         }
 
-        //
+		//
         if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.2f))
         {
-            onGround = true;
-            lastKnownSafelyOnGround = transform.position;
+			if (rhInfo.collider != null)
+			{
+				onGround = true;
+				lastKnownSafelyOnGround = transform.position;
+				forward = Vector3.Cross(transform.right, rhInfo.normal).normalized;
+				right = Vector3.Cross(-transform.forward, rhInfo.normal).normalized;
+				if (Input.GetAxisRaw("Vertical") == 0f && Input.GetAxisRaw("Horizontal") == 0f)
+				{
+					//Magic number (1.041f) comes from the following line:
+					//Debug.Log(Vector3.Distance(transform.position, rhInfo.point));
+					transform.position = new Vector3(rhInfo.point.x, rhInfo.point.y + 1.045f, rhInfo.point.z);
+					rb.velocity = Vector3.zero;
+				}
+			}
         }
         else
         {
