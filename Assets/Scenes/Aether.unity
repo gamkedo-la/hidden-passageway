@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.448
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 702917159}
-  m_IndirectSpecularColor: {r: 0.15747309, g: 0.22341554, b: 0.2500609, a: 0.448}
+  m_IndirectSpecularColor: {r: 0.15747334, g: 0.22341621, b: 0.25006276, a: 0.448}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24195,6 +24195,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 36e9ccfcd43c27f4288af965c0eba43a,
     type: 3}
   m_PrefabInternal: {fileID: 276849602}
+--- !u!1 &279607384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 279607385}
+  m_Layer: 0
+  m_Name: Airship
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &279607385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279607384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1846669544}
+  m_Father: {fileID: 797846489}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &279896919
 Prefab:
   m_ObjectHideFlags: 0
@@ -44791,6 +44820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2042922036}
+  - {fileID: 279607385}
   m_Father: {fileID: 1475398112}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111763,6 +111793,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 95a5fccf2a2ccc54c8918cdfbfa96bc8,
     type: 3}
   m_PrefabInternal: {fileID: 2053261402}
+--- !u!1 &1846669543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846669544}
+  - component: {fileID: 1846669546}
+  - component: {fileID: 1846669545}
+  m_Layer: 0
+  m_Name: CreakingCue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846669544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846669543}
+  m_LocalRotation: {x: -0, y: -0.18530647, z: -0, w: 0.9826808}
+  m_LocalPosition: {x: -69.58, y: 61.19, z: 124.29}
+  m_LocalScale: {x: -16.618055, y: -12.708448, z: -40.401966}
+  m_Children: []
+  m_Father: {fileID: 279607385}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -21.358002, z: 0}
+--- !u!114 &1846669545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846669543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/Airship
+  PlayEvent: 3
+  StopEvent: 4
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 49.08
+--- !u!65 &1846669546
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846669543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1849346814
 GameObject:
   m_ObjectHideFlags: 0
