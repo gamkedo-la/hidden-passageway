@@ -15,11 +15,14 @@ public class DigSitePuzzle : MonoBehaviour {
     public bool solutionCheckNeeded = false;
     public List<int>[] clues;
     public GameObject[] numberPlates;
+    public GameObject doorToOpen;
+    private SlideToPos doorControl;
 
     void Start () {
 
         parent = this.transform.parent.gameObject;
         puzzleTracker = parent.GetComponent<DigSitePuzzleTracker>();
+        doorControl = doorToOpen.GetComponent<SlideToPos>();
 
         cubeState = new bool[gridCols * gridRows];
         //numberPlates = new GameObject[10];
@@ -123,6 +126,7 @@ public class DigSitePuzzle : MonoBehaviour {
         if (breakableCubes.Count == 0) { //solves if 1 left, because last cube is not detroyed yet, when check is made.
             puzzleTracker.MarkSolved(gameObject.name);
             Debug.Log("Solution Found. Calling MarkSolved() for object " + gameObject.name);
+            doorControl.Activate();
         } // end of if
 
     } // end of CheckForSolution()
