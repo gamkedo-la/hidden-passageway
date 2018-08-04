@@ -36,7 +36,7 @@ public class SlideToPos : AbstractActivateable {
     FMOD.Studio.EventInstance MoveLoopAudio;
 
 	void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == Tags.Player) {
             isTouchingPlayer = true;
             //Debug.Log(name +" is now touching player");
         }
@@ -44,7 +44,7 @@ public class SlideToPos : AbstractActivateable {
 
     void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == Tags.Player)
         {
             isTouchingPlayer = false;
             //Debug.Log(name + " is no longer touching player");
@@ -54,8 +54,8 @@ public class SlideToPos : AbstractActivateable {
     public void Start()
     {
         mainCam = Camera.main;
-        if(playerGO == null) {
-            playerGO = GameObject.FindWithTag("Player");
+        if (playerGO == null) {
+            playerGO = GameObject.FindWithTag(Tags.Player);
         }
         isStarted = false;
         camRotReset = mainCam.transform.localRotation;
@@ -82,22 +82,28 @@ public class SlideToPos : AbstractActivateable {
             }
             if (matchFound == false) // called directly by a player switch?
             {
-                GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag("InteractionSwitch");
+                GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag(Tags.InteractionSwitch);
                 for (int i = 0; i < interactionSwitches.Length; i++)
                 {
                     TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
-                    if (tceScript.toEnable == this)
+                    // Skip this object if it has no script
+                    if (tceScript == null)
+                    {
+                        Debug.LogWarning("Does the object " + interactionSwitches[i].name + " correctly have the tag set to " + Tags.InteractionSwitch + "?");
+                        continue;
+                    }
+                    if (tceScript.toEnable == this || tceScript.toEnable2 == this || tceScript.toEnable3 == this)
                     {
                         matchFound = true;
                     }
                 }
             }
-            if(matchFound == false) {
-                Debug.LogWarning("Is the tag set to InteractionSwitch for switch to " + gameObject.name);
+            if (matchFound == false) {
+                Debug.LogWarning("Is the tag set to " + Tags.InteractionSwitch + " for switch to " + gameObject.name + "?");
             }
         }
 
-        if(moveSound.Length > 2) {
+        if (moveSound.Length > 2) {
             MoveLoopAudio = FMODUnity.RuntimeManager.CreateInstance(moveSound);
         }
     }
@@ -127,6 +133,7 @@ public class SlideToPos : AbstractActivateable {
             // this.enabled = false;
             return;
         }
+
         PlayerPrefs.SetInt(mySaveName, 1);
         if ((isReversing == false && callPrev == null) ||
                     (isReversing && callNext == null)) // start of chain?
