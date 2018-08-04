@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LatLongGlobeChange : MonoBehaviour {
     public LatLongGlobe whichGlobe;
-    public float minChange = 15.0f;
+    public float degChange = 15.0f;
     public bool isForLatNotLong = false;
 
 	private void Start()
@@ -17,12 +17,13 @@ public class LatLongGlobeChange : MonoBehaviour {
 	public void triggerAction() {
         if (isForLatNotLong)
         {
-            whichGlobe.targetLat += minChange;
+            whichGlobe.targetLat += degChange;
             whichGlobe.targetLat = Mathf.Round(whichGlobe.targetLat / 5.0f) * 5.0f;
+            whichGlobe.targetLat = Mathf.Clamp(whichGlobe.targetLat, -90.0f, 90.0f);
         }
         else
         {
-            whichGlobe.targetLong += minChange;
+            whichGlobe.targetLong += degChange;
             whichGlobe.targetLong = Mathf.Round(whichGlobe.targetLong / 5.0f) * 5.0f;
         }
 	}
