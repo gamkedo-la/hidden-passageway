@@ -60,8 +60,7 @@ public class SlideToPos : AbstractActivateable {
         isStarted = false;
         camRotReset = mainCam.transform.localRotation;
 
-        mySaveName = SceneManager.GetActiveScene().name +
-                                      gameObject.name;
+        mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
         int wasFinished = PlayerPrefs.GetInt(mySaveName, 0);
 
         // storing separately, used for reverse option
