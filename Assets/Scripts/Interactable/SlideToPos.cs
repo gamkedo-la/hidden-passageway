@@ -60,47 +60,23 @@ public class SlideToPos : AbstractActivateable {
         isStarted = false;
         camRotReset = mainCam.transform.localRotation;
 
-        mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
-        int wasFinished = PlayerPrefs.GetInt(mySaveName, 0);
-
         // storing separately, used for reverse option
         posA = transform.position;
         rotA = transform.rotation;
         posB = endPos.position;
         rotB = endPos.rotation;
 
-        if (wasFinished == 1)
+        mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
+        int previousState = PlayerPrefs.GetInt(mySaveName, 0);
+
+        if (previousState == 1)
         {
             transform.position = endPos.position;
             transform.rotation = endPos.rotation;
             isStarted = isDone = true;
-            bool matchFound = false;
-            if (callPrev != null) // part of a sequence?
-            {
-                matchFound = true;
-            }
-            if (matchFound == false) // called directly by a player switch?
-            {
-                GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag(Tags.InteractionSwitch);
-                for (int i = 0; i < interactionSwitches.Length; i++)
-                {
-                    TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
-                    // Skip this object if it has no script
-                    if (tceScript == null)
-                    {
-                        Debug.LogWarning("Does the object " + interactionSwitches[i].name + " correctly have the tag set to " + Tags.InteractionSwitch + "?");
-                        continue;
-                    }
-                    if (tceScript.toEnable == this || tceScript.toEnable2 == this || tceScript.toEnable3 == this)
-                    {
-                        matchFound = true;
-                    }
-                }
-            }
-            if (matchFound == false) {
-                Debug.LogWarning("Is the tag set to " + Tags.InteractionSwitch + " for switch to " + gameObject.name + "?");
-            }
         }
+
+        WarnAboutIncorrectTags();
 
         if (moveSound.Length > 2) {
             MoveLoopAudio = FMODUnity.RuntimeManager.CreateInstance(moveSound);
@@ -249,5 +225,35 @@ public class SlideToPos : AbstractActivateable {
         transform.position = Vector3.Lerp(startPos, endPos.position, movePerc);
         transform.rotation = Quaternion.Slerp(startRot, endPos.rotation, movePerc);
 
+    }
+
+    private void WarnAboutIncorrectTags()
+    {
+        bool matchFound = false;
+        if (callPrev != null) // part of a sequence?
+        {
+            matchFound = true;
+        }
+        if (matchFound == false) // called directly by a player switch?
+        {
+            GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag(Tags.InteractionSwitch);
+            for (int i = 0; i < interactionSwitches.Length; i++)
+            {
+                TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
+                // Skip this object if it has no script
+                if (tceScript == null)
+                {
+                    Debug.LogWarning("Does the object " + interactionSwitches[i].name + " correctly have the tag set to " + Tags.InteractionSwitch + "?");
+                    continue;
+                }
+                if (tceScript.toEnable == this || tceScript.toEnable2 == this || tceScript.toEnable3 == this)
+                {
+                    matchFound = true;
+                }
+            }
+        }
+        if (matchFound == false) {
+            Debug.LogWarning("Is the tag set to " + Tags.InteractionSwitch + " for switch to " + gameObject.name + "?");
+        }
     }
 }
