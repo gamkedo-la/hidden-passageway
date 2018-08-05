@@ -17,6 +17,7 @@ public class DigSitePuzzle : MonoBehaviour {
     public GameObject[] numberPlates;
     public GameObject doorToOpen;
     private SlideToPos doorControl;
+    public float percentBreakableCube = 40f;
 
     void Start () {
 
@@ -70,7 +71,7 @@ public class DigSitePuzzle : MonoBehaviour {
                 tempGO.GetComponent<DigSitePuzzleCube>().SetIndex(gridIndex);
 
                 //Randomize cube state
-                if (Random.Range(0f,1f) > 0.6) {
+                if (Random.Range(0f,1f) > (percentBreakableCube / 100)) {
                     cubeState[gridIndex] = true;
                 } else { //end if
                     cubeState[gridIndex] = false;

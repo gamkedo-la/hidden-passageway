@@ -45,27 +45,8 @@ public class DigSitePuzzleCube : MonoBehaviour {
     } // end of ReactOnMouseOver()
 
     public void InteractCubeOnClick() {
+
         if (Input.GetMouseButtonDown(0)) {
-
-            if (cubeActivated) {
-
-                cubeActivated = false;
-                mat.SetColor("_EmissionColor", Color.green);
-
-            } else if (puzzle.IsCubeUnbreakable(puzzleIndex)) { //end of if
-
-                puzzle.ResetPuzzle();
-
-            } else {
-
-                Destroy(this.gameObject);
-                puzzle.SetSolutionCheckNeeded();
-
-            }//end of else
-
-        } // end of if mouse input
-
-        if (Input.GetMouseButtonDown(1)) {
             if (cubeActivated) {
 
                 cubeActivated = false;
@@ -78,7 +59,26 @@ public class DigSitePuzzleCube : MonoBehaviour {
                 gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
 
             } //end of else
-        }
+        } //end of if left-click
+
+        if (Input.GetMouseButtonDown(1)) {
+            if (cubeActivated) {
+
+                cubeActivated = false;
+                mat.SetColor("_EmissionColor", Color.green);
+
+            } else if (puzzle.IsCubeUnbreakable(puzzleIndex)) { //end of if
+
+                puzzle.ResetPuzzle();
+
+            } else { //end of else if
+
+                Destroy(this.gameObject);
+                puzzle.SetSolutionCheckNeeded();
+
+            }//end of else
+        } // end of if right-click
+
     } // end of RemoveBrickOnClick()
 
     public void SetIndex(int index) {
