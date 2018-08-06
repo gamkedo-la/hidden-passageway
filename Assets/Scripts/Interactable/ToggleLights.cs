@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ToggleLights : AbstractActivateable {
 
+	[SerializeField] LightsPuzzleManager lightsPuzzleManager;
+	[SerializeField] bool winState;
 	[SerializeField] Light[] lightsToToggle;
+
+	[SerializeField] bool currentState = true;
 
 	string mySaveName;
 
@@ -16,21 +20,43 @@ public class ToggleLights : AbstractActivateable {
 			DoToggleLights();
 		}
 	}
-	public override void Activate () {
+
+	public bool HasWon()
+	{
+		Debug.Log("has won?" + mySaveName + " = " + (currentState?"1":"0") + "=="+(winState?"1":"0"));
+		return currentState == winState;
+	}
+
+	public override void Activate ()
+	{
 		isDone = true;
-		PlayerPrefs.SetInt(mySaveName, 1);
 		DoToggleLights();
+
+		if (callNext) {
+			callNext.Activate();
+		}
 	}
 
-	public override void Reverse () {
+	public override void Reverse ()
+	{
 		isDone = false;
-		PlayerPrefs.SetInt(mySaveName, 0);
 		DoToggleLights();
+
+		if (callPrev) {
+			callPrev.Reverse();
+		}
 	}
 
-	void DoToggleLights() {
+	void DoToggleLights()
+	{
 		foreach (Light light in lightsToToggle) {
 			light.enabled = !light.enabled;
 		}
+
+		currentState = !currentState;
+
+		PlayerPrefs.SetInt(mySaveName, currentState ? 1 : 0);
+
+		lightsPuzzleManager.CheckWinState();
 	}
 }
