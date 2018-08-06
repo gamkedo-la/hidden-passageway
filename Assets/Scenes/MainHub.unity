@@ -4441,6 +4441,76 @@ Transform:
   m_Father: {fileID: 1336160703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1196492198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1196492199}
+  - component: {fileID: 1196492202}
+  - component: {fileID: 1196492201}
+  - component: {fileID: 1196492200}
+  m_Layer: 0
+  m_Name: Go to Bates Estate
+  m_TagString: Teleporter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1196492199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196492198}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.087, y: -0.30483818, z: -0.19158745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1593713177}
+  - {fileID: 1603227341}
+  m_Father: {fileID: 2096072232}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1196492200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196492198}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.36, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1196492201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196492198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbbb7ad45f25417a80a4dc516bcf0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Bates Estate
+  returnLocation: {fileID: 1593713177}
+--- !u!114 &1196492202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196492198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Go to Bates Estate
 --- !u!1 &1213037422
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,6 +5206,105 @@ Transform:
   m_Father: {fileID: 1847622713}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1593713176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593713177}
+  m_Layer: 0
+  m_Name: ReturnTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593713177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593713176}
+  m_LocalRotation: {x: -0.6819571, y: 0.18690772, z: 0.18690772, w: 0.6819571}
+  m_LocalPosition: {x: 0.20629668, y: -0.09381294, z: 1.3792887}
+  m_LocalScale: {x: 0.020618208, y: 0.020618208, z: 0.020618198}
+  m_Children: []
+  m_Father: {fileID: 1196492199}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1603227340
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1196492199}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6830127
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.18301266
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.18301266
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6830127
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.024405787
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.024405787
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.024405787
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+      propertyPath: m_Name
+      value: gamkedo-book (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3dc0ced5f2cd049d7a765af39e44196a, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!4 &1603227341 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a,
+    type: 3}
+  m_PrefabInternal: {fileID: 1603227340}
 --- !u!1 &1647249180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6709,6 +6878,7 @@ Transform:
   - {fileID: 2048165641}
   - {fileID: 210541977}
   - {fileID: 1979898225}
+  - {fileID: 1196492199}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
