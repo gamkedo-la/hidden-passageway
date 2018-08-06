@@ -10,12 +10,20 @@ public class doorOpenClose : MonoBehaviour
     public bool doorClosed = false;
     public bool doorOpened = false;
 
+    [FMODUnity.EventRef]
+    public string startSound;
+    [FMODUnity.EventRef]
+    public string moveSound;
+    [FMODUnity.EventRef]
+    public string endSound;
+    FMOD.Studio.EventInstance MoveLoopAudio;
+
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         anim = GetComponent<Animator>();
-        
-        if(startsOpen)
+
+        if (startsOpen)
         {
             Open();
         }
@@ -23,12 +31,17 @@ public class doorOpenClose : MonoBehaviour
         {
             doorClosed = true;
         }
-	}
+    }
 
     private void FixedUpdate()
     {
         if(buttonPressed)
         {
+            if (startSound.Length > 0)
+            {
+                FMODUnity.RuntimeManager.PlayOneShotAttached(startSound, gameObject);
+            }
+            
             //Debug.Log("playing air pressure SFX");
             buttonPressed = false;
         }
