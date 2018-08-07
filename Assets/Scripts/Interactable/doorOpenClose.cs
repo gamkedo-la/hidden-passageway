@@ -7,8 +7,6 @@ public class doorOpenClose : MonoBehaviour
     public Animator anim;
     public bool startsOpen;
     public bool buttonPressed = false;
-    public bool doorClosed = false;
-    public bool doorOpened = false;
 
     [FMODUnity.EventRef]
     public string startSound;
@@ -26,10 +24,6 @@ public class doorOpenClose : MonoBehaviour
         if (startsOpen)
         {
             Open();
-        }
-        else
-        {
-            doorClosed = true;
         }
     }
 
@@ -49,11 +43,17 @@ public class doorOpenClose : MonoBehaviour
 
     public void Close()
     {
-        anim.Play("doorClose");
+        //anim.Play("doorClose");
+
+        anim.SetBool("openDoor", false);
+        anim.SetBool("closeDoor", true);
     }
 
     public void Open()
     {
-        anim.Play("doorOpen");
+        //anim.Play("doorOpen");
+
+        anim.SetBool("closeDoor", false);
+        anim.SetBool("openDoor", true);
     }
-}
+}   

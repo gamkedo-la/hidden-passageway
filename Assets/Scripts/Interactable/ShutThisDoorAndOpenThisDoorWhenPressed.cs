@@ -6,6 +6,7 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
 {
     public doorOpenClose[] doorsToBeOpened;
     public doorOpenClose[] doorsInGroup;
+    bool hasButtonBeenPressed = false;
 
     private void Start()
     {
@@ -22,26 +23,32 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
             {               
                 if (rayHitInfo.collider.gameObject == gameObject)
                 {
-                    OpenMyDoorsOnly();
+                    hasButtonBeenPressed = !hasButtonBeenPressed;
+                    OpenDoors(hasButtonBeenPressed);
                 }
             }           
         }
     }
 
-    void OpenMyDoorsOnly()
+    void OpenDoors(bool hasButtonBeenPressed)
     {
-        for (int i = 0; i < doorsInGroup.Length; i++)
+        if(hasButtonBeenPressed)
         {
-            doorsInGroup[i].buttonPressed = true;
-            doorsInGroup[i].Close();
-        }
-
-        if (doorsToBeOpened != null)
-        {
-            for (int i = 0; i < doorsToBeOpened.Length; i++)
+            for (int i = 0; i < doorsInGroup.Length; i++)
             {
-                doorsToBeOpened[i].buttonPressed = true;
-                doorsToBeOpened[i].Open();
+                doorsInGroup[i].buttonPressed = true;
+                doorsInGroup[i].Close();
+            }
+        }
+        else if(!hasButtonBeenPressed)
+        {
+            if (doorsToBeOpened != null)
+            {
+                for (int i = 0; i < doorsToBeOpened.Length; i++)
+                {
+                    doorsToBeOpened[i].buttonPressed = true;
+                    doorsToBeOpened[i].Open();
+                }
             }
         }
     }

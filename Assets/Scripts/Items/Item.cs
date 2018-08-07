@@ -8,11 +8,9 @@ public class Item : ScriptableObject {
 
     public virtual bool Use()
     {
-        //Debug.Log("Using " + name);
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 3.5f))
         {
-            //Debug.Log("Ray hitting: " + hit.collider.name);
             switch(hit.collider.name)
             {
                 case "mini_power_source_dark_red_slot":
@@ -26,7 +24,6 @@ public class Item : ScriptableObject {
 
     public virtual void RemoveItem()
     {
-        Debug.Log("Dropping " + name);
         Instantiate(prefabToSpawn);
     }
 }

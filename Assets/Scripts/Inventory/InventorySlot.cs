@@ -25,7 +25,6 @@ public class InventorySlot : MonoBehaviour {
 
     public void OnRemoveButton()
     {
-        //Debug.Log("Removing " + item.name);
         if(item != null)
         {
             item.RemoveItem();

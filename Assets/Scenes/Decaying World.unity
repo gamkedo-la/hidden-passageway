@@ -1451,8 +1451,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 1
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -1892,6 +1890,65 @@ MonoBehaviour:
   - {fileID: 412975343}
   - {fileID: 423107627}
   - {fileID: 2051911268}
+--- !u!1001 &136318230
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1525356539}
+    m_Modifications:
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 277.2723
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.30000305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 317.68695
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.79335326
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.60876167
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 105.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.04000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.04000003
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 307dd153449c23e4eb0635f7045a2e00, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &136318231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4314724977162826, guid: 307dd153449c23e4eb0635f7045a2e00,
+    type: 2}
+  m_PrefabInternal: {fileID: 136318230}
 --- !u!1001 &138508932
 Prefab:
   m_ObjectHideFlags: 0
@@ -3155,6 +3212,36 @@ Transform:
   m_Father: {fileID: 1573150245}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &253559144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 253559145}
+  m_Layer: 0
+  m_Name: Light (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &253559145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253559144}
+  m_LocalRotation: {x: 0.70710677, y: -0, z: 0.7071069, w: 0}
+  m_LocalPosition: {x: 34, y: 7.919998, z: 25.5}
+  m_LocalScale: {x: 0.15000011, y: 0.15000011, z: 0.15000008}
+  m_Children:
+  - {fileID: 329472135}
+  - {fileID: 472938614}
+  m_Father: {fileID: 1771806008}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
 --- !u!1 &260500127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,8 +3289,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: event:/DecayingWorld/DoorStart
   moveSound: event:/DecayingWorld/DoorMove
   endSound: event:/DecayingWorld/DoorStop
@@ -8076,6 +8161,53 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &267230039
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1525356539}
+    m_Modifications:
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 307.4223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.30000305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 319.67694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &267230040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00,
+    type: 2}
+  m_PrefabInternal: {fileID: 267230039}
 --- !u!1 &274343538
 GameObject:
   m_ObjectHideFlags: 0
@@ -13507,6 +13639,73 @@ MonoBehaviour:
   rotationSpeed: 100
   rotateAtRandom: 0
   rotationVector: {x: 0, y: 0, z: 1}
+--- !u!1001 &329472134
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 253559145}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ddda0a8ce8c0bcd4a9e8f50517bed95b, type: 2}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c7c7685491b31b4497c8b1b8f0b778d, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!4 &329472135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d,
+    type: 3}
+  m_PrefabInternal: {fileID: 329472134}
 --- !u!1 &340230349
 GameObject:
   m_ObjectHideFlags: 0
@@ -13650,8 +13849,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 1
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -15002,6 +15199,72 @@ Transform:
   m_Father: {fileID: 612478081}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &472938613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 472938614}
+  - component: {fileID: 472938615}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472938614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472938613}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 253559145}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!108 &472938615
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472938613}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 20
+  m_SpotAngle: 75
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: 0
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!4 &473925572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4107529108098928, guid: 4573156306aa9254da75de2257127a6c,
@@ -15120,8 +15383,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -15220,8 +15481,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -21296,6 +21555,53 @@ Transform:
   m_Father: {fileID: 1573150245}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &622999216
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1525356539}
+    m_Modifications:
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 278.1923
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.30000305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 316.42694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &622999217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00,
+    type: 2}
+  m_PrefabInternal: {fileID: 622999216}
 --- !u!1 &634812707
 GameObject:
   m_ObjectHideFlags: 0
@@ -21622,8 +21928,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -23016,8 +23320,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -29101,8 +29403,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: event:/DecayingWorld/DoorStart
   moveSound: event:/DecayingWorld/DoorMove
   endSound: event:/DecayingWorld/DoorStop
@@ -29856,8 +30156,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -31818,8 +32116,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -33021,8 +33317,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 1
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -33269,8 +33563,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -35023,6 +35315,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 62bd427089ea5be4888987fbd020c50f,
     type: 3}
   m_PrefabInternal: {fileID: 1380975780}
+--- !u!1001 &1381510351
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1525356539}
+    m_Modifications:
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 276.0523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.30000305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 319.17694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.60876125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7933535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 75
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a1c0fdea5041284aa8d4a518ea23959, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1381510352 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4530156770517788, guid: 7a1c0fdea5041284aa8d4a518ea23959,
+    type: 2}
+  m_PrefabInternal: {fileID: 1381510351}
 --- !u!1001 &1382039613
 Prefab:
   m_ObjectHideFlags: 0
@@ -36558,6 +36901,11 @@ Transform:
   - {fileID: 895667687}
   - {fileID: 194124230}
   - {fileID: 19435476}
+  - {fileID: 267230040}
+  - {fileID: 1912698809}
+  - {fileID: 622999217}
+  - {fileID: 136318231}
+  - {fileID: 1381510352}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41782,8 +42130,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 1
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -47259,8 +47605,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -47329,8 +47673,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -47509,8 +47851,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 1
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -57955,6 +58295,7 @@ Transform:
   - {fileID: 1250193059}
   - {fileID: 1068918967}
   - {fileID: 1880745890}
+  - {fileID: 253559145}
   m_Father: {fileID: 2119125115}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58035,8 +58376,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -63245,8 +63584,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -63586,6 +63923,53 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224520603287940392, guid: a53970b79b217ca44923e94fc8aeffde,
     type: 2}
   m_PrefabInternal: {fileID: 1910394845}
+--- !u!1001 &1912698808
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1525356539}
+    m_Modifications:
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 304.6123
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.30000305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 338.56696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc422b0e16a471743b98326ee2995a00, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1912698809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4470929737673568, guid: cc422b0e16a471743b98326ee2995a00,
+    type: 2}
+  m_PrefabInternal: {fileID: 1912698808}
 --- !u!1001 &1916838754
 Prefab:
   m_ObjectHideFlags: 0
@@ -64183,8 +64567,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 1
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 
@@ -65989,8 +66371,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   startsOpen: 0
   buttonPressed: 0
-  doorClosed: 0
-  doorOpened: 0
   startSound: 
   moveSound: 
   endSound: 

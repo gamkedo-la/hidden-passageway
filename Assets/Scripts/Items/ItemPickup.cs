@@ -10,7 +10,6 @@ public class ItemPickup : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log(itemPickupSound);
         if(!string.IsNullOrEmpty(itemPickupSound))
         {
             ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
@@ -19,10 +18,8 @@ public class ItemPickup : MonoBehaviour {
         {
             itemPickupSound = @"event:/DecayingWorld/ItemPickup";
         }
-
-        Debug.Log(itemPickupSound);
-        ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
         
+        ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
     }
 
     private void Update()
@@ -47,7 +44,6 @@ public class ItemPickup : MonoBehaviour {
 
         if(wasItemPickedUp)
         {
-            Debug.Log("Picking up: " + item.name);
             Destroy(parentOfGOToBeDestroyed);
         }
         
