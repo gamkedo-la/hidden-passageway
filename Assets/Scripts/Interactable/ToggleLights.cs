@@ -8,7 +8,9 @@ public class ToggleLights : AbstractActivateable {
 	[SerializeField] bool winState;
 	[SerializeField] Light[] lightsToToggle;
 
-	[SerializeField] bool currentState = true;
+	bool currentState = false;
+
+	TriggerComponentEnable triggerScript;
 
 	string mySaveName;
 
@@ -19,12 +21,35 @@ public class ToggleLights : AbstractActivateable {
 		if (previousState == 1) {
 			DoToggleLights();
 		}
+
+		GameObject[] interactionSwitches = GameObject.FindGameObjectsWithTag(Tags.InteractionSwitch);
+		for (int i = 0; i < interactionSwitches.Length; i++)
+		{
+			TriggerComponentEnable tceScript = interactionSwitches[i].GetComponent<TriggerComponentEnable>();
+			// Skip this object if it has no script
+			if (tceScript == null)
+			{
+				continue;
+			}
+			if (tceScript.toEnable == this || tceScript.toEnable2 == this || tceScript.toEnable3 == this)
+			{
+				triggerScript = tceScript;
+			}
+		}
 	}
 
-	public bool HasWon()
+	public bool HasWon ()
 	{
-		Debug.Log("has won?" + mySaveName + " = " + (currentState?"1":"0") + "=="+(winState?"1":"0"));
+		// Debug.Log("has won?" + mySaveName + " = " + (currentState?"1":"0") + "=="+(winState?"1":"0"));
 		return currentState == winState;
+	}
+
+	public void Disable ()
+	{
+		if (triggerScript) {
+			triggerScript.enabled = false;
+			enabled = false;
+		}
 	}
 
 	public override void Activate ()

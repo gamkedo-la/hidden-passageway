@@ -20,6 +20,10 @@ public class TriggerComponentEnable : MonoBehaviour {
 
     public void triggerAction()
     {
+        if (!enabled) {
+            return;
+        }
+
         if(toEnable.isDone == false)
         {
             toEnable.SendMessage("Activate");
@@ -59,6 +63,6 @@ public class TriggerComponentEnable : MonoBehaviour {
     }
 
     public bool canBeUsed() {
-        return (toEnable.isDone == false) || canBeReversed;
+        return enabled && ((toEnable.isDone == false) || canBeReversed);
     }
 }
