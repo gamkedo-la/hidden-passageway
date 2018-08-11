@@ -19,6 +19,9 @@ public class EstatePuzzle : MonoBehaviour {
     //DELETE THIS LATER. USED FOR TESTING THE SOLUTION
     public GameObject lightUpWhenCorrect;
 
+    public GameObject wardrobe1;
+    public GameObject wardrobe2;
+
     private void Awake()
     {
         defaultColor = lanternLight.color;
@@ -57,8 +60,14 @@ public class EstatePuzzle : MonoBehaviour {
         {
             if (TestSolution())
             {
-                lightUpWhenCorrect.SetActive(true);
+                SolvePuzzle();
             }
+        }
+
+        //USE THIS FOR TESTING THE ROTATION OF WARDROBE WHEN FIRST PUZZLE IS COMPLETED
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SolvePuzzle();
         }
 
     }
@@ -129,5 +138,11 @@ public class EstatePuzzle : MonoBehaviour {
         }
         else
             return false;
+    }
+
+    void SolvePuzzle()
+    {
+        wardrobe1.SetActive(false);
+        wardrobe2.SetActive(true);
     }
 }
