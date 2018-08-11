@@ -148,4 +148,12 @@ public class LanternScript : MonoBehaviour {
                 col.enabled = true;
         }
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.name == "LanternFallTrigger")
+        {
+            PickUp(null);
+        }
+    }
 }
