@@ -12,8 +12,7 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
     {
         
     }
-
-    //Update is called once per frame
+    
     void Update()
     {
         RaycastHit rayHitInfo;
