@@ -26,6 +26,12 @@ public class LanternScript : MonoBehaviour {
 
     LanternSway lanternSwayScript;
 
+    [FMODUnity.EventRef]
+    public string itemPickupSound;
+    FMOD.Studio.EventInstance ItemPickupAudio;
+    public string itemDropSound;
+    FMOD.Studio.EventInstance ItemDropAudio;
+
     private void Awake()
     {
         defaultParent = gameObject.transform.parent;
@@ -36,8 +42,17 @@ public class LanternScript : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		
-	}
+        if (!string.IsNullOrEmpty(itemPickupSound))
+        {
+            ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
+        }
+        else
+        {
+            itemPickupSound = @"event:/BatesEstate/LanternPickup";
+        }
+
+        ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -107,6 +122,7 @@ public class LanternScript : MonoBehaviour {
         lanternSwayScript.constraintsFrozen = true;
         lanternSwayScript.ToggleFreezeTargetPos();
         held = true;
+        FMODUnity.RuntimeManager.PlayOneShotAttached(itemPickupSound, gameObject);
     }
     void PutDown()
     {
@@ -119,6 +135,7 @@ public class LanternScript : MonoBehaviour {
         lanternSwayScript.constraintsFrozen = false;
         lanternSwayScript.ToggleFreezeTargetPos();
         held = false;
+        FMODUnity.RuntimeManager.PlayOneShotAttached(itemDropSound, gameObject);
     }
     void Throw()
     {
