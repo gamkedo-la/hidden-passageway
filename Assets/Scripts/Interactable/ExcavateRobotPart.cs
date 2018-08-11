@@ -7,7 +7,6 @@ public class ExcavateRobotPart : MonoBehaviour {
 
     [SerializeField] private float rateOfRotationY = 100.0f;
     [SerializeField] private float rateOfRotationZ = 5.0f;
-    [SerializeField] private float rateOfRotationX = 0.0f;
 
     private float startingAngY = 0.0f;
     private float startingAngZ = 45.0f;

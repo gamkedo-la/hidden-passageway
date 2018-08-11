@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class doorOpenClose : MonoBehaviour
 {
-    public Animator anim;
+    private Animator anim;
     public bool startsOpen;
     public bool buttonPressed = false;
 
@@ -36,7 +36,6 @@ public class doorOpenClose : MonoBehaviour
                 FMODUnity.RuntimeManager.PlayOneShotAttached(startSound, gameObject);
             }
             
-            //Debug.Log("playing air pressure SFX");
             buttonPressed = false;
         }
     }

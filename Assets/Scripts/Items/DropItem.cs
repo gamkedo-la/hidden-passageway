@@ -15,10 +15,7 @@ public class DropItem : MonoBehaviour {
         Transform player = t.GetComponentInParent<Transform>();
         Assert.IsNotNull(player, "No t means no player transform");
         Vector3 pos = new Vector3(player.position.x, player.position.y - 1.0f, player.position.z - 2.0f);
-
-        if(pos != null)
-        {
-            transform.position = pos;
-        }  
+        
+        transform.position = pos;
 	}
 }
