@@ -23,6 +23,11 @@ public class ViewControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (ArcadePlayer.playingNow != null)
+        {
+            return;
+        }
+
 		if(Cursor.lockState != CursorLockMode.Locked) {
 			return;
 		}

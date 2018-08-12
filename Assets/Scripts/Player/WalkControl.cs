@@ -48,6 +48,10 @@ public class WalkControl : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+        if (ArcadePlayer.playingNow != null)
+        {
+            return;
+        }
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -101,6 +105,11 @@ public class WalkControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        if (ArcadePlayer.playingNow != null)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
         RaycastHit rhInfo;
 
         prevValidPosition = transform.position;

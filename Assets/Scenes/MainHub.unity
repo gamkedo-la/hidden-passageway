@@ -3492,6 +3492,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907924882}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &910150397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1552369758932374, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 1225592014}
+--- !u!114 &910150405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910150397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38b1e239e81c45778a1034cfd538dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bills: 0
+  tokens: 5
+  zoomFOV: 45
 --- !u!1001 &919789262
 Prefab:
   m_ObjectHideFlags: 0
@@ -4525,7 +4544,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1156342021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32800007, y: -1.7851949, z: 0.7140007}
+  m_LocalPosition: {x: -0.02, y: -1.7851949, z: 1.1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1734923750}
@@ -5309,7 +5328,7 @@ GameObject:
   - component: {fileID: 1555751896}
   - component: {fileID: 1555751900}
   m_Layer: 0
-  m_Name: Prairie Overkill
+  m_Name: Prairie Overkill Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5397,7 +5416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlaying: 0
   playTime: 30
-  myCab: {fileID: 1670285682}
+  myCab: {fileID: 0}
   triedThisYet: 0
   paintThis: {fileID: 2800000, guid: 1bf028806df854759a646dd1fcc777dd, type: 3}
   bgCol: {r: 0.3, g: 0.3, b: 0.3, a: 1}
@@ -5690,27 +5709,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a,
     type: 3}
   m_PrefabInternal: {fileID: 1665781654}
---- !u!1 &1670285681 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: fd1d7dfe3811548438fa899be379cc01,
-    type: 3}
-  m_PrefabInternal: {fileID: 139835492}
---- !u!114 &1670285682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1670285681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73c6977813364ffcbde44c6041508c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHere: {fileID: 0}
-  gameName: Prairie Overkill
-  gameInstructions: LEFT/RIGHT TURN
-  standHere: {fileID: 1156342022}
-  gameScreen: {fileID: 1555751900}
 --- !u!4 &1670285684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01,
@@ -5943,6 +5941,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1734923750}
   - component: {fileID: 1734923751}
+  - component: {fileID: 1734923752}
+  - component: {fileID: 1734923753}
   m_Layer: 0
   m_Name: Prairie Overkill Arcade Game
   m_TagString: Untagged
@@ -5956,8 +5956,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734923749}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 8.79, z: 14.86}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -2.86, y: 8.79, z: 5.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1670285684}
@@ -5965,7 +5965,7 @@ Transform:
   - {fileID: 1555751899}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!65 &1734923751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5978,6 +5978,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.61, y: 3.11, z: 2.08}
   m_Center: {x: 0, y: -0.23, z: -0.63}
+--- !u!114 &1734923752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734923749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8d1736f23c9425dac699ee6b55033d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tokenDelta: 0
+  billDelta: 0
+  pgScript: {fileID: 0}
+--- !u!114 &1734923753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734923749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73c6977813364ffcbde44c6041508c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHere: {fileID: 0}
+  gameName: Prairie Overkill
+  gameInstructions: LEFT/RIGHT TURN
+  standHere: {fileID: 1156342022}
+  gameScreen: {fileID: 1555751900}
 --- !u!1 &1749375072
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,21 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ArcadePlayer : MonoBehaviour {
-	public Text tokenBillText;
-	public GameObject parentDialog;
-	public TokenInteraction lastAdultSpokenTo;
-	public Text adultSays;
-	private bool expectingResponse;
-	public int allGameCount = 9;
-
-	public GameObject gameOverMessage;
-	public GameObject winMessage;
-
-	public static PlayableGame playingNow = null;
+    public static PlayableGame playingNow = null;
 
 	Coroutine prevMsgReset = null;
-
-	public Transform dialogLookFocus;
 
 	Rigidbody rb;
 	public static int ticketNum = 0;
@@ -72,7 +60,7 @@ public class ArcadePlayer : MonoBehaviour {
 				disclaimer = "\nGot "+pluralString(billDelta,"Bill");
 			}
 
-			if(tokenDelta < 0) {
+			/*if(tokenDelta < 0) {
 				SoundCenter.instance.PlayClipOn( SoundCenter.instance.coinSpend,
 				                                transform.position, 1.0f);
 				disclaimer += "\nSpent "+pluralString(-tokenDelta,"Token");
@@ -82,7 +70,7 @@ public class ArcadePlayer : MonoBehaviour {
 				SoundCenter.instance.PlayClipOn( SoundCenter.instance.coinGet,
 				                                transform.position, 1.0f);
 				disclaimer += "\nGot "+pluralString(tokenDelta,"Token");
-			}
+			}*/
 
 			if( disclaimer.Length > 0 ) {
 				prevMsgReset = StartCoroutine( resetMessage() );
@@ -91,18 +79,10 @@ public class ArcadePlayer : MonoBehaviour {
 			}
 		}
 
-		if(tokenBillText) {
-			tokenBillText.text = "Games Tried: " + ticketNum + "/"+allGameCount+"\nBills: $" + bills +
-			"\nTokens: " + tokens + disclaimer;
-		}
+		Debug.Log("Games Tried: " + ticketNum + "\nBills: $" + bills +
+                  "\nTokens: " + tokens + disclaimer);
 
 		return hadEnoughTokens;
-	}
-
-	// for adult dialog button
-	public void TokenInteractionWith(bool wasYesAnswered) {
-		parentDialog.SetActive(false);
-		hideMouse();
 	}
 
 	void hideMouse() {
@@ -122,13 +102,7 @@ public class ArcadePlayer : MonoBehaviour {
 		baseFOV = Camera.main.fieldOfView;
 		hideMouse();
 		rb = GetComponent<Rigidbody>();
-		tokenBillsChange(1,0);
-		if(gameOverMessage) {
-			gameOverMessage.SetActive(false);
-		}
-		if(winMessage) {
-			winMessage.SetActive(false);
-		}
+		tokenBillsChange(0,5);
 	}
 
 	void LookToward(Transform thatObject) {
@@ -148,6 +122,7 @@ public class ArcadePlayer : MonoBehaviour {
 	}
 
 	IEnumerator StartGameInAMoment(PlayableGame playScript) {
+        Debug.Log("reached StartGameInAMoment");
 		yield return new WaitForSeconds(0.05f); // keeps spacebar from counting as input on this game
 		playScript.playerHere = gameObject;
 		if(prevMsgReset != null) {
@@ -155,9 +130,36 @@ public class ArcadePlayer : MonoBehaviour {
 		}
 		playingNow = playScript;
 		playingNow.gameScreen.GameStart();
-		tokenBillText.text = "" + playingNow.gameName.Replace("\\n", "\n") + "\nBACKSPACE: QUIT\n" +
-			playingNow.gameInstructions.Replace("\\n", "\n");
+        Debug.Log("" + playingNow.gameName.Replace("\\n", "\n") + "\nBACKSPACE: QUIT\n" +
+                  playingNow.gameInstructions.Replace("\\n", "\n"));
 	}
+
+    void FixedUpdate()
+    {
+        float cameraK = 0.7f;
+        float targetTilt;
+        float tiltK = 0.9f;
+        if (playingNow != null)
+        {
+            LookToward(playingNow.transform);
+            TakePositionFor(playingNow);
+            Camera.main.fieldOfView *= cameraK;
+            Camera.main.fieldOfView += zoomFOV * (1.0f - cameraK);
+
+            /*targetTilt = 0.0f;
+            camTilt = tiltK * camTilt + (1.0f - tiltK) * targetTilt;
+            Camera.main.transform.localRotation = Quaternion.Euler(camTilt, 0.0f, 0.0f);*/
+            Camera.main.transform.rotation = Quaternion.RotateTowards(Camera.main.transform.rotation,
+                                                                      Quaternion.LookRotation(transform.forward),
+                                                                      tiltK);
+        }
+        else
+        {
+            Camera.main.fieldOfView *= cameraK;
+            Camera.main.fieldOfView += baseFOV * (1.0f - cameraK);
+            targetTilt = 346.0f;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -167,24 +169,15 @@ public class ArcadePlayer : MonoBehaviour {
 		}
 
 		if(playingNow != null) {
-			LookToward(playingNow.transform);
-			TakePositionFor(playingNow);
-
 			if(Input.GetKeyDown(KeyCode.Backspace) || playingNow.gameScreen.isPlaying == false) {
 				// playingNow.gameScreen.isPlaying = false; // nah, leave it running but cease input!
 
-				PlayerDistrib.instance.Shuffle(); // BEFORE releasing player assignment, or it may appear here
 				playingNow.playerHere = null; // freeing up player assignment AFTER the shuffle
 
 				playingNow = null;
 				tokenBillsChange(0,0);
 			}
 			return;
-		}
-
-		if(parentDialog && parentDialog.activeSelf) {
-			LookToward(dialogLookFocus.transform);
-			return; // freeze while in dialog
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space)) {
@@ -211,6 +204,11 @@ public class ArcadePlayer : MonoBehaviour {
 					distFromFront = 0.0f;
 				}
 
+                Debug.Log("ArcadePlayer ray hit: " + rhInfo.collider.name+
+                          " pS:" +(playScript!=null)+
+                          " tS:" + (tiScript!= null) +
+                          " distFromFront:" + distFromFront);
+
 				if(distFromFront < 1.5f) {
 					bool hadTheMoney = false;
 					if(playScript && playScript.gameScreen.isPlaying) {
@@ -236,32 +234,5 @@ public class ArcadePlayer : MonoBehaviour {
 		mouseOrHorizKeys = Mathf.Clamp(mouseOrHorizKeys, -1.0f, 1.0f);
 
 		transform.Rotate(Vector3.up, mouseOrHorizKeys * Time.deltaTime * 85.0f);
-	}
-
-	void FixedUpdate() {
-		if((gameOverMessage && gameOverMessage.activeSelf) ||
-			(winMessage && winMessage.activeSelf)) {
-			return; // game frozen, player lost
-		}
-
-		if(parentDialog == null || (parentDialog.activeSelf==false && playingNow == null)) {
-			rb.velocity = transform.forward * Input.GetAxis("Vertical") * 5.0f;
-		}
-
-		float cameraK = 0.89f;
-		float targetTilt;
-		if(playingNow != null) {
-			Camera.main.fieldOfView *= cameraK;
-			Camera.main.fieldOfView += zoomFOV*(1.0f-cameraK);
-			targetTilt = 340.0f;
-		} else {
-			Camera.main.fieldOfView *= cameraK;
-			Camera.main.fieldOfView += baseFOV*(1.0f-cameraK);
-			targetTilt = 346.0f;
-		}
-		float tiltK = 0.9f;
-		camTilt = tiltK*camTilt+(1.0f-tiltK)*targetTilt;
-
-		Camera.main.transform.localRotation = Quaternion.Euler(camTilt, 0.0f, 0.0f);
 	}
 }

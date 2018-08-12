@@ -12,11 +12,13 @@ public class TokenInteraction : MonoBehaviour {
 	}
 
 	public bool tokenExchange (ArcadePlayer interactor) {
-		if( interactor.tokenBillsChange(billDelta, tokenDelta) 
+        return true; // FREE PLAY for now :)
+
+        /*if( interactor.tokenBillsChange(billDelta, tokenDelta) 
 		   && pgScript) {
 			// pgScript.gameScreen.isPlaying = true;
 			return true;
 		}
-		return false;
+		return false;*/
 	}
 }
