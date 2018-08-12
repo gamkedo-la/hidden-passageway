@@ -7,6 +7,15 @@ public class EstatePuzzle : MonoBehaviour {
     bool greenLight = false;
     public Light lanternLight;
 
+    //How long the green light lasts.
+    float greenLightTimer = 10;
+
+    public ParticleSystem greenFountain;
+    bool fountainActivated = false;
+
+    //Counts to 5. Goes up each time the player discovers a puzzle cube. Once the last one is discovered, the green fountain activates.
+    int numOfActivates = 0;
+
     GameObject[] scribbles;
     public GameObject[] alternateByLight;
     public GameObject[] visibleByLight;
@@ -31,7 +40,6 @@ public class EstatePuzzle : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ToggleScribbleVisibility();
-		
 	}
 	
 	// Update is called once per frame
@@ -43,17 +51,41 @@ public class EstatePuzzle : MonoBehaviour {
         {
             if(rhInfo.collider.gameObject.tag == "EstatePuzzleCube")
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetMouseButtonDown(0))
                 {
                     rhInfo.collider.gameObject.GetComponent<EstatePuzzleCube>().RotateDown();
                 }
             }
+            if(rhInfo.collider.gameObject.name == "GreenLanternFountain")
+            {
+                if (Input.GetMouseButtonDown(0) && fountainActivated)
+                {
+                    if (!greenLight)
+                    {
+                        Debug.Log("COLOR CHANGE!!!!");
+                        ToggleLanternColor();
+                    }
+                }
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (greenLight)
+        {
+            if(greenLightTimer > 0)
+            {
+                greenLightTimer -= Time.deltaTime;
+            }
+            else
+            {
+                ToggleLanternColor();
+                greenLightTimer = 10;
+            }
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.L))
         {
             ToggleLanternColor();
-        }
+        }*/
 
         //USING THIS FOR TESTING
         if (Input.GetKeyDown(KeyCode.K))
@@ -79,12 +111,14 @@ public class EstatePuzzle : MonoBehaviour {
             lanternLight.color = Color.green;
             greenLight = true;
             ToggleScribbleVisibility();
+            greenFountain.Stop();
         }
         else
         {
             lanternLight.color = defaultColor;
             greenLight = false;
             ToggleScribbleVisibility();
+            greenFountain.Play();
         }
     }
 
@@ -144,5 +178,21 @@ public class EstatePuzzle : MonoBehaviour {
     {
         wardrobe1.SetActive(false);
         wardrobe2.SetActive(true);
+    }
+
+    void FountainNowUsable()
+    {
+        fountainActivated = true;
+        greenFountain.Play();
+    }
+
+    //Triggers when player discovers a puzzle cube
+    public void FoundPuzzleCube()
+    {
+        numOfActivates++;
+        if(numOfActivates == 5)
+        {
+            FountainNowUsable();
+        }
     }
 }

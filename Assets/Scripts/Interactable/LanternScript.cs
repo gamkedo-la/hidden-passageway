@@ -60,10 +60,10 @@ public class LanternScript : MonoBehaviour {
         {
             if (canPerformAction)
             {
-                if (Input.GetMouseButtonDown(0))
+                /*if (Input.GetMouseButtonDown(0))
                 {
                     PutDown();
-                }
+                }*/
                 if (Input.GetMouseButton(1))
                 {
                     if (throwForce < maxThrowForce)
