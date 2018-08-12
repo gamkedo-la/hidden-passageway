@@ -703,6 +703,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &139835492
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1734923750}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7851949
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.009999275
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 521f7e435b48d480898b166802add05e, type: 2}
+    - target: {fileID: 2300000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 521f7e435b48d480898b166802add05e, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd1d7dfe3811548438fa899be379cc01, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &154294847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4441,6 +4503,34 @@ Transform:
   m_Father: {fileID: 1336160703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1156342021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1156342022}
+  m_Layer: 0
+  m_Name: Stand Here
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1156342022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1156342021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.32800007, y: -1.7851949, z: 0.7140007}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_Children: []
+  m_Father: {fileID: 1734923750}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1196492198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,8 +5307,9 @@ GameObject:
   - component: {fileID: 1555751898}
   - component: {fileID: 1555751897}
   - component: {fileID: 1555751896}
+  - component: {fileID: 1555751900}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Prairie Overkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5286,13 +5377,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1555751895}
-  m_LocalRotation: {x: -0, y: 0.9998855, z: -0, w: 0.015135299}
-  m_LocalPosition: {x: 0.56, y: 8.298, z: 14.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0037966778, y: 0.96791536, z: -0.25082052, w: 0.014651367}
+  m_LocalPosition: {x: -0.016, y: -0.049, z: -0.29}
+  m_LocalScale: {x: 0.8675717, y: -0.7499947, z: 0.86757207}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 178.266, z: 0}
+  m_Father: {fileID: 1734923750}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 29.056002, y: 178.266, z: 0}
+--- !u!114 &1555751900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555751895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6f38582bfab4128ac35447404a4da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 0
+  playTime: 30
+  myCab: {fileID: 1670285682}
+  triedThisYet: 0
+  paintThis: {fileID: 2800000, guid: 1bf028806df854759a646dd1fcc777dd, type: 3}
+  bgCol: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  playerImg: {fileID: 2800000, guid: 0b6664cf340184bc08505c1373029d9a, type: 3}
+  playerImg2: {fileID: 2800000, guid: d38c2899e2671459da3ea1e78fe5fee0, type: 3}
+  buffaloImg: {fileID: 2800000, guid: 271a01e40eb7a4b2fb2963067ff2918b, type: 3}
+  buffaloImg2: {fileID: 2800000, guid: 39a3b7ff1786c462ba78b0fb18354846, type: 3}
+  treeImg: {fileID: 2800000, guid: 13b2d5c4dfbb44dfba07c0c1cfd2db0f, type: 3}
 --- !u!1 &1593713176
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5690,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 3dc0ced5f2cd049d7a765af39e44196a,
     type: 3}
   m_PrefabInternal: {fileID: 1665781654}
+--- !u!1 &1670285681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fd1d7dfe3811548438fa899be379cc01,
+    type: 3}
+  m_PrefabInternal: {fileID: 139835492}
+--- !u!114 &1670285682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670285681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73c6977813364ffcbde44c6041508c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHere: {fileID: 0}
+  gameName: Prairie Overkill
+  gameInstructions: LEFT/RIGHT TURN
+  standHere: {fileID: 1156342022}
+  gameScreen: {fileID: 1555751900}
+--- !u!4 &1670285684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: fd1d7dfe3811548438fa899be379cc01,
+    type: 3}
+  m_PrefabInternal: {fileID: 139835492}
 --- !u!1 &1703083963
 GameObject:
   m_ObjectHideFlags: 0
@@ -5795,6 +5934,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichClock: {fileID: 834223786}
   minChange: -60
+--- !u!1 &1734923749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734923750}
+  - component: {fileID: 1734923751}
+  m_Layer: 0
+  m_Name: Prairie Overkill Arcade Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734923750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734923749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.51, y: 8.79, z: 14.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1670285684}
+  - {fileID: 1156342022}
+  - {fileID: 1555751899}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1734923751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734923749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.61, y: 3.11, z: 2.08}
+  m_Center: {x: 0, y: -0.23, z: -0.63}
 --- !u!1 &1749375072
 GameObject:
   m_ObjectHideFlags: 0
