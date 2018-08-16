@@ -22,6 +22,10 @@ public class DigSitePuzzleCube : MonoBehaviour {
         mat = GetComponent<Renderer>().material;
         mat.SetColor("_EmissionColor", Color.green);
 
+        if (puzzle.startsCompleted && !puzzle.IsCubeUnbreakable(puzzleIndex)) {
+            Destroy(this.gameObject);
+        }
+
     } //end of Start()
 	
 	void Update () {

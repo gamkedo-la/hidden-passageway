@@ -18,6 +18,25 @@ public class DigSitePuzzle : MonoBehaviour {
     public GameObject doorToOpen;
     private SlideToPos doorControl;
     public float percentBreakableCube = 40f;
+    public enum puzzlePatternName { RANDOM, BOX, CROSS };
+    public puzzlePatternName thisPattern;
+    public bool startsCompleted = false;
+
+    private int[] boxPattern = new int[]   {0, 0, 0, 0, 0, 0, 0,
+                                            0, 1, 1, 1, 1, 1, 0,
+                                            0, 1, 0, 0, 0, 1, 0,
+                                            0, 1, 0, 0, 0, 1, 0,
+                                            0, 1, 0, 0, 0, 1, 0,
+                                            0, 1, 1, 1, 1, 1, 0,
+                                            0, 0, 0, 0, 0, 0, 0 };
+
+    private int[] crossPattern = new int[] {1, 0, 0, 0, 0, 0, 1,
+                                            0, 1, 0, 0, 0, 1, 0,
+                                            0, 0, 1, 0, 1, 0, 0,
+                                            0, 0, 0, 1, 0, 0, 0,
+                                            0, 0, 1, 0, 1, 0, 0,
+                                            0, 1, 0, 0, 0, 1, 0,
+                                            1, 0, 0, 0, 0, 0, 1 };
 
     void Start () {
 
@@ -70,13 +89,40 @@ public class DigSitePuzzle : MonoBehaviour {
                 //Set grid index on new cube
                 tempGO.GetComponent<DigSitePuzzleCube>().SetIndex(gridIndex);
 
-                //Randomize cube state
-                if (Random.Range(0f,1f) > (percentBreakableCube / 100)) {
-                    cubeState[gridIndex] = true;
-                } else { //end if
-                    cubeState[gridIndex] = false;
-                    breakableCubes.Add(tempGO);
-                } // end else
+                switch (thisPattern) {
+                    case puzzlePatternName.RANDOM:
+
+                        //Randomize cube state
+                        if (Random.Range(0f, 1f) > (percentBreakableCube / 100)) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        } // end else
+                        break;
+
+                    case puzzlePatternName.BOX:
+
+                        //Patterned cube state
+                        if (boxPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.CROSS:
+
+                        //Patterned cube state
+                        if (crossPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+                }
 
             } // end of for x loop
         } // end of for y loop
@@ -124,7 +170,7 @@ public class DigSitePuzzle : MonoBehaviour {
         breakableCubes.RemoveAll(GameObject => GameObject == null);
 
         Debug.Log(breakableCubes);
-        if (breakableCubes.Count == 0) { //solves if 1 left, because last cube is not detroyed yet, when check is made.
+        if (breakableCubes.Count == 0) {
             puzzleTracker.MarkSolved(gameObject.name);
             Debug.Log("Solution Found. Calling MarkSolved() for object " + gameObject.name);
             doorControl.Activate();
