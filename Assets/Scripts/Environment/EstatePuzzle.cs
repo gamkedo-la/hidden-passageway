@@ -1,8 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class EstatePuzzle : MonoBehaviour {
+
+    int testNum = 0;
+
+    public Text text1;
+    public Text text2;
 
     bool greenLight = false;
     public Light lanternLight;
@@ -49,23 +55,71 @@ public class EstatePuzzle : MonoBehaviour {
         RaycastHit rhInfo;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 4.0f))
         {
-            if(rhInfo.collider.gameObject.tag == "EstatePuzzleCube")
+            LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
+
+            //Debug.Log(rhInfo.collider.gameObject.name);
+
+            if (lantern)
             {
+                text1.text = "Pick up lantern";
+                text2.text = "Pick up lantern";
+
+                lantern.LookedAt();
+            }
+
+            if (rhInfo.collider.gameObject.tag == "EstatePuzzleCube")
+            {
+                text1.text = "Activate";
+                text2.text = "Activate";
+
                 if (Input.GetMouseButtonDown(0))
                 {
+                    Debug.Log("changed" + testNum);
+                    testNum++;
                     rhInfo.collider.gameObject.GetComponent<EstatePuzzleCube>().RotateDown();
                 }
             }
-            if(rhInfo.collider.gameObject.name == "GreenLanternFountain")
+
+            if (rhInfo.collider.gameObject.name == "GreenLanternFountain")
             {
+                text1.text = "Touch";
+                text2.text = "Touch";
+
                 if (Input.GetMouseButtonDown(0) && fountainActivated)
                 {
                     if (!greenLight)
                     {
-                        Debug.Log("COLOR CHANGE!!!!");
                         ToggleLanternColor();
                     }
                 }
+            }
+
+            if (rhInfo.collider.gameObject.name == "Button1")
+            {
+                text1.text = "Press button";
+                text2.text = "Press button";
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("Button Pressed");
+                    if (TestSolution())
+                    {
+                        Debug.Log("The path forward has been opened");
+                        SolvePuzzle();
+                    }
+                    else
+                    {
+                        Debug.Log("Nothing happens");
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (text1.text != "")
+            {
+                text1.text = "";
+                text2.text = "";
             }
         }
 
@@ -100,6 +154,12 @@ public class EstatePuzzle : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.P))
         {
             SolvePuzzle();
+        }
+
+        //USE FOR TESTING PURPOSES. REMOVE LATER.
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            ToggleLanternColor();
         }
 
     }

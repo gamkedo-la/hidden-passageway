@@ -70,12 +70,12 @@ public class ViewControl : MonoBehaviour {
 		RaycastHit rhInfo;
 		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 4.0f)) {		
             MouseTipOnLook mtol = rhInfo.collider.gameObject.GetComponent<MouseTipOnLook>();
-            LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
+            /*LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
 
             if (lantern)
             {
                 lantern.LookedAt();
-            }
+            }*/
 
             if (mtol) {
                 if(Input.GetMouseButtonDown(0)) {

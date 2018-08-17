@@ -121,6 +121,9 @@ public class LanternScript : MonoBehaviour {
 
         lanternSwayScript.constraintsFrozen = true;
         lanternSwayScript.ToggleFreezeTargetPos();
+
+        gameObject.layer = 2;
+
         held = true;
         FMODUnity.RuntimeManager.PlayOneShotAttached(itemPickupSound, gameObject);
     }
@@ -134,6 +137,9 @@ public class LanternScript : MonoBehaviour {
 
         lanternSwayScript.constraintsFrozen = false;
         lanternSwayScript.ToggleFreezeTargetPos();
+
+        gameObject.layer = 0;
+
         held = false;
         FMODUnity.RuntimeManager.PlayOneShotAttached(itemDropSound, gameObject);
     }
@@ -150,6 +156,9 @@ public class LanternScript : MonoBehaviour {
         gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * throwForce, ForceMode.Impulse);
 
         throwForce = 0;
+
+        gameObject.layer = 0;
+
         held = false;
     }
 
