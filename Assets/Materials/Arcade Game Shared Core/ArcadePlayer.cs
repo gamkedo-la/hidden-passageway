@@ -229,10 +229,10 @@ public class ArcadePlayer : MonoBehaviour {
 			}
 		}
 
-		float mouseOrHorizKeys =
+		/*float mouseOrHorizKeys =
 			Input.GetAxis("Horizontal") + Input.GetAxis("Mouse X");
 		mouseOrHorizKeys = Mathf.Clamp(mouseOrHorizKeys, -1.0f, 1.0f);
 
-		transform.Rotate(Vector3.up, mouseOrHorizKeys * Time.deltaTime * 85.0f);
+		transform.Rotate(Vector3.up, mouseOrHorizKeys * Time.deltaTime * 85.0f);*/
 	}
 }
