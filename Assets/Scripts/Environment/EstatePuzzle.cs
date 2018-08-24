@@ -37,6 +37,8 @@ public class EstatePuzzle : MonoBehaviour {
     public GameObject wardrobe1;
     public GameObject wardrobe2;
 
+    public GameObject[] blockedDoorways = new GameObject[3];
+
     private void Awake()
     {
         defaultColor = lanternLight.color;
