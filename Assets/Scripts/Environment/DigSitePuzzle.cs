@@ -21,6 +21,7 @@ public class DigSitePuzzle : MonoBehaviour {
     public enum puzzlePatternName { RANDOM, BOX, CROSS };
     public puzzlePatternName thisPattern;
     public bool startsCompleted = false;
+    public bool cluesHidden = false;
 
     private int[] boxPattern = new int[]   {0, 0, 0, 0, 0, 0, 0,
                                             0, 1, 1, 1, 1, 1, 0,
@@ -127,7 +128,9 @@ public class DigSitePuzzle : MonoBehaviour {
             } // end of for x loop
         } // end of for y loop
 
-        CreateRowColClues(7, 7);
+        if (!cluesHidden) {
+            CreateRowColClues(7, 7);
+        }
 
         //Sets the puzzle gameObject rotation (along with all the new cubes) back to the intended rotation.
         transform.rotation = Quaternion.Euler(gridFrameRotation);
