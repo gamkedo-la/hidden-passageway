@@ -18,7 +18,7 @@ public class DigSitePuzzle : MonoBehaviour {
     public GameObject doorToOpen;
     private SlideToPos doorControl;
     public float percentBreakableCube = 40f;
-    public enum puzzlePatternName { RANDOM, BOX, CROSS };
+    public enum puzzlePatternName { RANDOM, BOX, CROSS, KEYS, CAT, FACE, SUN, TEMPLE, KEY, EYE, CROOK, COLUMN, CHALICE };
     public puzzlePatternName thisPattern;
     public bool startsCompleted = false;
     public bool cluesHidden = false;
@@ -38,6 +38,86 @@ public class DigSitePuzzle : MonoBehaviour {
                                             0, 0, 1, 0, 1, 0, 0,
                                             0, 1, 0, 0, 0, 1, 0,
                                             1, 0, 0, 0, 0, 0, 1 };
+
+    private int[] keysPattern = new int[] { 1, 1, 1, 0, 0, 0, 0,
+                                            1, 0, 1, 1, 1, 1, 1,
+                                            1, 1, 1, 0, 1, 0, 1,
+                                            0, 0, 0, 0, 0, 0, 0,
+                                            0, 0, 0, 0, 1, 1, 1,
+                                            1, 1, 1, 1, 1, 0, 1,
+                                            1, 0, 1, 0, 1, 1, 1 };
+
+    private int[] catPattern = new int[] {  0, 1, 0, 0, 0, 1, 0,
+                                            0, 1, 1, 0, 1, 1, 0,
+                                            0, 1, 1, 1, 1, 1, 0,
+                                            1, 1, 0, 1, 0, 1, 1,
+                                            1, 1, 1, 1, 1, 1, 1,
+                                            1, 1, 1, 0, 1, 1, 1,
+                                            0, 1, 0, 1, 0, 1, 0 };
+
+    private int[] facePattern = new int[] { 0, 1, 1, 1, 1, 1, 0,
+                                            1, 1, 0, 1, 0, 1, 1,
+                                            1, 1, 1, 1, 1, 1, 1,
+                                            1, 1, 1, 0, 1, 1, 1,
+                                            0, 1, 1, 1, 1, 1, 0,
+                                            0, 1, 0, 0, 0, 1, 0,
+                                            0, 0, 1, 1, 1, 0, 0 };
+
+    private int[] sunPattern = new int[] {  0, 0, 0, 0, 0, 0, 0,
+                                            0, 1, 0, 1, 0, 1, 0,
+                                            0, 0, 1, 1, 1, 0, 0,
+                                            0, 1, 1, 1, 1, 1, 0,
+                                            0, 0, 1, 1, 1, 0, 0,
+                                            0, 1, 0, 1, 0, 1, 0,
+                                            0, 0, 0, 0, 0, 0, 0 };
+
+    private int[] templePattern = new int[] {   0, 0, 0, 0, 0, 0, 0,
+                                                0, 0, 0, 0, 0, 0, 0,
+                                                0, 0, 0, 0, 0, 0, 0,
+                                                0, 0, 0, 1, 0, 0, 0,
+                                                0, 0, 1, 1, 1, 0, 0,
+                                                0, 1, 1, 1, 1, 1, 0,
+                                                1, 1, 1, 1, 1, 1, 1 };
+
+    private int[] keyPattern = new int[] {   0, 0, 0, 0, 0, 0, 0,
+                                             0, 0, 0, 0, 0, 0, 0,
+                                             1, 1, 1, 0, 0, 0, 0,
+                                             1, 0, 1, 1, 1, 1, 1,
+                                             1, 1, 1, 0, 1, 0, 1,
+                                             0, 0, 0, 0, 0, 0, 0,
+                                             0, 0, 0, 0, 0, 0, 0 };
+
+    private int[] eyePattern = new int[] {   0, 0, 0, 0, 0, 0, 0,
+                                             0, 0, 1, 1, 1, 0, 0,
+                                             0, 1, 1, 0, 1, 1, 0,
+                                             1, 0, 1, 1, 1, 0, 1,
+                                             0, 1, 0, 0, 0, 1, 0,
+                                             0, 0, 1, 1, 1, 0, 0,
+                                             0, 0, 0, 0, 0, 0, 0 };
+
+    private int[] crookPattern = new int[] {   0, 0, 1, 1, 1, 1, 0,
+                                               0, 1, 0, 0, 0, 1, 0,
+                                               0, 1, 0, 0, 0, 1, 0,
+                                               0, 0, 0, 0, 1, 0, 0,
+                                               0, 0, 0, 1, 0, 0, 0,
+                                               0, 0, 0, 1, 0, 0, 0,
+                                               0, 0, 1, 1, 1, 0, 0 };
+
+    private int[] columnPattern = new int[] {   0, 1, 1, 1, 1, 1, 0,
+                                                0, 0, 1, 1, 1, 0, 0,
+                                                0, 0, 1, 1, 1, 0, 0,
+                                                0, 0, 1, 1, 1, 0, 0,
+                                                0, 0, 1, 1, 1, 0, 0,
+                                                0, 0, 1, 1, 1, 0, 0,
+                                                0, 1, 1, 1, 1, 1, 0 };
+
+    private int[] chalicePattern = new int[] {   1, 1, 1, 1, 1, 1, 1,
+                                                 1, 1, 1, 1, 1, 1, 1,
+                                                 0, 1, 1, 1, 1, 1, 0,
+                                                 0, 0, 1, 1, 1, 0, 0,
+                                                 0, 0, 0, 1, 0, 0, 0,
+                                                 0, 0, 1, 1, 1, 0, 0,
+                                                 0, 1, 1, 1, 1, 1, 0 };
 
     void Start () {
 
@@ -123,6 +203,117 @@ public class DigSitePuzzle : MonoBehaviour {
                             breakableCubes.Add(tempGO);
                         }
                         break;
+
+                    case puzzlePatternName.KEYS:
+
+                        //Patterned cube state
+                        if (keysPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.CAT:
+
+                        //Patterned cube state
+                        if (catPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.FACE:
+
+                        //Patterned cube state
+                        if (facePattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.SUN:
+
+                        //Patterned cube state
+                        if (sunPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.TEMPLE:
+
+                        //Patterned cube state
+                        if (templePattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.KEY:
+
+                        //Patterned cube state
+                        if (keyPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.EYE:
+
+                        //Patterned cube state
+                        if (eyePattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.CROOK:
+
+                        //Patterned cube state
+                        if (crookPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.COLUMN:
+
+                        //Patterned cube state
+                        if (columnPattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.CHALICE:
+
+                        //Patterned cube state
+                        if (chalicePattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
                 }
 
             } // end of for x loop
