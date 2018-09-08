@@ -8,8 +8,8 @@ public class DigSitePuzzle : MonoBehaviour {
     public List<GameObject> breakableCubes;
     public bool[] cubeState;
     private int gridIndex;
-    private int gridCols = 7;
-    private int gridRows = 7;
+    public int gridCols = 7;
+    public int gridRows = 7;
     private GameObject parent;
     private DigSitePuzzleTracker puzzleTracker;
     public bool solutionCheckNeeded = false;
@@ -141,6 +141,7 @@ public class DigSitePuzzle : MonoBehaviour {
     
     public void CreateCubeGrid(int cols, int rows) {
 
+        Debug.Log(cols + " x " + rows);
         //Temporarily resets puzzle gameObject rotation to (0,0,0), 
         //so that the cubes are created in the correct position, regardless 
         //of the placement orientation of the puzzle prefab in the world.
@@ -320,7 +321,7 @@ public class DigSitePuzzle : MonoBehaviour {
         } // end of for y loop
 
         if (!cluesHidden) {
-            CreateRowColClues(7, 7);
+            CreateRowColClues(gridCols, gridRows);
         }
 
         //Sets the puzzle gameObject rotation (along with all the new cubes) back to the intended rotation.
@@ -334,7 +335,11 @@ public class DigSitePuzzle : MonoBehaviour {
         Transform[] children = gameObject.GetComponentsInChildren<Transform>(true);
         foreach (Transform item in children) {
 
-            if (item.gameObject != this.gameObject && item.gameObject.name != "7x7_Puzzle_Frame") {
+            if (item.gameObject != this.gameObject
+                && item.gameObject.name != "3x3_Puzzle_Frame"
+                && item.gameObject.name != "7x7_Puzzle_Frame"
+                && item.gameObject.name != "4x4_Puzzle_Frame"
+                && item.gameObject.name != "10x10_Puzzle_Frame") {
                 GameObject.Destroy(item.gameObject);
             } // end of if
                
@@ -387,6 +392,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
         for (int y = 0; y < rows; y++) {
             for (int x = 0; x < cols; x++) {
+                int lastClueIndex = clues[y].Count - 1;
                 if (IsCubeUnbreakable(ColRowToGridIndex(x, y))) {
                     consecutiveCubes++;
                     if (x == cols - 1) {
@@ -396,7 +402,12 @@ public class DigSitePuzzle : MonoBehaviour {
                 } else if (consecutiveCubes != 0) { //end of if cube is unbreakable
                     clues[y].Add(consecutiveCubes);
                     consecutiveCubes = 0;
-                } // end of else if
+                }
+
+                if (clues[y].Count < 1 && x == cols - 1){
+                    clues[y].Add(0);  // end of else if
+                }
+
             } // end of for x
         } //end of for y
 
@@ -412,19 +423,22 @@ public class DigSitePuzzle : MonoBehaviour {
                     clues[x + rows].Add(consecutiveCubes);
                     consecutiveCubes = 0;
                 } // end of else if
+
+                if (clues[x + rows].Count < 1 && y == rows - 1) {
+                    clues[x + rows].Add(0);  // end of else if
+                }
+
             } // end of for y
         } // end of for x
 
         //Create number plates for each row
         for (int y = 0; y < rows; y++) {
-            Debug.Log("Number of clues in row y" + (y+1) +": " + clues[y].Count);
+            //Debug.Log("Number of clues in row y" + (y+1) +": " + clues[y].Count);
             for (int i = 0; i < clues[y].Count; i++) {
                 Debug.Log("Clue " + i+1 + " in row y" + (y + 1) + ": " + clues[y][i]);
 
                 GameObject tempPlateGO = GameObject.Instantiate(numberPlates[clues[y][(clues[y].Count - 1) - i]]);
-                if (numberPlates[clues[y][i]] == null) {
-                    tempPlateGO = GameObject.Instantiate(numberPlates[0]);
-                }
+
                 tempPlateGO.transform.position = gameObject.transform.position + new Vector3(0.4f * (-0.4f * i) - 1,  (0.4f * y) - 0.2f , 0f);
 
                 //Child new plate to this gameObject and set local scale to (.1, .1, .1)
@@ -440,15 +454,13 @@ public class DigSitePuzzle : MonoBehaviour {
 
         //Create number plates for each col
         for (int x = 0; x < cols; x++) {
-            Debug.Log("Number of clues in col x" + (x + 1) + ": " + clues[x + rows].Count);
+            //Debug.Log("Number of clues in col x" + (x + 1) + ": " + clues[x + rows].Count);
             for (int i = 0; i < clues[x + rows].Count; i++) {
-                Debug.Log("Clue " + i + 1 + " in col x" + (x + 1) + ": " + clues[x + rows][i]);
+                //Debug.Log("Clue " + i + 1 + " in col x" + (x + 1) + ": " + clues[x + rows][i]);
 
                 GameObject tempPlateGO = GameObject.Instantiate(numberPlates[clues[x + rows][i]]);
-                if (numberPlates[clues[x + rows][i]] == null) {
-                    tempPlateGO = GameObject.Instantiate(numberPlates[0]);
-                }
-                tempPlateGO.transform.position = gameObject.transform.position + new Vector3(0.4f * x, (0.4f * i) + 3, 0f);
+           
+                tempPlateGO.transform.position = gameObject.transform.position + new Vector3(0.4f * x, (0.4f * i) + ((gridRows + 1) * .4f), 0f);
 
                 //Child new plate to this gameObject and set local scale to (.1, .1, .1)
                 tempPlateGO.transform.SetParent(gameObject.transform);
