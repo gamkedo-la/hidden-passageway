@@ -14,13 +14,20 @@ public class EstatePuzzle : MonoBehaviour {
     public Light lanternLight;
 
     //How long the green light lasts.
-    float greenLightTimer = 10;
+    float greenLightTimer = 60;
 
     public ParticleSystem greenFountain;
     bool fountainActivated = false;
 
     //Counts to 5. Goes up each time the player discovers a puzzle cube. Once the last one is discovered, the green fountain activates.
     int numOfActivates = 0;
+    int maxNumActivates = 5;
+    string activateText = "";
+    public Text activeText;
+    float textFadeSpeed = .005f;
+    bool fadeText = false;
+
+    Color textColor;
 
     GameObject[] scribbles;
     public GameObject[] alternateByLight;
@@ -48,6 +55,9 @@ public class EstatePuzzle : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ToggleScribbleVisibility();
+        textColor = activeText.color;
+        activateText = numOfActivates + "/" + maxNumActivates;
+        activeText.text = activateText;
 	}
 	
 	// Update is called once per frame
@@ -164,6 +174,11 @@ public class EstatePuzzle : MonoBehaviour {
             ToggleLanternColor();
         }
 
+        if (fadeText && activeText.color.a >0)
+        {
+            FadeText();
+        }
+
     }
 
     void ToggleLanternColor()
@@ -252,9 +267,23 @@ public class EstatePuzzle : MonoBehaviour {
     public void FoundPuzzleCube()
     {
         numOfActivates++;
-        if(numOfActivates == 5)
+
+        activateText = numOfActivates + "/" + maxNumActivates;
+        activeText.text = activateText;
+
+        if (numOfActivates == 5)
         {
             FountainNowUsable();
+            fadeText = true;
+        }
+    }
+
+    public void FadeText()
+    {
+        if(activeText.color.a > 0)
+        {
+            textColor.a -= textFadeSpeed;
+            activeText.color = textColor;
         }
     }
 }
