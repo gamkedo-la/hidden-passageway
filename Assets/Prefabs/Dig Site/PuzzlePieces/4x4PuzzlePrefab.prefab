@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1373321266137134}
+  m_IsPrefabAsset: 1
+--- !u!1 &1072185352683090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4379136930000008}
+  - component: {fileID: 33251905962279780}
+  - component: {fileID: 23580660087834934}
+  m_Layer: 0
+  m_Name: 4x4_Puzzle_Frame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1373321266137134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4105778142369418}
+  - component: {fileID: 114299168940045774}
+  - component: {fileID: 114221139662627732}
+  m_Layer: 0
+  m_Name: 4x4PuzzlePrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4105778142369418
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373321266137134}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 17.07, y: 75.39, z: -90.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4379136930000008}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+--- !u!4 &4379136930000008
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072185352683090}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4105778142369418}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23580660087834934
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072185352683090}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 327c1655c232a644bb4185ecd3699be3, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33251905962279780
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072185352683090}
+  m_Mesh: {fileID: 4300000, guid: 327c1655c232a644bb4185ecd3699be3, type: 3}
+--- !u!114 &114221139662627732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373321266137134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389990ba139b5714092fb6005a5f261c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDone: 0
+  callNext: {fileID: 0}
+  callPrev: {fileID: 0}
+  endPos: {fileID: 0}
+  duration: 2
+  lookAtAction: 1
+  startSound: 
+  moveSound: 
+  endSound: 
+--- !u!114 &114299168940045774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373321266137134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d97ca1799165bf4185f58723378dd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleCubePrefab: {fileID: 1902651225846532, guid: cce6de9a64858bb4eb98bfde436a0003,
+    type: 2}
+  breakableCubes: []
+  cubeState: 
+  gridCols: 4
+  gridRows: 4
+  solutionCheckNeeded: 0
+  numberPlates:
+  - {fileID: 1812884617827118, guid: 240f67c2be8affe48bf3c368fcd0df35, type: 2}
+  - {fileID: 1394141265750776, guid: 282c5224a26768840826b402fed7c2be, type: 2}
+  - {fileID: 1304805806830370, guid: f0d6609d6b1ef9b41960d2bb61cac86b, type: 2}
+  - {fileID: 1160785354574328, guid: 7cdcd8873d29abe4a90d9679b9dad9b6, type: 2}
+  - {fileID: 1140239208299824, guid: 57e4d9e65fc9f1e4487bdc93827155ce, type: 2}
+  - {fileID: 1015014284509104, guid: 680639b257684a24f8e383858e00b65d, type: 2}
+  - {fileID: 1915520615472530, guid: fe4ee942576c8264d9ccf6a97414c308, type: 2}
+  - {fileID: 1839539732568978, guid: 4b2ce420ccdc9534e90585d7ccae45d4, type: 2}
+  - {fileID: 1469077605534002, guid: 22155346257aef142ac00163b8850f40, type: 2}
+  - {fileID: 1616168474265342, guid: 56d54036e64ddff4183a41f8f99df855, type: 2}
+  doorToOpen: {fileID: 1373321266137134}
+  percentBreakableCube: 40
+  thisPattern: 0
+  startsCompleted: 0
+  cluesHidden: 0

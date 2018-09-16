@@ -6,17 +6,24 @@ public class Item : ScriptableObject {
     public Sprite icon = null;
     public GameObject prefabToSpawn;
 
-    public virtual bool Use()
+    public virtual bool Use(string itemName)
     {
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 3.5f))
         {
-            switch(hit.collider.name)
+            if(itemName == "Red Power Source" && hit.collider.name == "mini_power_source_dark_red_slot")
             {
-                case "mini_power_source_dark_red_slot":
-                    ExcavateRobotPart hand = hit.collider.GetComponent<ExcavateRobotPart>();
+                ExcavateRobotPart hand = hit.collider.GetComponent<ExcavateRobotPart>();
+                if (hand != null)
                     hand.isPowerSourceInSlot = true;
-                    return true;
+                return true;
+            }
+            else if(itemName == "Blue Power Source" && hit.collider.name == "mini_power_source_blue_slot")
+            {
+                MakeThisLightDimAndBrightenOverTime light = hit.collider.GetComponent<MakeThisLightDimAndBrightenOverTime>();
+                if (light != null)
+                    light.enabled = true;
+                return true;
             }
         }
         return false;

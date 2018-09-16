@@ -28,10 +28,10 @@ public class BatesTriggersToActivate : MonoBehaviour {
             }
             else if(thisName == "LockInTrigger")
             {
-                mainPuzzleScript.wardrobe2.SetActive(false);
-                mainPuzzleScript.wardrobe1.SetActive(true);
+                //mainPuzzleScript.wardrobe2.SetActive(false);
+                //mainPuzzleScript.wardrobe1.SetActive(true);
                 mainPuzzleScript.blockedDoorways[0].SetActive(false);
-                mainPuzzleScript.blockedDoorways[1].SetActive(true);
+                //mainPuzzleScript.blockedDoorways[1].SetActive(true);
                 gameObject.SetActive(false);
             }
         }

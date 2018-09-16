@@ -8,4 +8,6 @@ public class Tags
     public const string Player = "Player";
     public const string Powerup = "Powerup";
     public const string Teleporter = "Teleporter";
+    public const string Item = "item";
+    public const string KeyItem = "keyItem";
 }
