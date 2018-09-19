@@ -10,18 +10,26 @@ public class PuzzleBall : MonoBehaviour {
 	private Vector3 resetPosition;
 	private Quaternion resetRotation;
 
-	void Start () {
+	void Start ()
+	{
 		rb = gameObject.GetComponent<Rigidbody>();
 		resetPosition = transform.position;
 		resetRotation = transform.rotation;
 	}
 
-	void Update () {
+	void Update ()
+	{
 		if (transform.position.y <= resetPositionY) {
 			rb.velocity = Vector3.zero;
 			rb.angularVelocity = Vector3.zero;
 			transform.position = resetPosition;
 			transform.rotation = resetRotation;
 		}
+	}
+
+	public void Disable ()
+	{
+		enabled = false;
+		gameObject.tag = "Untagged";
 	}
 }

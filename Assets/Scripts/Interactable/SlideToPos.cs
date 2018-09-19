@@ -7,6 +7,7 @@ public class SlideToPos : AbstractActivateable {
     public Transform endPos;
     public float duration = 2.0f;
     public bool lookAtAction = true;
+    public bool rememberPreviousState = true;
 
     Camera mainCam;
     bool isStarted = false;
@@ -69,7 +70,7 @@ public class SlideToPos : AbstractActivateable {
         mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
         int previousState = PlayerPrefs.GetInt(mySaveName, 0);
 
-        if (previousState == 1)
+        if (rememberPreviousState && previousState == 1)
         {
             transform.position = endPos.position;
             transform.rotation = endPos.rotation;

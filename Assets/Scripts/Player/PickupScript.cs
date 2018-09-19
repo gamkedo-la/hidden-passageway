@@ -27,7 +27,7 @@ public class PickupScript : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             // Debug.Log("Click");
             if (!canHold)

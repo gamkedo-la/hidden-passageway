@@ -4,22 +4,58 @@ using UnityEngine;
 
 public class Pedestal : MonoBehaviour {
 
-	private bool isActive = false;
+	[SerializeField] BallPedestalPuzzleManager ballPedestalPuzzleManager;
+	[SerializeField] bool winState;
+	private bool currentState = false;
 
-	void OnTriggerStay(Collider other)
+	private bool checkState = false;
+
+	void OnTriggerEnter(Collider other)
 	{
+		if (!enabled) {
+			return;
+		}
+
 		PuzzleBall pb = other.GetComponent<PuzzleBall>();
 		if (pb != null) {
-			isActive = true;
+			checkState = currentState = true;
+			ballPedestalPuzzleManager.CheckWinState();
 		}
 	}
 
-	void Update () {
-		if (isActive) {
+	void OnTriggerStay(Collider other)
+	{
+		if (!enabled) {
+			return;
+		}
+
+		PuzzleBall pb = other.GetComponent<PuzzleBall>();
+		if (pb != null) {
+			checkState = true;
+		}
+	}
+
+	void Update ()
+	{
+		if (currentState) {
 			transform.Rotate(Vector3.up, 10 * Time.deltaTime);
+			if (!checkState) {
+				currentState = false;
+			}
 		}
 
 		// Will be re-enabled in OnTriggerStay if there's still a ball
-		isActive = false;
+		checkState = false;
+	}
+
+	public bool HasWon ()
+	{
+		// Debug.Log("has won?" + PlayerPrefsHelper.GetPrefsName(gameObject) + " = " + (currentState?"1":"0") + "=="+(winState?"1":"0"));
+		return currentState == winState;
+	}
+
+	public void Disable ()
+	{
+		enabled = false;
 	}
 }
