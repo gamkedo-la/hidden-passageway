@@ -382,6 +382,7 @@ MonoBehaviour:
   endPos: {fileID: 2039191857}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -1461,6 +1462,7 @@ MonoBehaviour:
   endPos: {fileID: 2039191857}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -5665,6 +5667,7 @@ MonoBehaviour:
   endPos: {fileID: 800525683}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -7173,6 +7176,7 @@ MonoBehaviour:
   endPos: {fileID: 1085990265}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -7969,6 +7973,7 @@ MonoBehaviour:
   endPos: {fileID: 1451729009}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: event:/Islands/BridgeStart
   moveSound: event:/Islands/BridgeMove
   endSound: event:/Islands/BridgeStop
@@ -8835,6 +8840,7 @@ MonoBehaviour:
   endPos: {fileID: 2058425807}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -8921,6 +8927,7 @@ MonoBehaviour:
   endPos: {fileID: 565213165}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -9089,6 +9096,7 @@ MonoBehaviour:
   endPos: {fileID: 1949705048}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -9285,6 +9293,7 @@ MonoBehaviour:
   endPos: {fileID: 1569728987}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -11751,6 +11760,7 @@ MonoBehaviour:
   endPos: {fileID: 1690250829}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -12294,6 +12304,7 @@ MonoBehaviour:
   endPos: {fileID: 800525683}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -12387,6 +12398,7 @@ MonoBehaviour:
   endPos: {fileID: 1978217493}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -13372,6 +13384,7 @@ MonoBehaviour:
   endPos: {fileID: 181093642}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -14647,6 +14660,7 @@ MonoBehaviour:
   endPos: {fileID: 1141871021}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -15190,6 +15204,7 @@ MonoBehaviour:
   endPos: {fileID: 800525683}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -15401,7 +15416,7 @@ Prefab:
     - target: {fileID: 20206818486725336, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: m_RenderingPath
-      value: -1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
@@ -17388,6 +17403,7 @@ MonoBehaviour:
   endPos: {fileID: 1182934047}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: event:/Islands/BridgeStart
   moveSound: event:/Islands/BridgeMove
   endSound: event:/Islands/BridgeStop
@@ -17500,6 +17516,7 @@ MonoBehaviour:
   endPos: {fileID: 1690250829}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -19671,6 +19688,7 @@ MonoBehaviour:
   endPos: {fileID: 1695121970}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -20685,6 +20703,7 @@ MonoBehaviour:
   endPos: {fileID: 1569728987}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -21828,6 +21847,7 @@ MonoBehaviour:
   endPos: {fileID: 1755984906}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: 
   moveSound: 
   endSound: 
@@ -21940,9 +21960,68 @@ MonoBehaviour:
   endPos: {fileID: 18821024}
   duration: 2
   lookAtAction: 1
+  rememberPreviousState: 1
   startSound: event:/Islands/BridgeStart
   moveSound: event:/Islands/BridgeMove
   endSound: event:/Islands/BridgeStop
+--- !u!1001 &2041531473
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed51841edd479f948b9ba865f01b8596, type: 2}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29974bfc93b4c3d40a9f83dcf439f9be, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1001 &2046017291
 Prefab:
   m_ObjectHideFlags: 0
