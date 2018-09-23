@@ -150,7 +150,7 @@ public class DigSitePuzzle : MonoBehaviour {
         tempGridFrameRotation = new Vector3(0,0,0);
         transform.rotation = Quaternion.Euler(tempGridFrameRotation);
 
-        for (int y = 0; y < rows; y++) {
+        for (int y = rows - 1; y >= 0; y--) {
             for (int x = 0; x < cols; x++) {
 
                 gridIndex = ColRowToGridIndex(x, y);
@@ -360,7 +360,7 @@ public class DigSitePuzzle : MonoBehaviour {
     } // end isCubeUnbreakable
 
     public int ColRowToGridIndex(int col, int row) {
-        return col + (gridCols * row);
+        return col + (gridCols * (gridRows - row)) - gridRows;
     }  // end of ColRowToGridIndex()
 
     public void CheckForSolution() {
