@@ -392,7 +392,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
         for (int y = 0; y < rows; y++) {
             for (int x = 0; x < cols; x++) {
-                int lastClueIndex = clues[y].Count - 1;
+                //int lastClueIndex = clues[y].Count - 1;
                 if (IsCubeUnbreakable(ColRowToGridIndex(x, y))) {
                     consecutiveCubes++;
                     if (x == cols - 1) {
