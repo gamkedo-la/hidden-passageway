@@ -18,10 +18,29 @@ public class DigSitePuzzle : MonoBehaviour {
     public GameObject doorToOpen;
     private SlideToPos doorControl;
     public float percentBreakableCube = 40f;
-    public enum puzzlePatternName { RANDOM, BOX, CROSS, KEYS, CAT, FACE, SUN, TEMPLE, KEY, EYE, CROOK, COLUMN, CHALICE };
+    public enum puzzlePatternName { RANDOM, BOX, CROSS, KEYS, CAT, FACE, SUN, TEMPLE, KEY, EYE, CROOK, COLUMN, CHALICE, 
+                                    PATTERN3X3_1, PATTERN3X3_2, PATTERN4X4_1, PATTERN4X4_2};
     public puzzlePatternName thisPattern;
     public bool startsCompleted = false;
     public bool cluesHidden = false;
+
+    private int[] pattern3x3_1 = new int[]   {0, 0, 0, 
+                                              1, 1, 1, 
+                                              0, 0, 0 };
+
+    private int[] pattern3x3_2 = new int[]   {0, 1, 0,
+                                              1, 0, 1,
+                                              0, 1, 0 };
+
+    private int[] pattern4x4_1 = new int[]   {1, 1, 1, 1,
+                                              0, 1, 0, 1,
+                                              1, 1, 1, 1,
+                                              0, 1, 0, 0};
+
+    private int[] pattern4x4_2 = new int[]   {1, 0, 1, 1,
+                                              1, 1, 0, 0,
+                                              0, 1, 0, 1,
+                                              0, 0, 0, 1};
 
     private int[] boxPattern = new int[]   {0, 0, 0, 0, 0, 0, 0,
                                             0, 1, 1, 1, 1, 1, 0,
@@ -308,6 +327,50 @@ public class DigSitePuzzle : MonoBehaviour {
 
                         //Patterned cube state
                         if (chalicePattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.PATTERN3X3_1:
+
+                        //Patterned cube state
+                        if (pattern3x3_1[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.PATTERN3X3_2:
+
+                        //Patterned cube state
+                        if (pattern3x3_2[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.PATTERN4X4_1:
+
+                        //Patterned cube state
+                        if (pattern4x4_1[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.PATTERN4X4_2:
+
+                        //Patterned cube state
+                        if (pattern4x4_2[gridIndex] == 1) {
                             cubeState[gridIndex] = true;
                         } else { //end if
                             cubeState[gridIndex] = false;
