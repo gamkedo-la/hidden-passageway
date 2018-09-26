@@ -8,7 +8,7 @@ public class flickeringLight : MonoBehaviour {
     public Light light;
 
     // Array of random values for the intensity.
-    private float[] smoothing = new float[20];
+    private float[] smoothing = new float[10]; // lower number is more flickery, higher is smoother
 
     void Start()
     {
