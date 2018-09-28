@@ -13,6 +13,7 @@ public class DigSitePuzzle : MonoBehaviour {
     private GameObject parent;
     private DigSitePuzzleTracker puzzleTracker;
     public bool solutionCheckNeeded = false;
+    public bool puzzleSolved = false;
     public List<int>[] clues;
     public GameObject[] numberPlates;
     public GameObject doorToOpen;
@@ -140,12 +141,15 @@ public class DigSitePuzzle : MonoBehaviour {
 
     void Start () {
 
+        if (startsCompleted) {
+            puzzleSolved = true;
+        }
+
         parent = this.transform.parent.gameObject;
         puzzleTracker = parent.GetComponent<DigSitePuzzleTracker>();
         doorControl = doorToOpen.GetComponent<SlideToPos>();
 
         cubeState = new bool[gridCols * gridRows];
-        //numberPlates = new GameObject[10];
         CreateCubeGrid(gridCols,gridRows);
         
     }
@@ -153,14 +157,12 @@ public class DigSitePuzzle : MonoBehaviour {
 	void Update () {
         if (solutionCheckNeeded) {
             CheckForSolution();
-            Debug.Log("Calling CheckForSolution()");
             solutionCheckNeeded = false;
         }
     }
     
     public void CreateCubeGrid(int cols, int rows) {
 
-        Debug.Log(cols + " x " + rows);
         //Temporarily resets puzzle gameObject rotation to (0,0,0), 
         //so that the cubes are created in the correct position, regardless 
         //of the placement orientation of the puzzle prefab in the world.
@@ -431,10 +433,9 @@ public class DigSitePuzzle : MonoBehaviour {
         //Remove destroyed cubes from list
         breakableCubes.RemoveAll(GameObject => GameObject == null);
 
-        Debug.Log(breakableCubes);
         if (breakableCubes.Count == 0) {
+            puzzleSolved = true;
             puzzleTracker.MarkSolved(gameObject.name);
-            Debug.Log("Solution Found. Calling MarkSolved() for object " + gameObject.name);
             doorControl.Activate();
         } // end of if
 
@@ -455,7 +456,6 @@ public class DigSitePuzzle : MonoBehaviour {
 
         for (int y = 0; y < rows; y++) {
             for (int x = 0; x < cols; x++) {
-                //int lastClueIndex = clues[y].Count - 1;
                 if (IsCubeUnbreakable(ColRowToGridIndex(x, y))) {
                     consecutiveCubes++;
                     if (x == cols - 1) {
@@ -496,9 +496,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
         //Create number plates for each row
         for (int y = 0; y < rows; y++) {
-            //Debug.Log("Number of clues in row y" + (y+1) +": " + clues[y].Count);
             for (int i = 0; i < clues[y].Count; i++) {
-                Debug.Log("Clue " + i+1 + " in row y" + (y + 1) + ": " + clues[y][i]);
 
                 GameObject tempPlateGO = GameObject.Instantiate(numberPlates[clues[y][(clues[y].Count - 1) - i]]);
 
@@ -517,9 +515,7 @@ public class DigSitePuzzle : MonoBehaviour {
 
         //Create number plates for each col
         for (int x = 0; x < cols; x++) {
-            //Debug.Log("Number of clues in col x" + (x + 1) + ": " + clues[x + rows].Count);
             for (int i = 0; i < clues[x + rows].Count; i++) {
-                //Debug.Log("Clue " + i + 1 + " in col x" + (x + 1) + ": " + clues[x + rows][i]);
 
                 GameObject tempPlateGO = GameObject.Instantiate(numberPlates[clues[x + rows][i]]);
            
@@ -536,7 +532,6 @@ public class DigSitePuzzle : MonoBehaviour {
 
             }
         }
-
-
+  
     }
 } // end of class

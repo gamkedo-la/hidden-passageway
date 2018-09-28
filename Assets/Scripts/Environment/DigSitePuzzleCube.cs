@@ -30,7 +30,13 @@ public class DigSitePuzzleCube : MonoBehaviour {
 	
 	void Update () {
 
-        ReactOnMouseOver();
+        //If puzzle is not solved yet, react to Mouse over.
+        if (puzzle.puzzleSolved == false) {
+            ReactOnMouseOver();
+        } else { //else if puzzle is already solved, change color to yellow.
+            mat.SetColor("_EmissionColor", Color.yellow);
+            gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        }
 
     } //end of Update()
 
