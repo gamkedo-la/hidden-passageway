@@ -36,14 +36,15 @@ public class SlideToPos : AbstractActivateable {
     public string endSound;
     FMOD.Studio.EventInstance MoveLoopAudio;
 
-	void OnCollisionEnter(Collision other) {
+	void OnTriggerEnter(Collider other)
+    {
         if (other.gameObject.tag == Tags.Player) {
             isTouchingPlayer = true;
             //Debug.Log(name +" is now touching player");
         }
     }
 
-    void OnCollisionExit(Collision other)
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == Tags.Player)
         {
