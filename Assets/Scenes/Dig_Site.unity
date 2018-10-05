@@ -4788,6 +4788,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 60b98df409215c5448b2a91651737ff8,
     type: 3}
   m_PrefabInternal: {fileID: 1594243861}
+--- !u!1 &1594594241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1594594242}
+  - component: {fileID: 1594594244}
+  - component: {fileID: 1594594243}
+  m_Layer: 0
+  m_Name: EnableTempleRoomTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1594594242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594594241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35, y: 3.19, z: 18.99}
+  m_LocalScale: {x: 6.2365956, y: 12.934191, z: 4.5196}
+  m_Children: []
+  m_Father: {fileID: 342580903}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594594243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594594241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 1908319871}
+  setActiveOnTrigger: 1
+--- !u!65 &1594594244
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594594241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1606931672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,6 +5185,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493926281656774, guid: 110404173c5bd76479268ab83a860f0e,
     type: 2}
   m_PrefabInternal: {fileID: 1688396123}
+--- !u!1 &1741201254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741201255}
+  - component: {fileID: 1741201257}
+  - component: {fileID: 1741201256}
+  m_Layer: 0
+  m_Name: DisableTempleRoomTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741201255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741201254}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35000038, y: 19.6, z: -17.36}
+  m_LocalScale: {x: 6.2366, y: 12.934199, z: 4.5196}
+  m_Children: []
+  m_Father: {fileID: 342580903}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1741201256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741201254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 1908319871}
+  setActiveOnTrigger: 0
+--- !u!65 &1741201257
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741201254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1748894942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 60b98df409215c5448b2a91651737ff8,
@@ -5639,7 +5749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1908319872
 Transform:
   m_ObjectHideFlags: 0
