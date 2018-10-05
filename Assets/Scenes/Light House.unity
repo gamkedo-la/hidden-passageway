@@ -4433,6 +4433,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: f6569fd73473744abb81fd5ae1fed5bd,
     type: 3}
   m_PrefabInternal: {fileID: 1301288882}
+--- !u!4 &1252169533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: f6569fd73473744abb81fd5ae1fed5bd,
+    type: 3}
+  m_PrefabInternal: {fileID: 1301288882}
 --- !u!114 &1252169536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4444,6 +4449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfb94b84a2b24e0b9b0f74c7e140106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dest: {fileID: 1308283844}
+  light: {fileID: 2105980566}
 --- !u!65 &1252169537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4739,6 +4746,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb4c8c45dbe243c98ab5d887ae426cd, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1308283843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308283844}
+  m_Layer: 0
+  m_Name: Battery Lock Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1308283844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1308283843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.11, y: 0.54, z: 0.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1252169533}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1313034219
 Prefab:
   m_ObjectHideFlags: 0
@@ -5095,6 +5130,25 @@ Prefab:
       propertyPath: walkSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: Event
+      value: event:/Aether/Airship
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 54212025622843034, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552369758932374, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
@@ -5109,7 +5163,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1488701654}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
