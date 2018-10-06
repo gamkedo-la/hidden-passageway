@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DigSitePuzzleCube : MonoBehaviour {
 
-    public float cubeClickDistance = 50f; //distance player must be to a puzzle cube to interact (Seems to currently have no effect)
+    public float cubeClickDistance = 7f; //distance player must be to a puzzle cube to interact (Seems to currently have no effect)
     public int puzzleIndex;
     public Material mat;
     public RaycastHit rhInfo;
@@ -71,7 +71,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
             } //end of else
         } //end of if left-click
 
-        if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.E)){
             if (cubeActivated) {
 
                 cubeActivated = false;

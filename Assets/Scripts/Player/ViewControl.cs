@@ -10,6 +10,8 @@ public class ViewControl : MonoBehaviour {
     public Image paperView;
     [SerializeField]
     private float lookAngLimit = 45.0f;
+    public float raycastMaxDistance = 4.0f;
+    
 
     ReadableScrap readScript;
     int pageViewed = -1;
@@ -67,8 +69,8 @@ public class ViewControl : MonoBehaviour {
             linkClueShadow.text = linkClue.text = "";
 		}
 
-		RaycastHit rhInfo;
-		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 4.0f)) {		
+        RaycastHit rhInfo;
+		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, raycastMaxDistance)) {		
             MouseTipOnLook mtol = rhInfo.collider.gameObject.GetComponent<MouseTipOnLook>();
             /*LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
 
