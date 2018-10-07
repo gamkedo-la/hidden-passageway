@@ -19,7 +19,7 @@ public class DigSitePuzzle : MonoBehaviour {
     public GameObject doorToOpen;
     private SlideToPos doorControl;
     public float percentBreakableCube = 40f;
-    public enum puzzlePatternName { RANDOM, BOX, CROSS, KEYS, CAT, FACE, SUN, TEMPLE, KEY, EYE, CROOK, COLUMN, CHALICE, 
+    public enum puzzlePatternName { RANDOM, BOX, CROSS, KEYS, CAT, FACE, SUN, TEMPLE, KEY, EYE, CROOK, COLUMN, CHALICE, ARROW, 
                                     PATTERN3X3_1, PATTERN3X3_2, PATTERN4X4_1, PATTERN4X4_2};
     public puzzlePatternName thisPattern;
     public bool startsCompleted = false;
@@ -138,6 +138,14 @@ public class DigSitePuzzle : MonoBehaviour {
                                                  0, 0, 0, 1, 0, 0, 0,
                                                  0, 0, 1, 1, 1, 0, 0,
                                                  0, 1, 1, 1, 1, 1, 0 };
+
+    private int[] arrowPattern = new int[] {   0, 0, 0, 0, 0, 0, 0,
+                                               0, 0, 1, 1, 1, 0, 0,
+                                               0, 0, 1, 1, 1, 0, 0,
+                                               1, 0, 1, 1, 1, 0, 1,
+                                               0, 1, 1, 1, 1, 1, 0,
+                                               0, 0, 1, 1, 1, 0, 0,
+                                               0, 0, 0, 1, 0, 0, 0 };
 
     void Start () {
 
@@ -329,6 +337,17 @@ public class DigSitePuzzle : MonoBehaviour {
 
                         //Patterned cube state
                         if (chalicePattern[gridIndex] == 1) {
+                            cubeState[gridIndex] = true;
+                        } else { //end if
+                            cubeState[gridIndex] = false;
+                            breakableCubes.Add(tempGO);
+                        }
+                        break;
+
+                    case puzzlePatternName.ARROW:
+
+                        //Patterned cube state
+                        if (arrowPattern[gridIndex] == 1) {
                             cubeState[gridIndex] = true;
                         } else { //end if
                             cubeState[gridIndex] = false;
