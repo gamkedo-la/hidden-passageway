@@ -1891,7 +1891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Camp
+  displayText: Start Aether
 --- !u!1001 &226328705
 Prefab:
   m_ObjectHideFlags: 0
@@ -3085,7 +3085,7 @@ Transform:
   m_Children:
   - {fileID: 179488664}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &355613452 stripped
 Transform:
@@ -4831,7 +4831,7 @@ Transform:
   m_Children:
   - {fileID: 1678265443}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &568968573
 Prefab:
@@ -5139,7 +5139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Wordwall
+  displayText: Start Wordwall
 --- !u!1 &593717469
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,6 +6253,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.000002, y: 10, z: 4.0000014}
   m_Center: {x: 0.5000001, y: 5, z: -1.0000002}
+--- !u!1 &692044666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692044667}
+  m_Layer: 0
+  m_Name: ReturnTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692044667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 692044666}
+  m_LocalRotation: {x: -0.6819571, y: 0.18690772, z: 0.18690772, w: 0.6819571}
+  m_LocalPosition: {x: 0.20629668, y: -0.09381294, z: 1.3792887}
+  m_LocalScale: {x: 0.020618208, y: 0.020618208, z: 0.020618198}
+  m_Children: []
+  m_Father: {fileID: 1251218789}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &709800286
 Prefab:
   m_ObjectHideFlags: 0
@@ -7193,7 +7221,7 @@ Transform:
   - {fileID: 624455413}
   - {fileID: 1032844279}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &834223786
 MonoBehaviour:
@@ -7296,7 +7324,7 @@ Transform:
   - {fileID: 787952989}
   - {fileID: 713579293}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 30.000002, y: 0, z: 0}
 --- !u!1 &841222858
 GameObject:
@@ -8302,7 +8330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Wordwall
+  displayText: Start Islands
 --- !u!1001 &961223184
 Prefab:
   m_ObjectHideFlags: 0
@@ -9812,7 +9840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Bates Estate
+  displayText: Start Lighthouse
 --- !u!1 &1087582521
 GameObject:
   m_ObjectHideFlags: 0
@@ -10277,7 +10305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Camp
+  displayText: Start Platform X
 --- !u!1 &1142180756
 GameObject:
   m_ObjectHideFlags: 0
@@ -10372,6 +10400,91 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1148137539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148137540}
+  - component: {fileID: 1148137543}
+  - component: {fileID: 1148137542}
+  - component: {fileID: 1148137541}
+  m_Layer: 0
+  m_Name: Placeholder GBA Cart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1148137540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148137539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.20000076}
+  m_LocalScale: {x: 0.3, y: 0.02, z: 0.3}
+  m_Children: []
+  m_Father: {fileID: 1859272982}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1148137541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148137539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1148137542
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148137539}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1148137543
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148137539}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1156342021
 GameObject:
   m_ObjectHideFlags: 0
@@ -10545,7 +10658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Bates Estate
+  displayText: Start Bates Estate
 --- !u!1001 &1210485596
 Prefab:
   m_ObjectHideFlags: 0
@@ -10835,7 +10948,7 @@ Transform:
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.1}
   m_Children: []
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217074831
 GameObject:
@@ -10906,7 +11019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Bates Estate
+  displayText: Start Sept
 --- !u!1001 &1218016112
 Prefab:
   m_ObjectHideFlags: 0
@@ -11106,6 +11219,76 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1251218788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251218789}
+  - component: {fileID: 1251218792}
+  - component: {fileID: 1251218791}
+  - component: {fileID: 1251218790}
+  m_Layer: 0
+  m_Name: Go to Camp
+  m_TagString: Teleporter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251218789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251218788}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.004, y: -1.5900002, z: 3.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 692044667}
+  - {fileID: 1863424819}
+  m_Father: {fileID: 2096072232}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1251218790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251218788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17, y: 0.022, z: 0.24}
+  m_Center: {x: -0, y: 0, z: -0.12}
+--- !u!114 &1251218791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251218788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbbb7ad45f25417a80a4dc516bcf0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Camp
+  returnLocation: {fileID: 692044667}
+--- !u!114 &1251218792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251218788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Start Camp
 --- !u!1001 &1260201058
 Prefab:
   m_ObjectHideFlags: 0
@@ -11670,7 +11853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Camp
+  displayText: Start Camp
 --- !u!1 &1341269210
 GameObject:
   m_ObjectHideFlags: 0
@@ -11740,7 +11923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Decaying World
+  displayText: Start Decaying World
 --- !u!1 &1343998188
 GameObject:
   m_ObjectHideFlags: 0
@@ -12787,6 +12970,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1847622713}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1462487635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462487636}
+  m_Layer: 0
+  m_Name: ReturnTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462487636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462487635}
+  m_LocalRotation: {x: -0.6819571, y: 0.18690772, z: 0.18690772, w: 0.6819571}
+  m_LocalPosition: {x: 0.20629668, y: -0.09381294, z: 1.3792887}
+  m_LocalScale: {x: 0.020618208, y: 0.020618208, z: 0.020618198}
+  m_Children: []
+  m_Father: {fileID: 1859272982}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1466616421
 Prefab:
@@ -14098,7 +14309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Decaying World
+  displayText: Start Caves
 --- !u!1 &1703083963
 GameObject:
   m_ObjectHideFlags: 0
@@ -14600,7 +14811,7 @@ Transform:
   - {fileID: 1156342022}
   - {fileID: 1555751899}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!65 &1734923751
 BoxCollider:
@@ -15541,7 +15752,7 @@ Transform:
   - {fileID: 650481481}
   - {fileID: 268858775}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 30.000002, y: 0, z: 0}
 --- !u!1001 &1841415205
 Prefab:
@@ -15726,6 +15937,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1859272981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859272982}
+  - component: {fileID: 1859272985}
+  - component: {fileID: 1859272984}
+  - component: {fileID: 1859272983}
+  m_Layer: 0
+  m_Name: Go to Graveyard
+  m_TagString: Teleporter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1859272982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859272981}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.4, y: -1.5900002, z: 3.0699997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1462487636}
+  - {fileID: 1148137540}
+  m_Father: {fileID: 2096072232}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1859272983
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859272981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.06, z: 0.45}
+  m_Center: {x: 0, y: 0, z: -0.2}
+--- !u!114 &1859272984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859272981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbbb7ad45f25417a80a4dc516bcf0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Graveyard
+  returnLocation: {fileID: 1462487636}
+--- !u!114 &1859272985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859272981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Start Graveyard
 --- !u!1 &1861239033
 GameObject:
   m_ObjectHideFlags: 0
@@ -15796,6 +16077,69 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1861239033}
   m_CullTransparentMesh: 0
+--- !u!1001 &1863424818
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1251218789}
+    m_Modifications:
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!4 &1863424819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b,
+    type: 3}
+  m_PrefabInternal: {fileID: 1863424818}
 --- !u!1001 &1865968783
 Prefab:
   m_ObjectHideFlags: 0
@@ -16671,7 +17015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Decaying World
+  displayText: Start Decaying World
 --- !u!1001 &1998427685
 Prefab:
   m_ObjectHideFlags: 0
@@ -17616,7 +17960,7 @@ RectTransform:
   m_Children:
   - {fileID: 746227611}
   m_Father: {fileID: 2096072232}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17755,7 +18099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae511b51391743feafabdb2fa4ad784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Go to Wordwall
+  displayText: Start Wordwall
 --- !u!1 &2051317605
 GameObject:
   m_ObjectHideFlags: 0
@@ -18315,6 +18659,8 @@ Transform:
   - {fileID: 583090597}
   - {fileID: 1687031383}
   - {fileID: 1217074832}
+  - {fileID: 1251218789}
+  - {fileID: 1859272982}
   - {fileID: 834223785}
   - {fileID: 836546160}
   - {fileID: 354076742}
