@@ -87,7 +87,14 @@ public class DigSitePuzzleCube : MonoBehaviour {
                 puzzle.SetSolutionCheckNeeded();
 
             }//end of else
-        } // end of if right-click
+        } // end of if right-click or E press
+
+        //Cheat key. Press C on a puzzle to immediately solve it
+        if (Input.GetKeyDown(KeyCode.C)) {
+            puzzle.startsCompleted = true;
+            puzzle.ResetPuzzle();
+            puzzle.SetSolutionCheckNeeded();
+        } //end if
 
     } // end of RemoveBrickOnClick()
 
