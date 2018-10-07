@@ -35,11 +35,17 @@ public class GamePlayPO : PixelScreenLib {
 		private float tY;
 
 	bool isWalking = false;
+    int INTERACT_WAIT = 30;
+    float INTERACT_JUMP = 15.0f;
+    private int pauseScroll = 0;
 
 	float ballX = 25;
 	float ballY = 20;
 	float ballXV = 3.4f;
 	float ballYV = 1.4f;
+
+    public string[] creditsLines;
+    private float scrollY = 0f;
 
 	public override void PerPixelGameBootup() { // happens once per game universe
 		playerPOSprite = new PixelSprite(playerImg, 16);
@@ -54,6 +60,8 @@ public class GamePlayPO : PixelScreenLib {
 
 		treeSprite = new PixelSprite(treeImg);
 			treeSprite.isAnimating = false;
+
+        scrollY = screenHeight;
 	}
 
 	private direction turnLeft(direction fromDir) {
@@ -193,17 +201,13 @@ public class GamePlayPO : PixelScreenLib {
 
 		// arrow keys set position frame 1 and then move after
 	
-		if(Input.GetKeyDown(KeyCode.LeftArrow)) { 
-			playerFacing = turnLeft(playerFacing);
-		}
 		if(Input.GetKeyDown(KeyCode.UpArrow)) { 
-			isWalking = true;
-		}
-		if(Input.GetKeyDown(KeyCode.RightArrow)) { 
-			playerFacing = turnRight(playerFacing);
+            scrollY -= INTERACT_JUMP;
+            pauseScroll = INTERACT_WAIT;
 		}
 		if(Input.GetKeyDown(KeyCode.DownArrow)) { 
-			isWalking = false;
+            scrollY += INTERACT_JUMP;
+            pauseScroll = INTERACT_WAIT;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space)) {
@@ -240,6 +244,7 @@ public class GamePlayPO : PixelScreenLib {
 	}
 
 	private void Draw() {
+        /*
 		ballX += ballXV;
 		ballY += ballYV;
 		
@@ -319,7 +324,26 @@ public class GamePlayPO : PixelScreenLib {
 			""+ highScore);
 		drawStringCentered(15,screenHeight-17,yellowCol, "meat");
 		drawStringCentered(15, screenHeight - 10, yellowCol,
-			"" + score);
+			"" + score);*/
+
+        if (pauseScroll > 0)
+        {
+            pauseScroll--;
+        }
+        else
+        {
+            scrollY -= 1.2f;
+        }
+        int drawAtY = 3 + (int)scrollY;
+        for (int i = 0; i < creditsLines.Length; i++)
+        {
+            drawStringCentered(screenWidth / 2, drawAtY, yellowCol, creditsLines[i]);
+            drawAtY += 6;
+        }
+        if (drawAtY < 0)
+        {
+            scrollY = screenHeight;
+        }
 	}
 
 	private void FireLaser(){
@@ -353,13 +377,13 @@ public class GamePlayPO : PixelScreenLib {
 		moveBuffalo();
 		Draw();
 
-		drawStringCentered(screenWidth/2,screenHeight/8+40,whiteCol,"PRAIRIE OVERKILL");
-		drawStringCentered(screenWidth/2,screenHeight/8+48,greenCol,"9000 LBS OF BUFFALO");
+		//drawStringCentered(screenWidth/2,screenHeight/8+40,whiteCol,"PRAIRIE OVERKILL");
+		//drawStringCentered(screenWidth/2,screenHeight/8+48,greenCol,"9000 LBS OF BUFFALO");
 	}
 
 	public override void PerGameDemoModeCoinRequestDisplay() {
 		if( flashing ) {
-			drawStringCentered(screenWidth/2,screenHeight/2+15,redCol,"INSERT TOKEN");
+			drawStringCentered(screenWidth/2,screenHeight-8,redCol,"SPACE TO CONTROL SCROLL");
 		}
 	}
 

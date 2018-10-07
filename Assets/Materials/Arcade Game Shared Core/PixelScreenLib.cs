@@ -399,7 +399,8 @@ public class PixelScreenLib : GameManager {
 	             int at02, int at12, int at22,
 	             int at03, int at13, int at23,
 	             int at04, int at14, int at24) {
-		if(atX >= screenWidth-3) { // avoid out of array accesses
+        if(atY < 0 || atX < 0 ||
+            atY >= screenHeight-5 || atX >= screenWidth-3) { // avoid out of array accesses
 			return;
 		}
 		if(at00==1) screenBuffer[ (atX) + ((atY) * screenWidth) ] = sharedColor;
@@ -425,9 +426,11 @@ public class PixelScreenLib : GameManager {
 	                 int at02, int at12, int at22, int at32, int at42,
 	                 int at03, int at13, int at23, int at33, int at43,
 	                 int at04, int at14, int at24, int at34, int at44) {
-		if(atX >= screenWidth-5) { // avoid out of array accesses
-			return;
-		}
+        if (atY < 0 || atX < 0 ||
+            atY >= screenHeight - 5 || atX >= screenWidth - 5)
+        { // avoid out of array accesses
+            return;
+        }
 		if(at00==1) screenBuffer[ (atX) + ((atY) * screenWidth) ] = sharedColor;
 		if(at10==1) screenBuffer[ (atX+1) + ((atY) * screenWidth) ] = sharedColor;
 		if(at20==1) screenBuffer[ (atX+2) + ((atY) * screenWidth) ] = sharedColor;

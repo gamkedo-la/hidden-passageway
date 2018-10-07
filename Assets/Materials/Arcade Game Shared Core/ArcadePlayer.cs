@@ -79,8 +79,8 @@ public class ArcadePlayer : MonoBehaviour {
 			}
 		}
 
-		Debug.Log("Games Tried: " + ticketNum + "\nBills: $" + bills +
-                  "\nTokens: " + tokens + disclaimer);
+		/* Debug.Log("Games Tried: " + ticketNum + "\nBills: $" + bills +
+                  "\nTokens: " + tokens + disclaimer);*/
 
 		return hadEnoughTokens;
 	}
@@ -130,7 +130,7 @@ public class ArcadePlayer : MonoBehaviour {
 		}
 		playingNow = playScript;
 		playingNow.gameScreen.GameStart();
-        Debug.Log("" + playingNow.gameName.Replace("\\n", "\n") + "\nBACKSPACE: QUIT\n" +
+        Debug.Log("" + playingNow.gameName.Replace("\\n", "\n") + "\nSPACE TO QUIT\n" +
                   playingNow.gameInstructions.Replace("\\n", "\n"));
 	}
 
@@ -169,7 +169,9 @@ public class ArcadePlayer : MonoBehaviour {
 		}
 
 		if(playingNow != null) {
-			if(Input.GetKeyDown(KeyCode.Backspace) || playingNow.gameScreen.isPlaying == false) {
+            if(Input.GetMouseButtonDown(0) || 
+               Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftArrow)
+               || Input.GetKeyDown(KeyCode.RightArrow) || playingNow.gameScreen.isPlaying == false) {
 				// playingNow.gameScreen.isPlaying = false; // nah, leave it running but cease input!
 
 				playingNow.playerHere = null; // freeing up player assignment AFTER the shuffle

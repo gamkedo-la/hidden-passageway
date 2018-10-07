@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour {
 
 				isPlaying = false; // will return to PerGameDemoMode
 
-				if(myCab.playerHere && myCab.playerHere != PlayerDistrib.instance.player) {
+                if(myCab && PlayerDistrib.instance && myCab.playerHere && myCab.playerHere != PlayerDistrib.instance.player) {
 					GameStart(); // reset!
 				}
 			} else {
