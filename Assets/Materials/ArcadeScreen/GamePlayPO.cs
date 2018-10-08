@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GamePlayPO : PixelScreenLib {
 
@@ -44,7 +45,7 @@ public class GamePlayPO : PixelScreenLib {
 	float ballXV = 3.4f;
 	float ballYV = 1.4f;
 
-    public string[] creditsLines;
+    public List<string> creditsLines;
     private float scrollY = 0f;
 
 	public override void PerPixelGameBootup() { // happens once per game universe
@@ -62,6 +63,39 @@ public class GamePlayPO : PixelScreenLib {
 			treeSprite.isAnimating = false;
 
         scrollY = screenHeight;
+
+        creditsLines = new List<string>();
+        creditsLines.Add("Chris DeLeon");
+        creditsLines.Add("Chris Markle");
+        creditsLines.Add("Jaime Rivas");
+        creditsLines.Add("Caspar \"SpadXIII\" Dunant");
+        creditsLines.Add("Trenton Pegeas");
+        creditsLines.Add("Brian Boucher");
+        creditsLines.Add("Christer \"McFunkypants\" Kaitila");
+        creditsLines.Add("Brian Dieffenderfer");
+        creditsLines.Add("Kornel");
+        creditsLines.Add("Dan Lazar");
+        creditsLines.Add("Simon J Hoffiz");
+        creditsLines.Add("Cameron Button");
+        creditsLines.Add("Michael \"Misha\" Fewkes");
+        creditsLines.Add("Klaim (A.Joël Lamotte)");
+        creditsLines.Add("Gerard Belenguer Prous");
+        creditsLines.Add("Joseph Spedale");
+        creditsLines.Add("Adam A.Lohnes");
+        creditsLines.Add("Rémy Lapointe");
+        creditsLines.Add("Erik Verlage");
+        creditsLines.Add("Frederik Max");
+        creditsLines.Add("Vignesh Ramesh");
+        creditsLines.Add("Daniel Viruet");
+        creditsLines.Add("Sam Seltzer - Johnston");
+        creditsLines.Add("Asix Jin");
+        creditsLines.Add("Jeff Hanlon");
+        creditsLines.Add("Barış Köklü");
+        creditsLines.Add("Terrence McDonnell");
+        creditsLines.Add("Loren Pierce");
+        creditsLines.Add("Andreas Lathe");
+        creditsLines.Add("Matthew Ko");
+        creditsLines.Add("Made in Gamkedo Club");
 	}
 
 	private direction turnLeft(direction fromDir) {
@@ -216,7 +250,7 @@ public class GamePlayPO : PixelScreenLib {
 	}
 
 	private void moveBuffalo() {
-		float buffaloSpeed = 3.0f;
+		/*float buffaloSpeed = 3.0f;
 		if(buffaloSprite.drawFrame != 2) {
 			float buffOffX = dirToXO(buffaloFacing) * buffaloSpeed;
 			if(buffOffX < 0.0f) {
@@ -240,7 +274,7 @@ public class GamePlayPO : PixelScreenLib {
 		} else if(buffaloSprite.drawFrame == 0) {
 			buffaloSprite.drawFrame = 1;
 		}
-		buffaloSprite2.drawFrame = buffaloSprite.drawFrame;
+		buffaloSprite2.drawFrame = buffaloSprite.drawFrame;*/
 	}
 
 	private void Draw() {
@@ -335,7 +369,7 @@ public class GamePlayPO : PixelScreenLib {
             scrollY -= 1.2f;
         }
         int drawAtY = 3 + (int)scrollY;
-        for (int i = 0; i < creditsLines.Length; i++)
+        for (int i = 0; i < creditsLines.Count; i++)
         {
             drawStringCentered(screenWidth / 2, drawAtY, yellowCol, creditsLines[i]);
             drawAtY += 6;
@@ -344,6 +378,8 @@ public class GamePlayPO : PixelScreenLib {
         {
             scrollY = screenHeight;
         }
+
+        drawBoxAt(0, screenHeight-20, screenWidth, 20, blackCol);
 	}
 
 	private void FireLaser(){
@@ -382,15 +418,17 @@ public class GamePlayPO : PixelScreenLib {
 	}
 
 	public override void PerGameDemoModeCoinRequestDisplay() {
+        drawStringCentered(screenWidth / 2, screenHeight -17, cyanCol, "Join us at Gamkedo.com!");
 		if( flashing ) {
-			drawStringCentered(screenWidth/2,screenHeight-8,redCol,"SPACE TO CONTROL SCROLL");
+            drawStringCentered(screenWidth/2,screenHeight-9,whiteCol,"Spacebar for arrow scroll");
 		}
 	}
 
 	public override void PerGameTimerDisplay() {
-		drawStringCentered(screenWidth/2,screenHeight-17,yellowCol, "time");
-		drawStringCentered(screenWidth/2,screenHeight-10,yellowCol,
-			""+ timerLeft);
+        drawStringCentered(screenWidth/2,screenHeight-17,whiteCol, "Up or down to scroll.");
+        drawStringCentered(screenWidth/2,screenHeight-9,whiteCol,
+			"Spacebar to back away");
+        
 	}
 
 	public override void PerGameLogic() {

@@ -186,7 +186,7 @@ public class ArcadePlayer : MonoBehaviour {
 			RaycastHit rhInfo;
 			if( Physics.Raycast(transform.position, transform.forward, out rhInfo, 3.0f)) {
 				int hadTokens = tokens;
-
+                Debug.Log(rhInfo.collider.name);
 				PlayableGame playScript = rhInfo.collider.GetComponent<PlayableGame>();
 
 				TokenInteraction tiScript = rhInfo.collider.GetComponent<TokenInteraction>();
