@@ -282,13 +282,14 @@ GameObject:
   - component: {fileID: 33255435986555078}
   - component: {fileID: 23045610223004462}
   - component: {fileID: 114723207113318162}
+  - component: {fileID: 114289714175440296}
   m_Layer: 0
   m_Name: PhantomPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1697723671969846
 GameObject:
   m_ObjectHideFlags: 1
@@ -424,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408216501224784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -34.5, y: 2.4, z: -26.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4992526200459184}
@@ -493,7 +494,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878888730666724}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.09, y: 5.923, z: 19.18}
+  m_LocalPosition: {x: 47.9, y: 5.923, z: 25.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4073002075660618}
@@ -562,7 +563,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 1500
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -723,6 +724,7 @@ MonoBehaviour:
   linkClueShadow: {fileID: 114893536971660668}
   paperView: {fileID: 114951926519792290}
   lookAngLimit: 45
+  raycastMaxDistance: 4
 --- !u!114 &114108348413138508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -863,6 +865,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Button
+--- !u!114 &114289714175440296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552369758932374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38b1e239e81c45778a1034cfd538dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bills: 0
+  tokens: 5
+  zoomFOV: 45
 --- !u!114 &114307846459349504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1247,6 +1263,7 @@ MonoBehaviour:
   linkClueShadow: {fileID: 114893536971660668}
   paperView: {fileID: 0}
   lookAngLimit: 45
+  raycastMaxDistance: 4
 --- !u!114 &114636972912215508
 MonoBehaviour:
   m_ObjectHideFlags: 1
