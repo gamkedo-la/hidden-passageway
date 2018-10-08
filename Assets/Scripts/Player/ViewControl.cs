@@ -11,7 +11,7 @@ public class ViewControl : MonoBehaviour {
     [SerializeField]
     private float lookAngLimit = 45.0f;
     public float raycastMaxDistance = 4.0f;
-    
+
 
     ReadableScrap readScript;
     int pageViewed = -1;
@@ -22,7 +22,7 @@ public class ViewControl : MonoBehaviour {
     void Start () {
         instance = this;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         if (ArcadePlayer.playingNow != null)
@@ -70,7 +70,7 @@ public class ViewControl : MonoBehaviour {
 		}
 
         RaycastHit rhInfo;
-		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, raycastMaxDistance)) {		
+		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, raycastMaxDistance)) {
             MouseTipOnLook mtol = rhInfo.collider.gameObject.GetComponent<MouseTipOnLook>();
             /*LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
 
@@ -94,7 +94,7 @@ public class ViewControl : MonoBehaviour {
                     }
                 } else {
                     TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
-                
+
                     if(activateComponent == null || activateComponent.canBeUsed())
                     {
                         linkClueShadow.text = linkClue.text = mtol.displayText;
