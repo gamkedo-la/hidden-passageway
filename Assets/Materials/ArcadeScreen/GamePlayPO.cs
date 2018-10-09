@@ -45,7 +45,7 @@ public class GamePlayPO : PixelScreenLib {
 	float ballXV = 3.4f;
 	float ballYV = 1.4f;
 
-    public List<string> creditsLines;
+    private List<string> creditsLines;
     private float scrollY = 0f;
 
 	public override void PerPixelGameBootup() { // happens once per game universe
@@ -82,20 +82,56 @@ public class GamePlayPO : PixelScreenLib {
         creditsLines.Add(":Klaim (A. Joel Lamotte):");
         creditsLines.Add(":Gerard Belenguer Prous:");
         creditsLines.Add(":Joseph Spedale:");
+        creditsLines.Add("Music for Aether");
+        creditsLines.Add("Music for WordWall");
         creditsLines.Add(":Adam A.Lohnes:");
+        creditsLines.Add("Schoolbus Model");
         creditsLines.Add(":Remy Lapointe:");
-        creditsLines.Add(":Erik Verlage:");
         creditsLines.Add(":Frederik Max:");
+        creditsLines.Add("Wooden door open/close sound");
+        creditsLines.Add("Orb sound effect");
+
         creditsLines.Add(":Vignesh Ramesh:");
-        creditsLines.Add(":Daniel Viruet:");
-        creditsLines.Add(":Sam Seltzer - Johnston:");
+        creditsLines.Add("Old-fashioned chair model");
+        creditsLines.Add("Old-fashioned table model");
+        creditsLines.Add("Song for graveyard");
+
+        creditsLines.Add(":Coy Compositions:");
+        creditsLines.Add("Music for Bates Estate");
+        creditsLines.Add("Music for Sept");
+        creditsLines.Add("Music for Dig Site");
+        creditsLines.Add("Music for Graveyard");
+
         creditsLines.Add(":Asix Jin:");
+        creditsLines.Add("Music for Puzzle Tower");
+        creditsLines.Add("Music for Kahn");
+
         creditsLines.Add(":Jeff Hanlon:");
+        creditsLines.Add("Red Stapler Model");
+
         creditsLines.Add(":Baris Koklu:");
+        creditsLines.Add("Printer Model");
+
         creditsLines.Add(":Terrence McDonnell:");
+        creditsLines.Add("Pumpkin Model");
+
         creditsLines.Add(":Loren Pierce:");
+        creditsLines.Add("USB Drive");
+
         creditsLines.Add(":Andreas Lathe:");
+
         creditsLines.Add(":Matthew Ko:");
+        creditsLines.Add("Eject Game Menu");
+
+        creditsLines.Add(":Erik Verlage:");
+        creditsLines.Add("Office plant model");
+
+        creditsLines.Add(":Daniel Viruet:");
+        creditsLines.Add("Ferris Wheel");
+
+        creditsLines.Add(":Sam Seltzer - Johnston:");
+        creditsLines.Add("Camp photo");
+
         creditsLines.Add(":Made in Gamkedo Club:");
 	}
 

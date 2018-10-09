@@ -16026,17 +16026,6 @@ MonoBehaviour:
   buffaloImg: {fileID: 2800000, guid: 271a01e40eb7a4b2fb2963067ff2918b, type: 3}
   buffaloImg2: {fileID: 2800000, guid: 39a3b7ff1786c462ba78b0fb18354846, type: 3}
   treeImg: {fileID: 2800000, guid: 13b2d5c4dfbb44dfba07c0c1cfd2db0f, type: 3}
-  creditsLines:
-  - Chris DeLeon
-  - Hub world
-  - Project lead
-  - 
-  - Chris Markle
-  - Sound Effects
-  - 
-  - Caspar
-  - Platform X
-  - Etc. (demo test)
 --- !u!1001 &1557071994
 Prefab:
   m_ObjectHideFlags: 0
@@ -16818,6 +16807,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: Start Caves
+--- !u!1001 &1690617533
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1847622713}
+    m_Modifications:
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.82465
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.8799
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3708578
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92868966
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -43.537003
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc397b823745a48ce8cd2ec5185e592b, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!4 &1690617534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: fc397b823745a48ce8cd2ec5185e592b,
+    type: 3}
+  m_PrefabInternal: {fileID: 1690617533}
+--- !u!1 &1690617535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fc397b823745a48ce8cd2ec5185e592b,
+    type: 3}
+  m_PrefabInternal: {fileID: 1690617533}
+--- !u!65 &1690617536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690617535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 7, z: 16}
+  m_Center: {x: 0, y: 3.5, z: 0}
 --- !u!1 &1703083963
 GameObject:
   m_ObjectHideFlags: 0
@@ -18745,6 +18814,7 @@ Transform:
   - {fileID: 630082398}
   - {fileID: 1909324848}
   - {fileID: 760210316}
+  - {fileID: 1690617534}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
