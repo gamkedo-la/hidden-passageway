@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.448
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 702917159}
-  m_IndirectSpecularColor: {r: 0.15747334, g: 0.22341621, b: 0.25006276, a: 0.448}
+  m_IndirectSpecularColor: {r: 0.4242557, g: 0.4991598, b: 0.52169687, a: 0.448}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -40130,12 +40130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThrowForce: 5
   canHold: 1
-  hideCol: 0
-  item: {fileID: 0}
-  itemCol: {fileID: 0}
   guide: {fileID: 1472091769}
   rotationForce: 0
-  exception: {fileID: 0}
 --- !u!108 &562387979
 Light:
   m_ObjectHideFlags: 0
@@ -111528,6 +111524,16 @@ Prefab:
     - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: Event
+      value: event:/Aether/Music
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
