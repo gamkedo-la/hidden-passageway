@@ -31,6 +31,14 @@ public class PixelScreenLibBigText : PixelScreenLib {
 				0,1,0,
 				0,0,0);
 				break;
+                case '-':
+                    dotGrid_MP(fX, fY,
+                   0, 0, 0,
+                   0, 0, 0,
+                   1, 1, 1,
+                   0, 0, 0,
+                   0, 0, 0);
+                    break;
                 case '(':
                     dotGrid_MP(fX, fY,
                    0, 0, 1,

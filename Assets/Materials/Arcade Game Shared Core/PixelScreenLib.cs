@@ -88,7 +88,7 @@ public class PixelScreenLib : GameManager {
 	}
 
 	protected void drawStringCentered(int fX, int fY, Color useCol, string thisText) {
-		drawString(fX - (int)(thisText.Length * 2.15f), fY, useCol, thisText);
+		drawString(fX - (int)(thisText.Length * 2.05f), fY, useCol, thisText);
 	}
 
 	protected void drawString(int fX, int fY, Color useCol, string thisText) {
@@ -107,7 +107,40 @@ public class PixelScreenLib : GameManager {
 				                 0,0,0,
 				                 0,1,0);
 				break;
-			case ':':dotGrid(fX,fY,
+                case '-':
+                    dotGrid(fX, fY,
+                   0, 0, 0,
+                   0, 0, 0,
+                   1, 1, 1,
+                   0, 0, 0,
+                   0, 0, 0);
+                    break;
+                case '(':
+                    dotGrid(fX, fY,
+                   0, 0, 1,
+                   0, 1, 0,
+                   0, 1, 0,
+                   0, 1, 0,
+                   0, 0, 1);
+                    break;
+                case ')':
+                    dotGrid(fX, fY,
+                   1, 0, 0,
+                   0, 1, 0,
+                   0, 1, 0,
+                   0, 1, 0,
+                   1, 0, 0);
+                    break;
+                case '\"':
+                    dotGrid(fX, fY,
+                                 1, 0, 1,
+                                 1, 0, 1,
+                                 0, 0, 0,
+                                 0, 0, 0,
+                                 0, 0, 0);
+                    skipBy = 5;
+                    break;
+                case ':':dotGrid(fX,fY,
 				                 0,0,0,
 				                 0,1,0,
 				                 0,0,0,
@@ -242,7 +275,31 @@ public class PixelScreenLib : GameManager {
 				                  1,0,1,
 				                  1,1,0);
 				break;
-			case 'E': dotGrid(fX,fY,
+                case 'ö':
+                    dotGrid(fX, fY,
+                        1, 0, 1,
+                        0, 0, 0,
+                        1, 1, 1,
+                        1, 0, 1,
+                        1, 1, 1);
+                    break;
+                case 'ü':
+                    dotGrid(fX, fY,
+                            1, 0, 1,
+                            0, 0, 0,
+                            1, 0, 1,
+                            1, 0, 1,
+                            1, 1, 1);
+                    break;
+                case 'é':
+                    dotGrid(fX, fY,
+                        0, 0, 1,
+                        1, 1, 0,
+                        1, 1, 1,
+                        1, 0, 0,
+                        1, 1, 1);
+                    break;
+                case 'E': dotGrid(fX,fY,
 				                  1,1,1,
 				                  1,0,0,
 				                  1,1,0,

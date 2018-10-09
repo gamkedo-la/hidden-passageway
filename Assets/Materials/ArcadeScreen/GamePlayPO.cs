@@ -62,40 +62,41 @@ public class GamePlayPO : PixelScreenLib {
 		treeSprite = new PixelSprite(treeImg);
 			treeSprite.isAnimating = false;
 
-        scrollY = screenHeight;
+        scrollY = screenHeight-20;
 
         creditsLines = new List<string>();
-        creditsLines.Add("Chris DeLeon");
-        creditsLines.Add("Chris Markle");
-        creditsLines.Add("Jaime Rivas");
-        creditsLines.Add("Caspar \"SpadXIII\" Dunant");
-        creditsLines.Add("Trenton Pegeas");
-        creditsLines.Add("Brian Boucher");
-        creditsLines.Add("Christer \"McFunkypants\" Kaitila");
-        creditsLines.Add("Brian Dieffenderfer");
-        creditsLines.Add("Kornel");
-        creditsLines.Add("Dan Lazar");
-        creditsLines.Add("Simon J Hoffiz");
-        creditsLines.Add("Cameron Button");
-        creditsLines.Add("Michael \"Misha\" Fewkes");
-        creditsLines.Add("Klaim (A.Joël Lamotte)");
-        creditsLines.Add("Gerard Belenguer Prous");
-        creditsLines.Add("Joseph Spedale");
-        creditsLines.Add("Adam A.Lohnes");
-        creditsLines.Add("Rémy Lapointe");
-        creditsLines.Add("Erik Verlage");
-        creditsLines.Add("Frederik Max");
-        creditsLines.Add("Vignesh Ramesh");
-        creditsLines.Add("Daniel Viruet");
-        creditsLines.Add("Sam Seltzer - Johnston");
-        creditsLines.Add("Asix Jin");
-        creditsLines.Add("Jeff Hanlon");
-        creditsLines.Add("Barış Köklü");
-        creditsLines.Add("Terrence McDonnell");
-        creditsLines.Add("Loren Pierce");
-        creditsLines.Add("Andreas Lathe");
-        creditsLines.Add("Matthew Ko");
-        creditsLines.Add("Made in Gamkedo Club");
+        creditsLines.Add(":Chris DeLeon:");
+        creditsLines.Add("Project Lead");
+        creditsLines.Add(":Chris Markle:");
+        creditsLines.Add(":Jaime Rivas:");
+        creditsLines.Add(":Caspar \"SpadXIII\" Dunant:");
+        creditsLines.Add(":Trenton Pegeas:");
+        creditsLines.Add(":Brian Boucher:");
+        creditsLines.Add(":Christer McFunkypants Kaitila:");
+        creditsLines.Add(":Brian Dieffenderfer:");
+        creditsLines.Add(":Kornel:");
+        creditsLines.Add(":Dan Lazar:");
+        creditsLines.Add(":Simon J Hoffiz:");
+        creditsLines.Add(":Cameron Button:");
+        creditsLines.Add(":Michael \"Misha\" Fewkes:");
+        creditsLines.Add(":Klaim (A. Joel Lamotte):");
+        creditsLines.Add(":Gerard Belenguer Prous:");
+        creditsLines.Add(":Joseph Spedale:");
+        creditsLines.Add(":Adam A.Lohnes:");
+        creditsLines.Add(":Remy Lapointe:");
+        creditsLines.Add(":Erik Verlage:");
+        creditsLines.Add(":Frederik Max:");
+        creditsLines.Add(":Vignesh Ramesh:");
+        creditsLines.Add(":Daniel Viruet:");
+        creditsLines.Add(":Sam Seltzer - Johnston:");
+        creditsLines.Add(":Asix Jin:");
+        creditsLines.Add(":Jeff Hanlon:");
+        creditsLines.Add(":Baris Koklu:");
+        creditsLines.Add(":Terrence McDonnell:");
+        creditsLines.Add(":Loren Pierce:");
+        creditsLines.Add(":Andreas Lathe:");
+        creditsLines.Add(":Matthew Ko:");
+        creditsLines.Add(":Made in Gamkedo Club:");
 	}
 
 	private direction turnLeft(direction fromDir) {
@@ -371,12 +372,15 @@ public class GamePlayPO : PixelScreenLib {
         int drawAtY = 3 + (int)scrollY;
         for (int i = 0; i < creditsLines.Count; i++)
         {
-            drawStringCentered(screenWidth / 2, drawAtY, yellowCol, creditsLines[i]);
+            drawStringCentered(screenWidth / 2, drawAtY, 
+                               (creditsLines[i].Substring(0, 1) == ":" ?
+                                whiteCol : yellowCol),
+                               creditsLines[i]);
             drawAtY += 6;
         }
         if (drawAtY < 0)
         {
-            scrollY = screenHeight;
+            scrollY = screenHeight-20;
         }
 
         drawBoxAt(0, screenHeight-20, screenWidth, 20, blackCol);
