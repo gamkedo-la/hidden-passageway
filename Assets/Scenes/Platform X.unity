@@ -1031,6 +1031,16 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114542526215428254, guid: 35e6fb055146747e88330203aae48d3f,
+        type: 2}
+      propertyPath: startSound
+      value: event:/PlatformX/Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 114542526215428254, guid: 35e6fb055146747e88330203aae48d3f,
+        type: 2}
+      propertyPath: moveSound
+      value: event:/PlatformX/Platform/ElevatorMove
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e6fb055146747e88330203aae48d3f, type: 2}
   m_IsPrefabAsset: 0
@@ -2143,9 +2153,9 @@ MonoBehaviour:
   duration: 2
   lookAtAction: 0
   rememberPreviousState: 0
-  startSound: 
-  moveSound: 
-  endSound: 
+  startSound: event:/Camp/ElevatorActivate
+  moveSound: event:/Camp/ElevatorMove
+  endSound: event:/Camp/ElevatorStop
 --- !u!1 &730341899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,6 +5017,16 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: Event
+      value: event:/PlatformX/Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
