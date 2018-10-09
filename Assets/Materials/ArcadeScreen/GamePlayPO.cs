@@ -133,6 +133,15 @@ public class GamePlayPO : PixelScreenLib {
         creditsLines.Add("Camp photo");
 
         creditsLines.Add(":Made in Gamkedo Club:");
+
+        for (int i = 0; i < creditsLines.Count; i++)
+        {
+            if (creditsLines[i].Substring(0, 1) == ":")
+            {
+                creditsLines.Insert(i, " ");
+                i++;
+            }
+        }
 	}
 
 	private direction turnLeft(direction fromDir) {
