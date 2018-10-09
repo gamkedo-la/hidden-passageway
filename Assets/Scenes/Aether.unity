@@ -122630,6 +122630,7 @@ GameObject:
   - component: {fileID: 2132433013}
   - component: {fileID: 2132433012}
   - component: {fileID: 2132433011}
+  - component: {fileID: 2132433015}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -122644,10 +122645,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132433010}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 9.19
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2132433012
 MeshRenderer:
@@ -122704,6 +122705,28 @@ Transform:
   m_Father: {fileID: 87232646}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2132433015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132433010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Aether/Orb
+  PlayEvent: 3
+  StopEvent: 4
+  CollisionTag: Player
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 9.21
 --- !u!1 &2133900481
 GameObject:
   m_ObjectHideFlags: 0
