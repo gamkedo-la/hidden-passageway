@@ -30,6 +30,6 @@ public class PressKeyCode : MonoBehaviour {
 			return;
 		}
 
-		Debug.Log("clicked: "+btn.buttonValue);
+		btn.ClickButton();
 	}
 }

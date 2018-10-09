@@ -3,5 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControlPanelButton : MonoBehaviour {
-	public int buttonValue;
+	[SerializeField] ControlPanelManager controlPanel;
+
+	[SerializeField] int buttonValue;
+
+	public void ClickButton() {
+		if (controlPanel.enabled) {
+			controlPanel.ClickButton(buttonValue);
+		}
+	}
 }
