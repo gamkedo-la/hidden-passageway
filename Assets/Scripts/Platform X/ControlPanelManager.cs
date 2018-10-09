@@ -5,7 +5,7 @@ using  UnityEngine.UI;
 
 public class ControlPanelManager : MonoBehaviour {
 
-	[SerializeField] ControlPanelsPuzzleManager controlPanelsPuzzleManager;
+	[SerializeField] AbstractActivateable toEnable;
 	[SerializeField] Canvas codeCanvas;
 	[SerializeField] Image panelImage;
 	[SerializeField] Text codeText;
@@ -16,19 +16,28 @@ public class ControlPanelManager : MonoBehaviour {
 	private string currentCode = "";
 	private int codeSolutionLength = 0;
 	private Coroutine resetCodeCoroutine = null;
+	private string mySaveName;
 
 	void Start () {
 		codeSolutionLength = codeSolution.Length;
 
 		codeCanvas.enabled = false;
 		codeText.text = "";
-		// @todo: prev state: SetWon();
+
+        mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
+        int previousState = PlayerPrefs.GetInt(mySaveName, 0);
+
+        if (previousState == 1) {
+			SetWon();
+		}
 	}
 
 	void SetWon() {
 		panelImage.color = panelWinColor;
 		codeText.text = currentCode = codeSolution;
 		codeCanvas.enabled = true;
+
+		PlayerPrefs.SetInt(mySaveName, 1);
 
 		Disable();
 	}
@@ -38,8 +47,8 @@ public class ControlPanelManager : MonoBehaviour {
 		codeText.text = currentCode;
 
 		if (HasWon()) {
-			// call puzzle manager
 			SetWon();
+			toEnable.SendMessage("Activate");
 
 			return;
 		}
