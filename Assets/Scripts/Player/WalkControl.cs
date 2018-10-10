@@ -32,6 +32,7 @@ public class WalkControl : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 
         if(SceneWarp.fromScene != null && SceneWarp.fromScene.Length > 0) {
+            Debug.Log("FROM SCENE: " + SceneWarp.fromScene);
             GameObject[] warpGOs = GameObject.FindGameObjectsWithTag("Teleporter");
             for (int i = 0; i < warpGOs.Length;i++) {
                 SceneWarp swScript = warpGOs[i].GetComponent<SceneWarp>();

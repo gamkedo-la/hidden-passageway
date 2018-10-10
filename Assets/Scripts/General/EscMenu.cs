@@ -67,6 +67,7 @@ public class EscMenu : MonoBehaviour {
 
 	public void BackToHub(){
 		if(!isAnimating){
+            SceneWarp.fromScene = SceneManager.GetActiveScene().name;
 			SceneManager.LoadScene("MainHub");
 		}
 	}
