@@ -121,13 +121,13 @@ public class WalkControl : MonoBehaviour {
             return;
         }
 
-        if (Input.GetKeyUp(KeyCode.Escape)) {
+        /*if (Input.GetKeyUp(KeyCode.Escape)) { // now handled by exit widget
 			if(Cursor.lockState == CursorLockMode.Locked) {
 				Cursor.lockState = CursorLockMode.None;
 			} else {
 				Cursor.lockState = CursorLockMode.Locked;
 			}
-		}
+		}*/
 
         if (ViewControl.instance.paperView.enabled)
         {
