@@ -115,11 +115,11 @@ public class WalkControl : MonoBehaviour {
 
         prevValidPosition = transform.position;
 
-        if(Input.GetKeyDown(KeyCode.Q)) {
+        /*if(Input.GetKeyDown(KeyCode.Q)) {
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene( SceneManager.GetActiveScene().name );
             return;
-        }
+        }*/
 
         /*if (Input.GetKeyUp(KeyCode.Escape)) { // now handled by exit widget
 			if(Cursor.lockState == CursorLockMode.Locked) {
