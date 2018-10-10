@@ -74,6 +74,7 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Apartment Zone");
         creditsLines.Add("Graveyard Zone");
         creditsLines.Add("Camp Zone");
+        creditsLines.Add("Ships Zone");
 
         creditsLines.Add(":Trenton Pegeas:");
         creditsLines.Add("Aether Zone");

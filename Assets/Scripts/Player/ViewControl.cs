@@ -36,7 +36,7 @@ public class ViewControl : MonoBehaviour {
 
         if (paperView.enabled)
         {
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 pageViewed++;
                 if (pageViewed < readScript.pageToRead.Length)
@@ -83,7 +83,7 @@ public class ViewControl : MonoBehaviour {
             }*/
 
             if (mtol) {
-                if(Input.GetMouseButtonDown(0)) {
+                if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) {
                     readScript = mtol.GetComponent<ReadableScrap>();
                     if(readScript)
                     {
