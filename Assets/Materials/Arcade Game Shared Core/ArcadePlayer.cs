@@ -227,7 +227,7 @@ public class ArcadePlayer : MonoBehaviour {
 					}
 				}
 			} else {
-				Debug.Log ("Not close enough");
+				// Debug.Log ("Not close enough");
 			}
 		}
 

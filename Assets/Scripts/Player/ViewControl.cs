@@ -70,8 +70,11 @@ public class ViewControl : MonoBehaviour {
 		}
 
         RaycastHit rhInfo;
-		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, raycastMaxDistance)) {
+        int ignoreMask = ~LayerMask.GetMask("Ignore Raycast");
+		if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, raycastMaxDistance,
+                            ignoreMask)) {
             MouseTipOnLook mtol = rhInfo.collider.gameObject.GetComponent<MouseTipOnLook>();
+            // Debug.Log(rhInfo.collider.gameObject.name);
             /*LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
 
             if (lantern)
