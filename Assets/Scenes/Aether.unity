@@ -2679,6 +2679,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
   m_IsPrefabAsset: 0
@@ -11982,7 +11986,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -31987,18 +31991,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 4253467698696768, guid: 558131412da44a744bcdf04222e6024b, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.043010753
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253467698696768, guid: 558131412da44a744bcdf04222e6024b, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.043010753
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253467698696768, guid: 558131412da44a744bcdf04222e6024b, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.043010753
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558131412da44a744bcdf04222e6024b, type: 2}
   m_IsPrefabAsset: 0
@@ -36992,6 +36984,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 108385073777327800, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
+        type: 2}
+      propertyPath: m_Range
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
   m_IsPrefabAsset: 0
@@ -37300,7 +37297,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.6298992, b: 0, a: 1}
   m_Intensity: 0.5
-  m_Range: 100
+  m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -37687,7 +37684,7 @@ Transform:
   m_LocalScale: {x: 0.05376346, y: 0.057123676, z: 0.05712366}
   m_Children: []
   m_Father: {fileID: 945356152}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -4.63, y: 249.982, z: 92.828}
 --- !u!114 &477877946
 MonoBehaviour:
@@ -38142,7 +38139,7 @@ Transform:
   m_LocalScale: {x: 0.9613284, y: 45.943787, z: 6.115182}
   m_Children: []
   m_Father: {fileID: 945356152}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 2.186, y: -23.703001, z: 72.764}
 --- !u!54 &492907507
 Rigidbody:
@@ -39923,7 +39920,7 @@ Transform:
   m_LocalScale: {x: 0.080645174, y: 0.08064524, z: 0.1}
   m_Children: []
   m_Father: {fileID: 945356152}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &540201360
 MonoBehaviour:
@@ -42004,36 +42001,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 4451576632749010, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.08064516
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451576632749010, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.08064516
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451576632749010, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.08064516
-      objectReference: {fileID: 0}
     - target: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
       propertyPath: m_Name
       value: Torch (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 108385073777327800, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
-        type: 2}
-      propertyPath: m_Range
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 198144373571249328, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
-        type: 2}
-      propertyPath: EmissionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108385073777327800, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
@@ -46463,6 +46433,10 @@ Prefab:
     - target: {fileID: 108385073777327800, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -51865,7 +51839,7 @@ Transform:
   m_LocalScale: {x: 0.080645196, y: 0.08064516, z: 0.080645196}
   m_Children: []
   m_Father: {fileID: 945356152}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &887367513
 MonoBehaviour:
@@ -53647,33 +53621,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7616de96e1acf26458145638e49214dc,
     type: 3}
   m_PrefabInternal: {fileID: 297623082}
---- !u!1 &973319592 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 674834955}
---- !u!114 &973319598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 973319592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Aether/Torch
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 2.5
-  OverrideMaxDistance: 7
 --- !u!1 &981805389
 GameObject:
   m_ObjectHideFlags: 0
@@ -61758,18 +61705,6 @@ Prefab:
     - target: {fileID: 1397386286979190, guid: 59ad11ddd5ef8aa45805a82fa6453cdf, type: 2}
       propertyPath: m_Name
       value: TorchPurple (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074978877558036, guid: 59ad11ddd5ef8aa45805a82fa6453cdf, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.074999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074978877558036, guid: 59ad11ddd5ef8aa45805a82fa6453cdf, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.060000014
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074978877558036, guid: 59ad11ddd5ef8aa45805a82fa6453cdf, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.07500001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ad11ddd5ef8aa45805a82fa6453cdf, type: 2}
@@ -78920,7 +78855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 63aa44fb52493f24690326f607f2a8be, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 63aa44fb52493f24690326f607f2a8be, type: 3}
       propertyPath: m_LocalScale.x
@@ -85867,7 +85802,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -86074,7 +86009,7 @@ ParticleSystem:
       type: 0
       properties: 0
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 948411873}
     randomDistribution: 1
@@ -110444,7 +110379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4451576632749010, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
       propertyPath: m_Name
@@ -110474,6 +110409,15 @@ Prefab:
     - target: {fileID: 108385073777327800, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65461512297042616, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -120525,33 +120469,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4825220102323402, guid: 2b94198b7ff079e41af98dcd9f5cfdc8,
     type: 2}
   m_PrefabInternal: {fileID: 1998031491}
---- !u!1 &1998608256 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1426275167121504, guid: 558131412da44a744bcdf04222e6024b,
-    type: 2}
-  m_PrefabInternal: {fileID: 390145803}
---- !u!114 &1998608258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1998608256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Aether/Torch
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 2.5
-  OverrideMaxDistance: 7
 --- !u!1001 &1998925087
 Prefab:
   m_ObjectHideFlags: 0
