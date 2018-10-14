@@ -6,8 +6,18 @@ public class InventorySlot : MonoBehaviour {
 
     public Image icon;
     public Button removeButton;
+    public KeyCode useKey;
+    public KeyCode keyAlt;
 
-    public void AddItem(Item newItem)
+	private void Update()
+	{
+        if (Input.GetKeyDown(useKey) || Input.GetKeyDown(keyAlt))
+        {
+            UseItem();
+        }
+	}
+
+	public void AddItem(Item newItem)
     {
         item = newItem;
         icon.sprite = item.icon;

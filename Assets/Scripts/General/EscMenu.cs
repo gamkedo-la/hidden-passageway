@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class EscMenu : MonoBehaviour {
+public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 	bool isOpen;
+    bool isMouseOver = false;
 	bool isAnimating;
 	[SerializeField]
 	RectTransform target;
@@ -33,7 +35,8 @@ public class EscMenu : MonoBehaviour {
 		endMax = openMax;
 		currAnimTime = 0f;
 		isAnimating = true;
-		
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = (Cursor.lockState == CursorLockMode.None);
 	}
 
 	public void SetToClose(){
@@ -42,8 +45,21 @@ public class EscMenu : MonoBehaviour {
 		startMin = openMin;
 		startMax = openMax;
 		currAnimTime = 0f;
-		isAnimating = true;		
+		isAnimating = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = (Cursor.lockState == CursorLockMode.None);
 	}
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("The cursor entered the selectable UI element.");
+        isMouseOver = true;
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("The cursor left the selectable UI element.");
+        isMouseOver = false;
+    }
 
 	public void ToggleMenu(){
 		if(!isAnimating){
@@ -67,6 +83,7 @@ public class EscMenu : MonoBehaviour {
 
 	public void BackToHub(){
 		if(!isAnimating){
+            SceneWarp.fromScene = SceneManager.GetActiveScene().name;
 			SceneManager.LoadScene("MainHub");
 		}
 	}
@@ -76,11 +93,17 @@ public class EscMenu : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			ToggleMenu();
 		}
+        /*
 		//Provide a way to unlock cursor when in esc menu
 		if (Input.GetKeyUp(KeyCode.T)) {
 			Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ?
-				CursorLockMode.None : CursorLockMode.Locked;			
-		}
+				CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = (Cursor.lockState == CursorLockMode.None);
+		}*/
+
+        //Debug.Log(EventSystem.current.IsPointerOverGameObject());
+        //bool noUIcontrolsInUse = EventSystem.current.currentSelectedGameObject == null;
+        //Debug.Log(noUIcontrolsInUse);
 
 		if(isAnimating){
 			currAnimTime += Time.deltaTime;
@@ -93,7 +116,10 @@ public class EscMenu : MonoBehaviour {
 				isAnimating = false;
 				isOpen = !isOpen;
 			}
-		}
+        } else if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject()==false && isOpen)
+        {
+            SetToClose();
+        }
 	}
 
 	void Set(Vector2 anchorMin, Vector2 anchorMax){

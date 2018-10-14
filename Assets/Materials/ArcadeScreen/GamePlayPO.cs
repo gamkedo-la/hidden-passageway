@@ -74,6 +74,7 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Apartment Zone");
         creditsLines.Add("Graveyard Zone");
         creditsLines.Add("Camp Zone");
+        creditsLines.Add("Ships Zone");
 
         creditsLines.Add(":Trenton Pegeas:");
         creditsLines.Add("Aether Zone");
@@ -151,6 +152,7 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add(":Vignesh Ramesh:");
         creditsLines.Add("Decaying World chair model");
         creditsLines.Add("Decaying World table model");
+        creditsLines.Add("Platform X chest models");
         creditsLines.Add("Song for graveyard");
 
         creditsLines.Add(":Adam A. Lohnes:");

@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       method: 0
       fxaaSettings:
@@ -103,7 +103,7 @@ MonoBehaviour:
         intensity: 0.6
         threshold: 0.85
         softKnee: 0.5
-        radius: 4
+        radius: 2.33
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -310,7 +310,7 @@ MonoBehaviour:
       spectralTexture: {fileID: 0}
       intensity: 0.25
   grain:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       colored: 0
       intensity: 0.035

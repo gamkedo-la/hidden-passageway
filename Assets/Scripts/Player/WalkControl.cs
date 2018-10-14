@@ -32,6 +32,7 @@ public class WalkControl : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 
         if(SceneWarp.fromScene != null && SceneWarp.fromScene.Length > 0) {
+            Debug.Log("FROM SCENE: " + SceneWarp.fromScene);
             GameObject[] warpGOs = GameObject.FindGameObjectsWithTag("Teleporter");
             for (int i = 0; i < warpGOs.Length;i++) {
                 SceneWarp swScript = warpGOs[i].GetComponent<SceneWarp>();
@@ -114,19 +115,19 @@ public class WalkControl : MonoBehaviour {
 
         prevValidPosition = transform.position;
 
-        if(Input.GetKeyDown(KeyCode.Q)) {
+        /*if(Input.GetKeyDown(KeyCode.Q)) {
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene( SceneManager.GetActiveScene().name );
             return;
-        }
+        }*/
 
-        if (Input.GetKeyUp(KeyCode.Escape)) {
+        /*if (Input.GetKeyUp(KeyCode.Escape)) { // now handled by exit widget
 			if(Cursor.lockState == CursorLockMode.Locked) {
 				Cursor.lockState = CursorLockMode.None;
 			} else {
 				Cursor.lockState = CursorLockMode.Locked;
 			}
-		}
+		}*/
 
         if (ViewControl.instance.paperView.enabled)
         {
