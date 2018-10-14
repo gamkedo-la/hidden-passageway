@@ -22,10 +22,10 @@ public class ClockTime : MonoBehaviour {
 	void Update () {
         // Debug.Log(minutesNow);
         float offsetForZeroDegAtTop = -90.0f;
-        minHand.rotation = Quaternion.AngleAxis(minutesNow * 360.0f / 60.0f
+        minHand.rotation = Quaternion.AngleAxis(-minutesNow * 360.0f / 60.0f
                                                 +offsetForZeroDegAtTop, Vector3.forward);
         float hourNow = minutesNow / 60.0f;
-        hourHand.rotation = Quaternion.AngleAxis(hourNow * 360.0f / (12.0f)
+        hourHand.rotation = Quaternion.AngleAxis(-hourNow * 360.0f / (12.0f)
                                                  +offsetForZeroDegAtTop, Vector3.forward);
 	}
 }

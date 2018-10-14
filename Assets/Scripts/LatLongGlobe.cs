@@ -29,14 +29,14 @@ public class LatLongGlobe : MonoBehaviour {
     void Update()
     {
         // Debug.Log(minutesNow);
-        // float offsetForZeroDegAtTop = -90.0f;
+        float offsetForZeroDegAtPrime = 180.0f;
         transform.rotation = Quaternion.AngleAxis(latNow
                                                   /*+ offsetForZeroDegAtTop*/, Vector3.right)
             * Quaternion.AngleAxis(longNow
-                                   /*+ offsetForZeroDegAtTop*/, Vector3.up);
+                                   + offsetForZeroDegAtPrime, Vector3.up);
         float longWrapped = Mathf.Repeat(longNow + 180.0f, 360.0f) - 180.0f;
         string EWlong = (longWrapped < 0.0f ? "W" : "E");
         string NSlat = (latNow < 0.0f ? "S" : "N");;
-        textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+", "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
+        textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+" "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
     }
 }
