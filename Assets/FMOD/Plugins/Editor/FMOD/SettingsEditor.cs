@@ -415,14 +415,7 @@ namespace FMODUnity
                 EditorGUILayout.BeginHorizontal();
                 string oldPath = settings.SourceProjectPathUnformatted;
                 EditorGUILayout.PrefixLabel("Studio Project Path", GUI.skin.textField, style);
-
-                EditorGUI.BeginChangeCheck();
                 settings.SourceProjectPathUnformatted = EditorGUILayout.TextField(GUIContent.none, settings.SourceProjectPathUnformatted);
-                if (EditorGUI.EndChangeCheck())
-                {
-                    settings.SourceProjectPath = settings.SourceProjectPathUnformatted;
-                }
-
                 if (GUILayout.Button("Browse", GUILayout.ExpandWidth(false)))
                 {
                     GUI.FocusControl(null);
@@ -456,14 +449,7 @@ namespace FMODUnity
                 EditorGUILayout.BeginHorizontal();
                 string oldPath = settings.SourceBankPathUnformatted;
                 EditorGUILayout.PrefixLabel("Build Path", GUI.skin.textField, style);
-
-                EditorGUI.BeginChangeCheck();
                 settings.SourceBankPathUnformatted = EditorGUILayout.TextField(GUIContent.none, settings.SourceBankPathUnformatted);
-                if (EditorGUI.EndChangeCheck())
-                {
-                    settings.SourceBankPath = settings.SourceBankPathUnformatted;
-                }
-
                 if (GUILayout.Button("Browse", GUILayout.ExpandWidth(false)))
                 {
                     GUI.FocusControl(null);
@@ -525,14 +511,6 @@ namespace FMODUnity
             EditorGUI.EndDisabledGroup();
             EditorGUI.BeginDisabledGroup(settings.ImportType == ImportType.AssetBundle);
 
-            // ----- Logging -----------------
-            EditorGUILayout.Separator();
-            EditorGUILayout.LabelField("<b>Logging</b>", style);
-            EditorGUI.indentLevel++;
-            settings.LoggingLevel = (FMOD.DEBUG_FLAGS)EditorGUILayout.EnumPopup("Logging Level", settings.LoggingLevel);
-            EditorGUI.indentLevel--;
-            EditorGUI.EndDisabledGroup();
-
             // ----- Loading -----------------
             EditorGUILayout.Separator();
             EditorGUILayout.LabelField("<b>Loading</b>", style);
@@ -558,7 +536,6 @@ namespace FMODUnity
                 #endif
             }
             DisplayEditorBool("Debug Overlay", settings.OverlaySettings, FMODPlatform.PlayInEditor);
-            DisplayChildFreq("Sample Rate", settings.SampleRateSettings, FMODPlatform.PlayInEditor);
             if (settings.HasPlatforms)
             {
                 DisplayPIEBuildDirectory("Bank Platform", settings.BankDirectorySettings, FMODPlatform.PlayInEditor);

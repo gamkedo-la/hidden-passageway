@@ -9,6 +9,7 @@ using System.Net.Sockets;
 
 namespace FMODUnity
 {
+
     public enum PreviewState
     {
         Stopped,
@@ -229,7 +230,6 @@ namespace FMODUnity
             if (EditorApplication.isCompiling)
             {
                 DestroySystem();
-                RuntimeManager.Destroy();
             }
 
             // Update the editor system
