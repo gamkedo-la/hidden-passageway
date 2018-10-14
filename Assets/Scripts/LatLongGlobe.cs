@@ -36,7 +36,7 @@ public class LatLongGlobe : MonoBehaviour {
                                    + offsetForZeroDegAtPrime, Vector3.up);
         float longWrapped = Mathf.Repeat(longNow + 180.0f, 360.0f) - 180.0f;
         string EWlong = (longWrapped < 0.0f ? "W" : "E");
-        string NSlat = (latNow < 0.0f ? "S" : "N");;
+        string NSlat = (latNow > 0.0f ? "S" : "N");;
         textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+" "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
     }
 }
