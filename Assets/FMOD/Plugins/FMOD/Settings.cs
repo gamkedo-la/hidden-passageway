@@ -95,7 +95,7 @@ namespace FMODUnity
                     instance = Resources.Load(SettingsAssetName) as Settings;
                     if (instance == null)
                     {
-                        UnityEngine.Debug.Log("FMOD Studio: cannot find integration settings, creating default settings");
+                        UnityEngine.Debug.Log("[FMOD] Cannot find integration settings, creating default settings");
                         instance = CreateInstance<Settings>();
                         instance.name = "FMOD Studio Integration Settings";
 
@@ -117,7 +117,11 @@ namespace FMODUnity
         public static void EditSettings()
         {
             Selection.activeObject = Instance;
+            #if UNITY_2018_2_OR_NEWER
+            EditorApplication.ExecuteMenuItem("Window/General/Inspector");
+            #else
             EditorApplication.ExecuteMenuItem("Window/Inspector");
+            #endif
         }
         #endif
 
@@ -180,6 +184,9 @@ namespace FMODUnity
 
         [SerializeField]
         public string TargetAssetPath;
+
+        [SerializeField]
+        public FMOD.DEBUG_FLAGS LoggingLevel = FMOD.DEBUG_FLAGS.WARNING;
 
         [SerializeField]
         public List<PlatformIntSetting> SpeakerModeSettings;
@@ -374,6 +381,7 @@ namespace FMODUnity
             SetSetting(LoggingSettings, FMODPlatform.PlayInEditor, TriStateBool.Enabled);
             SetSetting(LiveUpdateSettings, FMODPlatform.PlayInEditor, TriStateBool.Enabled);
             SetSetting(OverlaySettings, FMODPlatform.PlayInEditor, TriStateBool.Enabled);
+            SetSetting(SampleRateSettings, FMODPlatform.PlayInEditor, 48000);
             // These are not editable, set them high
             SetSetting(RealChannelSettings, FMODPlatform.PlayInEditor, 256);
             SetSetting(VirtualChannelSettings, FMODPlatform.PlayInEditor, 1024);
