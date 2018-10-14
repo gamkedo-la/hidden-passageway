@@ -35,8 +35,9 @@ public class LatLongGlobe : MonoBehaviour {
             * Quaternion.AngleAxis(longNow
                                    + offsetForZeroDegAtPrime, Vector3.up);
         float longWrapped = Mathf.Repeat(longNow + 180.0f, 360.0f) - 180.0f;
-        string EWlong = (longWrapped < 0.0f ? "W" : "E");
-        string NSlat = (latNow > 0.0f ? "S" : "N");;
-        textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+" "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
+        string EWlong = (longWrapped < 0.0f ? "-" : "+");
+        // string NSlat = (latNow > 0.0f ? "S" : "N");;
+        // textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+" "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
+        textOut.text = "UTC" + EWlong + Mathf.FloorToInt(longWrapped/12.0f);
     }
 }

@@ -110,6 +110,7 @@ public class GamePlayPO : PixelScreenLib
 
         creditsLines.Add(":Simon J Hoffiz:");
         creditsLines.Add("Light House Zone");
+        creditsLines.Add("Light House Music");
 
         creditsLines.Add(":Dan Lazar:");
         creditsLines.Add("Sept Zone");
