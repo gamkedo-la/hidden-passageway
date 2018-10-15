@@ -9,7 +9,7 @@ public class SoftenLightIfWebGL : MonoBehaviour {
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             Light myLight = GetComponent<Light>();
-            myLight.intensity *= 0.4f;
+            myLight.intensity *= 0.525f;
         }
 	}
 }

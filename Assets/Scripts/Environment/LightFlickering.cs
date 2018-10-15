@@ -24,13 +24,14 @@ public class LightFlickering : MonoBehaviour {
 	void Start () {
         lightToMod = gameObject.GetComponent<Light>();
 
-        minFlickerRad = lightToMod.range - radiusMod;
-        maxFlickerRad = lightToMod.range + radiusMod;
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             lightToMod.intensity *= 2.0f;
-            lightToMod.range *= 2.0f;
+            lightToMod.range *= 2.5f;
         }
+
+        minFlickerRad = lightToMod.range - radiusMod;
+        maxFlickerRad = lightToMod.range + radiusMod;
         minFlickerIntensity = lightToMod.intensity - intensityMod;
         maxFlickerIntensity = lightToMod.intensity + intensityMod;
     }
