@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class LatLongGlobe : MonoBehaviour {
     public float targetLat = 0.0f;
-    public float targetLong = 0.0f;
+    public float targetLong = 5.0f;
+    public float offset = 0.0f;
     private float latNow = 0.0f;
     private float longNow = 0.0f;
 
@@ -29,7 +30,7 @@ public class LatLongGlobe : MonoBehaviour {
     void Update()
     {
         // Debug.Log(minutesNow);
-        float offsetForZeroDegAtPrime = 180.0f;
+        float offsetForZeroDegAtPrime = 180.0f+offset;
         transform.rotation = Quaternion.AngleAxis(latNow
                                                   /*+ offsetForZeroDegAtTop*/, Vector3.right)
             * Quaternion.AngleAxis(longNow
@@ -38,6 +39,6 @@ public class LatLongGlobe : MonoBehaviour {
         string EWlong = (longWrapped < 0.0f ? "-" : "+");
         // string NSlat = (latNow > 0.0f ? "S" : "N");;
         // textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+" "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
-        textOut.text = "UTC" + EWlong + Mathf.FloorToInt(longWrapped/12.0f);
+        textOut.text = "UTC" + EWlong + Mathf.FloorToInt(Mathf.Abs(longWrapped/14.0f)); //// 180/15 is 12
     }
 }
