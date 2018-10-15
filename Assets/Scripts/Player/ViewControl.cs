@@ -30,13 +30,17 @@ public class ViewControl : MonoBehaviour {
             return;
         }
 
-		if(Cursor.lockState != CursorLockMode.Locked) {
+        if(Cursor.lockState != CursorLockMode.Locked) {
 			return;
 		}
 
         if (paperView.enabled)
         {
-            if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                paperView.enabled = false;
+                WalkControl.instance.areFeetLocked = false;
+            } else if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 pageViewed++;
                 if (readScript.pageToRead == null || pageViewed < readScript.pageToRead.Length)
