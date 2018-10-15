@@ -7,6 +7,7 @@ public class LatLongGlobe : MonoBehaviour {
     public float targetLat = 0.0f;
     public float targetLong = 5.0f;
     public float offset = 0.0f;
+    public int UTCNow = 0;
     private float latNow = 0.0f;
     private float longNow = 0.0f;
 
@@ -31,14 +32,19 @@ public class LatLongGlobe : MonoBehaviour {
     {
         // Debug.Log(minutesNow);
         float offsetForZeroDegAtPrime = 180.0f+offset;
-        transform.rotation = Quaternion.AngleAxis(latNow
-                                                  /*+ offsetForZeroDegAtTop*/, Vector3.right)
+        transform.rotation = Quaternion.AngleAxis(latNow, Vector3.right)
             * Quaternion.AngleAxis(longNow
                                    + offsetForZeroDegAtPrime, Vector3.up);
-        float longWrapped = Mathf.Repeat(longNow + 180.0f, 360.0f) - 180.0f;
-        string EWlong = (longWrapped < 0.0f ? "-" : "+");
-        // string NSlat = (latNow > 0.0f ? "S" : "N");;
-        // textOut.text = " " + Mathf.Abs(latNow).ToString("N1") + "°"+NSlat+" "+ Mathf.Abs(longWrapped).ToString("N1") + "°"+EWlong;
-        textOut.text = "UTC" + EWlong + Mathf.FloorToInt(Mathf.Abs(longWrapped/14.0f)); //// 180/15 is 12
+        if (UTCNow == -13)
+        {
+            UTCNow = 12;
+        } else if (UTCNow == 13)
+        {
+            UTCNow = -12;
+        }
+        Debug.Log(UTCNow);
+        string EWlong = (UTCNow < 0 ? "-" : "+");
+        int numToShow = Mathf.Abs(UTCNow);
+        textOut.text = "UTC" + EWlong + numToShow; //// 180/15 is 12
     }
 }
