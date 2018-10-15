@@ -26,8 +26,8 @@ public class LightFlickering : MonoBehaviour {
 
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
-            lightToMod.intensity *= 2.0f;
-            lightToMod.range *= 2.5f;
+            lightToMod.intensity *= 1.5f;
+            lightToMod.range *= 1.75f;
         }
 
         minFlickerRad = lightToMod.range - radiusMod;
