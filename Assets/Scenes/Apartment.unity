@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.88525516, g: 0.9819334, b: 1.0039052, a: 1}
+  m_IndirectSpecularColor: {r: 0.8486319, g: 0.9433594, b: 0.96191436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -214,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81976280}
   - component: {fileID: 81976279}
+  - component: {fileID: 81976281}
   m_Layer: 0
   m_Name: Sun Directional Light
   m_TagString: Untagged
@@ -271,6 +272,17 @@ Transform:
   m_Father: {fileID: 1847622713}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 12.6, y: -18.69, z: 0}
+--- !u!114 &81976281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81976278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cf389356cad4766ba132910918575a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &98706466
 Prefab:
   m_ObjectHideFlags: 0
@@ -1553,65 +1565,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
-        type: 2}
-      propertyPath: Event
-      value: event:/Apartment/Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 47.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 23.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 224668681280000612, guid: e68c31d7edd714b8aaca10bdfe763061,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1488701654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1172376823558762, guid: e68c31d7edd714b8aaca10bdfe763061,
-    type: 2}
-  m_PrefabInternal: {fileID: 1488701653}
---- !u!114 &1488701655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1488701654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 3c29a07b35f7f42ca9a3e5dc0af34a68, type: 2}
 --- !u!1 &1648717201
 GameObject:
   m_ObjectHideFlags: 0

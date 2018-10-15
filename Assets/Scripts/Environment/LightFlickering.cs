@@ -26,6 +26,11 @@ public class LightFlickering : MonoBehaviour {
 
         minFlickerRad = lightToMod.range - radiusMod;
         maxFlickerRad = lightToMod.range + radiusMod;
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            lightToMod.intensity *= 2.0f;
+            lightToMod.range *= 2.0f;
+        }
         minFlickerIntensity = lightToMod.intensity - intensityMod;
         maxFlickerIntensity = lightToMod.intensity + intensityMod;
     }

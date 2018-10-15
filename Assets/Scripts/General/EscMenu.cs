@@ -81,6 +81,12 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 		}
 	}
 
+    public void ResetCart()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 	public void BackToHub(){
 		if(!isAnimating){
             SceneWarp.fromScene = SceneManager.GetActiveScene().name;
