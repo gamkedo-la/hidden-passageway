@@ -114,6 +114,11 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 			}else{
 				Set(endMin, endMax);
 				isAnimating = false;
+                if (isOpen) // was open
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = (Cursor.lockState == CursorLockMode.None);
+                }
 				isOpen = !isOpen;
 			}
         } else if (Input.GetButtonDown("Fire1") && EventSystem.current.IsPointerOverGameObject()==false && isOpen)

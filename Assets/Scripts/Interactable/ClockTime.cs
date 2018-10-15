@@ -16,7 +16,7 @@ public class ClockTime : MonoBehaviour {
 	private void FixedUpdate()
 	{
         float kVal = 0.9f;
-        minutesNow = (targetTime + 60.0f*Mathf.Floor(llg.targetLong / 15.0f)) * (1.0f-kVal) + minutesNow * kVal;
+        minutesNow = (targetTime + 60.0f*Mathf.Floor(llg.targetLong / 14.0f)) * (1.0f-kVal) + minutesNow * kVal;
 	}
 
 	// Update is called once per frame
