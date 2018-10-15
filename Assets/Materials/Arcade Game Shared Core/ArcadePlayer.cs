@@ -169,8 +169,8 @@ public class ArcadePlayer : MonoBehaviour {
 		}*/
 
 		if(playingNow != null) {
-            if(Input.GetMouseButtonDown(0) || 
-               Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftArrow)
+            if(Input.GetButtonDown("Fire1") || 
+               Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.LeftArrow)
                || Input.GetKeyDown(KeyCode.RightArrow) || playingNow.gameScreen.isPlaying == false) {
 				// playingNow.gameScreen.isPlaying = false; // nah, leave it running but cease input!
 
@@ -182,7 +182,7 @@ public class ArcadePlayer : MonoBehaviour {
 			return;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space)) {
+        if(Input.GetButtonDown("Jump")) {
 			RaycastHit rhInfo;
 			if( Physics.Raycast(transform.position, transform.forward, out rhInfo, 3.0f)) {
 				int hadTokens = tokens;

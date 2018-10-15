@@ -56,7 +56,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
 
     public void InteractCubeOnClick() {
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetButtonDown("Fire1")) {
             if (cubeActivated) {
 
                 cubeActivated = false;
@@ -71,7 +71,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
             } //end of else
         } //end of if left-click
 
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.E)){
+        if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.E)){
             if (cubeActivated) {
 
                 cubeActivated = false;

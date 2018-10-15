@@ -84,7 +84,7 @@ public class EstatePuzzle : MonoBehaviour {
                 text1.text = "Activate";
                 text2.text = "Activate";
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetButtonDown("Fire1"))
                 {
                     Debug.Log("changed" + testNum);
                     testNum++;
@@ -97,7 +97,7 @@ public class EstatePuzzle : MonoBehaviour {
                 text1.text = "Touch";
                 text2.text = "Touch";
 
-                if (Input.GetMouseButtonDown(0) && fountainActivated)
+                if (Input.GetButtonDown("Fire1") && fountainActivated)
                 {
                     if (!greenLight)
                     {
@@ -111,7 +111,7 @@ public class EstatePuzzle : MonoBehaviour {
                 text1.text = "Press button";
                 text2.text = "Press button";
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetButtonDown("Fire1"))
                 {
                     Debug.Log("Button Pressed");
                     if (TestSolution())

@@ -52,12 +52,12 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("The cursor entered the selectable UI element.");
+        // Debug.Log("The cursor entered the selectable UI element.");
         isMouseOver = true;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("The cursor left the selectable UI element.");
+        // Debug.Log("The cursor left the selectable UI element.");
         isMouseOver = false;
     }
 
@@ -116,7 +116,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 				isAnimating = false;
 				isOpen = !isOpen;
 			}
-        } else if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject()==false && isOpen)
+        } else if (Input.GetButtonDown("Fire1") && EventSystem.current.IsPointerOverGameObject()==false && isOpen)
         {
             SetToClose();
         }

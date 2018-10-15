@@ -40,7 +40,7 @@ public class ViewControl : MonoBehaviour {
             {
                 paperView.enabled = false;
                 WalkControl.instance.areFeetLocked = false;
-            } else if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            } else if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
                 pageViewed++;
                 if (readScript.pageToRead == null || pageViewed < readScript.pageToRead.Length)
@@ -87,7 +87,7 @@ public class ViewControl : MonoBehaviour {
             }*/
 
             if (mtol) {
-                if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) {
+                if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
                     readScript = mtol.GetComponent<ReadableScrap>();
                     if(readScript)
                     {

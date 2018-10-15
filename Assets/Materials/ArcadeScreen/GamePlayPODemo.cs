@@ -24,10 +24,6 @@ public class GamePlayPODemo : PixelScreenLib {
 		if(Input.GetKey(KeyCode.DownArrow) && ballYV < 0.0f) {
 			ballYV *= -1.0f;
 		}
-		if(Input.GetKeyDown(KeyCode.Space)) {
-			ballX = Random.Range(0.0f, screenWidth);
-			ballY = Random.Range(0.0f, screenHeight);
-		}
 	}
 
 	private void ballBounceAndDraw() {

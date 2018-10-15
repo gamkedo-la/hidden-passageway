@@ -16,10 +16,10 @@ public class InventoryUI : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetButtonDown("Inventory"))
+        /*if(Input.GetButtonDown("Inventory"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
-        }       
+        } */      
     }
 
     private void UpdateUI()

@@ -88,7 +88,7 @@ public class WalkControl : MonoBehaviour {
                 rb.velocity += right * Time.deltaTime * strafeSpeed * scaleForCompatibilityWithOlderTuning *
                     Input.GetAxisRaw("Horizontal");
 
-                if (onGround && Input.GetKeyDown(KeyCode.Space))
+                if (onGround && Input.GetButtonDown("Jump"))
                 {
                     onGround = false;
                     rb.velocity += Vector3.up * jumpForce;
@@ -98,7 +98,7 @@ public class WalkControl : MonoBehaviour {
             transform.Rotate(Vector3.up, Time.deltaTime * 65.0f * Input.GetAxis("Mouse X"));
 
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if (Input.GetButtonDown("Fire1"))
         {
             Cursor.lockState = CursorLockMode.Locked;
         }

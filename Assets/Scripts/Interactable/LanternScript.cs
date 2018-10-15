@@ -64,7 +64,7 @@ public class LanternScript : MonoBehaviour {
                 {
                     PutDown();
                 }*/
-                if (Input.GetMouseButton(1))
+                if (Input.GetButtonDown("Fire2"))
                 {
                     if (throwForce < maxThrowForce)
                     {
@@ -75,13 +75,13 @@ public class LanternScript : MonoBehaviour {
                         throwForce = maxThrowForce;
                     }
                 }
-                else if (Input.GetMouseButtonUp(1))
+                else if (Input.GetButtonUp("Fire2"))
                 {
                     Throw();
                 }
             }else if (!canPerformAction)
             {
-                if (Input.GetMouseButtonUp(0))
+                if (Input.GetButtonUp("Fire1"))
                 {
                     canPerformAction = true;
                 }
@@ -93,7 +93,7 @@ public class LanternScript : MonoBehaviour {
     {
         if (!held)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("Fire1"))
             {
                 PickUp(null);
                 canPerformAction = false;

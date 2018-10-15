@@ -390,11 +390,6 @@ public class GamePlayPO : PixelScreenLib
             scrollY += INTERACT_JUMP;
             pauseScroll = INTERACT_WAIT;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            FireLaser();
-        }
     }
 
     private void moveBuffalo()

@@ -42,7 +42,7 @@ namespace ProBuilder2.Examples
 			eulerRotation.z = 0f;
 
 			// orbits
-			if( Input.GetMouseButton(0) )
+            if( Input.GetButtonDown("Fire1") )
 			{
 				float rot_x = Input.GetAxis(INPUT_MOUSE_X);
 				float rot_y = -Input.GetAxis(INPUT_MOUSE_Y);

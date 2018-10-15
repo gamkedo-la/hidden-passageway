@@ -16,7 +16,7 @@ public class ShutThisDoorAndOpenThisDoorWhenPressed : MonoBehaviour
     void Update()
     {
         RaycastHit rayHitInfo;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rayHitInfo, 1.5f))
             {               
