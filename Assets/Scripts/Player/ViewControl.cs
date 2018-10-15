@@ -39,7 +39,7 @@ public class ViewControl : MonoBehaviour {
             if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 pageViewed++;
-                if (pageViewed < readScript.pageToRead.Length)
+                if (readScript.pageToRead == null || pageViewed < readScript.pageToRead.Length)
                 {
                     paperView.sprite = readScript.pageToRead[pageViewed];
                     paperView.enabled = true;
