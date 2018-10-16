@@ -42,7 +42,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
 
     public void ReactOnMouseOver() {
 
-        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray mouseRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);// Camera.main.ScreenPointToRay(Input.mousePosition);
         int mouseMask = LayerMask.GetMask("DigSitePuzzleCube");
 
         if (Physics.Raycast(mouseRay, out rhInfo, cubeClickDistance, mouseMask) && rhInfo.collider.gameObject == gameObject) {

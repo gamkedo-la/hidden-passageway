@@ -455,7 +455,10 @@ public class DigSitePuzzle : MonoBehaviour {
         if (breakableCubes.Count == 0) {
             puzzleSolved = true;
             puzzleTracker.MarkSolved(gameObject.name);
-            doorControl.Activate();
+            if (doorControl)
+            {
+                doorControl.Activate();
+            }
         } // end of if
 
     } // end of CheckForSolution()
