@@ -78,7 +78,7 @@ public class AetherDebugController : MonoBehaviour {
                 {
                     flightSpeed = 12f;
                 }
-                if (Input.GetKeyUp(KeyCode.Escape))
+                /*if (Input.GetKeyUp(KeyCode.Tab))
                 {
                     if (Cursor.lockState == CursorLockMode.Locked)
                     {
@@ -88,7 +88,7 @@ public class AetherDebugController : MonoBehaviour {
                     {
                         Cursor.lockState = CursorLockMode.Locked;
                     }
-                }
+                }*/
 
             }
 

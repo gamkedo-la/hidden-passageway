@@ -36,7 +36,7 @@ public class ViewControl : MonoBehaviour {
 
         if (paperView.enabled)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 paperView.enabled = false;
                 WalkControl.instance.areFeetLocked = false;
