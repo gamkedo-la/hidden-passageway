@@ -42,7 +42,7 @@ public class LatLongGlobe : MonoBehaviour {
         {
             UTCNow = -12;
         }
-        Debug.Log(UTCNow);
+        // Debug.Log(UTCNow);
         string EWlong = (UTCNow < 0 ? "-" : "+");
         int numToShow = Mathf.Abs(UTCNow);
         textOut.text = "UTC" + EWlong + numToShow; //// 180/15 is 12

@@ -87,12 +87,6 @@ public class WalkControl : MonoBehaviour {
                     Input.GetAxisRaw("Vertical");
                 rb.velocity += right * Time.deltaTime * strafeSpeed * scaleForCompatibilityWithOlderTuning *
                     Input.GetAxisRaw("Horizontal");
-
-                if (onGround && Input.GetButtonDown("Jump"))
-                {
-                    onGround = false;
-                    rb.velocity += Vector3.up * jumpForce;
-                }
             }
 
             transform.Rotate(Vector3.up, Time.deltaTime * 65.0f * Input.GetAxis("Mouse X"));
@@ -114,6 +108,12 @@ public class WalkControl : MonoBehaviour {
         RaycastHit rhInfo;
 
         prevValidPosition = transform.position;
+
+        if (onGround && Input.GetButtonDown("Jump"))
+        {
+            onGround = false;
+            rb.velocity += Vector3.up * jumpForce;
+        }
 
         /*if(Input.GetKeyDown(KeyCode.Q)) {
             PlayerPrefs.DeleteAll();
@@ -154,7 +154,8 @@ public class WalkControl : MonoBehaviour {
 				lastKnownSafelyOnGround = transform.position;
 				forward = Vector3.Cross(transform.right, rhInfo.normal).normalized;
 				right = Vector3.Cross(-transform.forward, rhInfo.normal).normalized;
-				if (Input.GetAxisRaw("Vertical") == 0f && Input.GetAxisRaw("Horizontal") == 0f)
+                if (Mathf.Abs(Input.GetAxisRaw("Vertical")) < 0.1f && Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 01f &&
+                    Input.GetButton("Jump") == false)
 				{
 					//Magic number (1.041f) comes from the following line:
 					//Debug.Log(Vector3.Distance(transform.position, rhInfo.point));
