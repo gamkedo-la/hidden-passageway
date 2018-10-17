@@ -26,9 +26,19 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 		closeMin = new Vector2(0.953f, 0.871f);
 		Set(closeMin, closeMax);
 		isOpen = false;
+        ShowOrHideBabies(false);
 	}
 
+    void ShowOrHideBabies(bool showThem)
+    {
+        for (int i = 0; i < target.transform.GetChildCount(); i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(showThem);
+        }
+    }
+
 	public void SetToOpen(){
+        ShowOrHideBabies(true);
 		startMin = closeMin;
 		startMax = closeMax;
 		endMin = openMin;
@@ -124,6 +134,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
                 {
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = (Cursor.lockState == CursorLockMode.None);
+                    ShowOrHideBabies(false);
                 }
 				isOpen = !isOpen;
 			}

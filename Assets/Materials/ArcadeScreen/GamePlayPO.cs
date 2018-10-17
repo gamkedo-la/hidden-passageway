@@ -91,6 +91,8 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Dig Site Zone");
         creditsLines.Add("Dig Site 1970's Cart");
         creditsLines.Add("Desk calendar model");
+        creditsLines.Add("Jump code fix");
+        creditsLines.Add("Final testing");
 
         creditsLines.Add(":Chris Markle:");
         creditsLines.Add("Sound effects authoring for");
