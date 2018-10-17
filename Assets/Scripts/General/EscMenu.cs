@@ -31,7 +31,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
     void ShowOrHideBabies(bool showThem)
     {
-        for (int i = 0; i < target.transform.GetChildCount(); i++)
+        for (int i = 0; i < target.transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(showThem);
         }
