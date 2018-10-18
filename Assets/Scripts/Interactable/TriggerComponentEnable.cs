@@ -18,7 +18,12 @@ public class TriggerComponentEnable : MonoBehaviour {
     [Header("Trigger Settings")]
     public bool canBeReversed = false;
 
-    public void triggerAction()
+	public void Start() // even though empty, gets us the enabled checkbox in inspector
+	{
+        
+	}
+
+	public void triggerAction()
     {
         if (!enabled) {
             return;
@@ -63,6 +68,7 @@ public class TriggerComponentEnable : MonoBehaviour {
     }
 
     public bool canBeUsed() {
+        // Debug.Log( enabled + " " + (toEnable.isDone == false) + " " + canBeReversed);
         return enabled && ((toEnable.isDone == false) || canBeReversed);
     }
 }

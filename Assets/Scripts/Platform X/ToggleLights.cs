@@ -7,6 +7,7 @@ public class ToggleLights : AbstractActivateable {
 	[SerializeField] LightsPuzzleManager lightsPuzzleManager;
 	[SerializeField] bool winState;
 	[SerializeField] Light[] lightsToToggle;
+    [SerializeField] GameObject[] lightGOsToToggle;
 
 	bool currentState = false;
 
@@ -74,9 +75,14 @@ public class ToggleLights : AbstractActivateable {
 
 	void DoToggleLights()
 	{
-		foreach (Light light in lightsToToggle) {
+		/*foreach (Light light in lightsToToggle) {
 			light.enabled = !light.enabled;
-		}
+		}*/
+        foreach (GameObject lightGO in lightGOsToToggle)
+        {
+            lightGO.SetActive(lightGO.activeSelf == false);
+        }
+
 
 		currentState = !currentState;
 

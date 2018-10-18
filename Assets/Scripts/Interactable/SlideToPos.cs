@@ -115,7 +115,10 @@ public class SlideToPos : AbstractActivateable {
         if ((isReversing == false && callPrev == null) ||
                     (isReversing && callNext == null)) // start of chain?
         {
-            camRotWorldInitial = mainCam.transform.rotation;
+            if (mainCam)
+            {
+                camRotWorldInitial = mainCam.transform.rotation;
+            }
         }
         isStarted = true;
         startTime = Time.time;
@@ -128,12 +131,21 @@ public class SlideToPos : AbstractActivateable {
         {
             wasPlayerParent = playerGO.transform.parent;
             playerGO.transform.parent = transform;
-            WalkControl.instance.rb.isKinematic = true;
-            WalkControl.instance.areFeetLocked = true;
+            if (WalkControl.instance)
+            {
+                WalkControl.instance.rb.isKinematic = true;
+                WalkControl.instance.areFeetLocked = true;
+            }
         } else {
-            WalkControl.instance.rb.isKinematic = true;
-            WalkControl.instance.enabled = false;
-            ViewControl.instance.enabled = false;
+            if (WalkControl.instance)
+            {
+                if (WalkControl.instance.rb)
+                {
+                    WalkControl.instance.rb.isKinematic = true;
+                }
+                WalkControl.instance.enabled = false;
+                ViewControl.instance.enabled = false;
+            }
         }
 
         if (startSound.Length>0)

@@ -101,7 +101,6 @@ public class ViewControl : MonoBehaviour {
                     }
                 } else {
                     TriggerComponentEnable activateComponent = mtol.GetComponent<TriggerComponentEnable>();
-
                     if(activateComponent == null || activateComponent.canBeUsed())
                     {
                         linkClueShadow.text = linkClue.text = mtol.displayText;
