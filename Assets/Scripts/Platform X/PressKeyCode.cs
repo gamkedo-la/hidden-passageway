@@ -26,7 +26,7 @@ public class PressKeyCode : MonoBehaviour {
 		ControlPanelButton btn = hit.collider.gameObject.GetComponent<ControlPanelButton>();
 		if (!btn)
 		{
-			Debug.Log("has raycast hit on other object? " + hit.collider.gameObject.name);
+			// Debug.Log("has raycast hit on other object? " + hit.collider.gameObject.name);
 			return;
 		}
 

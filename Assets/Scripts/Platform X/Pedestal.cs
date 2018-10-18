@@ -35,6 +35,11 @@ public class Pedestal : MonoBehaviour {
 		}
 	}
 
+    void OnTriggerExit(Collider other)
+    {
+        checkState = false;
+    }
+
 	void Update ()
 	{
 		if (currentState) {
@@ -43,9 +48,6 @@ public class Pedestal : MonoBehaviour {
 				currentState = false;
 			}
 		}
-
-		// Will be re-enabled in OnTriggerStay if there's still a ball
-		checkState = false;
 	}
 
 	public bool HasWon ()

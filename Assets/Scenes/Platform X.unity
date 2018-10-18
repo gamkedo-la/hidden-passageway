@@ -250,6 +250,10 @@ Prefab:
       propertyPath: m_Size.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1065514648852006, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a455ce3e78fa34cd9a6d2768d31313a9, type: 2}
   m_IsPrefabAsset: 0
@@ -911,6 +915,11 @@ Prefab:
       propertyPath: ballPedestalPuzzleManager
       value: 
       objectReference: {fileID: 1053230710}
+    - target: {fileID: 65950756119506860, guid: 0a66357a1f489444cb929ec7c8bec500,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a66357a1f489444cb929ec7c8bec500, type: 2}
   m_IsPrefabAsset: 0
@@ -4642,6 +4651,11 @@ Prefab:
       propertyPath: ballPedestalPuzzleManager
       value: 
       objectReference: {fileID: 1053230710}
+    - target: {fileID: 65950756119506860, guid: 0a66357a1f489444cb929ec7c8bec500,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a66357a1f489444cb929ec7c8bec500, type: 2}
   m_IsPrefabAsset: 0
@@ -5028,6 +5042,11 @@ Prefab:
       propertyPath: ballPedestalPuzzleManager
       value: 
       objectReference: {fileID: 1053230710}
+    - target: {fileID: 65950756119506860, guid: 0a66357a1f489444cb929ec7c8bec500,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a66357a1f489444cb929ec7c8bec500, type: 2}
   m_IsPrefabAsset: 0
@@ -5099,6 +5118,11 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 119060c03d94c44c3b4c598f0b1fdb59, type: 3}
+    - target: {fileID: 65950756119506860, guid: 0a66357a1f489444cb929ec7c8bec500,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a66357a1f489444cb929ec7c8bec500, type: 2}
   m_IsPrefabAsset: 0
@@ -5345,6 +5369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1171096639}
+  - {fileID: 1577037130}
   m_Father: {fileID: 1057897859}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5362,6 +5387,7 @@ MonoBehaviour:
   playerGO: {fileID: 1608088315}
   teleList:
   - {fileID: 1171096639}
+  - {fileID: 1577037130}
 --- !u!1 &1053230708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5924,7 +5950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171096639}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: By Door Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8415,6 +8441,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4991626187706776, guid: 35e6fb055146747e88330203aae48d3f,
     type: 2}
   m_PrefabInternal: {fileID: 1561941996}
+--- !u!1 &1577037129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577037130}
+  m_Layer: 0
+  m_Name: By Ball Pedestals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1577037130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577037129}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 143.9, y: -13.35, z: -1.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1046742901}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608088315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1878888730666724, guid: e68c31d7edd714b8aaca10bdfe763061,
@@ -10028,6 +10082,11 @@ Prefab:
         type: 2}
       propertyPath: winState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65950756119506860, guid: 0a66357a1f489444cb929ec7c8bec500,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a66357a1f489444cb929ec7c8bec500, type: 2}
