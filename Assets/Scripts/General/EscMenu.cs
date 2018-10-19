@@ -33,7 +33,15 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
     {
         for (int i = 0; i < target.transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(showThem);
+            if (transform.GetChild(i).gameObject.name == "btn_QuitApp" && showThem)
+            {
+                transform.GetChild(i).gameObject.SetActive(Application.platform != RuntimePlatform.WebGLPlayer);
+        
+            }
+            else
+            {
+                transform.GetChild(i).gameObject.SetActive(showThem);
+            }
         }
     }
 
