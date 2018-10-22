@@ -188,13 +188,13 @@ GameObject:
   - component: {fileID: 52649818}
   - component: {fileID: 52649820}
   - component: {fileID: 52649819}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SmallBirdsCue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &52649818
 Transform:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 154948973}
   - component: {fileID: 154948972}
   - component: {fileID: 154948971}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: UnderGroundPostProcessing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1969,13 +1969,13 @@ GameObject:
   - component: {fileID: 715096991}
   - component: {fileID: 715096993}
   - component: {fileID: 715096992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OwlsCue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &715096991
 Transform:
   m_ObjectHideFlags: 0
@@ -2010,7 +2010,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 1
-  OverrideMaxDistance: 67.5
+  OverrideMaxDistance: 67.9
 --- !u!65 &715096993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2839,7 +2839,7 @@ GameObject:
   - component: {fileID: 1111167044}
   - component: {fileID: 1111167046}
   - component: {fileID: 1111167045}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CatacombsCue (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/Graveyard/Catacombs
   PlayEvent: 3
-  StopEvent: 0
+  StopEvent: 4
   CollisionTag: Player
   AllowFadeout: 1
   TriggerOnce: 1
@@ -3731,8 +3731,15 @@ Prefab:
       propertyPath: m_Color.a
       value: 0.5019608
       objectReference: {fileID: 0}
+    - target: {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114384749811757698, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1488701654 stripped
@@ -3822,13 +3829,13 @@ GameObject:
   - component: {fileID: 1636982864}
   - component: {fileID: 1636982866}
   - component: {fileID: 1636982865}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CricketsCue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1636982864
 Transform:
   m_ObjectHideFlags: 0
@@ -3862,8 +3869,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 0.1
-  OverrideMaxDistance: 62
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 67.9
 --- !u!65 &1636982866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4070,7 +4077,7 @@ GameObject:
   - component: {fileID: 1800345647}
   - component: {fileID: 1800345649}
   - component: {fileID: 1800345648}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CatacombsCue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4103,7 +4110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/Graveyard/Catacombs
   PlayEvent: 3
-  StopEvent: 0
+  StopEvent: 4
   CollisionTag: Player
   AllowFadeout: 1
   TriggerOnce: 1
@@ -4798,7 +4805,7 @@ GameObject:
   - component: {fileID: 2052742106}
   - component: {fileID: 2052742105}
   - component: {fileID: 2052742104}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: SurfacePostProcessing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

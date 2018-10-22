@@ -133,7 +133,7 @@ public class WalkControl : MonoBehaviour {
         {
             return; // reading, stand still
         }
-
+        /*
         if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 3.0f))
         {
 			if (rhInfo.collider != null)
@@ -143,13 +143,14 @@ public class WalkControl : MonoBehaviour {
 					transform.position = prevValidPosition; // undoing position if over water
 				}
 			}
-        }
+        }*/
 
-		//
-        if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.2f))
+        int layerMask = ~LayerMask.GetMask("Ignore Raycast");
+        if (Physics.Raycast(transform.position, Vector3.down, out rhInfo, 1.2f, layerMask))
         {
 			if (rhInfo.collider != null)
 			{
+                // Debug.Log("standing on " + rhInfo.collider.name);
 				onGround = true;
 				lastKnownSafelyOnGround = transform.position;
 				forward = Vector3.Cross(transform.right, rhInfo.normal).normalized;
