@@ -37,19 +37,30 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
             if (transform.GetChild(i).gameObject.name == "btn_QuitApp" && showThem)
             {
                 transform.GetChild(i).gameObject.SetActive(Application.platform != RuntimePlatform.WebGLPlayer);
-        
+
             }
             else
             {
-                if(SceneWarp.onMedium != null && SceneWarp.onMedium.Length > 1) {
-                    if (transform.GetChild(i).gameObject.name == "btn_BackToHub") 
+                if (SceneWarp.onMedium != null && SceneWarp.onMedium.Length > 1)
+                {
+                    if (transform.GetChild(i).gameObject.name == "btn_BackToHub")
                     {
                         Text quitText = transform.GetChild(i).gameObject.GetComponentInChildren<Text>();
                         quitText.text = "Eject " + SceneWarp.onMedium + "\n(back to office)";
-                    } else if (transform.GetChild(i).gameObject.name == "btn_ResetCart")
+                    }
+                    else if (transform.GetChild(i).gameObject.name == "btn_ResetCart")
                     {
                         Text resetText = transform.GetChild(i).gameObject.GetComponentInChildren<Text>();
                         resetText.text = "Reboot " + SceneWarp.onMedium;
+                    }
+                }
+                if (transform.GetChild(i).gameObject.name == "Text")
+                {
+                    Text menuText = transform.GetChild(i).gameObject.GetComponent<Text>();
+                    if (menuText != null && menuText.text == "There is no progress to save :)")
+                    {
+                        menuText.text = "You're still in the game studio";
+                        menuText.alignment = TextAnchor.MiddleCenter;
                     }
                 }
                 transform.GetChild(i).gameObject.SetActive(showThem);
