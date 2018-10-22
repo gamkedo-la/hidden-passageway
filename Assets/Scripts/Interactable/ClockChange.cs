@@ -16,6 +16,6 @@ public class ClockChange : MonoBehaviour {
 	public void triggerAction() {
         whichClock.targetTime += minChange;
         // keeps it on even increments of 5 min.
-        whichClock.targetTime = Mathf.Round(whichClock.targetTime / 5.0f) * 5.0f;
+        whichClock.targetTime = Mathf.Floor(whichClock.targetTime);
 	}
 }
