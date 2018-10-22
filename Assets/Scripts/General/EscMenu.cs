@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
@@ -40,6 +41,17 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
             }
             else
             {
+                if(SceneWarp.onMedium != null && SceneWarp.onMedium.Length > 1) {
+                    if (transform.GetChild(i).gameObject.name == "btn_BackToHub") 
+                    {
+                        Text quitText = transform.GetChild(i).gameObject.GetComponentInChildren<Text>();
+                        quitText.text = "Eject " + SceneWarp.onMedium + "\n(back to office)";
+                    } else if (transform.GetChild(i).gameObject.name == "btn_ResetCart")
+                    {
+                        Text resetText = transform.GetChild(i).gameObject.GetComponentInChildren<Text>();
+                        resetText.text = "Reboot " + SceneWarp.onMedium;
+                    }
+                }
                 transform.GetChild(i).gameObject.SetActive(showThem);
             }
         }

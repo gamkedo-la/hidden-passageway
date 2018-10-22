@@ -2605,6 +2605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Aether
+  mediumName: cartridge
   returnLocation: {fileID: 1401935131}
 --- !u!114 &218496841
 MonoBehaviour:
@@ -5144,6 +5145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Bates Estate
+  mediumName: cartridge
   returnLocation: {fileID: 1941047219}
 --- !u!114 &429867667
 MonoBehaviour:
@@ -6665,6 +6667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Ship
+  mediumName: USB drive
   returnLocation: {fileID: 854459929}
 --- !u!114 &583090600
 MonoBehaviour:
@@ -11333,6 +11336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Islands
+  mediumName: card
   returnLocation: {fileID: 841222859}
 --- !u!114 &959609193
 MonoBehaviour:
@@ -12018,6 +12022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Apartment
+  mediumName: CD-R
   returnLocation: {fileID: 874020595}
 --- !u!114 &1031512034
 MonoBehaviour:
@@ -12590,6 +12595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Light House
+  mediumName: cartridge
   returnLocation: {fileID: 424447219}
 --- !u!114 &1083797639
 MonoBehaviour:
@@ -13431,6 +13437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Platform X
+  mediumName: disk
   returnLocation: {fileID: 1472890477}
 --- !u!114 &1134743169
 MonoBehaviour:
@@ -13756,6 +13763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Puzzle_Tower
+  mediumName: disk
   returnLocation: {fileID: 1593713177}
 --- !u!114 &1196492202
 MonoBehaviour:
@@ -14282,6 +14290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Sept
+  mediumName: cartridge
   returnLocation: {fileID: 1482803966}
 --- !u!114 &1217074835
 MonoBehaviour:
@@ -14672,6 +14681,16 @@ Prefab:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114391031841972216, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_Text
+      value: No game is loaded to eject
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391031841972216, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
@@ -14681,6 +14700,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1225592014}
   m_Script: {fileID: 11500000, guid: b2bd2f6f47aa47c47a2f5461e7e43959, type: 3}
+--- !u!1 &1225592016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1172376823558762, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 1225592014}
+--- !u!114 &1225592017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1225592016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1251218788
 GameObject:
   m_ObjectHideFlags: 0
@@ -14738,6 +14774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Camp
+  mediumName: memory card
   returnLocation: {fileID: 692044667}
 --- !u!114 &1251218792
 MonoBehaviour:
@@ -15478,6 +15515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Kahn
+  mediumName: disk
   returnLocation: {fileID: 1115515462}
 --- !u!114 &1336160706
 MonoBehaviour:
@@ -15548,6 +15586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Dig_Site
+  mediumName: cartridge
   returnLocation: {fileID: 1484149798}
 --- !u!114 &1341269214
 MonoBehaviour:
@@ -16639,7 +16678,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1462487635}
   m_LocalRotation: {x: -0.6819571, y: 0.18690772, z: 0.18690772, w: 0.6819571}
-  m_LocalPosition: {x: -2.47, y: -0.09381294, z: -1.33}
+  m_LocalPosition: {x: -0.37, y: -0.09381294, z: -3.7}
   m_LocalScale: {x: 0.020618208, y: 0.020618208, z: 0.020618198}
   m_Children: []
   m_Father: {fileID: 1859272982}
@@ -18383,6 +18422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Cosy_Caves
+  mediumName: cartridge
   returnLocation: {fileID: 1809040830}
 --- !u!114 &1687031386
 MonoBehaviour:
@@ -20561,6 +20601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Graveyard
+  mediumName: cartridge
   returnLocation: {fileID: 1462487636}
 --- !u!114 &1859272985
 MonoBehaviour:
@@ -21884,6 +21925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Decaying World
+  mediumName: cartridge
   returnLocation: {fileID: 483904044}
 --- !u!114 &1979898228
 MonoBehaviour:
@@ -22716,6 +22758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Wordwall
+  mediumName: tape
   returnLocation: {fileID: 396982353}
 --- !u!114 &2048165644
 MonoBehaviour:
