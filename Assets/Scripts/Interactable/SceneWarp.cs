@@ -9,15 +9,17 @@ public class SceneWarp : MonoBehaviour {
     public Transform returnLocation;
     public static string fromScene;
 
-    public static SceneWarp instance;
-
 	private void Awake()
 	{
-        instance = this;
 	}
 
 	public void triggerAction () {
         fromScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(sceneName);
+        if(SquashTransition.instance) {
+            SquashTransition.instance.startTransition(sceneName);
+            SquashTransition.instance = null;
+        } else {
+            SceneManager.LoadScene(sceneName);
+        }
 	}
 }
