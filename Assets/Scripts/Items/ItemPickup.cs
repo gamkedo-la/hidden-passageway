@@ -24,7 +24,7 @@ public class ItemPickup : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire1"))
         {
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2.5f))
