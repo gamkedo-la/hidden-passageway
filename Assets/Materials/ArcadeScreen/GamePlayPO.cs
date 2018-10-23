@@ -122,6 +122,7 @@ public class GamePlayPO : PixelScreenLib
 
         creditsLines.Add(":Coy Compositions:");
         creditsLines.Add("Music for Bates Estate");
+        creditsLines.Add("Music for Caves");
         creditsLines.Add("Music for Sept");
         creditsLines.Add("Music for Dig Site");
         creditsLines.Add("Music for Graveyard");

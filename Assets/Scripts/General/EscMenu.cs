@@ -130,8 +130,20 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
 	public void BackToHub(){
 		if(!isAnimating){
+            ShowOrHideBabies(false);
+            Image selfImage = GetComponent<Image>();
+            selfImage.enabled = false;
             SceneWarp.fromScene = SceneManager.GetActiveScene().name;
-			SceneManager.LoadScene("MainHub");
+			// SceneManager.LoadScene("MainHub");
+            if (SquashTransition.instance)
+            {
+                SquashTransition.instance.startTransition("MainHub");
+                SquashTransition.instance = null;
+            }
+            else
+            {
+                SceneManager.LoadScene("MainHub");
+            }
 		}
 	}
 

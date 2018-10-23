@@ -4,24 +4,42 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SquashTransition : MonoBehaviour {
-
-    public WalkControl walkToTurnOff;
-    public ViewControl lookToTurnOff;
     bool isSquashing = false;
     string toScene = "";
     public static SquashTransition instance;
+    public RenderTexture renderTexture;
+    private Camera transitionCam;
 
 	// Use this for initialization
 	void Start () {
         instance = this;
+        transitionCam = transform.parent.GetComponentInChildren<Camera>();
 	}
 
     public void startTransition(string forScene) {
         if(isSquashing == false) {
+            transitionCam.targetTexture = renderTexture;
+            GameObject menuGO = GameObject.Find("MenuHub");
+            menuGO.SetActive(false);
+            GameObject aimerGO = GameObject.Find("Aimer");
+            aimerGO.SetActive(false);
+
             isSquashing = true;
             toScene = forScene;
-            walkToTurnOff.enabled = false;
-            lookToTurnOff.enabled = false;
+
+            GameObject playerGO = GameObject.Find("Player");
+
+            WalkControl walkToTurnOff = playerGO.GetComponent<WalkControl>();
+            ViewControl lookToTurnOff = Camera.main.GetComponent<ViewControl>();
+
+            if (walkToTurnOff)
+            {
+                walkToTurnOff.enabled = false;
+            }
+            if (lookToTurnOff)
+            {
+                lookToTurnOff.enabled = false;
+            }
         }
     }
 	
