@@ -11,9 +11,13 @@ public class DigSitePuzzleCube : MonoBehaviour {
     private GameObject parent;
     private DigSitePuzzle puzzle;
     private bool cubeActivated = false;
+
+    private Camera mainCamCached;
+    private Material matCached;
  
     void Start () {
-
+        mainCamCached = Camera.main;
+        matCached = gameObject.GetComponent<Renderer>().material;
         //Get reference to the DigSitePuzzle script component of parent puzzle game object
         parent = this.transform.parent.gameObject;
         puzzle = parent.GetComponent<DigSitePuzzle>();
@@ -21,6 +25,8 @@ public class DigSitePuzzleCube : MonoBehaviour {
         //Get reference to the cube's Renderer component and set the default emission color to green
         mat = GetComponent<Renderer>().material;
         mat.SetColor("_EmissionColor", Color.green);
+
+        matCached.DisableKeyword("_EMISSION");
 
         if (puzzle.startsCompleted && !puzzle.IsCubeUnbreakable(puzzleIndex)) {
             Destroy(this.gameObject);
@@ -35,21 +41,26 @@ public class DigSitePuzzleCube : MonoBehaviour {
             ReactOnMouseOver();
         } else { //else if puzzle is already solved, change color to yellow.
             mat.SetColor("_EmissionColor", Color.yellow);
-            gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+            matCached.EnableKeyword("_EMISSION");
         }
 
     } //end of Update()
 
     public void ReactOnMouseOver() {
 
-        Ray mouseRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);// Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Vector3.Distance(mainCamCached.transform.position, transform.position) > cubeClickDistance)
+        {
+            return; // avoid majority of raycast checks
+        }
+
+           Ray mouseRay = new Ray(mainCamCached.transform.position, mainCamCached.transform.forward);
         int mouseMask = LayerMask.GetMask("DigSitePuzzleCube");
 
         if (Physics.Raycast(mouseRay, out rhInfo, cubeClickDistance, mouseMask) && rhInfo.collider.gameObject == gameObject) {
-            gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+            matCached.EnableKeyword("_EMISSION");
             InteractCubeOnClick();
         } else if (!cubeActivated) { // end of if mouse is over this cube
-            this.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+            matCached.DisableKeyword("_EMISSION");
         } // end of else mouse is not over this cube 
 
     } // end of ReactOnMouseOver()
@@ -66,7 +77,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
 
                 cubeActivated = true;
                 mat.SetColor("_EmissionColor", Color.blue);
-                gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+                matCached.EnableKeyword("_EMISSION");
 
             } //end of else
         } //end of if left-click
