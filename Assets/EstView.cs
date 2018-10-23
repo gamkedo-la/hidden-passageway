@@ -69,14 +69,14 @@ public class EstView : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1") ||
-           Input.GetMouseButtonDown(0))
+            Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Tab))
         {
             QuitEst();
             return;
         }
 
         float lerpPt = (Time.timeSinceLevelLoad-durationStart) / duration;
-        if (lerpPt > 1.0f)
+        if (lerpPt > 1.0f || Input.GetKeyDown(KeyCode.N))
         {
             wpNow+=2;
             if (wpNow + 1 >= viewWaypoints.Length)

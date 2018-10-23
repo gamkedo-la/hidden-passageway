@@ -9,10 +9,10 @@ public class AetherDebugController : MonoBehaviour {
     [SerializeField] private bool fullBright;
     [SerializeField] private bool flight;
     [SerializeField] private bool noClip;
-    [SerializeField] private GameObject player;
-    [SerializeField] private Light mainLight;
-    [SerializeField] public WalkControl walkControl;
-    [SerializeField] private Collider col;
+    [SerializeField] public GameObject player;
+    private Light mainLight;
+    public WalkControl walkControl;
+    private Collider col;
     public LightShadows sTypeNone = 0;
     public LightShadows sTypeSoft;
     public float flightSpeed = 8f;
@@ -23,7 +23,7 @@ public class AetherDebugController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        player = GameObject.FindGameObjectWithTag(Tags.Player);
+        // player = GameObject.FindGameObjectWithTag(Tags.Player);
         walkControl = player.GetComponent<WalkControl>();
         GameObject lightObject = GameObject.Find("Directional Light");
         mainLight = lightObject.GetComponent<Light>();
