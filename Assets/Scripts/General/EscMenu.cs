@@ -113,7 +113,19 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 	}
 
 	void Start () {
-		
+        Font nicerFont = Resources.Load("Asap-Regular") as Font;
+        Text[] allText = GetComponentsInChildren<Text>();
+        for (int i = 0; i < allText.Length; i++)
+        {
+            allText[i].font = nicerFont;
+        }
+
+        GameObject text1GO = GameObject.Find("TipTextShadow");
+        GameObject text2GO = GameObject.Find("TipTextFG");
+        Text tip1 = text1GO.GetComponent<Text>();
+        Text tip2 = text1GO.GetComponent<Text>();
+        tip1.font = nicerFont;
+        tip2.font = nicerFont;
 	}
 	
 	public void QuitApplication(){

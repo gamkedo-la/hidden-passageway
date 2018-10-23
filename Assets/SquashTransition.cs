@@ -26,6 +26,13 @@ public class SquashTransition : MonoBehaviour {
             GameObject aimerGO = GameObject.Find("Aimer");
             aimerGO.SetActive(false);
 
+            GameObject mouseLookGO = GameObject.Find("MouseLockTip");
+            if (mouseLookGO)
+            {
+                mouseLookGO.SetActive(false);
+            }
+
+
             isSquashing = true;
             toScene = forScene;
 

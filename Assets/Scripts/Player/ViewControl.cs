@@ -56,18 +56,35 @@ public class ViewControl : MonoBehaviour {
             return;
         }
 
-		transform.Rotate(Vector3.right, Time.deltaTime * -60.0f * Input.GetAxis("Mouse Y"));
-		float lookAng = transform.rotation.eulerAngles.x;
-		if(lookAng > 180.0f) {
-			lookAng = lookAng - 360.0f;
-			if(lookAng < -lookAngLimit) {
-				transform.Rotate(Vector3.right, ((-lookAngLimit) - lookAng));
-			}
-		} else {
-			if(lookAng > lookAngLimit) {
-				transform.Rotate(Vector3.right, (lookAngLimit-lookAng));
-			}
-		}
+        bool ignoreDuringInit = false;
+        if (SceneWarp.fromScene != null && SceneWarp.fromScene.Length > 0)
+        {
+            ignoreDuringInit = false;
+        }
+        else if (Time.timeSinceLevelLoad < 0.25f)
+        {
+            ignoreDuringInit = true;
+        }
+        if (ignoreDuringInit == false)
+        {
+            transform.Rotate(Vector3.right, Time.deltaTime * -60.0f * Input.GetAxis("Mouse Y"));
+            float lookAng = transform.rotation.eulerAngles.x;
+            if (lookAng > 180.0f)
+            {
+                lookAng = lookAng - 360.0f;
+                if (lookAng < -lookAngLimit)
+                {
+                    transform.Rotate(Vector3.right, ((-lookAngLimit) - lookAng));
+                }
+            }
+            else
+            {
+                if (lookAng > lookAngLimit)
+                {
+                    transform.Rotate(Vector3.right, (lookAngLimit - lookAng));
+                }
+            }
+        }
 
 		if(linkClue.text != "") {
             linkClueShadow.text = linkClue.text = "";
