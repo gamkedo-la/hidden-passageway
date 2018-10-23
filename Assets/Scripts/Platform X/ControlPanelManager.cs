@@ -16,7 +16,7 @@ public class ControlPanelManager : MonoBehaviour {
 	private string currentCode = "";
 	private int codeSolutionLength = 0;
 	private Coroutine resetCodeCoroutine = null;
-	private string mySaveName;
+	// private string mySaveName;
 
 	void Start () {
 		codeSolutionLength = codeSolution.Length;
@@ -24,8 +24,8 @@ public class ControlPanelManager : MonoBehaviour {
 		codeCanvas.enabled = false;
 		codeText.text = "";
 
-        mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
-        int previousState = PlayerPrefs.GetInt(mySaveName, 0);
+        // mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
+        int previousState = 0;//PlayerPrefs.GetInt(mySaveName, 0);
 
         if (previousState == 1) {
 			SetWon();
@@ -37,7 +37,7 @@ public class ControlPanelManager : MonoBehaviour {
 		codeText.text = currentCode = codeSolution;
 		codeCanvas.enabled = true;
 
-		PlayerPrefs.SetInt(mySaveName, 1);
+		// PlayerPrefs.SetInt(mySaveName, 1);
 
 		Disable();
 	}

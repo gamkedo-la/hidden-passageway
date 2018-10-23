@@ -14,7 +14,7 @@ public class LightsPuzzleManager : MonoBehaviour {
 	void Awake()
 	{
 		string mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
-        hasWon = (PlayerPrefs.GetInt(mySaveName, 0) == 1);
+        hasWon = false;//(PlayerPrefs.GetInt(mySaveName, 0) == 1);
 		if (hasWon) {
 			DisablePuzzle();
 		}

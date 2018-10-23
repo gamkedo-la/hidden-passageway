@@ -157,7 +157,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
     public void ResetCart()
     {
-        PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

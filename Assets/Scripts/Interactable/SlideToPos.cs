@@ -16,7 +16,7 @@ public class SlideToPos : AbstractActivateable {
     Quaternion startRot;
     Quaternion camRotReset;
     static Quaternion camRotWorldInitial;
-    private string mySaveName;
+    // private string mySaveName;
     bool isReversing = false;
 
     private Vector3 posA;
@@ -68,8 +68,8 @@ public class SlideToPos : AbstractActivateable {
         posB = endPos.position;
         rotB = endPos.rotation;
 
-        mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
-        int previousState = PlayerPrefs.GetInt(mySaveName, 0);
+        // mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
+        int previousState = 0;// PlayerPrefs.GetInt(mySaveName, 0);
 
         if (rememberPreviousState && previousState == 1)
         {
@@ -91,7 +91,7 @@ public class SlideToPos : AbstractActivateable {
         Activate();
 
         // overriding how Activate() left them:
-        PlayerPrefs.SetInt(mySaveName, 0);
+        // PlayerPrefs.SetInt(mySaveName, 0);
         endPos.position = posA;
         endPos.rotation = rotA;
         startPos = posB;
@@ -111,7 +111,7 @@ public class SlideToPos : AbstractActivateable {
             return;
         }
 
-        PlayerPrefs.SetInt(mySaveName, 1);
+        // PlayerPrefs.SetInt(mySaveName, 1);
         if ((isReversing == false && callPrev == null) ||
                     (isReversing && callNext == null)) // start of chain?
         {

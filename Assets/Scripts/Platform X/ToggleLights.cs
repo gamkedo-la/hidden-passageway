@@ -13,12 +13,12 @@ public class ToggleLights : AbstractActivateable {
 
 	TriggerComponentEnable triggerScript;
 
-	string mySaveName;
+	// string mySaveName;
 
 	void Awake()
 	{
-		mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
-        int previousState = PlayerPrefs.GetInt(mySaveName, 0);
+		// mySaveName = PlayerPrefsHelper.GetPrefsName(gameObject);
+        int previousState = 0;//PlayerPrefs.GetInt(mySaveName, 0);
 		if (previousState == 1) {
 			DoToggleLights();
 		}
@@ -86,7 +86,7 @@ public class ToggleLights : AbstractActivateable {
 
 		currentState = !currentState;
 
-		PlayerPrefs.SetInt(mySaveName, currentState ? 1 : 0);
+		// PlayerPrefs.SetInt(mySaveName, currentState ? 1 : 0);
 
 		lightsPuzzleManager.CheckWinState();
 	}
