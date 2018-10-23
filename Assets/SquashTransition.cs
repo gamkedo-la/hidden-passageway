@@ -10,6 +10,7 @@ public class SquashTransition : MonoBehaviour {
     public RenderTexture renderTexture;
     private Camera transitionCam;
     public bool expandInstead = false;
+    public float speedScale = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -52,7 +53,7 @@ public class SquashTransition : MonoBehaviour {
             {
                 Vector3 moreSquished = transform.localScale;
                 float referenceFramerate = 30.0f;
-                float fadeFactor = 0.88f;
+                float fadeFactor = 0.88f * speedScale;
                 float blend = 1.0f - Mathf.Pow(1.0f - fadeFactor, Time.deltaTime * referenceFramerate);
                 moreSquished.y *= blend;
 
