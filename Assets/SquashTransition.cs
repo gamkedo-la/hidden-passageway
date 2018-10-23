@@ -9,6 +9,7 @@ public class SquashTransition : MonoBehaviour {
     public static SquashTransition instance;
     public RenderTexture renderTexture;
     private Camera transitionCam;
+    public bool expandInstead = false;
 
 	// Use this for initialization
 	void Start () {
@@ -45,16 +46,26 @@ public class SquashTransition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(isSquashing) {
-            Vector3 moreSquished = transform.localScale;
-            float referenceFramerate = 30.0f;
-            float fadeFactor = 0.88f;
-            float blend = 1.0f - Mathf.Pow(1.0f - fadeFactor, Time.deltaTime * referenceFramerate);
-            moreSquished.y *= blend;
+        if (isSquashing)
+        {
+            if (expandInstead == false)
+            {
+                Vector3 moreSquished = transform.localScale;
+                float referenceFramerate = 30.0f;
+                float fadeFactor = 0.88f;
+                float blend = 1.0f - Mathf.Pow(1.0f - fadeFactor, Time.deltaTime * referenceFramerate);
+                moreSquished.y *= blend;
 
-            transform.localScale = moreSquished;
-            if(moreSquished.y < 0.005f) {
-                SceneManager.LoadScene(toScene);
+                if (moreSquished.y < 0.01f)
+                {
+                    moreSquished.y = 0.005f;
+                    transform.localScale = moreSquished;
+                    SceneManager.LoadScene(toScene);
+                }
+                else
+                {
+                    transform.localScale = moreSquished;
+                }
             }
         }
 	}
@@ -63,7 +74,21 @@ public class SquashTransition : MonoBehaviour {
         if(isSquashing) {
             Vector3 moreSquished = transform.localScale;
 
-            moreSquished.x *= 1.07f;
+            if (expandInstead)
+            {
+                moreSquished.x *= 1.4f;
+                moreSquished.y *= 1.4f;
+                transform.Rotate(Vector3.forward, 10.0f);
+
+                if (moreSquished.y > 500.0f)
+                {
+                    SceneManager.LoadScene(toScene);
+                }
+            }
+            else
+            {
+                moreSquished.x *= 1.05f;
+            }
 
             transform.localScale = moreSquished;
         }
