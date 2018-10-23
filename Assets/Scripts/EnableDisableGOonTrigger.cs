@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnableDisableGOonTrigger : MonoBehaviour {
 
-    public GameObject go;
+    public GameObject[] goList;
     public bool setActiveOnTrigger;
 
     void OnTriggerEnter(Collider other) {
-        go.SetActive(setActiveOnTrigger);
+        foreach (GameObject go in goList)
+        {
+            go.SetActive(setActiveOnTrigger);
+        }
     }
 }

@@ -466,6 +466,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1590188116674828, guid: 89a696b821fb3db49aac64070e82ac03, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89a696b821fb3db49aac64070e82ac03, type: 2}
   m_IsPrefabAsset: 0
@@ -885,6 +889,10 @@ Prefab:
     - target: {fileID: 198037528749238972, guid: 631630d03c342aa4d9773ab40df1e160,
         type: 2}
       propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2565,6 +2573,62 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 42.62
   OverrideMaxDistance: 42.62
+--- !u!1 &432538641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432538642}
+  - component: {fileID: 432538644}
+  - component: {fileID: 432538643}
+  m_Layer: 0
+  m_Name: DisableTempleRoomTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &432538642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432538641}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.099999905, y: 4.6200027, z: 66.52}
+  m_LocalScale: {x: 6.2366, y: 12.934199, z: 4.5196}
+  m_Children: []
+  m_Father: {fileID: 342580903}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &432538643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432538641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goList:
+  - {fileID: 405995597}
+  setActiveOnTrigger: 1
+--- !u!65 &432538644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432538641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &443403690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,6 +3052,10 @@ Prefab:
     - target: {fileID: 198982045718444598, guid: 631630d03c342aa4d9773ab40df1e160,
         type: 2}
       propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4187,6 +4255,11 @@ Transform:
   m_Father: {fileID: 1516513267}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!1 &637586023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160,
+    type: 2}
+  m_PrefabInternal: {fileID: 1382666705}
 --- !u!1 &687115915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5193,10 @@ Prefab:
       propertyPath: CollisionModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
   m_IsPrefabAsset: 0
@@ -5383,6 +5460,10 @@ Prefab:
     - target: {fileID: 198657712374110790, guid: 631630d03c342aa4d9773ab40df1e160,
         type: 2}
       propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7281,11 +7362,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1119269899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1786589598381090, guid: 3420bdd105b784f46a28c33877506f2f,
-    type: 2}
-  m_PrefabInternal: {fileID: 836551838}
 --- !u!1 &1119532761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1786589598381090, guid: 3420bdd105b784f46a28c33877506f2f,
@@ -8037,6 +8113,62 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1234219204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234219205}
+  - component: {fileID: 1234219207}
+  - component: {fileID: 1234219206}
+  m_Layer: 0
+  m_Name: DisableTempleRoomTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234219205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234219204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 4.62, z: 74.54}
+  m_LocalScale: {x: 6.2366, y: 12.934199, z: 4.5196}
+  m_Children: []
+  m_Father: {fileID: 342580903}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234219206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234219204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goList:
+  - {fileID: 405995597}
+  setActiveOnTrigger: 0
+--- !u!65 &1234219207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234219204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1241015177
 GameObject:
   m_ObjectHideFlags: 0
@@ -8644,6 +8776,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4380866875746222, guid: 790a9cd490dc0bc4cae03349611d3dbd,
     type: 2}
   m_PrefabInternal: {fileID: 1278999330}
+--- !u!1 &1294988103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160,
+    type: 2}
+  m_PrefabInternal: {fileID: 484240071}
 --- !u!1 &1295176897
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,7 +9258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1119269899}
+  goList: []
   setActiveOnTrigger: 1
 --- !u!65 &1330259430
 BoxCollider:
@@ -9620,6 +9757,10 @@ Prefab:
     - target: {fileID: 198037528749238972, guid: 631630d03c342aa4d9773ab40df1e160,
         type: 2}
       propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10984,6 +11125,11 @@ Transform:
   m_Father: {fileID: 1516513267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1539829716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160,
+    type: 2}
+  m_PrefabInternal: {fileID: 97637687}
 --- !u!1 &1550805946
 GameObject:
   m_ObjectHideFlags: 0
@@ -11342,7 +11488,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1908319871}
+  goList:
+  - {fileID: 1908319871}
+  - {fileID: 1668123648}
+  - {fileID: 637586023}
+  - {fileID: 1631964763}
+  - {fileID: 1835972207}
+  - {fileID: 2128606373}
+  - {fileID: 1539829716}
+  - {fileID: 1294988103}
   setActiveOnTrigger: 1
 --- !u!65 &1594594244
 BoxCollider:
@@ -11509,6 +11663,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4006471388695172, guid: 3420bdd105b784f46a28c33877506f2f,
     type: 2}
   m_PrefabInternal: {fileID: 1624444649}
+--- !u!1 &1631964763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160,
+    type: 2}
+  m_PrefabInternal: {fileID: 822524976}
 --- !u!1001 &1643354736
 Prefab:
   m_ObjectHideFlags: 0
@@ -11706,6 +11865,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 128bf8a3fa691fc4d82cad2c5c54a0b9, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1668123648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1590188116674828, guid: 89a696b821fb3db49aac64070e82ac03,
+    type: 2}
+  m_PrefabInternal: {fileID: 53357830}
 --- !u!1001 &1669548454
 Prefab:
   m_ObjectHideFlags: 0
@@ -12069,7 +12233,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37328c65a478c394faa4def7c0ec0e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1908319871}
+  goList:
+  - {fileID: 1908319871}
+  - {fileID: 1668123648}
+  - {fileID: 637586023}
+  - {fileID: 1631964763}
+  - {fileID: 1835972207}
+  - {fileID: 2128606373}
+  - {fileID: 1539829716}
+  - {fileID: 1294988103}
   setActiveOnTrigger: 0
 --- !u!65 &1741201257
 BoxCollider:
@@ -12506,6 +12678,11 @@ Transform:
   m_Father: {fileID: 1241015178}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1835972207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160,
+    type: 2}
+  m_PrefabInternal: {fileID: 1883845244}
 --- !u!1001 &1836057245
 Prefab:
   m_ObjectHideFlags: 0
@@ -13120,6 +13297,10 @@ Prefab:
     - target: {fileID: 198181340876048172, guid: 631630d03c342aa4d9773ab40df1e160,
         type: 2}
       propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14624,6 +14805,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2128606373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1983545721464318, guid: 631630d03c342aa4d9773ab40df1e160,
+    type: 2}
+  m_PrefabInternal: {fileID: 841249432}
 --- !u!1 &2143754222
 GameObject:
   m_ObjectHideFlags: 0
