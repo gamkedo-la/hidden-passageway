@@ -143,6 +143,8 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
         Text tip2 = text2GO.GetComponent<Text>();
         tip1.font = nicerFont;
         tip2.font = nicerFont;
+
+        ShowOrHideBabies(false);
         /*RectTransform rect1 = text1GO.GetComponent<RectTransform>();
         RectTransform rect2 = text2GO.GetComponent<RectTransform>();
         Debug.Log(rect1.name + " " + rect1.anchoredPosition.x);

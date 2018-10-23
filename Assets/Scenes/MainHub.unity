@@ -5000,6 +5000,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 224455429093883568, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -13428,6 +13433,7 @@ MonoBehaviour:
   bills: 99
   tokens: 99
   zoomFOV: 45
+  mainCam: {fileID: 1200941249}
 --- !u!1 &1134743165
 GameObject:
   m_ObjectHideFlags: 0
@@ -13825,6 +13831,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: Start Puzzle Tower
+--- !u!20 &1200941249 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20015741820153842, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 110389555}
 --- !u!1 &1205591047
 GameObject:
   m_ObjectHideFlags: 0

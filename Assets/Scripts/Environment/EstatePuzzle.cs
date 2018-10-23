@@ -46,6 +46,8 @@ public class EstatePuzzle : MonoBehaviour {
 
     public GameObject[] blockedDoorways = new GameObject[3];
 
+    public Camera mainCam;
+
     private void Awake()
     {
         defaultColor = lanternLight.color;
@@ -65,7 +67,7 @@ public class EstatePuzzle : MonoBehaviour {
 
         //Allows the player to interact with the puzzles by looking at them and pressing a key.
         RaycastHit rhInfo;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 4.0f))
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out rhInfo, 4.0f))
         {
             LanternScript lantern = rhInfo.collider.gameObject.GetComponent<LanternScript>();
 

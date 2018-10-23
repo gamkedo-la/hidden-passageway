@@ -19,6 +19,9 @@ public class EstView : MonoBehaviour {
     GameObject menuGO, aimerGO, mouseLookGO;
     GameObject TipTextShadowGO, TipTextFGGO;
 
+    public GameObject[] turnOffWhenDone;
+    public GameObject[] turnOnWhenDone;
+
 	// Use this for initialization
 	void Start () {
         if (SceneWarp.fromScene != null && SceneWarp.fromScene != "MainHub")
@@ -53,6 +56,15 @@ public class EstView : MonoBehaviour {
 
     void QuitEst()
     {
+        foreach(GameObject offGO in turnOffWhenDone)
+        {
+            offGO.SetActive(false);
+        }
+        foreach (GameObject onGO in turnOnWhenDone)
+        {
+            onGO.SetActive(true);
+            Debug.Log("turning on " + onGO.name);
+        }
         useCamera.transform.position = wasPos;
         useCamera.transform.rotation = wasRot;
         playerGO.SetActive(true);

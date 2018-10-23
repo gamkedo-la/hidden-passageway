@@ -16,6 +16,8 @@ public class ArcadePlayer : MonoBehaviour {
 	private float baseFOV;
 	private float camTilt;
 
+    public Camera mainCam;
+
 	IEnumerator resetMessage() {
 		yield return new WaitForSeconds(1.25f);
 		tokenBillsChange(0,0);
@@ -99,7 +101,7 @@ public class ArcadePlayer : MonoBehaviour {
 	void Start() {
 		camTilt = 342.5f;
 		ticketNum = 0; // forget how many games tried
-		baseFOV = Camera.main.fieldOfView;
+        baseFOV = mainCam.fieldOfView;
 		hideMouse();
 		rb = GetComponent<Rigidbody>();
 		tokenBillsChange(0,5);
@@ -143,20 +145,20 @@ public class ArcadePlayer : MonoBehaviour {
         {
             LookToward(playingNow.transform);
             TakePositionFor(playingNow);
-            Camera.main.fieldOfView *= cameraK;
-            Camera.main.fieldOfView += zoomFOV * (1.0f - cameraK);
+            mainCam.fieldOfView *= cameraK;
+            mainCam.fieldOfView += zoomFOV * (1.0f - cameraK);
 
             /*targetTilt = 0.0f;
             camTilt = tiltK * camTilt + (1.0f - tiltK) * targetTilt;
             Camera.main.transform.localRotation = Quaternion.Euler(camTilt, 0.0f, 0.0f);*/
-            Camera.main.transform.rotation = Quaternion.RotateTowards(Camera.main.transform.rotation,
+            mainCam.transform.rotation = Quaternion.RotateTowards(mainCam.transform.rotation,
                                                                       Quaternion.LookRotation(transform.forward),
                                                                       tiltK);
         }
         else
         {
-            Camera.main.fieldOfView *= cameraK;
-            Camera.main.fieldOfView += baseFOV * (1.0f - cameraK);
+            mainCam.fieldOfView *= cameraK;
+            mainCam.fieldOfView += baseFOV * (1.0f - cameraK);
             targetTilt = 346.0f;
         }
     }
