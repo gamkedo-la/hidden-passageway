@@ -46,7 +46,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
                     if (transform.GetChild(i).gameObject.name == "btn_BackToHub")
                     {
                         Text quitText = transform.GetChild(i).gameObject.GetComponentInChildren<Text>();
-                        quitText.text = "Eject " + SceneWarp.onMedium + "\n(back to office)";
+                        quitText.text = "Eject " + SceneWarp.onMedium;// + "\n(back to office)";
                     }
                     else if (transform.GetChild(i).gameObject.name == "btn_ResetCart")
                     {
@@ -114,18 +114,39 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
 	void Start () {
         Font nicerFont = Resources.Load("Asap-Regular") as Font;
+
+        for (int i = 0; i < target.transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
+
         Text[] allText = GetComponentsInChildren<Text>();
+        // Debug.Log(allText.Length);
         for (int i = 0; i < allText.Length; i++)
         {
             allText[i].font = nicerFont;
+            RectTransform rectTransform = allText[i].transform.parent.GetComponent<RectTransform>();
+            if (rectTransform.anchorMin.x < 0.3f)
+            {
+                Vector2 tempV2 = rectTransform.anchorMin;
+                tempV2.x = 0.1f;
+                rectTransform.anchorMin = tempV2;
+                tempV2 = rectTransform.anchorMax;
+                tempV2.x = 1.0f - rectTransform.anchorMin.x;
+                rectTransform.anchorMax = tempV2;
+            }
         }
 
         GameObject text1GO = GameObject.Find("TipTextShadow");
         GameObject text2GO = GameObject.Find("TipTextFG");
         Text tip1 = text1GO.GetComponent<Text>();
-        Text tip2 = text1GO.GetComponent<Text>();
+        Text tip2 = text2GO.GetComponent<Text>();
         tip1.font = nicerFont;
         tip2.font = nicerFont;
+        /*RectTransform rect1 = text1GO.GetComponent<RectTransform>();
+        RectTransform rect2 = text2GO.GetComponent<RectTransform>();
+        Debug.Log(rect1.name + " " + rect1.anchoredPosition.x);
+        Debug.Log(rect2.name + " " +rect2.anchoredPosition.x);*/
 	}
 	
 	public void QuitApplication(){
