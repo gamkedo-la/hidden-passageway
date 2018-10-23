@@ -67,23 +67,30 @@ public class ViewControl : MonoBehaviour {
         }
         if (ignoreDuringInit == false)
         {
-            transform.Rotate(Vector3.right, Time.deltaTime * -60.0f * Input.GetAxis("Mouse Y"));
-            float lookAng = transform.rotation.eulerAngles.x;
-            if (lookAng > 180.0f)
+            float angleBefore = transform.rotation.eulerAngles.x;
+            float angleMoveBy = Time.deltaTime * -60.0f * Input.GetAxis("Mouse Y");
+            float angleAfter = angleBefore + angleMoveBy;
+            /*if (angleAfter < -lookAngLimit)
             {
-                lookAng = lookAng - 360.0f;
-                if (lookAng < -lookAngLimit)
+                angleMoveBy = (-lookAngLimit) - angleBefore;
+            }
+            */
+            if (angleAfter > 180.0f)
+            {
+                angleAfter = angleAfter - 360.0f;
+                if (angleAfter < -lookAngLimit)
                 {
-                    transform.Rotate(Vector3.right, ((-lookAngLimit) - lookAng));
+                    angleMoveBy = (-lookAngLimit) - angleBefore;
                 }
             }
             else
             {
-                if (lookAng > lookAngLimit)
+                if (angleAfter > lookAngLimit)
                 {
-                    transform.Rotate(Vector3.right, (lookAngLimit - lookAng));
+                    angleMoveBy = lookAngLimit - angleBefore;
                 }
             }
+            transform.Rotate(Vector3.right, angleMoveBy);
         }
 
 		if(linkClue.text != "") {
@@ -110,6 +117,7 @@ public class ViewControl : MonoBehaviour {
                     {
                         pageViewed=0;
                         paperView.sprite = readScript.pageToRead[pageViewed];
+                        paperView.preserveAspect = true;
                         paperView.enabled = true;
                         WalkControl.instance.areFeetLocked = true;
                     } else
