@@ -40,6 +40,16 @@ public class PickupScript : MonoBehaviour {
             }
         }//mause If
 
+        if (item) {
+            float distFromItem = Vector3.Distance(item.transform.position, transform.position);
+        
+            if (distFromItem > 7.0f)
+            { // somehow wandered away, release it
+                Debug.Log("somehow wandered " +distFromItem+ " away, releasing " + item.gameObject.name);
+                item = null;
+            }
+        }
+
         if (!canHold && item)
         {
             item.transform.position = guide.position;

@@ -87,8 +87,10 @@ public class AetherEvent : MonoBehaviour {
     void OnTriggerEnter(Collider col) //Trigger collision fires off KeyTriggered method and logs what it hit
     {
         if (col.gameObject == keyItem && (CanTrigger == true))
+        {
             KeyTriggered();
-            Debug.Log("Collision Detected With keyItem" + keyItem);
+            // Debug.Log("Collision Detected With keyItem" + keyItem);
+        }
     }
 
     void KeyTriggered () //Method to trigger either of the 3 types of effects, or all of them.
