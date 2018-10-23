@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HideChildrenIfPlayerIsFar : MonoBehaviour {
-    Camera camCache;
+    static Camera camCache;
     bool childrenShowing = true;
 	// Use this for initialization
 	void Start () {
-        camCache = Camera.main;
+        if (camCache == null)
+        {
+            GameObject camGO = GameObject.Find("TransitionCam");
+            camCache = camGO.GetComponent<Camera>();
+        }
         childrenShowing = true;
 
         for (int i = 0; i < transform.childCount; i++)

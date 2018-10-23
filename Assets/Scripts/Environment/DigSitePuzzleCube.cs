@@ -12,11 +12,15 @@ public class DigSitePuzzleCube : MonoBehaviour {
     private DigSitePuzzle puzzle;
     private bool cubeActivated = false;
 
-    private Camera mainCamCached;
+    private static Camera mainCamCached;
     private Material matCached;
  
     void Start () {
-        mainCamCached = Camera.main;
+        if (mainCamCached == null)
+        {
+            GameObject camGO = GameObject.Find("TransitionCam");
+            mainCamCached = camGO.GetComponent<Camera>();
+        }
         matCached = gameObject.GetComponent<Renderer>().material;
         //Get reference to the DigSitePuzzle script component of parent puzzle game object
         parent = this.transform.parent.gameObject;

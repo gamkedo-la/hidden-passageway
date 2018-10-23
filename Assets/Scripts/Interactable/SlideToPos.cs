@@ -14,7 +14,7 @@ public class SlideToPos : AbstractActivateable {
     float startTime;
     Vector3 startPos;
     Quaternion startRot;
-    Quaternion camRotReset;
+    // Quaternion camRotReset;
     static Quaternion camRotWorldInitial;
     // private string mySaveName;
     bool isReversing = false;
@@ -60,7 +60,7 @@ public class SlideToPos : AbstractActivateable {
             playerGO = GameObject.FindWithTag(Tags.Player);
         }
         isStarted = false;
-        camRotReset = mainCam.transform.localRotation;
+        // camRotReset = mainCam.transform.localRotation;
 
         // storing separately, used for reverse option
         posA = transform.position;
