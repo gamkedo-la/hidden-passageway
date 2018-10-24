@@ -25,6 +25,11 @@ public class EstView : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (SceneWarp.fromScene == "MainHub")
+        {
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/StartGame", gameObject);
+        }
+
         if (SceneWarp.fromScene != null && SceneWarp.fromScene != "MainHub")
         {
             gameObject.SetActive(false);

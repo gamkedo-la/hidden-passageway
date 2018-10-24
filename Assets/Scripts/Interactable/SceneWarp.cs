@@ -11,19 +11,14 @@ public class SceneWarp : MonoBehaviour {
     public static string fromScene;
     public static string onMedium;
 
-	private void Awake()
-	{
-	}
 
 	public void triggerAction () {
         fromScene = SceneManager.GetActiveScene().name;
-
         if(mediumName != null && mediumName.Length > 1) {
             onMedium = mediumName;
         }
 
         if(SquashTransition.instance) {
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/StartGame", gameObject);
             SquashTransition.instance.startTransition(sceneName);
             SquashTransition.instance = null;
         } else {
