@@ -56,6 +56,8 @@ public class EstView : MonoBehaviour {
 
     void QuitEst()
     {
+        ViewControl.timeWhenIntroEnded = Time.timeSinceLevelLoad;
+
         foreach(GameObject offGO in turnOffWhenDone)
         {
             offGO.SetActive(false);

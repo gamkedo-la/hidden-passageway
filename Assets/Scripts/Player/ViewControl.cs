@@ -11,7 +11,7 @@ public class ViewControl : MonoBehaviour {
     [SerializeField]
     private float lookAngLimit = 45.0f;
     public float raycastMaxDistance = 4.0f;
-
+    public static float timeWhenIntroEnded = 0.0f;
 
     ReadableScrap readScript;
     int pageViewed = -1;
@@ -66,7 +66,7 @@ public class ViewControl : MonoBehaviour {
         {
             ignoreDuringInit = false;
         }
-        else if (Time.timeSinceLevelLoad < 0.25f)
+        else if (Time.timeSinceLevelLoad - timeWhenIntroEnded < 0.25f)
         {
             ignoreDuringInit = true;
         }
