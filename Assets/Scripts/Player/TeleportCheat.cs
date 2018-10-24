@@ -7,6 +7,11 @@ public class TeleportCheat : MonoBehaviour {
     public Transform[] teleList;
 
 	void Update () {
+        if (Input.GetKey(KeyCode.LeftShift) == false)
+        {
+            return;
+        }
+
         int whichDest = 0;
         if (Input.GetKeyDown(KeyCode.Alpha1) && teleList.Length>whichDest)
         {

@@ -21,6 +21,7 @@ public class EstView : MonoBehaviour {
 
     public GameObject[] turnOffWhenDone;
     public GameObject[] turnOnWhenDone;
+    public GameObject[] destroyWhenDone;
 
 	// Use this for initialization
 	void Start () {
@@ -65,8 +66,12 @@ public class EstView : MonoBehaviour {
         foreach (GameObject onGO in turnOnWhenDone)
         {
             onGO.SetActive(true);
-            Debug.Log("turning on " + onGO.name);
         }
+        foreach (GameObject destGO in destroyWhenDone)
+        {
+            Destroy(destGO);
+        }
+
         useCamera.transform.position = wasPos;
         useCamera.transform.rotation = wasRot;
         playerGO.SetActive(true);

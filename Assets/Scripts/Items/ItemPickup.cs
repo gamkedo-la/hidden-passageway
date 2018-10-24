@@ -7,9 +7,13 @@ public class ItemPickup : MonoBehaviour {
     [FMODUnity.EventRef]
     public string itemPickupSound;
     FMOD.Studio.EventInstance ItemPickupAudio;
+    Camera mainCam;
 
     void Start()
     {
+        GameObject camGO = GameObject.Find("TransitionCam");
+        mainCam = camGO.GetComponent<Camera>();
+
         if(!string.IsNullOrEmpty(itemPickupSound))
         {
             ItemPickupAudio = FMODUnity.RuntimeManager.CreateInstance(itemPickupSound);
@@ -27,7 +31,7 @@ public class ItemPickup : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2.5f))
+            if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, 2.5f))
             {
                 if (hit.collider.gameObject == gameObject)
                 {

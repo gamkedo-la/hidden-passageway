@@ -1302,6 +1302,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 9c7c7685491b31b4497c8b1b8f0b778d,
     type: 3}
   m_PrefabInternal: {fileID: 103252664}
+--- !u!1 &104310172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104310174}
+  - component: {fileID: 104310173}
+  m_Layer: 2
+  m_Name: IntroAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &104310173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104310172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/DecayingWorld/Ambient
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!4 &104310174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104310172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1424188203}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105451770
 GameObject:
   m_ObjectHideFlags: 0
@@ -15562,6 +15613,11 @@ Prefab:
       propertyPath: turnOnWhenDone.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: destroyWhenDone.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224455429093883568, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
         type: 2}
       propertyPath: m_LocalPosition.z
@@ -15904,6 +15960,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: destroyWhenDone.Array.data[0]
+      value: 
+      objectReference: {fileID: 104310172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -37503,6 +37564,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 1c5930614e9863149bebc12c9ab109ca,
     type: 3}
   m_PrefabInternal: {fileID: 1413872767}
+--- !u!1 &1424188202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753154783028860, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 884432453}
+--- !u!4 &1424188203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4858774141832526, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 884432453}
+--- !u!114 &1424188204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424188202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1425272413
 GameObject:
   m_ObjectHideFlags: 0

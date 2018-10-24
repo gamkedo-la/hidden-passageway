@@ -14791,23 +14791,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1225592014}
   m_Script: {fileID: 11500000, guid: b2bd2f6f47aa47c47a2f5461e7e43959, type: 3}
---- !u!1 &1225592016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1172376823558762, guid: e68c31d7edd714b8aaca10bdfe763061,
-    type: 2}
-  m_PrefabInternal: {fileID: 1225592014}
---- !u!114 &1225592017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1225592016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!1 &1251218788
 GameObject:
   m_ObjectHideFlags: 0
@@ -20367,6 +20350,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4419752861148608, guid: 65c7021cdb75f45f1981293a9f640c7b,
     type: 2}
   m_PrefabInternal: {fileID: 1841710675}
+--- !u!1 &1844199499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753154783028860, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 110389555}
+--- !u!114 &1844199500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844199499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &1844199504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844199499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/DecayingWorld/Wind
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1846309540
 Prefab:
   m_ObjectHideFlags: 0
