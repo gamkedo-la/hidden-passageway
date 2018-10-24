@@ -22,6 +22,8 @@ public class SpawnAnimateSet : MonoBehaviour
                 }
             }
         }
+        MeshCollider mCollForMain = refShip.GetComponentInChildren<MeshCollider>();
+        mCollForMain.enabled = true;
 	}
 	
 	// Update is called once per frame
