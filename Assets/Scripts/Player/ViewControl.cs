@@ -56,6 +56,11 @@ public class ViewControl : MonoBehaviour {
             return;
         }
 
+        if (WalkControl.instance.areFeetLocked)
+        {
+            return;
+        }
+
         bool ignoreDuringInit = false;
         if (SceneWarp.fromScene != null && SceneWarp.fromScene.Length > 0)
         {

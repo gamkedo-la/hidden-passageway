@@ -160,11 +160,12 @@ public class SlideToPos : AbstractActivateable {
         }
     }
 
-    void Update () {
+	void Update () {
         if(isStarted == false || isDone)
         {
             return;
         }
+
         float movePerc = (Time.time - startTime) / duration;
         if (movePerc > 1.0f)
         {
@@ -212,6 +213,13 @@ public class SlideToPos : AbstractActivateable {
                 if (callNext)
                 {
                     callNext.Activate();
+                }
+                else
+                {
+                    Vector3 eulerTrap = mainCam.transform.rotation.eulerAngles;
+                    Camera.main.transform.localRotation = Quaternion.identity *
+                        Quaternion.AngleAxis(eulerTrap.x,Vector3.right);
+                    mainCam.transform.localRotation = Quaternion.identity;
                 }
             }
             return;
