@@ -160,11 +160,13 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
     public void ResetCart()
     {
         // PlayerPrefs.DeleteAll();
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ExitGame", gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 	public void BackToHub(){
 		if(!isAnimating){
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ExitGame", gameObject);
             ShowOrHideBabies(false);
             Image selfImage = GetComponent<Image>();
             selfImage.enabled = false;

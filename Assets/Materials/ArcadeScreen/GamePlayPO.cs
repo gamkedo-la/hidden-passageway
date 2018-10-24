@@ -124,7 +124,7 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Music for Bates Estate");
         creditsLines.Add("Music for Sept");
         creditsLines.Add("Music for Kahn");
-        creditsLines.Add("Music for Ship");
+        creditsLines.Add("Music for Ships");
         creditsLines.Add("Music for Dig Site");
 
         creditsLines.Add(":Praneil Kamat:");
@@ -396,6 +396,10 @@ public class GamePlayPO : PixelScreenLib
         {
             scrollY += INTERACT_JUMP;
             pauseScroll = INTERACT_WAIT;
+            if (scrollY > screenHeight - 20)
+            {
+                scrollY = screenHeight - 20;
+            }
         }
     }
 

@@ -23,6 +23,7 @@ public class SceneWarp : MonoBehaviour {
         }
 
         if(SquashTransition.instance) {
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/StartGame", gameObject);
             SquashTransition.instance.startTransition(sceneName);
             SquashTransition.instance = null;
         } else {
