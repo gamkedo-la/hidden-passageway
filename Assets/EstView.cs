@@ -24,7 +24,7 @@ public class EstView : MonoBehaviour {
     public GameObject[] destroyWhenDone;
 
     public GameObject turnOffOnStartClick;
-    public GameObject musicSourceWaitingForClick;
+    public GameObject[] turnOnAfterWaitingForClick;
 
     public bool waitForClickToStart = false;
 
@@ -37,6 +37,10 @@ public class EstView : MonoBehaviour {
 
         if (SceneWarp.fromScene != null && SceneWarp.fromScene != "MainHub")
         {
+            foreach(GameObject eachGO in turnOnAfterWaitingForClick)
+            {
+                eachGO.SetActive(true);
+            }
             waitForClickToStart = false;
             gameObject.SetActive(false);
             return;
@@ -103,7 +107,10 @@ public class EstView : MonoBehaviour {
             if (Input.GetMouseButtonUp(0))
             {
                 durationStart = Time.timeSinceLevelLoad;
-                musicSourceWaitingForClick.SetActive(true);
+                foreach (GameObject eachGO in turnOnAfterWaitingForClick)
+                {
+                    eachGO.SetActive(true);
+                }
                 turnOffOnStartClick.SetActive(false);
                 waitForClickToStart = false;
             }
