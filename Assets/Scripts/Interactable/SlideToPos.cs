@@ -55,7 +55,9 @@ public class SlideToPos : AbstractActivateable {
 
     public void Start()
     {
-        mainCam = Camera.main;
+        GameObject camGO = GameObject.Find("TransitionCam");
+        mainCam = camGO.GetComponent<Camera>();
+
         if (playerGO == null) {
             playerGO = GameObject.FindWithTag(Tags.Player);
         }
