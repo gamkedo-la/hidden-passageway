@@ -96,6 +96,7 @@ public class PickupScript : MonoBehaviour {
             // Debug.Log("No item to pick up");
             return;
         }
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Aether/Pickup", gameObject);
 
         // Parent an item to the guide
         item.transform.SetParent(guide);
@@ -132,7 +133,7 @@ public class PickupScript : MonoBehaviour {
         {
             itemCollider.enabled = true;
         }
-
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Aether/Pickup", gameObject);
         // Enable gravity and rotation
         Rigidbody itemRb = item.GetComponent<Rigidbody>();
         itemRb.useGravity = true;

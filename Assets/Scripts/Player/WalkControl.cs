@@ -111,6 +111,7 @@ public class WalkControl : MonoBehaviour {
 
         if (onGround && Input.GetButtonDown("Jump"))
         {
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/JumpUp", gameObject);
             onGround = false;
             rb.velocity += Vector3.up * jumpForce;
         }
@@ -150,8 +151,12 @@ public class WalkControl : MonoBehaviour {
         {
 			if (rhInfo.collider != null)
 			{
+                if (onGround == false && rb.velocity.y < 0.0f)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/JumpLand", gameObject);
+                }
+
                 // Debug.Log("standing on " + rhInfo.collider.name);
-				onGround = true;
 				lastKnownSafelyOnGround = transform.position;
 				forward = Vector3.Cross(transform.right, rhInfo.normal).normalized;
 				right = Vector3.Cross(-transform.forward, rhInfo.normal).normalized;
@@ -163,6 +168,7 @@ public class WalkControl : MonoBehaviour {
 					transform.position = new Vector3(rhInfo.point.x, rhInfo.point.y + 1.045f, rhInfo.point.z);
 					rb.velocity = Vector3.zero;
 				}
+                onGround = true;
 			}
         }
         else

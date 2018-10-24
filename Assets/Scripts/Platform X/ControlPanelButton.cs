@@ -9,6 +9,7 @@ public class ControlPanelButton : MonoBehaviour {
 
 	public void ClickButton() {
 		if (controlPanel.enabled) {
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlatformX/Keypad", gameObject);
 			controlPanel.ClickButton(buttonValue);
 		}
 	}

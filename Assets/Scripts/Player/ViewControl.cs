@@ -43,6 +43,7 @@ public class ViewControl : MonoBehaviour {
             } else if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
                 pageViewed++;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ScrapLook", gameObject);
                 if (readScript.pageToRead == null || pageViewed < readScript.pageToRead.Length)
                 {
                     paperView.sprite = readScript.pageToRead[pageViewed];
@@ -120,6 +121,7 @@ public class ViewControl : MonoBehaviour {
                     readScript = mtol.GetComponent<ReadableScrap>();
                     if(readScript)
                     {
+                        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ScrapLook", gameObject);
                         pageViewed=0;
                         paperView.sprite = readScript.pageToRead[pageViewed];
                         paperView.preserveAspect = true;
@@ -127,6 +129,7 @@ public class ViewControl : MonoBehaviour {
                         WalkControl.instance.areFeetLocked = true;
                     } else
                     {
+                        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/OtherSwitch", gameObject);
                         mtol.SendMessage("triggerAction", SendMessageOptions.DontRequireReceiver);
                     }
                 } else {
