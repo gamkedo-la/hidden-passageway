@@ -32,15 +32,11 @@ public class AetherGameManager : MonoBehaviour {
     public Material skyboxmat1;
     public Material skyboxmat2;
 
-
-
     private void Awake()
     {
         playerGO = GameObject.FindGameObjectWithTag(Tags.Player);
         GameObject PsGO = GameObject.Find("PlayerSpawn");
         playerSpawn = PsGO.transform;
-
-
     }
 
     void Start ()
@@ -69,10 +65,7 @@ public class AetherGameManager : MonoBehaviour {
         gameCompletionCounter = treasureCounter * 3 - deathCount;
     }
 
-
-
-
-    void OnTriggerEnter(Collider col)
+	void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == Tags.Player)
         {
@@ -102,7 +95,7 @@ public class AetherGameManager : MonoBehaviour {
             return;
         }
     }
-    void MakeDay()
+    public void MakeDay()
     {
         Sun.intensity = StartingLightIntensity;
         RenderSettings.skybox = skyboxmat1;
@@ -112,7 +105,7 @@ public class AetherGameManager : MonoBehaviour {
         Debug.Log("Made it Day");
 
     }
-    void MakeNight()
+    public void MakeNight()
     {
         Sun.intensity = UndergroundLightIntensity;
         RenderSettings.skybox = skyboxmat2;

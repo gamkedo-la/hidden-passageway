@@ -7,7 +7,7 @@ public class EstView : MonoBehaviour {
     public Transform[] viewWaypoints;
     public float duration = 5.0f;
     public Text progressUpdate;
-    private int wpNow = 0;
+    public int wpNow = 0;
     private float durationStart = 0.0f;
     private Camera useCamera;
     private Transform wasCamParent;
