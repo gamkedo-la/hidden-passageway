@@ -99,7 +99,7 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Aether, Decaying World, Island,");
         creditsLines.Add("...Hub, Bates Estate, Camp,");
         creditsLines.Add("...Platform X, and Graveyard");
-        creditsLines.Add("Also music for Camp");
+        creditsLines.Add("Music for Camp, Platform X");
 
         creditsLines.Add(":Christer McFunkypants Kaitila:");
         creditsLines.Add("Island Zone");
@@ -122,10 +122,14 @@ public class GamePlayPO : PixelScreenLib
 
         creditsLines.Add(":Coy Compositions:");
         creditsLines.Add("Music for Bates Estate");
-        creditsLines.Add("Music for Caves");
         creditsLines.Add("Music for Sept");
+        creditsLines.Add("Music for Kahn");
+        creditsLines.Add("Music for Ship");
         creditsLines.Add("Music for Dig Site");
-        creditsLines.Add("Music for Graveyard");
+
+        creditsLines.Add(":Praneil Kamat:");
+        creditsLines.Add("Music for Hub");
+        creditsLines.Add("Music for Caves");
 
         creditsLines.Add(":Michael \"Misha\" Fewkes:");
         creditsLines.Add("Wordwall audio");
@@ -137,6 +141,7 @@ public class GamePlayPO : PixelScreenLib
 
         creditsLines.Add(":Joseph Spedale:");
         creditsLines.Add("Music for Aether");
+        creditsLines.Add("Music for Apartment");
         creditsLines.Add("Music for WordWall");
 
         creditsLines.Add(":Klaim (A. Joel Lamotte):");
@@ -157,14 +162,13 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Decaying World chair model");
         creditsLines.Add("Decaying World table model");
         creditsLines.Add("Platform X chest models");
-        creditsLines.Add("Song for graveyard");
+        creditsLines.Add("Music for Graveyard");
 
         creditsLines.Add(":Adam A. Lohnes:");
         creditsLines.Add("Schoolbus Model");
 
         creditsLines.Add(":Asix Jin:");
         creditsLines.Add("Music for Puzzle Tower");
-        creditsLines.Add("Music for Kahn");
 
         creditsLines.Add(":Gerard Belenguer Prous:");
         creditsLines.Add("Player controller improvements");
@@ -383,12 +387,12 @@ public class GamePlayPO : PixelScreenLib
 
         // arrow keys set position frame 1 and then move after
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             scrollY -= INTERACT_JUMP;
             pauseScroll = INTERACT_WAIT;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             scrollY += INTERACT_JUMP;
             pauseScroll = INTERACT_WAIT;
