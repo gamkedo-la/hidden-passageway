@@ -72,6 +72,7 @@ public class DigSitePuzzleCube : MonoBehaviour {
     public void InteractCubeOnClick() {
 
         if (Input.GetButtonDown("Fire1")) {
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/OtherSwitch", gameObject);
             if (cubeActivated) {
 
                 cubeActivated = false;
@@ -91,13 +92,14 @@ public class DigSitePuzzleCube : MonoBehaviour {
 
                 cubeActivated = false;
                 mat.SetColor("_EmissionColor", Color.green);
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/OtherSwitch", gameObject);
 
             } else if (puzzle.IsCubeUnbreakable(puzzleIndex)) { //end of if
-
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ScrapLook", gameObject);
                 puzzle.ResetPuzzle();
 
             } else { //end of else if
-
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/DigSite/Dig", gameObject);
                 Destroy(this.gameObject);
                 puzzle.SetSolutionCheckNeeded();
 
