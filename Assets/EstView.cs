@@ -23,6 +23,11 @@ public class EstView : MonoBehaviour {
     public GameObject[] turnOnWhenDone;
     public GameObject[] destroyWhenDone;
 
+    public GameObject turnOffOnStartClick;
+    public GameObject musicSourceWaitingForClick;
+
+    public bool waitForClickToStart = false;
+
 	// Use this for initialization
 	void Start () {
         if (SceneWarp.fromScene == "MainHub")
@@ -32,6 +37,7 @@ public class EstView : MonoBehaviour {
 
         if (SceneWarp.fromScene != null && SceneWarp.fromScene != "MainHub")
         {
+            waitForClickToStart = false;
             gameObject.SetActive(false);
             return;
         }
@@ -92,6 +98,21 @@ public class EstView : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (waitForClickToStart)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                durationStart = Time.timeSinceLevelLoad;
+                musicSourceWaitingForClick.SetActive(true);
+                turnOffOnStartClick.SetActive(false);
+                waitForClickToStart = false;
+            }
+            else
+            {
+                return;
+            }
+        }
+
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1") ||
             Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Tab))
         {
