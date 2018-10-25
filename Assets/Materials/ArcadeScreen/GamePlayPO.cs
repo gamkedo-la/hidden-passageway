@@ -132,7 +132,8 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add("Music for Caves");
 
         creditsLines.Add(":Michael \"Misha\" Fewkes:");
-        creditsLines.Add("Wordwall audio");
+        creditsLines.Add("Wordwall sounds");
+        creditsLines.Add("Music for Wordwall");
         creditsLines.Add("Camp audio fixes");
         creditsLines.Add("Aether audio optimizations");
 
@@ -142,7 +143,6 @@ public class GamePlayPO : PixelScreenLib
         creditsLines.Add(":Joseph Spedale:");
         creditsLines.Add("Music for Aether");
         creditsLines.Add("Music for Apartment");
-        creditsLines.Add("Music for WordWall");
 
         creditsLines.Add(":Klaim (A. Joel Lamotte):");
         creditsLines.Add("Cosy Caves Zone");
