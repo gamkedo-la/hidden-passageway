@@ -121,10 +121,15 @@ public class EstView : MonoBehaviour {
         }
 
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1") ||
-            Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Tab))
+            Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Tab)
+            || Input.GetKeyDown(KeyCode.LeftShift))
         {
-            QuitEst();
-            return;
+            // avoids accidental skip click
+            if (wpNow > 0 || Time.timeSinceLevelLoad - durationStart > 0.3f)
+            {
+                QuitEst();
+                return;
+            }
         }
 
         float lerpPt = (Time.timeSinceLevelLoad-durationStart) / duration;

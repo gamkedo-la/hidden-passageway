@@ -1315,6 +1315,11 @@ Prefab:
       propertyPath: expandInstead
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23706006647996652, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
@@ -1668,7 +1673,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 04de3cda51f5145eea55d5b35ad8b308, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.064
+      value: -0.022
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04de3cda51f5145eea55d5b35ad8b308, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1676,7 +1681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04de3cda51f5145eea55d5b35ad8b308, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.565
+      value: -0.397
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04de3cda51f5145eea55d5b35ad8b308, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1978,7 +1983,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 65335
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -2276,7 +2281,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 3eee3870851a54261a13620bf4df1363, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04639244
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3eee3870851a54261a13620bf4df1363, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2284,7 +2289,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3eee3870851a54261a13620bf4df1363, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2022152
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3eee3870851a54261a13620bf4df1363, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2454,7 +2459,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 9d9e09ff9a9b76c4ab306b7080c9904a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d9e09ff9a9b76c4ab306b7080c9904a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2462,7 +2467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d9e09ff9a9b76c4ab306b7080c9904a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.37
+      value: 0.261
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d9e09ff9a9b76c4ab306b7080c9904a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2838,6 +2843,8 @@ MonoBehaviour:
   sceneName: Aether
   mediumName: cartridge
   returnLocation: {fileID: 1401935131}
+  rotX: 0
+  rotY: -90
 --- !u!114 &218496841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2859,7 +2866,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: dd2a2ecd8b7b64a89a6a12c6d20ba3d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: dd2a2ecd8b7b64a89a6a12c6d20ba3d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2867,7 +2874,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: dd2a2ecd8b7b64a89a6a12c6d20ba3d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.203
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: dd2a2ecd8b7b64a89a6a12c6d20ba3d1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4159,7 +4166,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 323caaa65058042668f96a41f6e4bb4b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.387
+      value: 0.462
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 323caaa65058042668f96a41f6e4bb4b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5354,7 +5361,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 0.17, z: 0.6}
-  m_Center: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &429867666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5369,6 +5376,8 @@ MonoBehaviour:
   sceneName: Bates Estate
   mediumName: cartridge
   returnLocation: {fileID: 1941047219}
+  rotX: 0
+  rotY: -90
 --- !u!114 &429867667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6470,7 +6479,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 5d596e120665b4d7da7a224c30b75783, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5d596e120665b4d7da7a224c30b75783, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6478,7 +6487,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5d596e120665b4d7da7a224c30b75783, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.301
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5d596e120665b4d7da7a224c30b75783, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6861,7 +6870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ac5d2d00512734a92ad3941cc32f63ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.202
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ac5d2d00512734a92ad3941cc32f63ce, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6966,6 +6975,8 @@ MonoBehaviour:
   sceneName: Ship
   mediumName: USB drive
   returnLocation: {fileID: 854459929}
+  rotX: 180
+  rotY: -90
 --- !u!114 &583090600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9540,7 +9551,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 03a4d4799f6f8a64db1cddd224cc68d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.117
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 03a4d4799f6f8a64db1cddd224cc68d7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9548,7 +9559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 03a4d4799f6f8a64db1cddd224cc68d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.372
+      value: 0.285
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 03a4d4799f6f8a64db1cddd224cc68d7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11862,8 +11873,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.13, z: 0.55}
-  m_Center: {x: 0.1, y: 0.1, z: 0.1}
+  m_Size: {x: 0.49, y: 0.13, z: 0.55}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &959609192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11878,6 +11889,8 @@ MonoBehaviour:
   sceneName: Islands
   mediumName: card
   returnLocation: {fileID: 841222859}
+  rotX: 0
+  rotY: -90
 --- !u!114 &959609193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12692,7 +12705,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031512030}
   m_LocalRotation: {x: -0, y: -0.98396283, z: -0, w: -0.17837375}
-  m_LocalPosition: {x: 40.587444, y: 4.25, z: -45.332485}
+  m_LocalPosition: {x: 40.537, y: 4.25, z: -45.197}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 874020595}
@@ -12711,7 +12724,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.83, y: 0.14, z: 0.8}
-  m_Center: {x: 0, y: 0, z: -0.18}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1031512033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12726,6 +12739,8 @@ MonoBehaviour:
   sceneName: Apartment
   mediumName: CD-R
   returnLocation: {fileID: 874020595}
+  rotX: 180
+  rotY: -90
 --- !u!114 &1031512034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12789,7 +12804,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: fa617f6a5617944bb975a93fc2b5841c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.132
+      value: -0.009
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa617f6a5617944bb975a93fc2b5841c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12797,7 +12812,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa617f6a5617944bb975a93fc2b5841c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.391
+      value: 0.493
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa617f6a5617944bb975a93fc2b5841c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13289,7 +13304,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.2, z: 0.6}
-  m_Center: {x: -0.06, y: 0.1, z: 0}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &1083797638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13304,6 +13319,8 @@ MonoBehaviour:
   sceneName: Light House
   mediumName: cartridge
   returnLocation: {fileID: 424447219}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1083797639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14132,7 +14149,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 0.05, z: 1}
-  m_Center: {x: 0.12, y: -0.04, z: -0.1}
+  m_Center: {x: 0, y: -0.04, z: 0}
 --- !u!114 &1134743168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14147,6 +14164,8 @@ MonoBehaviour:
   sceneName: Platform X
   mediumName: disk
   returnLocation: {fileID: 1472890477}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1134743169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14524,6 +14543,8 @@ MonoBehaviour:
   sceneName: Puzzle_Tower
   mediumName: disk
   returnLocation: {fileID: 1593713177}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1196492202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15097,7 +15118,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1217074831}
   m_LocalRotation: {x: -0, y: -0.788883, z: -0, w: 0.61454356}
-  m_LocalPosition: {x: -6.372, y: -0.7, z: -60.606}
+  m_LocalPosition: {x: -6.3, y: -0.7, z: -60.588}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1482803966}
@@ -15116,7 +15137,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.06, z: 0.45}
-  m_Center: {x: 0, y: 0, z: -0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1217074834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15131,6 +15152,8 @@ MonoBehaviour:
   sceneName: Sept
   mediumName: cartridge
   returnLocation: {fileID: 1482803966}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1217074835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15741,7 +15764,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.17, y: 0.022, z: 0.24}
-  m_Center: {x: -0, y: 0, z: -0.12}
+  m_Center: {x: -0, y: 0, z: 0}
 --- !u!114 &1251218791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15756,6 +15779,8 @@ MonoBehaviour:
   sceneName: Camp
   mediumName: memory card
   returnLocation: {fileID: 692044667}
+  rotX: -90
+  rotY: -90
 --- !u!114 &1251218792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16411,6 +16436,8 @@ MonoBehaviour:
   sceneName: Kahn
   mediumName: disk
   returnLocation: {fileID: 1115515462}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1336160706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16423,6 +16450,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: Start Kahn
+--- !u!1 &1336496960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336496961}
+  - component: {fileID: 1336496963}
+  - component: {fileID: 1336496962}
+  m_Layer: 0
+  m_Name: MediaCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336496961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336496960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1752543836}
+  m_Father: {fileID: 881366812}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1336496962
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336496960}
+  m_Enabled: 1
+--- !u!20 &1336496963
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336496960}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &1341269210
 GameObject:
   m_ObjectHideFlags: 0
@@ -16467,7 +16572,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.2, z: 0.6}
-  m_Center: {x: -0.01, y: 0.02, z: 0.17}
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!114 &1341269213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16482,6 +16587,8 @@ MonoBehaviour:
   sceneName: Dig_Site
   mediumName: cartridge
   returnLocation: {fileID: 1484149798}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1341269214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17838,7 +17945,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f2a1a07fdb4904ecc8d8887c02e03e1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.361
+      value: 0.177
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f2a1a07fdb4904ecc8d8887c02e03e1e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17993,7 +18100,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482803965}
   m_LocalRotation: {x: -0.6819571, y: 0.18690772, z: 0.18690772, w: 0.6819571}
-  m_LocalPosition: {x: -0.74, y: -0.09381294, z: 6.87}
+  m_LocalPosition: {x: -0.84, y: -0.09381294, z: 6.9}
   m_LocalScale: {x: 0.020618208, y: 0.020618208, z: 0.020618198}
   m_Children: []
   m_Father: {fileID: 1217074832}
@@ -19752,7 +19859,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1687031382}
   m_LocalRotation: {x: -0, y: -0.32271993, z: -0, w: 0.9464945}
-  m_LocalPosition: {x: -8.087, y: -0.688, z: -66.776}
+  m_LocalPosition: {x: -8.025, y: -0.688, z: -66.856}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1809040830}
@@ -19771,7 +19878,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.1, z: 0.4}
-  m_Center: {x: -0, y: 0.01, z: -0.2}
+  m_Center: {x: -0, y: 0.01, z: 0}
 --- !u!114 &1687031385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19786,6 +19893,8 @@ MonoBehaviour:
   sceneName: Cosy_Caves
   mediumName: cartridge
   returnLocation: {fileID: 1809040830}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1687031386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20760,6 +20869,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4419752861148608, guid: 65c7021cdb75f45f1981293a9f640c7b,
     type: 2}
   m_PrefabInternal: {fileID: 1749808735}
+--- !u!1 &1752543835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752543836}
+  - component: {fileID: 1752543837}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752543836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752543835}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.25, y: 0.74, z: -0.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1336496961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1752543837
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752543835}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1758557964
 Prefab:
   m_ObjectHideFlags: 0
@@ -21204,7 +21379,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809040829}
   m_LocalRotation: {x: -0.6819571, y: 0.18690772, z: 0.18690772, w: 0.6819571}
-  m_LocalPosition: {x: -0.51, y: 0.01, z: 3.93}
+  m_LocalPosition: {x: -1, y: 0.01, z: 3.78}
   m_LocalScale: {x: 0.020618208, y: 0.020618208, z: 0.020618198}
   m_Children: []
   m_Father: {fileID: 1687031383}
@@ -22047,7 +22222,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.85, y: 0.31, z: 0.6}
-  m_Center: {x: 0, y: 0, z: -0.29}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1859272984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22062,6 +22237,8 @@ MonoBehaviour:
   sceneName: Graveyard
   mediumName: cartridge
   returnLocation: {fileID: 1462487636}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1859272985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22083,7 +22260,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22091,7 +22268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.118
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a41df69d6ee81497ba9c5c09ae39887b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -22829,7 +23006,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: a2a346310e6444acc8ece9143fec843b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.051934257
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a2a346310e6444acc8ece9143fec843b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22837,7 +23014,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a2a346310e6444acc8ece9143fec843b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.36531088
+      value: 0.287
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a2a346310e6444acc8ece9143fec843b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -23376,7 +23553,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.89, y: 0.2, z: 0.7}
-  m_Center: {x: 0, y: 0, z: -0.13}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1979898227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23391,6 +23568,8 @@ MonoBehaviour:
   sceneName: Decaying World
   mediumName: cartridge
   returnLocation: {fileID: 483904044}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1979898228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24209,7 +24388,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.51, y: 0.13, z: 0.42988968}
-  m_Center: {x: 0.008416891, y: 0.144773, z: 0.19332027}
+  m_Center: {x: 0, y: 0.144773, z: 0}
 --- !u!114 &2048165643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24224,6 +24403,8 @@ MonoBehaviour:
   sceneName: Wordwall
   mediumName: tape
   returnLocation: {fileID: 396982353}
+  rotX: 0
+  rotY: -90
 --- !u!114 &2048165644
 MonoBehaviour:
   m_ObjectHideFlags: 0

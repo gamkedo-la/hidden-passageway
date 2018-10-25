@@ -11,11 +11,15 @@ public class SquashTransition : MonoBehaviour {
     private Camera transitionCam;
     public bool expandInstead = false;
     public float speedScale = 1.0f;
+    private Material squashMat;
+    private float startYSquish;
 
 	// Use this for initialization
 	void Start () {
         instance = this;
         transitionCam = transform.parent.GetComponentInChildren<Camera>();
+        squashMat = gameObject.GetComponent<Renderer>().material;
+        startYSquish = transform.localScale.y;
 	}
 
     public void startTransition(string forScene) {
@@ -84,11 +88,15 @@ public class SquashTransition : MonoBehaviour {
 
             if (expandInstead)
             {
-                moreSquished.x *= 1.4f;
-                moreSquished.y *= 1.4f;
-                transform.Rotate(Vector3.forward, 10.0f);
+                Color changedAlpha = squashMat.color;
+                float targetY = 4.0f;
+                changedAlpha.a = 1.0f-((moreSquished.y-startYSquish) / (targetY-startYSquish));
+                squashMat.color = changedAlpha;
+                moreSquished.x *= 1.009f; //// was 1.4f
+                moreSquished.y *= 1.009f;
+                transform.Rotate(Vector3.forward, 0.4f);
 
-                if (moreSquished.y > 500.0f)
+                if (moreSquished.y > targetY)
                 {
                     SceneManager.LoadScene(toScene);
                 }
