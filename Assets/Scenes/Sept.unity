@@ -2000,7 +2000,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &405022203
@@ -6466,6 +6469,8 @@ MonoBehaviour:
   sceneName: Camp
   mediumName: 
   returnLocation: {fileID: 1115515462}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1336160706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7318,7 +7323,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1488701654 stripped
@@ -8458,6 +8467,8 @@ MonoBehaviour:
   sceneName: Islands
   mediumName: 
   returnLocation: {fileID: 1429742091}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1691655347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9700,9 +9711,49 @@ Prefab:
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 303a97f4baeed430c8563d30d25b20b9, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1967966843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753154783028860, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1967966842}
+--- !u!114 &1967966844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967966843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &1967966845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967966843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sept/Music
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1981211785
 GameObject:
   m_ObjectHideFlags: 0
@@ -10035,6 +10086,8 @@ MonoBehaviour:
   sceneName: Wordwall
   mediumName: 
   returnLocation: {fileID: 396982353}
+  rotX: 0
+  rotY: -90
 --- !u!114 &2048165644
 MonoBehaviour:
   m_ObjectHideFlags: 0

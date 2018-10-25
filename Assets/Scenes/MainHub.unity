@@ -1320,7 +1320,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &115318332
@@ -15624,6 +15625,8 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
     - {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1225592015 stripped
@@ -16459,7 +16462,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1336496961}
   - component: {fileID: 1336496963}
-  - component: {fileID: 1336496962}
   m_Layer: 0
   m_Name: MediaCam
   m_TagString: Untagged
@@ -16481,13 +16483,6 @@ Transform:
   m_Father: {fileID: 881366812}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1336496962
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336496960}
-  m_Enabled: 1
 --- !u!20 &1336496963
 Camera:
   m_ObjectHideFlags: 0

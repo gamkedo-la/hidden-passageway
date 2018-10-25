@@ -3206,6 +3206,8 @@ MonoBehaviour:
   sceneName: Camp
   mediumName: 
   returnLocation: {fileID: 1115515462}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1336160706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3228,18 +3230,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4863188396238202, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 1488701653}
---- !u!114 &1343248047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343248045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!114 &1343248048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3418,7 +3408,8 @@ Prefab:
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 303a97f4baeed430c8563d30d25b20b9, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1444036362
@@ -3890,6 +3881,8 @@ Prefab:
     - {fileID: 114384749811757698, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
     - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
     - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    - {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1488701654 stripped
@@ -4745,6 +4738,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4858774141832526, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
     type: 2}
   m_PrefabInternal: {fileID: 1416234716}
+--- !u!114 &1846351955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846351953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &1846351956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846351953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Graveyard/Music
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1846351958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5150,6 +5177,8 @@ MonoBehaviour:
   sceneName: Decaying World
   mediumName: 
   returnLocation: {fileID: 483904044}
+  rotX: 0
+  rotY: -90
 --- !u!114 &1979898228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5383,6 +5412,8 @@ MonoBehaviour:
   sceneName: Wordwall
   mediumName: 
   returnLocation: {fileID: 396982353}
+  rotX: 0
+  rotY: -90
 --- !u!114 &2048165644
 MonoBehaviour:
   m_ObjectHideFlags: 0

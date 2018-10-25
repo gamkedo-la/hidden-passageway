@@ -25,11 +25,13 @@ public class EstView : MonoBehaviour {
 
     public GameObject turnOffOnStartClick;
     public GameObject[] turnOnAfterWaitingForClick;
+    private AetherNightIntroManage nightIntroManager;
 
     public bool waitForClickToStart = false;
 
 	// Use this for initialization
 	void Start () {
+        nightIntroManager = GetComponent<AetherNightIntroManage>();
         if (SceneWarp.fromScene == "MainHub")
         {
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/StartGame", gameObject);
@@ -73,6 +75,11 @@ public class EstView : MonoBehaviour {
     void QuitEst()
     {
         ViewControl.timeWhenIntroEnded = Time.timeSinceLevelLoad;
+
+        if (nightIntroManager)
+        {
+            nightIntroManager.ReturnToDay();
+        }
 
         foreach(GameObject offGO in turnOffWhenDone)
         {

@@ -10,6 +10,14 @@ public class AetherNightIntroManage : MonoBehaviour {
 	void Start () {
         EV = GetComponent<EstView>();	
 	}
+
+    public void ReturnToDay()
+    {
+        if (AGM.Night)
+        {
+            AGM.MakeDay();
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
