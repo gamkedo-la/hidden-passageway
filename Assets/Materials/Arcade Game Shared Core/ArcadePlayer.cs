@@ -139,7 +139,7 @@ public class ArcadePlayer : MonoBehaviour {
     void FixedUpdate()
     {
         float cameraK = 0.7f;
-        float targetTilt;
+        // float targetTilt;
         float tiltK = 0.9f;
         if (playingNow != null)
         {
@@ -159,7 +159,7 @@ public class ArcadePlayer : MonoBehaviour {
         {
             mainCam.fieldOfView *= cameraK;
             mainCam.fieldOfView += baseFOV * (1.0f - cameraK);
-            targetTilt = 346.0f;
+            // targetTilt = 346.0f;
         }
     }
 	
@@ -177,6 +177,11 @@ public class ArcadePlayer : MonoBehaviour {
 				// playingNow.gameScreen.isPlaying = false; // nah, leave it running but cease input!
 
 				playingNow.playerHere = null; // freeing up player assignment AFTER the shuffle
+
+                Vector3 eulerTrap = mainCam.transform.rotation.eulerAngles;
+                Camera.main.transform.localRotation = Quaternion.identity *
+                    Quaternion.AngleAxis(eulerTrap.x, Vector3.right);
+                mainCam.transform.localRotation = Quaternion.identity;
 
 				playingNow = null;
 				tokenBillsChange(0,0);
