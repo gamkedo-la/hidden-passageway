@@ -3371,23 +3371,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b94198b7ff079e41af98dcd9f5cfdc8, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &153511949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1753154783028860, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
-    type: 2}
-  m_PrefabInternal: {fileID: 441975976}
---- !u!114 &153511950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 153511949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!4 &156201222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4215328507322584, guid: c453335718458b54db9ddb1fdc663a79,
@@ -37773,13 +37756,7 @@ Prefab:
       propertyPath: speedScale
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
-        type: 2}
-      propertyPath: songEvtName
-      value: event:/Aether/Music
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &443688170
@@ -52580,12 +52557,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 0b87ed2720ad58e49a60d3cb670e5f80,
     type: 3}
   m_PrefabInternal: {fileID: 514546397}
---- !u!114 &897448352 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
-    type: 2}
-  m_PrefabInternal: {fileID: 441975976}
-  m_Script: {fileID: 11500000, guid: 9614afb02242c4555ba023864c9f2912, type: 3}
 --- !u!1 &900279534 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1020238273810248, guid: 8dbca34b0daeb6c4bba1c0cdfff273f6,
@@ -112564,7 +112535,7 @@ Prefab:
     - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -112745,7 +112716,6 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 81137604416117764, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
     - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
-    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1831343280 stripped
@@ -123725,11 +123695,6 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
-        type: 2}
-      propertyPath: songToggleForClick
-      value: 
-      objectReference: {fileID: 897448352}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0

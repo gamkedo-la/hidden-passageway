@@ -16236,7 +16236,7 @@ Prefab:
     - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224668681280000612, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -16410,8 +16410,7 @@ Prefab:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1488701654 stripped
@@ -19954,11 +19953,6 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -386.37402
       objectReference: {fileID: 0}
-    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
-        type: 2}
-      propertyPath: songToggleForClick
-      value: 
-      objectReference: {fileID: 1877718455}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -20026,38 +20020,9 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 3c29a07b35f7f42ca9a3e5dc0af34a68,
         type: 2}
-    - target: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
-        type: 2}
-      propertyPath: songEvtName
-      value: event:/Lighthouse/Music
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1877718453 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1753154783028860, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1877718452}
---- !u!114 &1877718454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1877718453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
---- !u!114 &1877718455 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1877718452}
-  m_Script: {fileID: 11500000, guid: 9614afb02242c4555ba023864c9f2912, type: 3}
 --- !u!1 &1878718605
 GameObject:
   m_ObjectHideFlags: 0

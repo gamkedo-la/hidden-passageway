@@ -43,9 +43,9 @@ public class SceneWarp : MonoBehaviour {
 
     IEnumerator spinToCam()
     {
+        Vector3 lookFocus = Camera.main.transform.position + Camera.main.transform.forward * 0.58f;
         while (true)
         {
-            Vector3 lookFocus = Camera.main.transform.position + Camera.main.transform.forward * 0.58f;
             float referenceFramerate = 30.0f;
             float fadeFactor = 0.05f;
             float blend = 1.0f - Mathf.Pow(1.0f - fadeFactor, Time.deltaTime * referenceFramerate);

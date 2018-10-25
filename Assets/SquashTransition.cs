@@ -14,34 +14,16 @@ public class SquashTransition : MonoBehaviour {
     private Material squashMat;
     private float startYSquish;
 
-    [FMODUnity.EventRef]
-    public string songEvtName;
-    private FMOD.Studio.EventInstance songEvt;
-
-    private bool songPlaying = false;
-
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         instance = this;
         transitionCam = transform.parent.GetComponentInChildren<Camera>();
         squashMat = gameObject.GetComponent<Renderer>().material;
         startYSquish = transform.localScale.y;
-        songEvt = FMODUnity.RuntimeManager.CreateInstance(songEvtName);
-
-        if (SceneManager.GetActiveScene().name != "MainHub")
-        {
-            songEvt.start();
-            songPlaying = true;
-            songEvt.setVolume(1.0f);
-        }
 	}
 
     public void startTransition(string forScene) {
         if(isSquashing == false) {
-            WalkControl.instance.areFeetLocked = true;
-            Rigidbody playerRB = WalkControl.instance.GetComponent<Rigidbody>();
-            playerRB.isKinematic = true;
-
             transitionCam.targetTexture = renderTexture;
             GameObject menuGO = GameObject.Find("MenuHub");
             menuGO.SetActive(false);
@@ -73,23 +55,6 @@ public class SquashTransition : MonoBehaviour {
             }
         }
     }
-
-    public void LateSongStartFromClick()
-    {
-        if(songPlaying == false)
-        {
-            songEvt.start();
-            songPlaying = true;
-            songEvt.setVolume(1.0f);
-        }
-    }
-
-    public void terminateIntroSound()
-    {
-        songPlaying = false;
-        songEvt.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        songEvt.release();
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -102,15 +67,11 @@ public class SquashTransition : MonoBehaviour {
                 float fadeFactor = 0.88f * speedScale;
                 float blend = 1.0f - Mathf.Pow(1.0f - fadeFactor, Time.deltaTime * referenceFramerate);
                 moreSquished.y *= blend;
-                float squishTarget = 0.01f;
-                //songEvt.setVolume((moreSquished.y - squishTarget) / (startYSquish - squishTarget));
 
-                if (moreSquished.y < squishTarget)
+                if (moreSquished.y < 0.01f)
                 {
                     moreSquished.y = 0.005f;
                     transform.localScale = moreSquished;
-                    songEvt.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    songEvt.release();
                     SceneManager.LoadScene(toScene);
                 }
                 else
@@ -133,13 +94,10 @@ public class SquashTransition : MonoBehaviour {
                 squashMat.color = changedAlpha;
                 moreSquished.x *= 1.009f; //// was 1.4f
                 moreSquished.y *= 1.009f;
-                songEvt.setVolume(changedAlpha.a);
                 transform.Rotate(Vector3.forward, 0.4f);
 
                 if (moreSquished.y > targetY)
                 {
-                    songEvt.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    songEvt.release();
                     SceneManager.LoadScene(toScene);
                 }
             }

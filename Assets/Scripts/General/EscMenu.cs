@@ -18,8 +18,6 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 	Vector2 closeMin;
 	Vector2 closeMax;
 
-    private GameObject estGO;
-
 	Vector2 startMin, startMax, endMin,endMax;
 	// Use this for initialization
 	void Awake (){
@@ -30,7 +28,6 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 		Set(closeMin, closeMax);
 		isOpen = false;
         ShowOrHideBabies(false);
-        estGO = GameObject.Find("EstViewManager");
 	}
 
     void ShowOrHideBabies(bool showThem)
@@ -162,12 +159,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
     public void ResetCart()
     {
-        SquashTransition stScript = estGO.GetComponent<EstView>().songToggleForClick;
-        if (stScript)
-        {
-            stScript.terminateIntroSound();
-        }
-
+        // PlayerPrefs.DeleteAll();
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ExitGame", gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
