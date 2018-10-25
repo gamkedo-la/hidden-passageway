@@ -465,6 +465,23 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 1
   m_ShadowAngle: 0
+--- !u!1 &307375500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753154783028860, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1417385336}
+--- !u!114 &307375503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 307375500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1001 &427160277
 Prefab:
   m_ObjectHideFlags: 0
@@ -1307,6 +1324,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.9810002
       objectReference: {fileID: 0}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: songToggleForClick
+      value: 
+      objectReference: {fileID: 1417385337}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -1643,9 +1665,21 @@ Prefab:
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 303a97f4baeed430c8563d30d25b20b9, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+        type: 2}
+      propertyPath: songEvtName
+      value: event:/Camp/CampMusic
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1417385337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1417385336}
+  m_Script: {fileID: 11500000, guid: 9614afb02242c4555ba023864c9f2912, type: 3}
 --- !u!1001 &1432305296
 Prefab:
   m_ObjectHideFlags: 0
@@ -1868,7 +1902,7 @@ Prefab:
     - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224668681280000612, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -2087,7 +2121,8 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1488701654 stripped

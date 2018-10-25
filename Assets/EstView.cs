@@ -25,8 +25,10 @@ public class EstView : MonoBehaviour {
 
     public GameObject turnOffOnStartClick;
     public GameObject[] turnOnAfterWaitingForClick;
+    public SquashTransition songToggleForClick;
 
     public bool waitForClickToStart = false;
+    public bool endSoundAfterOpeningTransition = false;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +42,10 @@ public class EstView : MonoBehaviour {
             foreach(GameObject eachGO in turnOnAfterWaitingForClick)
             {
                 eachGO.SetActive(true);
+            }
+            if (songToggleForClick)
+            {
+                songToggleForClick.LateSongStartFromClick();
             }
             waitForClickToStart = false;
             gameObject.SetActive(false);
@@ -87,6 +93,11 @@ public class EstView : MonoBehaviour {
             Destroy(destGO);
         }
 
+        if (endSoundAfterOpeningTransition)
+        {
+            songToggleForClick.terminateIntroSound();
+        }
+
         useCamera.transform.position = wasPos;
         useCamera.transform.rotation = wasRot;
         playerGO.SetActive(true);
@@ -110,6 +121,10 @@ public class EstView : MonoBehaviour {
                 foreach (GameObject eachGO in turnOnAfterWaitingForClick)
                 {
                     eachGO.SetActive(true);
+                }
+                if (songToggleForClick)
+                {
+                    songToggleForClick.LateSongStartFromClick();
                 }
                 turnOffOnStartClick.SetActive(false);
                 waitForClickToStart = false;

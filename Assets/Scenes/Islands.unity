@@ -6674,7 +6674,13 @@ Prefab:
       propertyPath: speedScale
       value: 0.7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+        type: 2}
+      propertyPath: songEvtName
+      value: event:/Islands/Ambient/IntroOcean
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &628877261 stripped
@@ -7183,6 +7189,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: b2aa1686e2b006643a6b550a232e5974,
     type: 3}
   m_PrefabInternal: {fileID: 662106727}
+--- !u!114 &663566021 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 625501582}
+  m_Script: {fileID: 11500000, guid: 9614afb02242c4555ba023864c9f2912, type: 3}
 --- !u!1 &664493020
 GameObject:
   m_ObjectHideFlags: 0
@@ -9953,6 +9965,16 @@ Prefab:
       propertyPath: destroyWhenDone.Array.data[0]
       value: 
       objectReference: {fileID: 1018394802}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: songToggleForClick
+      value: 
+      objectReference: {fileID: 663566021}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: endSoundAfterOpeningTransition
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -11834,7 +11856,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018394802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -18331,18 +18353,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1552369758932374, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 1488701653}
---- !u!114 &1545093797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545093796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!114 &1545093800
 MonoBehaviour:
   m_ObjectHideFlags: 0

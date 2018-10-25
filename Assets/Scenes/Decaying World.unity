@@ -1813,7 +1813,7 @@ Prefab:
     - target: {fileID: 224362806885985544, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224948567350020190, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -1823,7 +1823,7 @@ Prefab:
     - target: {fileID: 224225782589030764, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224668681280000612, guid: e68c31d7edd714b8aaca10bdfe763061,
         type: 2}
@@ -2018,7 +2018,13 @@ Prefab:
       propertyPath: m_Color.a
       value: 0.49803922
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114546016304325894, guid: e68c31d7edd714b8aaca10bdfe763061,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &135326588 stripped
@@ -16029,6 +16035,11 @@ Prefab:
       propertyPath: destroyWhenDone.Array.data[0]
       value: 
       objectReference: {fileID: 104310172}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: songToggleForClick
+      value: 
+      objectReference: {fileID: 818111765}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -29836,6 +29847,12 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &818111765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 884432453}
+  m_Script: {fileID: 11500000, guid: 9614afb02242c4555ba023864c9f2912, type: 3}
 --- !u!1 &819852822
 GameObject:
   m_ObjectHideFlags: 0
@@ -30808,7 +30825,13 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114110454429690258, guid: 6a6f24aeba1fb489590c3779ecb8ca1c,
+        type: 2}
+      propertyPath: songEvtName
+      value: event:/DecayingWorld/Ambient
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 81639654599699488, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6f24aeba1fb489590c3779ecb8ca1c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &888817363
