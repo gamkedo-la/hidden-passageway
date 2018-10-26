@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EstView : MonoBehaviour {
@@ -31,7 +32,7 @@ public class EstView : MonoBehaviour {
     public bool stopIntroAudioAfterEstShots = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         nightIntroManager = GetComponent<AetherNightIntroManage>();
         if (SceneWarp.fromScene == "MainHub")
         {
@@ -131,6 +132,11 @@ public class EstView : MonoBehaviour {
             {
                 return;
             }
+        }
+
+        if (SceneWarp.fromScene == null) // i.e. hub
+        {
+            MusicNotStartedYet.instance.StartSong(); // hammering it, otherwise hub didn't start
         }
 
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1") ||
