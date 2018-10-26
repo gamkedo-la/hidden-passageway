@@ -10250,6 +10250,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1408216501224784, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 1268298176}
+--- !u!114 &1268298178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268298177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea3c9b4298a41fc929f548ad334531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songEvtName: event:/DigSite/Music
+  mover: {fileID: 1369069725}
 --- !u!4 &1268298180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4863188396238202, guid: e68c31d7edd714b8aaca10bdfe763061,
@@ -11269,20 +11282,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369069723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: dca394d2c239447fba90f62d95f8d948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/DigSite/Music
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1370797959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1020238273810248, guid: 128bf8a3fa691fc4d82cad2c5c54a0b9,

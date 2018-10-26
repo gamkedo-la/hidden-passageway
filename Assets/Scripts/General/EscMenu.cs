@@ -104,6 +104,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
 	public void ToggleMenu(){
 		if(!isAnimating){
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ScrapLook", gameObject);
 			if(isOpen){
 				SetToClose();
 			}else{
@@ -159,6 +160,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
     public void ResetCart()
     {
+        MusicNotStartedYet.instance.StopSong();
         // PlayerPrefs.DeleteAll();
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ExitGame", gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -166,6 +168,7 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
 	public void BackToHub(){
 		if(!isAnimating){
+            MusicNotStartedYet.instance.StopSong();
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/ExitGame", gameObject);
             ShowOrHideBabies(false);
             Image selfImage = GetComponent<Image>();

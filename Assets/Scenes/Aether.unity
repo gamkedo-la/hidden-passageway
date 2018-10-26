@@ -37785,20 +37785,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 441975977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: dca394d2c239447fba90f62d95f8d948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Aether/Music
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &443688170
 Prefab:
   m_ObjectHideFlags: 0
@@ -112771,6 +112760,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1878888730666724, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 1831343279}
+--- !u!1 &1831343282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1408216501224784, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 1831343279}
+--- !u!114 &1831343283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831343282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea3c9b4298a41fc929f548ad334531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songEvtName: event:/Aether/Music
+  mover: {fileID: 441975979}
 --- !u!1001 &1835908472
 Prefab:
   m_ObjectHideFlags: 0

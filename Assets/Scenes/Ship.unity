@@ -991,6 +991,18 @@ Prefab:
       propertyPath: m_Color.a
       value: 0.49803922
       objectReference: {fileID: 0}
+    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992526200459184, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114422511974668438, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
     - {fileID: 81806673387731444, guid: e68c31d7edd714b8aaca10bdfe763061, type: 2}
@@ -1009,6 +1021,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4863188396238202, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 951361292}
+--- !u!1 &951361295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1408216501224784, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 951361292}
+--- !u!114 &951361296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951361295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea3c9b4298a41fc929f548ad334531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songEvtName: event:/Ship/Music
+  mover: {fileID: 1923457968}
 --- !u!1 &1092193441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,17 +1429,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923457966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: dca394d2c239447fba90f62d95f8d948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Ship/Music
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0

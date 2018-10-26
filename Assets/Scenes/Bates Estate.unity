@@ -414,20 +414,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 54019121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: dca394d2c239447fba90f62d95f8d948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/BatesEstate/Music
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &66104853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 08c9107953c174971bf438d1844781ac,
@@ -9153,6 +9142,24 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb9792da72bc67c4cb57496b9825aa90, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1097309200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1408216501224784, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 1488701653}
+--- !u!114 &1097309202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097309200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea3c9b4298a41fc929f548ad334531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songEvtName: event:/BatesEstate/Music
+  mover: {fileID: 54019123}
 --- !u!1 &1115515461
 GameObject:
   m_ObjectHideFlags: 0

@@ -9954,6 +9954,11 @@ Prefab:
       propertyPath: destroyWhenDone.Array.data[0]
       value: 
       objectReference: {fileID: 1018394802}
+    - target: {fileID: 114929405063850948, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92,
+        type: 2}
+      propertyPath: stopIntroAudioAfterEstShots
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b78f95a2ca94e9fa7dc9a96cbb1d92, type: 2}
   m_IsPrefabAsset: 0
@@ -10392,22 +10397,11 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892029884}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: dca394d2c239447fba90f62d95f8d948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Apartment/Music
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &899293146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4c3325b756e66fc4da98c4a19a29eec0,
@@ -17634,6 +17628,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4863188396238202, guid: e68c31d7edd714b8aaca10bdfe763061,
     type: 2}
   m_PrefabInternal: {fileID: 1488701653}
+--- !u!1 &1488701656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1408216501224784, guid: e68c31d7edd714b8aaca10bdfe763061,
+    type: 2}
+  m_PrefabInternal: {fileID: 1488701653}
+--- !u!114 &1488701657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488701656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea3c9b4298a41fc929f548ad334531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songEvtName: event:/Islands/Ambient/BirdsOceanOpening
+  mover: {fileID: 892029887}
 --- !u!1 &1500557835
 GameObject:
   m_ObjectHideFlags: 0

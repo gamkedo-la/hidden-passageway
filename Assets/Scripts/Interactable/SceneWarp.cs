@@ -21,6 +21,7 @@ public class SceneWarp : MonoBehaviour {
 
         if(SquashTransition.instance) {
             SquashTransition.instance.startTransition(sceneName);
+            MusicNotStartedYet.instance.StopSong();
             WalkControl.instance.areFeetLocked = true;
             if (fromScene == "MainHub")
             {

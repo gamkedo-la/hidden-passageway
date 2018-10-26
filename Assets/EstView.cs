@@ -28,6 +28,7 @@ public class EstView : MonoBehaviour {
     private AetherNightIntroManage nightIntroManager;
 
     public bool waitForClickToStart = false;
+    public bool stopIntroAudioAfterEstShots = false;
 
 	// Use this for initialization
 	void Start () {
@@ -92,6 +93,11 @@ public class EstView : MonoBehaviour {
         foreach (GameObject destGO in destroyWhenDone)
         {
             Destroy(destGO);
+        }
+
+        if (stopIntroAudioAfterEstShots)
+        {
+            MusicNotStartedYet.instance.StopSong();
         }
 
         useCamera.transform.position = wasPos;
