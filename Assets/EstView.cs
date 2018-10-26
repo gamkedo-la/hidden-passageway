@@ -118,8 +118,8 @@ public class EstView : MonoBehaviour {
 	void Update () {
         if (waitForClickToStart)
         {
-            if (Input.GetMouseButtonUp(0))
-            {
+            /*if (Input.GetMouseButtonUp(0))
+            {*/
                 durationStart = Time.timeSinceLevelLoad;
                 foreach (GameObject eachGO in turnOnAfterWaitingForClick)
                 {
@@ -127,11 +127,11 @@ public class EstView : MonoBehaviour {
                 }
                 turnOffOnStartClick.SetActive(false);
                 waitForClickToStart = false;
-            }
+            /*}
             else
             {
                 return;
-            }
+            }*/
         }
 
         if (SceneWarp.fromScene == null) // i.e. hub
