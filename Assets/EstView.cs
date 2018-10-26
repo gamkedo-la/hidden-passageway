@@ -115,25 +115,7 @@ public class EstView : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (waitForClickToStart)
-        {
-            /*if (Input.GetMouseButtonUp(0))
-            {*/
-                durationStart = Time.timeSinceLevelLoad;
-                foreach (GameObject eachGO in turnOnAfterWaitingForClick)
-                {
-                    eachGO.SetActive(true);
-                }
-                turnOffOnStartClick.SetActive(false);
-                waitForClickToStart = false;
-            /*}
-            else
-            {
-                return;
-            }*/
-        }
-
+    void Update () {
         if (SceneWarp.fromScene == null) // i.e. hub
         {
             MusicNotStartedYet.instance.StartSong(); // hammering it, otherwise hub didn't start
@@ -181,5 +163,23 @@ public class EstView : MonoBehaviour {
 
         useCamera.transform.position = Vector3.Lerp(viewWaypoints[wpNow].position,viewWaypoints[wpNow+1].position, lerpPt);
         useCamera.transform.rotation = Quaternion.Slerp(viewWaypoints[wpNow].rotation, viewWaypoints[wpNow + 1].rotation, lerpPt);
+
+        if (waitForClickToStart && Time.timeSinceLevelLoad >= 0.1f)
+        {
+            /*if (Input.GetMouseButtonUp(0))
+            {
+            durationStart = Time.timeSinceLevelLoad;*/
+            foreach (GameObject eachGO in turnOnAfterWaitingForClick)
+            {
+                eachGO.SetActive(true);
+            }
+            turnOffOnStartClick.SetActive(false);
+            waitForClickToStart = false;
+            /*}
+            else
+            {
+                return;
+            }*/
+        }
 	}
 }
