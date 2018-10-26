@@ -44,7 +44,9 @@ public class SquashTransition : MonoBehaviour {
 
             WalkControl walkToTurnOff = playerGO.GetComponent<WalkControl>();
             ViewControl lookToTurnOff = Camera.main.GetComponent<ViewControl>();
-
+            walkToTurnOff.areFeetLocked = true;
+            Rigidbody rb = playerGO.GetComponent<Rigidbody>();
+            rb.isKinematic = true;
             if (walkToTurnOff)
             {
                 walkToTurnOff.enabled = false;
