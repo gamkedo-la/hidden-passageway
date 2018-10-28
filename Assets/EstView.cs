@@ -36,7 +36,7 @@ public class EstView : MonoBehaviour {
         nightIntroManager = GetComponent<AetherNightIntroManage>();
         if (SceneWarp.fromScene == "MainHub")
         {
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MainHub/StartGame", gameObject);
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/GameSceneLoad/GameSceneLoad", gameObject);
         }
 
         if (SceneWarp.fromScene != null && SceneWarp.fromScene != "MainHub")
