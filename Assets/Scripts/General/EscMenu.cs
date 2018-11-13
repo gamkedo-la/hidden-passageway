@@ -189,6 +189,10 @@ public class EscMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if(Input.GetKeyUp(KeyCode.Tab) && WalkControl.instance.areFeetLocked == false){
 			ToggleMenu();
 		}
